@@ -39,6 +39,14 @@ app.get('/times', function(request, response) {
   response.send(result);
 });
 
+app.get('/app', function(request, response) {
+  response.render('app/index');
+});
+
+app.get('/editor', function(request, response) {
+  response.render('editor/index');
+});
+
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
 });
