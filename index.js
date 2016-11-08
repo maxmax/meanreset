@@ -1,7 +1,14 @@
 var pg = require('pg');
 var cool = require('cool-ascii-faces');
+var path = require('path');
 var express = require('express');
+var bodyParser = require('body-parser');
 var app = express();
+
+var editor = require('./views/editor/editor.js');
+var base = require('./views/base/base.js');
+
+var COMMENTS_FILE = path.join(__dirname, '/views/date/comments.json');
 
 app.set('port', (process.env.PORT || 5000));
 
@@ -25,6 +32,8 @@ app.get('/db', function (request, response) {
 
 app.get('/', function(request, response) {
   response.render('pages/index');
+  //json test
+  console.log(COMMENTS_FILE);
 });
 
 app.get('/cool', function(request, response) {
@@ -39,13 +48,14 @@ app.get('/times', function(request, response) {
   response.send(result);
 });
 
-app.get('/app', function(request, response) {
-  response.render('app/index');
-});
+//app.get('/app', function(request, response) {
+//  response.render('app/index');
+//});
 
-app.get('/editor', function(request, response) {
-  response.render('editor/index');
-});
+app.use('/editor', editor);
+
+app.use('/base', base);
+
 
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
