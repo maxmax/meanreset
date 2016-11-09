@@ -1,3 +1,4 @@
+var fs = require('fs');
 var pg = require('pg');
 var cool = require('cool-ascii-faces');
 var path = require('path');
@@ -8,11 +9,25 @@ var app = express();
 var editor = require('./views/editor/editor.js');
 var base = require('./views/base/base.js');
 
-var COMMENTS_FILE = path.join(__dirname, '/views/date/comments.json');
+//var COMMENTS_FILE = path.join(__dirname, '/views/date/comments.json');
 
 app.set('port', (process.env.PORT || 5000));
 
 app.use(express.static(__dirname + '/public'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
+
+// Additional middleware which will set headers that we need on each request.
+app.use(function(req, res, next) {
+    // Set permissive CORS header - this allows this server to be used only as
+    // an API server in conjunction with something like webpack-dev-server.
+    res.setHeader('Access-Control-Allow-Origin', '*');
+
+    // Disable caching so we'll always get the latest comments.
+    res.setHeader('Cache-Control', 'no-cache');
+    next();
+});
+//end request
 
 // views is directory for all template files
 app.set('views', __dirname + '/views');
@@ -33,7 +48,7 @@ app.get('/db', function (request, response) {
 app.get('/', function(request, response) {
   response.render('pages/index');
   //json test
-  console.log(COMMENTS_FILE);
+  //console.log(COMMENTS_FILE);
 });
 
 app.get('/cool', function(request, response) {

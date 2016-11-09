@@ -4,5 +4,6 @@
   "repository": "https://github.com/maxmax/meanreset",
   "logo": "http://node-js-sample.herokuapp.com/node.svg",
   "keywords": ["node", "express", "static"],
+  "success_url": "/",
   "image": "heroku/nodejs"
 }
