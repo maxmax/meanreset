@@ -7,9 +7,14 @@ var router = express.Router();
 var COMMENTS_FILE = path.join(__dirname, '../date/comments.json');
 
 var editordate = { title: 'Editor' };
+var tagline = "This edit page";
 
 router.get('/', function(req, res) {
-  res.render('editor/index', editordate);
+  //res.render('editor/index', editordate);
+  res.render('editor/index', {
+    editordate,
+    tagline: tagline
+  });
   //console.log(COMMENTS_FILE);
 });
 

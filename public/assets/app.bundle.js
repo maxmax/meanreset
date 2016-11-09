@@ -46,26 +46,77 @@
 
 	'use strict';
 
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 	var _react = __webpack_require__(1);
 
 	var _react2 = _interopRequireDefault(_react);
 
 	var _reactDom = __webpack_require__(34);
 
-	var _components = __webpack_require__(172);
+	var _todoview = __webpack_require__(172);
 
 	var _jumbotron = __webpack_require__(173);
 
+	var _Cards = __webpack_require__(174);
+
+	var _Cards2 = _interopRequireDefault(_Cards);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 	var dummyTodos = [{ id: 0, isDone: true, text: 'make components' }, { id: 1, isDone: false, text: 'design actions' }, { id: 2, isDone: false, text: 'implement reducer' }, { id: 3, isDone: false, text: 'connect components' }];
 
-	(0, _reactDom.render)(_react2.default.createElement(
-	  'div',
-	  null,
-	  _react2.default.createElement(_components.TodoList, { todos: dummyTodos }),
-	  _react2.default.createElement(_jumbotron.Jumbotron, { items: dummyTodos })
-	), document.getElementById('app'));
+	//class BaseWrapper extends React.Component {
+
+	var BaseWrapper = function (_React$Component) {
+	  _inherits(BaseWrapper, _React$Component);
+
+	  function BaseWrapper() {
+	    _classCallCheck(this, BaseWrapper);
+
+	    return _possibleConstructorReturn(this, (BaseWrapper.__proto__ || Object.getPrototypeOf(BaseWrapper)).apply(this, arguments));
+	  }
+
+	  _createClass(BaseWrapper, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'section',
+	        null,
+	        _react2.default.createElement(
+	          'h2',
+	          null,
+	          'Hello, ',
+	          this.props.name
+	        ),
+	        _react2.default.createElement(
+	          'section',
+	          null,
+	          _react2.default.createElement(_Cards2.default, { url: '/editor/comments', pollInterval: 2000 }),
+	          _react2.default.createElement(_jumbotron.Jumbotron, { items: dummyTodos }),
+	          _react2.default.createElement(_todoview.TodoList, { todos: dummyTodos })
+	        )
+	      );
+	    }
+	  }]);
+
+	  return BaseWrapper;
+	}(_react2.default.Component);
+
+	exports.default = BaseWrapper;
+
+
+	(0, _reactDom.render)(_react2.default.createElement(BaseWrapper, { name: 'this src/app ui' }), document.getElementById('app'));
 
 /***/ },
 /* 1 */
@@ -21543,6 +21594,110 @@
 	    )
 	  );
 	}
+
+/***/ },
+/* 174 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Cards = function (_Component) {
+	  _inherits(Cards, _Component);
+
+	  function Cards(props) {
+	    _classCallCheck(this, Cards);
+
+	    var _this = _possibleConstructorReturn(this, (Cards.__proto__ || Object.getPrototypeOf(Cards)).call(this, props));
+
+	    _this.state = {
+	      active: null
+	    };
+	    //this._itemOnClick = this._itemOnClick.bind(this);
+	    return _this;
+	  }
+
+	  _createClass(Cards, [{
+	    key: '_loadCommentsFromServer',
+	    value: function _loadCommentsFromServer() {
+	      $.ajax({
+	        url: this.props.url,
+	        dataType: 'json',
+	        cache: false,
+	        success: function (data) {
+	          this.setState({ data: data });
+	        }.bind(this),
+	        error: function (xhr, status, err) {
+	          console.error(this.props.url, status, err.toString());
+	        }.bind(this)
+	      });
+	    }
+	  }, {
+	    key: '_handleCommentSubmit',
+	    value: function _handleCommentSubmit() {
+	      var comments = this.state.data;
+	      //console.log(comments);
+	      // Optimistically set an id on the new comment. It will be replaced by an
+	      // id generated by the server. In a production application you would likely
+	      // not use Date.now() for this and would have a more robust system in place.
+	      comment.id = Date.now();
+	      var newComments = comments.concat([comment]);
+	      this.setState({ data: newComments });
+	      $.ajax({
+	        url: this.props.url,
+	        dataType: 'json',
+	        type: 'POST',
+	        data: comment,
+	        success: function (data) {
+	          this.setState({ data: data });
+	        }.bind(this),
+	        error: function (xhr, status, err) {
+	          this.setState({ data: comments });
+	          console.error(this.props.url, status, err.toString());
+	        }.bind(this)
+	      });
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      console.log(this.props);
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'cards' },
+	        _react2.default.createElement('br', null),
+	        _react2.default.createElement('br', null),
+	        _react2.default.createElement(
+	          'div',
+	          null,
+	          'cards in dev'
+	        ),
+	        _react2.default.createElement('br', null),
+	        _react2.default.createElement('br', null)
+	      );
+	    }
+	  }]);
+
+	  return Cards;
+	}(_react.Component);
+
+	exports.default = Cards;
 
 /***/ }
 /******/ ]);
