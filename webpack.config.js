@@ -1,8 +1,14 @@
 module.exports = {
-  entry: './src/app.js',
+  //entry: ["./src/app.js", "./src/test.js"],
+  entry: {
+      //main: './src/js/main.js'
+      app: './src/app.js',
+      test: './src/test.js',
+      editorapp: './src/commentsapp.js'
+  },
   output: {
     path: __dirname,
-    filename: './public/assets/bundle.js'
+    filename: "./public/assets/[name].bundle.js"
   },
   module: {
     loaders: [
