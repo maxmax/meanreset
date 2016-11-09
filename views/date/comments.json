@@ -1,42 +1,17 @@
 [
     {
-        "id": 1388534400000,
-        "author": "Pete Hunt",
-        "text": "Hey there!"
+        "id": 1478647600608,
+        "author": "testerkokoko",
+        "text": "lastcomment"
     },
     {
-        "id": 1420070400000,
-        "author": "Paul O’Shannessy",
-        "text": "React is *great*!"
+        "id": 1478647993691,
+        "author": "olololoev",
+        "text": "main comment"
     },
     {
-        "id": 1464988635157,
-        "author": "ben",
-        "text": "*abc*"
-    },
-    {
-        "id": 1464988636500,
-        "author": "ben",
-        "text": "*abc*"
-    },
-    {
-        "id": 1464988717637,
-        "author": "evil",
-        "text": "<a href=\"javascript:alert(1)\">alert(1)</a>"
-    },
-    {
-        "id": 1478562648900,
-        "author": "maxmax",
-        "text": "sadasdasdasdas"
-    },
-    {
-        "id": 1478562674845,
-        "author": "maxmax",
-        "text": "ssssss"
-    },
-    {
-        "id": 1478564089364,
-        "author": "max",
-        "text": "asdsadasd new"
+        "id": 1478649531935,
+        "author": "lastname",
+        "text": "last comment"
     }
 ]
