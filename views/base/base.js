@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-var basedate = { title: 'Base' };
+var basedate = { title: 'Base Page' };
 
 router.get('/', function(req, res) {
   var drinks = [
@@ -15,7 +15,6 @@ router.get('/', function(req, res) {
     drinks: drinks,
     tagline: tagline
   });
-  //console.log(editordate);
 });
 
 module.exports = router;

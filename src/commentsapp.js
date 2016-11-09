@@ -2,8 +2,6 @@ import React from 'react';
 import { render } from 'react-dom';
 import Remarkable from 'remarkable';
 //var Markdown = require('react-remarkable');
-//import { Remarkable } from 'react-dom';
-//var Remarkable = require('remarkable');
 
 //TODO: refactoring on es6,7,react webpack, redux, props etc.
 
@@ -64,6 +62,7 @@ var CommentBox = React.createClass({
       }.bind(this)
     });
   },
+  //
   getInitialState: function() {
     return {data: []};
   },
