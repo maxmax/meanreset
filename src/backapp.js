@@ -1,16 +1,14 @@
 import React from 'react';
 import { render } from 'react-dom';
-import Jumbotron from './Jumbotron/Jumbotron';
 import Cards from './Cards/Cards';
 
-export default class BaseWrapper extends React.Component {
+export default class EditWrapper extends React.Component {
   render() {
     return (
       <section>
         <h2>Hello, {this.props.name}</h2>
         <section>
-          <Cards url="/editor/comments" pollInterval={2000} />
-          <Jumbotron />
+          <Cards url="/editor/comments" pollInterval={2000} edit="true" />
         </section>
       </section>
     );
@@ -18,6 +16,6 @@ export default class BaseWrapper extends React.Component {
 }
 
 render(
-  <BaseWrapper name="this src/app ui" />,
+  <EditWrapper name="this src/editor full" />,
   document.getElementById( 'app' )
 );

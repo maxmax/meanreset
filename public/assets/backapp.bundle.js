@@ -58,10 +58,6 @@
 
 	var _reactDom = __webpack_require__(34);
 
-	var _Jumbotron = __webpack_require__(172);
-
-	var _Jumbotron2 = _interopRequireDefault(_Jumbotron);
-
 	var _Cards = __webpack_require__(173);
 
 	var _Cards2 = _interopRequireDefault(_Cards);
@@ -74,18 +70,16 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var dummyTodos = [{ id: 0, isDone: true, text: 'make components' }, { id: 1, isDone: false, text: 'design actions' }, { id: 2, isDone: false, text: 'implement reducer' }, { id: 3, isDone: false, text: 'connect components' }];
+	var EditWrapper = function (_React$Component) {
+	  _inherits(EditWrapper, _React$Component);
 
-	var BaseWrapper = function (_React$Component) {
-	  _inherits(BaseWrapper, _React$Component);
+	  function EditWrapper() {
+	    _classCallCheck(this, EditWrapper);
 
-	  function BaseWrapper() {
-	    _classCallCheck(this, BaseWrapper);
-
-	    return _possibleConstructorReturn(this, (BaseWrapper.__proto__ || Object.getPrototypeOf(BaseWrapper)).apply(this, arguments));
+	    return _possibleConstructorReturn(this, (EditWrapper.__proto__ || Object.getPrototypeOf(EditWrapper)).apply(this, arguments));
 	  }
 
-	  _createClass(BaseWrapper, [{
+	  _createClass(EditWrapper, [{
 	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
@@ -100,20 +94,19 @@
 	        _react2.default.createElement(
 	          'section',
 	          null,
-	          _react2.default.createElement(_Cards2.default, { url: '/editor/comments', pollInterval: 2000 }),
-	          _react2.default.createElement(_Jumbotron2.default, null)
+	          _react2.default.createElement(_Cards2.default, { url: '/editor/comments', pollInterval: 2000, edit: 'true' })
 	        )
 	      );
 	    }
 	  }]);
 
-	  return BaseWrapper;
+	  return EditWrapper;
 	}(_react2.default.Component);
 
-	exports.default = BaseWrapper;
+	exports.default = EditWrapper;
 
 
-	(0, _reactDom.render)(_react2.default.createElement(BaseWrapper, { name: 'this src/app ui' }), document.getElementById('app'));
+	(0, _reactDom.render)(_react2.default.createElement(EditWrapper, { name: 'this src/editor full' }), document.getElementById('app'));
 
 /***/ },
 /* 1 */
@@ -21483,107 +21476,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-/* 172 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var propTypes = {
-	  items: _react.PropTypes.array
-	};
-
-	var defaultProps = {
-	  items: [{
-	    id: 0,
-	    isDone: true,
-	    text: 'make components'
-	  }, {
-	    id: 1,
-	    isDone: false,
-	    text: 'design actions'
-	  }]
-	};
-
-	var Jumbotron = function (_React$Component) {
-	  _inherits(Jumbotron, _React$Component);
-
-	  function Jumbotron(props) {
-	    _classCallCheck(this, Jumbotron);
-
-	    var _this = _possibleConstructorReturn(this, (Jumbotron.__proto__ || Object.getPrototypeOf(Jumbotron)).call(this, props));
-
-	    _this.state = {
-	      active: null
-	    };
-	    //this._itemOnClick = this._itemOnClick.bind(this);
-	    return _this;
-	  }
-
-	  _createClass(Jumbotron, [{
-	    key: 'render',
-	    value: function render() {
-	      var items = this.props.items;
-
-
-	      return _react2.default.createElement(
-	        'div',
-	        { className: 'jumbotron' },
-	        _react2.default.createElement(
-	          'ul',
-	          { className: 'list-unstyled jumbotron__list' },
-	          items.map(function (item) {
-	            return _react2.default.createElement(
-	              'li',
-	              { key: item.id, className: 'todo__item' },
-	              _react2.default.createElement(
-	                'span',
-	                null,
-	                item.id
-	              ),
-	              _react2.default.createElement(
-	                'span',
-	                null,
-	                ' - '
-	              ),
-	              _react2.default.createElement(
-	                'span',
-	                null,
-	                item.text
-	              )
-	            );
-	          })
-	        )
-	      );
-	    }
-	  }]);
-
-	  return Jumbotron;
-	}(_react2.default.Component);
-
-	Jumbotron.propTypes = propTypes;
-	Jumbotron.defaultProps = defaultProps;
-
-	exports.default = Jumbotron;
-
-/***/ },
+/* 172 */,
 /* 173 */
 /***/ function(module, exports, __webpack_require__) {
 
