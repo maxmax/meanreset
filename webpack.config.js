@@ -1,7 +1,7 @@
 module.exports = {
   entry: {
       app: './src/app.js',
-      editorapp: './src/commentsapp.js'
+      backapp: './src/backapp.js'
   },
   output: {
     path: __dirname,
