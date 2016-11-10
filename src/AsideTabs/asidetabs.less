@@ -1,0 +1,118 @@
+// Color variables (appears count calculates by raw css)
+@color0: #000000; // Appears 4 times
+
+.panel.panel-aside {
+	position: relative;
+	.panel-body {
+		min-height: 1040px;
+		padding: 27px 56px 42px 311px;
+		nav {
+			margin-top: 40px;
+			ul.pager {
+				margin: 0 0;
+				li.previous {
+					a {
+						text-align: left;
+					}
+					span {
+						text-align: left;
+					}
+				}
+				li.next {
+					a {
+						text-align: right;
+					}
+					span {
+						text-align: right;
+					}
+				}
+				li {
+					a {
+						background-color: transparent;
+						border: 0px solid #dddddd;
+						cursor: pointer;
+						padding: 0 0;
+						position: relative;
+						&:after {
+							background: #ec008c;
+							bottom: -2px;
+							content: "";
+							height: 4px;
+							left: 0px;
+							position: absolute;
+							width: 100%;
+						}
+						&:hover {
+							background-color: transparent;
+						}
+						span {
+							&:first-child {
+								display: block;
+							}
+						}
+					}
+					&:hover {
+						a {
+							background-color: transparent;
+						}
+					}
+				}
+			}
+		}
+		.tab-content {
+			h4 {
+				margin: 0 0 4px;
+			}
+			p {
+				line-height: 1.8;
+				margin: 0 0 18px;
+			}
+			ul {
+				line-height: 1.8;
+				margin: 0 0 18px;
+			}
+		}
+	}
+	.nav-tabs.nav-stacked {
+		background-color: #e2e2e2;
+		border: 0px;
+		height: 100%;
+		left: 0;
+		padding: 21px 21px;
+		position: absolute;
+		top: 0;
+		width: 280px;
+		li {
+			a {
+				background: none;
+				border: 0px;
+				cursor: pointer;
+				display: block;
+				padding: 5px 5px 9px 10px;
+				position: relative;
+				text-transform: uppercase;
+				&:hover {
+					color: @color0;
+				}
+			}
+			span {
+				background: none;
+				border: 0px;
+				cursor: pointer;
+				display: block;
+				padding: 5px 5px 9px 10px;
+				position: relative;
+				text-transform: uppercase;
+				&:hover {
+					color: @color0;
+				}
+			}
+		}
+		li.active>a {
+			color: @color0;
+		}
+		li.active>span {
+			color: @color0;
+		}
+	}
+}

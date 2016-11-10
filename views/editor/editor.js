@@ -5,23 +5,19 @@ var express = require('express');
 var router = express.Router();
 
 var COMMENTS_FILE = path.join(__dirname, '../date/comments.json');
+var TERMS_FILE = path.join(__dirname, '../date/terms.json');
 
 var editordate = { title: 'Editor' };
 var tagline = "This edit page";
 
 router.get('/', function(req, res) {
-  //res.render('editor/index', editordate);
   res.render('editor/index', {
     editordate,
     tagline: tagline
   });
-  //console.log(COMMENTS_FILE);
 });
 
 router.get('/comments', function(req, res) {
-  //response.render('editor/index', editordate);
-  //console.log(COMMENTS_FILE);
-
   fs.readFile(COMMENTS_FILE, function(err, data) {
     if (err) {
       console.error(err);
@@ -29,7 +25,6 @@ router.get('/comments', function(req, res) {
     }
     res.json(JSON.parse(data));
   });
-
 });
 
 router.post('/comments', function(req, res) {

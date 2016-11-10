@@ -1,5 +1,7 @@
 import React, { PropTypes }  from 'react';
 
+import './jumbotron.less';
+
 const propTypes = {
   items: PropTypes.array
 };
