@@ -1,8 +1,8 @@
 import React from 'react';
 import { render } from 'react-dom';
-import Jumbotron from './Jumbotron/Jumbotron';
-import Cards from './Cards/Cards';
-import AsideTabs from './AsideTabs/AsideTabs';
+import Jumbotron from './components/Jumbotron/Jumbotron';
+import Cards from './components/Cards/Cards';
+import AsideTabs from './components/AsideTabs/AsideTabs';
 
 import './Base/global.less';
 

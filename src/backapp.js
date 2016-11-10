@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-import Cards from './Cards/Cards';
+import Cards from './components/Cards/Cards';
 
 export default class EditWrapper extends React.Component {
   render() {

@@ -1,24 +1,18 @@
-import React from 'react';
-import { render } from 'react-dom';
-import Jumbotron from './Jumbotron/Jumbotron';
-import Cards from './Cards/Cards';
-import AsideTabs from './AsideTabs/AsideTabs';
+import React from 'react'
+import { render } from 'react-dom'
+import { Router, Route, hashHistory } from 'react-router'
+import App from './modules/App'
+import About from './modules/About'
+import Terms from './modules/Terms'
+import Privacy from './modules/Privacy'
 
-//import './Base/global.less';
-
-export default class BaseWrapper extends React.Component {
-  render() {
-    return (
-      <section>
-        <section>
-          <AsideTabs />
-        </section>
-      </section>
-    );
-  }
-}
-
-render(
-  <BaseWrapper name="This src/buddy ui" />,
-  document.getElementById( 'app' )
-);
+render((
+  <Router history={hashHistory}>
+    <Route path="/" component={App}>
+      {/* make them children of `App` */}
+      <Route path="/about" component={About}/>
+      <Route path="/terms" component={Terms}/>
+      <Route path="/privacy" component={Privacy}/>
+    </Route>
+  </Router>
+), document.getElementById('app'))
