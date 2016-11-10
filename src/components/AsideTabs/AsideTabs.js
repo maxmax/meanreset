@@ -10,11 +10,8 @@ const propTypes = {
 const defaultProps = {
   data: [
     {
-      title: 'ARTICLE',
-      text: '<p>Description</p>'
-    }, {
-      title: 'ARTICLE 2',
-      text: '<p>Description 2</p>'
+      title: '',
+      text: 'Empty'
     }
   ]
 };
