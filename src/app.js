@@ -2,6 +2,9 @@ import React from 'react';
 import { render } from 'react-dom';
 import Jumbotron from './Jumbotron/Jumbotron';
 import Cards from './Cards/Cards';
+import AsideTabs from './AsideTabs/AsideTabs';
+
+import './Base/global.less';
 
 export default class BaseWrapper extends React.Component {
   render() {
@@ -11,6 +14,7 @@ export default class BaseWrapper extends React.Component {
         <section>
           <Cards url="/editor/comments" pollInterval={2000} />
           <Jumbotron />
+          <AsideTabs />
         </section>
       </section>
     );

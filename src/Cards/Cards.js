@@ -78,7 +78,7 @@ class Cards extends React.Component {
       <div className="cards">
         <CommentList data={this.state.data} />
         <br />
-        <div>{ this._componentRenderForm() }</div>
+        <div>{this._componentRenderForm()}</div>
       </div>
     );
   }
@@ -87,13 +87,16 @@ class Cards extends React.Component {
 class CommentList extends React.Component {
   render() {
     var commentNodes = this.props.data.map((comment, index) => {
-      return (<Comment author={comment.author} key={index}>
-      {comment.text}
-      </Comment>)
+      return (
+        <Comment author={comment.author} key={index}>
+          {comment.text}
+        </Comment>)
     });
-    return (<div className="commentList">
-    {commentNodes}
-    </div>)
+    return (
+      <div className="commentList">
+        {commentNodes}
+      </div>
+    )
   }
 }
 
@@ -116,13 +119,27 @@ class CommentForm extends React.Component {
       <form className="commentForm" onSubmit={this.handleSubmit.bind(this)}>
         <h3>New Comment</h3>
         <div className="form-group">
-          <input type="text" placeholder="Your name" ref="author" className="form-control" />
+          <input
+            type="text"
+            placeholder="Your name"
+            ref="author"
+            className="form-control"
+          />
         </div>
         <div className="form-group">
-          <input type="text" placeholder="Your comment" ref="text" className="form-control" />
+          <input
+            type="text"
+            placeholder="Your comment"
+            ref="text"
+            className="form-control"
+          />
         </div>
         <div className="form-group">
-          <input type="submit" value="Post" className="btn btn-default" />
+          <input
+            type="submit"
+            value="Post"
+            className="btn btn-default"
+          />
         </div>
       </form>
     )
@@ -133,7 +150,7 @@ class Comment extends React.Component {
   rawMarkup() {
     var md = new Remarkable();
     var rawMarkup = md.render(this.props.children.toString());
-    return { __html: rawMarkup };
+    return {__html: rawMarkup};
   }
 
   render() {
