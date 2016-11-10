@@ -8,7 +8,8 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
   entry: {
       app: './src/app.js',
-      backapp: './src/backapp.js'
+      backapp: './src/backapp.js',
+      buddy: './src/buddy.js'
   },
   output: {
     path: __dirname,
