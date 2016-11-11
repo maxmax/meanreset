@@ -8,12 +8,11 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
   entry: {
       app: './src/app.js',
-      backapp: './src/backapp.js',
-      buddy: './src/buddy.js'
+      backapp: './src/backapp.js'
   },
   output: {
     path: __dirname,
-    filename: "./public/assets/[name].bundle.js"
+    filename: "../public/assets/[name].bundle.js"
   },
   watch: true,
   watchOptions : {
@@ -46,6 +45,6 @@ module.exports = {
     ]
   },
   plugins: [
-    new ExtractTextPlugin("./public/stylesheets/style.css")
+    new ExtractTextPlugin("../public/stylesheets/style.css")
   ]
 };

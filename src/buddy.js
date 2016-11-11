@@ -6,6 +6,8 @@ import About from './modules/About'
 import Terms from './modules/Terms'
 import Privacy from './modules/Privacy'
 
+import './Base/global.less';
+
 render((
   <Router history={hashHistory}>
     <Route path="/" component={App}>
