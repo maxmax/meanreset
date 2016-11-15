@@ -38150,11 +38150,6 @@
 					"id": 3,
 					"img": "/media/HiggsBoson.jpg",
 					"text": "Lorem Ipsum is simply dummy text of the printing."
-				},
-				{
-					"id": 4,
-					"img": "",
-					"text": "Lorem Ipsum"
 				}
 			]
 		},
@@ -38209,10 +38204,6 @@
 				{
 					"id": 11,
 					"img": "http://greentradehouse.com/files/uploads/companies/1/13/logo_thumb.png"
-				},
-				{
-					"id": 12,
-					"img": ""
 				}
 			]
 		}
