@@ -8,6 +8,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
   entry: {
       app: './src/app.js',
+      apps: './src/apps.js',
       backapp: './src/backapp.js'
   },
   output: {
@@ -41,7 +42,8 @@ module.exports = {
       {
         test: /\.woff|\.woff2|\.svg|.eot|\.ttf/,
         loader: 'url?prefix=font/&limit=10000'
-      }
+      },
+      { test: /\.json$/, loader: "json-loader" }
     ]
   },
   plugins: [

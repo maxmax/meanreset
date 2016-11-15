@@ -26,4 +26,11 @@ router.get('/buddy', function(req, res, next) {
   });
 });
 
+router.get('/apps', function(req, res, next) {
+  var title = "This Apps";
+  res.render('base/apps', {
+    title: title
+  });
+});
+
 module.exports = router;

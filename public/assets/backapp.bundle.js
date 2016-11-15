@@ -58,7 +58,7 @@
 
 	var _reactDom = __webpack_require__(40);
 
-	var _Cards = __webpack_require__(183);
+	var _Cards = __webpack_require__(187);
 
 	var _Cards2 = _interopRequireDefault(_Cards);
 
@@ -21487,7 +21487,11 @@
 /* 180 */,
 /* 181 */,
 /* 182 */,
-/* 183 */
+/* 183 */,
+/* 184 */,
+/* 185 */,
+/* 186 */,
+/* 187 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21506,7 +21510,7 @@
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _remarkable = __webpack_require__(184);
+	var _remarkable = __webpack_require__(188);
 
 	var _remarkable2 = _interopRequireDefault(_remarkable);
 
@@ -21768,16 +21772,16 @@
 	exports.default = Cards;
 
 /***/ },
-/* 184 */
+/* 188 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	module.exports = __webpack_require__(185);
+	module.exports = __webpack_require__(189);
 
 
 /***/ },
-/* 185 */
+/* 189 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21786,21 +21790,21 @@
 	 * Local dependencies
 	 */
 
-	var assign       = __webpack_require__(186).assign;
-	var Renderer     = __webpack_require__(188);
-	var ParserCore   = __webpack_require__(190);
-	var ParserBlock  = __webpack_require__(208);
-	var ParserInline = __webpack_require__(223);
-	var Ruler        = __webpack_require__(191);
+	var assign       = __webpack_require__(190).assign;
+	var Renderer     = __webpack_require__(192);
+	var ParserCore   = __webpack_require__(194);
+	var ParserBlock  = __webpack_require__(212);
+	var ParserInline = __webpack_require__(227);
+	var Ruler        = __webpack_require__(195);
 
 	/**
 	 * Preset configs
 	 */
 
 	var config = {
-	  'default':    __webpack_require__(242),
-	  'full':       __webpack_require__(243),
-	  'commonmark': __webpack_require__(244)
+	  'default':    __webpack_require__(246),
+	  'full':       __webpack_require__(247),
+	  'commonmark': __webpack_require__(248)
 	};
 
 	/**
@@ -21974,11 +21978,11 @@
 	 * rendering.
 	 */
 
-	module.exports.utils = __webpack_require__(186);
+	module.exports.utils = __webpack_require__(190);
 
 
 /***/ },
-/* 186 */
+/* 190 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22065,7 +22069,7 @@
 
 	var NAMED_ENTITY_RE   = /&([a-z#][a-z0-9]{1,31});/gi;
 	var DIGITAL_ENTITY_TEST_RE = /^#((?:x[a-f0-9]{1,8}|[0-9]{1,8}))/i;
-	var entities = __webpack_require__(187);
+	var entities = __webpack_require__(191);
 
 	function replaceEntityPattern(match, name) {
 	  var code = 0;
@@ -22125,7 +22129,7 @@
 
 
 /***/ },
-/* 187 */
+/* 191 */
 /***/ function(module, exports) {
 
 	// List of valid entities
@@ -24265,7 +24269,7 @@
 
 
 /***/ },
-/* 188 */
+/* 192 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -24274,8 +24278,8 @@
 	 * Local dependencies
 	 */
 
-	var utils = __webpack_require__(186);
-	var rules = __webpack_require__(189);
+	var utils = __webpack_require__(190);
+	var rules = __webpack_require__(193);
 
 	/**
 	 * Expose `Renderer`
@@ -24346,7 +24350,7 @@
 
 
 /***/ },
-/* 189 */
+/* 193 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -24355,10 +24359,10 @@
 	 * Local dependencies
 	 */
 
-	var has             = __webpack_require__(186).has;
-	var unescapeMd      = __webpack_require__(186).unescapeMd;
-	var replaceEntities = __webpack_require__(186).replaceEntities;
-	var escapeHtml      = __webpack_require__(186).escapeHtml;
+	var has             = __webpack_require__(190).has;
+	var unescapeMd      = __webpack_require__(190).unescapeMd;
+	var replaceEntities = __webpack_require__(190).replaceEntities;
+	var escapeHtml      = __webpack_require__(190).escapeHtml;
 
 	/**
 	 * Renderer rules cache
@@ -24781,7 +24785,7 @@
 
 
 /***/ },
-/* 190 */
+/* 194 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -24790,22 +24794,22 @@
 	 * Local dependencies
 	 */
 
-	var Ruler = __webpack_require__(191);
+	var Ruler = __webpack_require__(195);
 
 	/**
 	 * Core parser `rules`
 	 */
 
 	var _rules = [
-	  [ 'block',          __webpack_require__(192)          ],
-	  [ 'abbr',           __webpack_require__(193)           ],
-	  [ 'references',     __webpack_require__(196)     ],
-	  [ 'inline',         __webpack_require__(201)         ],
-	  [ 'footnote_tail',  __webpack_require__(202)  ],
-	  [ 'abbr2',          __webpack_require__(203)          ],
-	  [ 'replacements',   __webpack_require__(204)   ],
-	  [ 'smartquotes',    __webpack_require__(205)    ],
-	  [ 'linkify',        __webpack_require__(206)        ]
+	  [ 'block',          __webpack_require__(196)          ],
+	  [ 'abbr',           __webpack_require__(197)           ],
+	  [ 'references',     __webpack_require__(200)     ],
+	  [ 'inline',         __webpack_require__(205)         ],
+	  [ 'footnote_tail',  __webpack_require__(206)  ],
+	  [ 'abbr2',          __webpack_require__(207)          ],
+	  [ 'replacements',   __webpack_require__(208)   ],
+	  [ 'smartquotes',    __webpack_require__(209)    ],
+	  [ 'linkify',        __webpack_require__(210)        ]
 	];
 
 	/**
@@ -24845,7 +24849,7 @@
 
 
 /***/ },
-/* 191 */
+/* 195 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -25124,7 +25128,7 @@
 
 
 /***/ },
-/* 192 */
+/* 196 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -25147,7 +25151,7 @@
 
 
 /***/ },
-/* 193 */
+/* 197 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// Parse abbreviation definitions, i.e. `*[abbr]: description`
@@ -25156,8 +25160,8 @@
 	'use strict';
 
 
-	var StateInline    = __webpack_require__(194);
-	var parseLinkLabel = __webpack_require__(195);
+	var StateInline    = __webpack_require__(198);
+	var parseLinkLabel = __webpack_require__(199);
 
 
 	function parseAbbr(str, parserInline, options, env) {
@@ -25223,7 +25227,7 @@
 
 
 /***/ },
-/* 194 */
+/* 198 */
 /***/ function(module, exports) {
 
 	// Inline parser state
@@ -25305,7 +25309,7 @@
 
 
 /***/ },
-/* 195 */
+/* 199 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -25370,17 +25374,17 @@
 
 
 /***/ },
-/* 196 */
+/* 200 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 
-	var StateInline          = __webpack_require__(194);
-	var parseLinkLabel       = __webpack_require__(195);
-	var parseLinkDestination = __webpack_require__(197);
-	var parseLinkTitle       = __webpack_require__(199);
-	var normalizeReference   = __webpack_require__(200);
+	var StateInline          = __webpack_require__(198);
+	var parseLinkLabel       = __webpack_require__(199);
+	var parseLinkDestination = __webpack_require__(201);
+	var parseLinkTitle       = __webpack_require__(203);
+	var normalizeReference   = __webpack_require__(204);
 
 
 	function parseReference(str, parser, options, env) {
@@ -25474,14 +25478,14 @@
 
 
 /***/ },
-/* 197 */
+/* 201 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 
-	var normalizeLink = __webpack_require__(198);
-	var unescapeMd    = __webpack_require__(186).unescapeMd;
+	var normalizeLink = __webpack_require__(202);
+	var unescapeMd    = __webpack_require__(190).unescapeMd;
 
 	/**
 	 * Parse link destination
@@ -25563,12 +25567,12 @@
 
 
 /***/ },
-/* 198 */
+/* 202 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var replaceEntities = __webpack_require__(186).replaceEntities;
+	var replaceEntities = __webpack_require__(190).replaceEntities;
 
 	module.exports = function normalizeLink(url) {
 	  var normalized = replaceEntities(url);
@@ -25582,13 +25586,13 @@
 
 
 /***/ },
-/* 199 */
+/* 203 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 
-	var unescapeMd = __webpack_require__(186).unescapeMd;
+	var unescapeMd = __webpack_require__(190).unescapeMd;
 
 	/**
 	 * Parse link title
@@ -25634,7 +25638,7 @@
 
 
 /***/ },
-/* 200 */
+/* 204 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -25648,7 +25652,7 @@
 
 
 /***/ },
-/* 201 */
+/* 205 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -25667,7 +25671,7 @@
 
 
 /***/ },
-/* 202 */
+/* 206 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -25768,7 +25772,7 @@
 
 
 /***/ },
-/* 203 */
+/* 207 */
 /***/ function(module, exports) {
 
 	// Enclose abbreviations in <abbr> tags
@@ -25862,7 +25866,7 @@
 
 
 /***/ },
-/* 204 */
+/* 208 */
 /***/ function(module, exports) {
 
 	// Simple typographical replacements
@@ -25932,7 +25936,7 @@
 
 
 /***/ },
-/* 205 */
+/* 209 */
 /***/ function(module, exports) {
 
 	// Convert straight quotation marks to typographic ones
@@ -26051,7 +26055,7 @@
 
 
 /***/ },
-/* 206 */
+/* 210 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// Replace link-like texts with link nodes.
@@ -26061,7 +26065,7 @@
 	'use strict';
 
 
-	var Autolinker = __webpack_require__(207);
+	var Autolinker = __webpack_require__(211);
 
 
 	var LINK_SCAN_RE = /www|@|\:\/\//;
@@ -26218,7 +26222,7 @@
 
 
 /***/ },
-/* 207 */
+/* 211 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (root, factory) {
@@ -28547,7 +28551,7 @@
 
 
 /***/ },
-/* 208 */
+/* 212 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -28556,26 +28560,26 @@
 	 * Local dependencies
 	 */
 
-	var Ruler      = __webpack_require__(191);
-	var StateBlock = __webpack_require__(209);
+	var Ruler      = __webpack_require__(195);
+	var StateBlock = __webpack_require__(213);
 
 	/**
 	 * Parser rules
 	 */
 
 	var _rules = [
-	  [ 'code',       __webpack_require__(210) ],
-	  [ 'fences',     __webpack_require__(211),     [ 'paragraph', 'blockquote', 'list' ] ],
-	  [ 'blockquote', __webpack_require__(212), [ 'paragraph', 'blockquote', 'list' ] ],
-	  [ 'hr',         __webpack_require__(213),         [ 'paragraph', 'blockquote', 'list' ] ],
-	  [ 'list',       __webpack_require__(214),       [ 'paragraph', 'blockquote' ] ],
-	  [ 'footnote',   __webpack_require__(215),   [ 'paragraph' ] ],
-	  [ 'heading',    __webpack_require__(216),    [ 'paragraph', 'blockquote' ] ],
-	  [ 'lheading',   __webpack_require__(217) ],
-	  [ 'htmlblock',  __webpack_require__(218),  [ 'paragraph', 'blockquote' ] ],
-	  [ 'table',      __webpack_require__(220),      [ 'paragraph' ] ],
-	  [ 'deflist',    __webpack_require__(221),    [ 'paragraph' ] ],
-	  [ 'paragraph',  __webpack_require__(222) ]
+	  [ 'code',       __webpack_require__(214) ],
+	  [ 'fences',     __webpack_require__(215),     [ 'paragraph', 'blockquote', 'list' ] ],
+	  [ 'blockquote', __webpack_require__(216), [ 'paragraph', 'blockquote', 'list' ] ],
+	  [ 'hr',         __webpack_require__(217),         [ 'paragraph', 'blockquote', 'list' ] ],
+	  [ 'list',       __webpack_require__(218),       [ 'paragraph', 'blockquote' ] ],
+	  [ 'footnote',   __webpack_require__(219),   [ 'paragraph' ] ],
+	  [ 'heading',    __webpack_require__(220),    [ 'paragraph', 'blockquote' ] ],
+	  [ 'lheading',   __webpack_require__(221) ],
+	  [ 'htmlblock',  __webpack_require__(222),  [ 'paragraph', 'blockquote' ] ],
+	  [ 'table',      __webpack_require__(224),      [ 'paragraph' ] ],
+	  [ 'deflist',    __webpack_require__(225),    [ 'paragraph' ] ],
+	  [ 'paragraph',  __webpack_require__(226) ]
 	];
 
 	/**
@@ -28708,7 +28712,7 @@
 
 
 /***/ },
-/* 209 */
+/* 213 */
 /***/ function(module, exports) {
 
 	// Parser state class
@@ -28872,7 +28876,7 @@
 
 
 /***/ },
-/* 210 */
+/* 214 */
 /***/ function(module, exports) {
 
 	// Code block (4 spaces padded)
@@ -28914,7 +28918,7 @@
 
 
 /***/ },
-/* 211 */
+/* 215 */
 /***/ function(module, exports) {
 
 	// fences (``` lang, ~~~ lang)
@@ -29011,7 +29015,7 @@
 
 
 /***/ },
-/* 212 */
+/* 216 */
 /***/ function(module, exports) {
 
 	// Block quotes
@@ -29150,7 +29154,7 @@
 
 
 /***/ },
-/* 213 */
+/* 217 */
 /***/ function(module, exports) {
 
 	// Horizontal rule
@@ -29201,7 +29205,7 @@
 
 
 /***/ },
-/* 214 */
+/* 218 */
 /***/ function(module, exports) {
 
 	// Lists
@@ -29473,7 +29477,7 @@
 
 
 /***/ },
-/* 215 */
+/* 219 */
 /***/ function(module, exports) {
 
 	// Process footnote reference list
@@ -29546,7 +29550,7 @@
 
 
 /***/ },
-/* 216 */
+/* 220 */
 /***/ function(module, exports) {
 
 	// heading (#, ##, ...)
@@ -29610,7 +29614,7 @@
 
 
 /***/ },
-/* 217 */
+/* 221 */
 /***/ function(module, exports) {
 
 	// lheading (---, ===)
@@ -29671,7 +29675,7 @@
 
 
 /***/ },
-/* 218 */
+/* 222 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// HTML block
@@ -29679,7 +29683,7 @@
 	'use strict';
 
 
-	var block_names = __webpack_require__(219);
+	var block_names = __webpack_require__(223);
 
 
 	var HTML_TAG_OPEN_RE = /^<([a-zA-Z]{1,15})[\s\/>]/;
@@ -29751,7 +29755,7 @@
 
 
 /***/ },
-/* 219 */
+/* 223 */
 /***/ function(module, exports) {
 
 	// List of valid html blocks names, accorting to commonmark spec
@@ -29819,7 +29823,7 @@
 
 
 /***/ },
-/* 220 */
+/* 224 */
 /***/ function(module, exports) {
 
 	// GFM table, non-standard
@@ -29963,7 +29967,7 @@
 
 
 /***/ },
-/* 221 */
+/* 225 */
 /***/ function(module, exports) {
 
 	// Definition lists
@@ -30176,7 +30180,7 @@
 
 
 /***/ },
-/* 222 */
+/* 226 */
 /***/ function(module, exports) {
 
 	// Paragraph
@@ -30241,7 +30245,7 @@
 
 
 /***/ },
-/* 223 */
+/* 227 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30250,31 +30254,31 @@
 	 * Local dependencies
 	 */
 
-	var Ruler       = __webpack_require__(191);
-	var StateInline = __webpack_require__(194);
-	var utils       = __webpack_require__(186);
+	var Ruler       = __webpack_require__(195);
+	var StateInline = __webpack_require__(198);
+	var utils       = __webpack_require__(190);
 
 	/**
 	 * Inline Parser `rules`
 	 */
 
 	var _rules = [
-	  [ 'text',            __webpack_require__(224) ],
-	  [ 'newline',         __webpack_require__(225) ],
-	  [ 'escape',          __webpack_require__(226) ],
-	  [ 'backticks',       __webpack_require__(227) ],
-	  [ 'del',             __webpack_require__(228) ],
-	  [ 'ins',             __webpack_require__(229) ],
-	  [ 'mark',            __webpack_require__(230) ],
-	  [ 'emphasis',        __webpack_require__(231) ],
-	  [ 'sub',             __webpack_require__(232) ],
-	  [ 'sup',             __webpack_require__(233) ],
-	  [ 'links',           __webpack_require__(234) ],
-	  [ 'footnote_inline', __webpack_require__(235) ],
-	  [ 'footnote_ref',    __webpack_require__(236) ],
-	  [ 'autolink',        __webpack_require__(237) ],
-	  [ 'htmltag',         __webpack_require__(239) ],
-	  [ 'entity',          __webpack_require__(241) ]
+	  [ 'text',            __webpack_require__(228) ],
+	  [ 'newline',         __webpack_require__(229) ],
+	  [ 'escape',          __webpack_require__(230) ],
+	  [ 'backticks',       __webpack_require__(231) ],
+	  [ 'del',             __webpack_require__(232) ],
+	  [ 'ins',             __webpack_require__(233) ],
+	  [ 'mark',            __webpack_require__(234) ],
+	  [ 'emphasis',        __webpack_require__(235) ],
+	  [ 'sub',             __webpack_require__(236) ],
+	  [ 'sup',             __webpack_require__(237) ],
+	  [ 'links',           __webpack_require__(238) ],
+	  [ 'footnote_inline', __webpack_require__(239) ],
+	  [ 'footnote_ref',    __webpack_require__(240) ],
+	  [ 'autolink',        __webpack_require__(241) ],
+	  [ 'htmltag',         __webpack_require__(243) ],
+	  [ 'entity',          __webpack_require__(245) ]
 	];
 
 	/**
@@ -30408,7 +30412,7 @@
 
 
 /***/ },
-/* 224 */
+/* 228 */
 /***/ function(module, exports) {
 
 	// Skip text characters for text token, place those to pending buffer
@@ -30466,7 +30470,7 @@
 
 
 /***/ },
-/* 225 */
+/* 229 */
 /***/ function(module, exports) {
 
 	// Proceess '\n'
@@ -30526,7 +30530,7 @@
 
 
 /***/ },
-/* 226 */
+/* 230 */
 /***/ function(module, exports) {
 
 	// Proceess escaped chars and hardbreaks
@@ -30581,7 +30585,7 @@
 
 
 /***/ },
-/* 227 */
+/* 231 */
 /***/ function(module, exports) {
 
 	// Parse backticks
@@ -30633,7 +30637,7 @@
 
 
 /***/ },
-/* 228 */
+/* 232 */
 /***/ function(module, exports) {
 
 	// Process ~~deleted text~~
@@ -30723,7 +30727,7 @@
 
 
 /***/ },
-/* 229 */
+/* 233 */
 /***/ function(module, exports) {
 
 	// Process ++inserted text++
@@ -30813,7 +30817,7 @@
 
 
 /***/ },
-/* 230 */
+/* 234 */
 /***/ function(module, exports) {
 
 	// Process ==highlighted text==
@@ -30903,7 +30907,7 @@
 
 
 /***/ },
-/* 231 */
+/* 235 */
 /***/ function(module, exports) {
 
 	// Process *this* and _that_
@@ -31058,7 +31062,7 @@
 
 
 /***/ },
-/* 232 */
+/* 236 */
 /***/ function(module, exports) {
 
 	// Process ~subscript~
@@ -31122,7 +31126,7 @@
 
 
 /***/ },
-/* 233 */
+/* 237 */
 /***/ function(module, exports) {
 
 	// Process ^superscript^
@@ -31186,17 +31190,17 @@
 
 
 /***/ },
-/* 234 */
+/* 238 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// Process [links](<to> "stuff")
 
 	'use strict';
 
-	var parseLinkLabel       = __webpack_require__(195);
-	var parseLinkDestination = __webpack_require__(197);
-	var parseLinkTitle       = __webpack_require__(199);
-	var normalizeReference   = __webpack_require__(200);
+	var parseLinkLabel       = __webpack_require__(199);
+	var parseLinkDestination = __webpack_require__(201);
+	var parseLinkTitle       = __webpack_require__(203);
+	var normalizeReference   = __webpack_require__(204);
 
 
 	module.exports = function links(state, silent) {
@@ -31362,14 +31366,14 @@
 
 
 /***/ },
-/* 235 */
+/* 239 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// Process inline footnotes (^[...])
 
 	'use strict';
 
-	var parseLinkLabel = __webpack_require__(195);
+	var parseLinkLabel = __webpack_require__(199);
 
 
 	module.exports = function footnote_inline(state, silent) {
@@ -31421,7 +31425,7 @@
 
 
 /***/ },
-/* 236 */
+/* 240 */
 /***/ function(module, exports) {
 
 	// Process footnote references ([^...])
@@ -31489,15 +31493,15 @@
 
 
 /***/ },
-/* 237 */
+/* 241 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// Process autolinks '<protocol:...>'
 
 	'use strict';
 
-	var url_schemas   = __webpack_require__(238);
-	var normalizeLink = __webpack_require__(198);
+	var url_schemas   = __webpack_require__(242);
+	var normalizeLink = __webpack_require__(202);
 
 
 	/*eslint max-len:0*/
@@ -31573,7 +31577,7 @@
 
 
 /***/ },
-/* 238 */
+/* 242 */
 /***/ function(module, exports) {
 
 	// List of valid url schemas, accorting to commonmark spec
@@ -31751,7 +31755,7 @@
 
 
 /***/ },
-/* 239 */
+/* 243 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// Process html tags
@@ -31759,7 +31763,7 @@
 	'use strict';
 
 
-	var HTML_TAG_RE = __webpack_require__(240).HTML_TAG_RE;
+	var HTML_TAG_RE = __webpack_require__(244).HTML_TAG_RE;
 
 
 	function isLetter(ch) {
@@ -31806,7 +31810,7 @@
 
 
 /***/ },
-/* 240 */
+/* 244 */
 /***/ function(module, exports) {
 
 	// Regexps to match html elements
@@ -31871,17 +31875,17 @@
 
 
 /***/ },
-/* 241 */
+/* 245 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// Process html entity - &#123;, &#xAF;, &quot;, ...
 
 	'use strict';
 
-	var entities          = __webpack_require__(187);
-	var has               = __webpack_require__(186).has;
-	var isValidEntityCode = __webpack_require__(186).isValidEntityCode;
-	var fromCodePoint     = __webpack_require__(186).fromCodePoint;
+	var entities          = __webpack_require__(191);
+	var has               = __webpack_require__(190).has;
+	var isValidEntityCode = __webpack_require__(190).isValidEntityCode;
+	var fromCodePoint     = __webpack_require__(190).fromCodePoint;
 
 
 	var DIGITAL_RE = /^&#((?:x[a-f0-9]{1,8}|[0-9]{1,8}));/i;
@@ -31925,7 +31929,7 @@
 
 
 /***/ },
-/* 242 */
+/* 246 */
 /***/ function(module, exports) {
 
 	// Remarkable default options
@@ -32011,7 +32015,7 @@
 
 
 /***/ },
-/* 243 */
+/* 247 */
 /***/ function(module, exports) {
 
 	// Remarkable default options
@@ -32055,7 +32059,7 @@
 
 
 /***/ },
-/* 244 */
+/* 248 */
 /***/ function(module, exports) {
 
 	// Commonmark default options

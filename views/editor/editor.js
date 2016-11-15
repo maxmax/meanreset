@@ -4,8 +4,8 @@ var bodyParser = require('body-parser');
 var express = require('express');
 var router = express.Router();
 
-var COMMENTS_FILE = path.join(__dirname, '../date/comments.json');
-var TERMS_FILE = path.join(__dirname, '../date/terms.json');
+var COMMENTS_FILE = path.join(__dirname, '../data/comments.json');
+var TERMS_FILE = path.join(__dirname, '../data/terms.json');
 
 var editordate = { title: 'Editor' };
 var tagline = "This edit page";

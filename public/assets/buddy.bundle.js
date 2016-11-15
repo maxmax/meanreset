@@ -58,19 +58,19 @@
 
 	var _App2 = _interopRequireDefault(_App);
 
-	var _About = __webpack_require__(244);
+	var _About = __webpack_require__(243);
 
 	var _About2 = _interopRequireDefault(_About);
 
-	var _Terms = __webpack_require__(245);
+	var _Terms = __webpack_require__(244);
 
 	var _Terms2 = _interopRequireDefault(_Terms);
 
-	var _Privacy = __webpack_require__(249);
+	var _Privacy = __webpack_require__(248);
 
 	var _Privacy2 = _interopRequireDefault(_Privacy);
 
-	__webpack_require__(250);
+	__webpack_require__(249);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -26748,8 +26748,7 @@
 
 /***/ },
 /* 242 */,
-/* 243 */,
-/* 244 */
+/* 243 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26776,7 +26775,7 @@
 	});
 
 /***/ },
-/* 245 */
+/* 244 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26795,7 +26794,7 @@
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _AsideTabs = __webpack_require__(246);
+	var _AsideTabs = __webpack_require__(245);
 
 	var _AsideTabs2 = _interopRequireDefault(_AsideTabs);
 
@@ -26998,7 +26997,7 @@
 	Terms.defaultProps = defaultProps;
 
 /***/ },
-/* 246 */
+/* 245 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27017,7 +27016,7 @@
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	__webpack_require__(247);
+	__webpack_require__(246);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -27168,14 +27167,14 @@
 	//};
 
 /***/ },
-/* 247 */
+/* 246 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 248 */,
-/* 249 */
+/* 247 */,
+/* 248 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27194,7 +27193,7 @@
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _AsideTabs = __webpack_require__(246);
+	var _AsideTabs = __webpack_require__(245);
 
 	var _AsideTabs2 = _interopRequireDefault(_AsideTabs);
 
@@ -27243,7 +27242,7 @@
 	Privacy.defaultProps = defaultProps;
 
 /***/ },
-/* 250 */
+/* 249 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
