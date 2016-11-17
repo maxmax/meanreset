@@ -1,6 +1,6 @@
 import React, { PropTypes }  from 'react';
 
-import './aboutcontainer.less';
+import './contentcontainer.less';
 
 const propTypes = {
   data: PropTypes.object
@@ -15,7 +15,7 @@ const defaultProps = {
   }
 };
 
-class AboutContainer extends React.Component {
+class ContentContainer extends React.Component {
 
   constructor(props) {
     super(props);
@@ -68,7 +68,7 @@ class AboutContainer extends React.Component {
   render() {
 
     return (
-      <div className='about-container text-center'>
+      <div className='content-container text-center'>
         <div className="container">
           {this._renderTitle()}
           {this._renderDesc()}
@@ -81,7 +81,7 @@ class AboutContainer extends React.Component {
   }
 }
 
-AboutContainer.propTypes = propTypes;
-AboutContainer.defaultProps = defaultProps;
+ContentContainer.propTypes = propTypes;
+ContentContainer.defaultProps = defaultProps;
 
-export default AboutContainer;
+export default ContentContainer;

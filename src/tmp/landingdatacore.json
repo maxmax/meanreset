@@ -2,19 +2,78 @@
   "landingBase": {
     "logo": "/media/logo-oval.svg",
     "title": "Hello and a very warm welcome!",
-    "description": "We are a customer-service oriented team of web developers committed to the highest quality of our work and we stand behind it.",
-    "img": "/media/billionphotos.jpg",
-    "down": "#AboutContainer"
+    "description": "We are a customer-service oriented team of developers committed to the highest quality of our work and we stand behind it.",
+    "video": "/media/videobg.mp4",
+    "down": "#AboutContainer",
+    "countdown": {
+      "endDate": "01/15/2017 10:12 AM",
+      "prefix": "App started!"
+    }
   },
   "aboutContainer": {
-    "title": "WHO WE ARE",
-    "description": "With Bootstrap 2, we added optional mobile friendly styles for key aspects of the framework. With Bootstrap 3, weve rewritten the project to be mobile friendly from the start. Instead of adding on optional mobile styles, theyre baked right into the core. In fact, Bootstrap is mobile first. Mobile first styles can be found throughout the entire library instead of in separate files."
+    "title": "About Us",
+    "description": "We are a highly skilled and motivated team of developers and designers that will transform your ideas into working business solutions.",
+    "text": "Our team provides a wide range of complex services in software development and specific IT solutions. Large scaled projects with high requirements to applied solutions-- flexible business oriented architecture.",
+    "services": "We are involved into development of various projects for different professional fields, such as:",
+    "items": [
+      {
+        "id": 0,
+        "text": "Creation of highload portals and social networking products, web services;"
+      }, {
+        "id": 1,
+        "text": "Management and development of corporate (business) applications;"
+      }, {
+        "id": 2,
+        "text": "IT solutions for e-commerce, internet stores, e-commerce apps;"
+      }, {
+        "id": 3,
+        "text": "Solutions for tourist, hotel and restaurant business;"
+      }, {
+        "id": 4,
+        "text": "Content Management Systems;"
+      }, {
+        "id": 5,
+        "text": "Analytics and Data visualization;"
+      }, {
+        "id": 6,
+        "text": "Web applications for all types of systems;"
+      }, {
+        "id": 7,
+        "text": "High data loads, scalability and expandable solutions, Security support;"
+      }, {
+        "id": 8,
+        "text": "24 hour Technical support, real time monitoring, IT experts services and estimation (IT-consulting)"
+      }
+    ]
   },
   "talkContainer": {
     "title": "Lets Talk About Your Disease",
     "description": "WE ARE READY TO WORK WITH YOU",
     "img": "/media/billionphotos.jpg",
     "btn": "GET IN TOUCH"
+  },
+  "whatsnewContainer": {
+    "catTitle": "What's New",
+    "role": "",
+    "items": [
+      {
+        "id": 0,
+        "img": "/media/tumblr_static.jpg",
+        "text": "Lorem Ipsum is simply dummy text of the printing."
+      }, {
+        "id": 1,
+        "img": "/media/tumblr_o06war.jpg",
+        "text": "Lorem Ipsum is simply dummy text of the printing."
+      }, {
+        "id": 2,
+        "img": "/media/maxresdefault.jpg",
+        "text": "Lorem Ipsum is simply dummy text of the printing."
+      }, {
+        "id": 3,
+        "img": "/media/HiggsBoson.jpg",
+        "text": "Lorem Ipsum is simply dummy text of the printing."
+      }
+    ]
   },
   "productsContainer": {
     "catTitle": "Our products",
@@ -103,6 +162,15 @@
         "img": "/media/tumblr_o06war.jpg",
         "text": "Darren was fantastic and really helpful during my visit, and as usual, I was a pain with arrangements out if my control but he accommodated them perfectly and work around it, which was extremely grateful",
         "author": "Janie Doe"
+      }
+    ]
+  },
+  "expertsContainer": {
+    "title": "We Are Your Experts",
+    "description": "We utilize only the latest technologies and have extensive experience in the following areas:",
+    "items": [
+      {
+        "text": "JavaScript, Node, Express, React, Redux, Webpack, Angular, MEAN, Ruby and Ruby on Rails, Python, PHP, BaaS, HBase, Babel, Mongodb, SQLite, MySQL, Big Data Apache Spark; Cassandra, HTML5, CSS3, HAML, jade, Sass, PostCSS, Stylus and Gulp, d3js and other UX/UI Design, Material Design, Animation and Motion, scrum, agile etc."
       }
     ]
   }

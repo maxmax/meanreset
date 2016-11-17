@@ -1,4 +1,5 @@
-import React, { PropTypes }  from 'react';
+import React, { Component, PropTypes }  from 'react';
+import Countdown from 'react-count-down'
 
 import './landingbase.less';
 
@@ -21,6 +22,8 @@ const defaultProps = {
 //video: '/media/videobg.mp4',
 //img: '/media/billionphotos.jpg',
 //down: '#AboutContainer'
+//Countdown: ''
+//let OPTIONS = { endDate: '06/03/2018 10:12 AM', prefix: 'App started!' }
 
 class LandingBase extends React.Component {
 
@@ -85,7 +88,19 @@ class LandingBase extends React.Component {
     );
   }
 
+  _renderCountdown () {
+    if (!this.props.data.countdown) { return null; }
+    let OPTIONS = this.props.data.countdown;
+    return (
+      <div className="countdown-wr">
+        <Countdown options={OPTIONS} />
+      </div>
+    );
+  }
+
   render() {
+
+    console.log(this.props.data.countdown);
 
     return (
       <div className='landing-base text-center'>
@@ -95,6 +110,7 @@ class LandingBase extends React.Component {
           {this._renderLogo()}
           {this._renderTitle()}
           {this._renderDesc()}
+          {this._renderCountdown()}
         </div>
         {this._renderDown()}
       </div>
