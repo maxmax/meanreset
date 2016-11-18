@@ -98,6 +98,18 @@ class LandingBase extends React.Component {
     );
   }
 
+  _renderInvite () {
+    if (!this.props.data.invite) { return null; }
+    return (
+      <form className="invite">
+        <div className="form-group">
+          <label>receive an invitation email</label>
+          <input type="email" className="form-control" placeholder="Email address" />
+        </div>
+      </form>
+    );
+  }
+
   render() {
 
     console.log(this.props.data.countdown);
@@ -111,6 +123,7 @@ class LandingBase extends React.Component {
           {this._renderTitle()}
           {this._renderDesc()}
           {this._renderCountdown()}
+          {this._renderInvite()}
         </div>
         {this._renderDown()}
       </div>

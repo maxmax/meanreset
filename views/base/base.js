@@ -33,4 +33,11 @@ router.get('/apps', function(req, res, next) {
   });
 });
 
+router.get('/fairyapps', function(req, res, next) {
+  var title = "This fairyapps";
+  res.render('base/fairyapps', {
+    title: title
+  });
+});
+
 module.exports = router;

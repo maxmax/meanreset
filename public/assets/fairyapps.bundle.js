@@ -86,9 +86,13 @@
 
 	var _FooterContainer2 = _interopRequireDefault(_FooterContainer);
 
-	var _greencore = __webpack_require__(342);
+	var _config = __webpack_require__(340);
 
-	var _greencore2 = _interopRequireDefault(_greencore);
+	var _config2 = _interopRequireDefault(_config);
+
+	var _landingdatacore = __webpack_require__(341);
+
+	var _landingdatacore2 = _interopRequireDefault(_landingdatacore);
 
 	__webpack_require__(312);
 
@@ -106,11 +110,11 @@
 	//import StickyFooter from './components/StickyFooter/StickyFooter';
 
 	//testdata
-	//import baseconfig from './tmp/config.json';
-	//
-	//import basedata from './tmp/landingdata.json';
-	//import basedata from './tmp/landingdatacore.json';
 
+	//import basedata from './tmp/landingdata.json';
+	//
+
+	//import basedata from './tmp/greencore.json';
 
 	var BaseWrapper = function (_React$Component) {
 	  _inherits(BaseWrapper, _React$Component);
@@ -147,7 +151,7 @@
 
 
 	exports.default = BaseWrapper;
-	(0, _reactDom.render)(_react2.default.createElement(BaseWrapper, { data: _greencore2.default }), document.getElementById('app'));
+	(0, _reactDom.render)(_react2.default.createElement(BaseWrapper, { data: _landingdatacore2.default }), document.getElementById('app'));
 
 /***/ },
 /* 1 */,
@@ -23149,30 +23153,34 @@
 /***/ },
 /* 338 */,
 /* 339 */,
-/* 340 */,
-/* 341 */,
-/* 342 */
+/* 340 */
+/***/ function(module, exports) {
+
+	module.exports = [
+		{
+			"_id": "582a5e42b8396afcae7a0864",
+			"index": 0,
+			"guid": "26a59453-d5e0-495d-9297-ee1abd96703c",
+			"isActive": false
+		}
+	];
+
+/***/ },
+/* 341 */
 /***/ function(module, exports) {
 
 	module.exports = {
 		"landingBase": {
 			"logo": "/media/logo-oval.svg",
-			"title": "GSFTRADE ui",
-			"description": "Hello and a very warm welcome!",
-			"video": "/media/videobg.mp4",
-			"down": "#AboutContainer",
-			"invite": "mail",
-			"countdown": {
-				"endDate": "01/15/2017 10:12 AM",
-				"prefix": "App started!"
-			}
+			"title": "Hello and a very warm welcome!",
+			"description": "We are a customer-service oriented team of developers committed to the highest quality of our work and we stand behind it.",
+			"down": "#AboutContainer"
 		},
 		"aboutContainer": {
 			"title": "About Us",
 			"description": "We are a highly skilled and motivated team of developers and designers that will transform your ideas into working business solutions.",
 			"text": "Our team provides a wide range of complex services in software development and specific IT solutions. Large scaled projects with high requirements to applied solutions-- flexible business oriented architecture.",
 			"services": "We are involved into development of various projects for different professional fields, such as:",
-			"promo": "4-GbFVOzM28",
 			"items": [
 				{
 					"id": 0,
@@ -23215,94 +23223,14 @@
 		"talkContainer": {
 			"title": "Lets Talk About Your Disease",
 			"description": "WE ARE READY TO WORK WITH YOU",
-			"img": "/media/green.jpg",
 			"btn": "GET IN TOUCH"
 		},
 		"whatsnewContainer": {},
-		"productsContainer": {
-			"catTitle": "Our products",
-			"role": "",
-			"items": [
-				{
-					"id": 0,
-					"img": "/media/tumblr_static.jpg",
-					"text": "Lorem Ipsum is simply dummy text of the printing."
-				},
-				{
-					"id": 1,
-					"img": "/media/tumblr_o06war.jpg",
-					"text": "Lorem Ipsum is simply dummy text of the printing."
-				},
-				{
-					"id": 2,
-					"img": "/media/maxresdefault.jpg",
-					"text": "Lorem Ipsum is simply dummy text of the printing."
-				},
-				{
-					"id": 3,
-					"img": "/media/HiggsBoson.jpg",
-					"text": "Lorem Ipsum is simply dummy text of the printing."
-				}
-			]
-		},
-		"partnersContainer": {
-			"catTitle": "Our partners",
-			"role": "centered",
-			"items": [
-				{
-					"id": 0,
-					"img": "http://greentradehouse.com/files/uploads/companies/1/18/logo_thumb.png"
-				},
-				{
-					"id": 1,
-					"img": "http://greentradehouse.com/files/uploads/companies/1/19/logo_thumb.png"
-				},
-				{
-					"id": 2,
-					"img": "http://greentradehouse.com/files/uploads/companies/1/17/logo_thumb.png"
-				},
-				{
-					"id": 3,
-					"img": "http://greentradehouse.com/files/uploads/companies/1/2/logo_thumb.png"
-				},
-				{
-					"id": 4,
-					"img": "http://greentradehouse.com/files/uploads/companies/1/6/logo_thumb.png"
-				},
-				{
-					"id": 5,
-					"img": "http://greentradehouse.com/files/uploads/companies/1/7/logo_thumb.png"
-				},
-				{
-					"id": 6,
-					"img": "http://greentradehouse.com/files/uploads/companies/1/10/logo_thumb.png"
-				},
-				{
-					"id": 7,
-					"img": "http://greentradehouse.com/files/uploads/companies/1/8/logo_thumb.png"
-				},
-				{
-					"id": 8,
-					"img": "http://greentradehouse.com/files/uploads/companies/1/9/logo_thumb.png"
-				},
-				{
-					"id": 9,
-					"img": "http://greentradehouse.com/files/uploads/companies/1/11/logo_thumb.png"
-				},
-				{
-					"id": 10,
-					"img": "http://greentradehouse.com/files/uploads/companies/1/12/logo_thumb.png"
-				},
-				{
-					"id": 11,
-					"img": "http://greentradehouse.com/files/uploads/companies/1/13/logo_thumb.png"
-				}
-			]
-		},
+		"productsContainer": {},
+		"partnersContainer": {},
 		"testimonials": {
 			"title": "Testimonials",
 			"description": "What our Customers are Saying",
-			"img": "/media/green.jpg",
 			"btn": "Show more Testimonials",
 			"items": [
 				{
@@ -23325,10 +23253,18 @@
 				}
 			]
 		},
-		"expertsContainer": {},
+		"expertsContainer": {
+			"title": "We Are Your Experts",
+			"description": "We utilize only the latest technologies and have extensive experience in the following areas:",
+			"items": [
+				{
+					"text": "JavaScript, Node, Express, React, Redux, Webpack, Angular, MEAN, Ruby and Ruby on Rails, Python, PHP, BaaS, HBase, Babel, Mongodb, SQLite, MySQL, Big Data Apache Spark; Cassandra, HTML5, CSS3, HAML, jade, Sass, PostCSS, Stylus and Gulp, d3js and other UX/UI Design, Material Design, Animation and Motion, scrum, agile etc."
+				}
+			]
+		},
 		"footerContainer": {
 			"role": "centered",
-			"text": "© 2016 GSFTRADE ui"
+			"text": "© 2016 fairyapps ui"
 		}
 	};
 

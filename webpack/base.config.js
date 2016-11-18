@@ -9,7 +9,8 @@ module.exports = {
   entry: {
       app: './src/app.js',
       apps: './src/apps.js',
-      backapp: './src/backapp.js'
+      backapp: './src/backapp.js',
+      fairyapps: './src/fairyapps.js'
   },
   output: {
     path: __dirname,

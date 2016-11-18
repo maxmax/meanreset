@@ -65,6 +65,18 @@ class AboutContainer extends React.Component {
     return (objlist ? (<ul className="list text-left">{objlist}</ul>) : null);
   }
 
+  _renderPromo () {
+    if (!this.props.data.promo) { return null; }
+    //?autoplay=1
+    return (
+      <iframe
+        width="800"
+        height="413"
+        src={'https://www.youtube.com/embed/' + this.props.data.promo + ''}
+      />
+    );
+  }
+
   render() {
 
     return (
@@ -72,6 +84,7 @@ class AboutContainer extends React.Component {
         <div className="container">
           {this._renderTitle()}
           {this._renderDesc()}
+          {this._renderPromo()}
           {this._renderText()}
           {this._renderServices()}
           {this._renderList()}

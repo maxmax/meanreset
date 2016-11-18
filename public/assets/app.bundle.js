@@ -21759,6 +21759,27 @@
 	      );
 	    }
 	  }, {
+	    key: '_renderInvite',
+	    value: function _renderInvite() {
+	      if (!this.props.data.invite) {
+	        return null;
+	      }
+	      return _react2.default.createElement(
+	        'form',
+	        { className: 'invite' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'form-group' },
+	          _react2.default.createElement(
+	            'label',
+	            null,
+	            'receive an invitation email'
+	          ),
+	          _react2.default.createElement('input', { type: 'email', className: 'form-control', placeholder: 'Email address' })
+	        )
+	      );
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
 
@@ -21775,7 +21796,8 @@
 	          this._renderLogo(),
 	          this._renderTitle(),
 	          this._renderDesc(),
-	          this._renderCountdown()
+	          this._renderCountdown(),
+	          this._renderInvite()
 	        ),
 	        this._renderDown()
 	      );

@@ -10,7 +10,6 @@ const propTypes = {
 
 const defaultProps = {
   data: {
-    catTitle: 'Empty category',
     role: "auto"
   }
 };
@@ -58,7 +57,7 @@ class Thumbs extends React.Component {
   }
 
   _renderWrap () {
-    if (!this.state.role) { return null; }
+    if (!this.props.data.items) { return null; }
     return (
       <div className={"container-fluid thumbs role-" + this.state.role}>
         {this._renderTitle()}

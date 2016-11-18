@@ -7,12 +7,7 @@ const propTypes = {
 };
 
 const defaultProps = {
-  data: {
-    title: 'Create Title!',
-    description: 'Create Description',
-    text: 'Create text',
-    services: 'Create services'
-  }
+  data: {}
 };
 
 class ContentContainer extends React.Component {
@@ -53,7 +48,7 @@ class ContentContainer extends React.Component {
   }
 
   _renderList () {
-    if (!this.props.data.items) { return null; }
+    if (!this.props.data.items[0]) { return null; }
     const { items } = this.props.data;
     const objlist = items.map((item, index) => {
       return (
@@ -65,8 +60,8 @@ class ContentContainer extends React.Component {
     return (objlist ? (<ul className="list text-left">{objlist}</ul>) : null);
   }
 
-  render() {
-
+  _renderWrapper () {
+    if (!this.props.data.title) { return null; }
     return (
       <div className='content-container text-center'>
         <div className="container">
@@ -78,6 +73,10 @@ class ContentContainer extends React.Component {
         </div>
       </div>
     );
+  }
+
+  render() {
+    return this._renderWrapper();
   }
 }
 

@@ -14,11 +14,11 @@ import FooterContainer from './components/FooterContainer/FooterContainer';
 //import StickyFooter from './components/StickyFooter/StickyFooter';
 
 //testdata
-//import baseconfig from './tmp/config.json';
-//
+import baseconfig from './tmp/config.json';
 //import basedata from './tmp/landingdata.json';
-//import basedata from './tmp/landingdatacore.json';
-import basedata from './tmp/greencore.json';
+//
+import basedata from './tmp/landingdatacore.json';
+//import basedata from './tmp/greencore.json';
 
 import './Base/global.less';
 
