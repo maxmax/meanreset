@@ -78,6 +78,10 @@
 
 	var _StickyFooter2 = _interopRequireDefault(_StickyFooter);
 
+	var _ProfBase = __webpack_require__(339);
+
+	var _ProfBase2 = _interopRequireDefault(_ProfBase);
+
 	__webpack_require__(312);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -104,6 +108,7 @@
 	        'section',
 	        null,
 	        _react2.default.createElement(_LandingBase2.default, null),
+	        _react2.default.createElement(_ProfBase2.default, null),
 	        _react2.default.createElement(_Cards2.default, { url: '/editor/comments', pollInterval: 2000 }),
 	        _react2.default.createElement(_Jumbotron2.default, null),
 	        _react2.default.createElement(_AsideTabs2.default, null),
@@ -37870,6 +37875,245 @@
 /***/ },
 /* 311 */,
 /* 312 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 313 */,
+/* 314 */,
+/* 315 */,
+/* 316 */,
+/* 317 */,
+/* 318 */,
+/* 319 */,
+/* 320 */,
+/* 321 */,
+/* 322 */,
+/* 323 */,
+/* 324 */,
+/* 325 */,
+/* 326 */,
+/* 327 */,
+/* 328 */,
+/* 329 */,
+/* 330 */,
+/* 331 */,
+/* 332 */,
+/* 333 */,
+/* 334 */,
+/* 335 */,
+/* 336 */,
+/* 337 */,
+/* 338 */,
+/* 339 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(7);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactCountDown = __webpack_require__(184);
+
+	var _reactCountDown2 = _interopRequireDefault(_reactCountDown);
+
+	__webpack_require__(340);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var propTypes = {
+	  data: _react.PropTypes.object
+	};
+
+	var defaultProps = {
+	  data: {
+	    logo: '/lang-logo.png',
+	    title: 'Create Title!',
+	    description: 'Create Description'
+	  }
+	};
+
+	//Shema
+	//logo: '/lang-logo.png',
+	//title: 'Hello and a very warm welcome!',
+	//description: 'We are a customer-service oriented team of web developers committed to the highest quality of our work and we stand behind it.',
+	//video: '/media/videobg.mp4',
+	//img: '/media/billionphotos.jpg',
+	//down: '#AboutContainer'
+	//Countdown: ''
+	//let OPTIONS = { endDate: '06/03/2018 10:12 AM', prefix: 'App started!' }
+
+	var ProfBase = function (_React$Component) {
+	  _inherits(ProfBase, _React$Component);
+
+	  function ProfBase(props) {
+	    _classCallCheck(this, ProfBase);
+
+	    var _this = _possibleConstructorReturn(this, (ProfBase.__proto__ || Object.getPrototypeOf(ProfBase)).call(this, props));
+
+	    _this.state = {
+	      active: null
+	    };
+	    return _this;
+	  }
+
+	  _createClass(ProfBase, [{
+	    key: '_renderLogo',
+	    value: function _renderLogo() {
+	      if (!this.props.data.logo) {
+	        return null;
+	      }
+	      return _react2.default.createElement(
+	        'a',
+	        { href: '/', className: 'lang-logo' },
+	        _react2.default.createElement('img', { src: this.props.data.logo })
+	      );
+	    }
+	  }, {
+	    key: '_renderTitle',
+	    value: function _renderTitle() {
+	      if (!this.props.data.title) {
+	        return null;
+	      }
+	      return _react2.default.createElement(
+	        'h1',
+	        null,
+	        this.props.data.title
+	      );
+	    }
+	  }, {
+	    key: '_renderDesc',
+	    value: function _renderDesc() {
+	      if (!this.props.data.description) {
+	        return null;
+	      }
+	      return _react2.default.createElement(
+	        'p',
+	        null,
+	        this.props.data.description
+	      );
+	    }
+	  }, {
+	    key: '_renderVideoBg',
+	    value: function _renderVideoBg() {
+	      if (!this.props.data.video) {
+	        return null;
+	      }
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'container-video' },
+	        _react2.default.createElement(
+	          'video',
+	          { className: 'video', autoPlay: 'autoplay', muted: true, loop: true },
+	          _react2.default.createElement('source', { src: this.props.data.video, type: 'video/mp4' })
+	        )
+	      );
+	    }
+	  }, {
+	    key: '_renderImgBg',
+	    value: function _renderImgBg() {
+	      if (!this.props.data.img) {
+	        return null;
+	      }
+	      var style = {
+	        backgroundImage: 'url(' + this.props.data.img + ')',
+	        backgroundRepeat: 'no-repeat',
+	        backgroundPosition: 'center center',
+	        backgroundSize: 'cover'
+	      };
+	      return _react2.default.createElement('div', { className: 'container-img', style: style });
+	    }
+	  }, {
+	    key: '_renderDown',
+	    value: function _renderDown() {
+	      if (!this.props.data.down) {
+	        return null;
+	      }
+	      return _react2.default.createElement('a', { href: this.props.data.down, className: 'down' });
+	    }
+	  }, {
+	    key: '_renderCountdown',
+	    value: function _renderCountdown() {
+	      if (!this.props.data.countdown) {
+	        return null;
+	      }
+	      var OPTIONS = this.props.data.countdown;
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'countdown-wr' },
+	        _react2.default.createElement(_reactCountDown2.default, { options: OPTIONS })
+	      );
+	    }
+	  }, {
+	    key: '_renderInvite',
+	    value: function _renderInvite() {
+	      if (!this.props.data.invite) {
+	        return null;
+	      }
+	      return _react2.default.createElement(
+	        'form',
+	        { className: 'invite' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'form-group' },
+	          _react2.default.createElement(
+	            'label',
+	            null,
+	            'receive an invitation email'
+	          ),
+	          _react2.default.createElement('input', { type: 'email', className: 'form-control', placeholder: 'Email address' })
+	        )
+	      );
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+
+	      console.log(this.props.data.countdown);
+
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'prof-base text-center' },
+	        this._renderVideoBg(),
+	        this._renderImgBg(),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'container' },
+	          this._renderLogo(),
+	          this._renderTitle(),
+	          this._renderDesc(),
+	          this._renderCountdown(),
+	          this._renderInvite()
+	        ),
+	        this._renderDown()
+	      );
+	    }
+	  }]);
+
+	  return ProfBase;
+	}(_react2.default.Component);
+
+	ProfBase.propTypes = propTypes;
+	ProfBase.defaultProps = defaultProps;
+
+	exports.default = ProfBase;
+
+/***/ },
+/* 340 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin

@@ -7,10 +7,8 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   entry: {
-      app: './src/app.js',
       apps: './src/apps.js',
-      backapp: './src/backapp.js',
-      fairyapps: './src/fairyapps.js'
+      fairyapps: './src/fairyapps.js' 
   },
   output: {
     path: __dirname,

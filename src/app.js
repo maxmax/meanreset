@@ -5,6 +5,7 @@ import LandingBase from './components/LandingBase/LandingBase';
 import Cards from './components/Cards/Cards';
 import AsideTabs from './components/AsideTabs/AsideTabs';
 import StickyFooter from './components/StickyFooter/StickyFooter';
+import ProfBase from './components/ProfBase/ProfBase';
 
 import './Base/global.less';
 
@@ -13,6 +14,7 @@ export default class BaseWrapper extends React.Component {
     return (
       <section>
         <LandingBase />
+        <ProfBase />
         <Cards url="/editor/comments" pollInterval={2000} />
         <Jumbotron />
         <AsideTabs />
