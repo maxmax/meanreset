@@ -1,5 +1,7 @@
 import React, { Component, PropTypes }  from 'react';
-import Countdown from 'react-count-down'
+import ContainerMedia from '../../elements/ContainerMedia/ContainerMedia';
+import Countdown from 'react-count-down';
+
 
 import './landingbase.less';
 
@@ -60,24 +62,18 @@ class LandingBase extends React.Component {
   _renderVideoBg () {
     if (!this.props.data.video) { return null; }
     return (
-      <div className="container-video">
-        <video className="video" autoPlay="autoplay" muted loop>
-          <source src={this.props.data.video} type="video/mp4" />
-        </video>
-      </div>
+      <ContainerMedia video={this.props.data.video} />
     );
   }
 
   _renderImgBg () {
     if (!this.props.data.img) { return null; }
-    var style = {
-      backgroundImage: 'url(' + this.props.data.img + ')',
-      backgroundRepeat: 'no-repeat',
-      backgroundPosition: 'center center',
-      backgroundSize: 'cover'
-    };
     return (
-      <div className="container-img" style={style}></div>
+      <ContainerMedia 
+        img={this.props.data.img}
+        opacity="0.6"
+        class="backdrop"
+      />
     );
   }
 
@@ -111,8 +107,6 @@ class LandingBase extends React.Component {
   }
 
   render() {
-
-    console.log(this.props.data.countdown);
 
     return (
       <div className='landing-base text-center'>

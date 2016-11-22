@@ -1,4 +1,5 @@
 import React, { PropTypes }  from 'react';
+import ContainerMedia from '../../elements/ContainerMedia/ContainerMedia';
 
 import './testimonials.less';
 
@@ -44,15 +45,12 @@ class Testimonials extends React.Component {
 
   _renderImgBg () {
     if (!this.props.data.img) { return null; }
-    var style = {
-      backgroundImage: 'url(' + this.props.data.img + ')',
-      backgroundRepeat: 'no-repeat',
-      backgroundPosition: 'center center',
-      backgroundSize: 'cover',
-      backgroundAttachment: 'fixed'
-    };
     return (
-      <div className="container-img" style={style}></div>
+      <ContainerMedia
+        img={this.props.data.img}
+        opacity="0.5"
+        class="backdrop"
+      />
     );
   }
 
@@ -111,9 +109,6 @@ class Testimonials extends React.Component {
     );
   }
 }
-
-//{this._renderData()}
-//{this._renderBtn()}
 
 Testimonials.propTypes = propTypes;
 Testimonials.defaultProps = defaultProps;

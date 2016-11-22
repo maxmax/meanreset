@@ -21567,6 +21567,10 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _ContainerMedia = __webpack_require__(223);
+
+	var _ContainerMedia2 = _interopRequireDefault(_ContainerMedia);
+
 	var _reactCountDown = __webpack_require__(179);
 
 	var _reactCountDown2 = _interopRequireDefault(_reactCountDown);
@@ -21659,15 +21663,7 @@
 	      if (!this.props.data.video) {
 	        return null;
 	      }
-	      return _react2.default.createElement(
-	        'div',
-	        { className: 'container-video' },
-	        _react2.default.createElement(
-	          'video',
-	          { className: 'video', autoPlay: 'autoplay', muted: true, loop: true },
-	          _react2.default.createElement('source', { src: this.props.data.video, type: 'video/mp4' })
-	        )
-	      );
+	      return _react2.default.createElement(_ContainerMedia2.default, { video: this.props.data.video });
 	    }
 	  }, {
 	    key: '_renderImgBg',
@@ -21675,13 +21671,11 @@
 	      if (!this.props.data.img) {
 	        return null;
 	      }
-	      var style = {
-	        backgroundImage: 'url(' + this.props.data.img + ')',
-	        backgroundRepeat: 'no-repeat',
-	        backgroundPosition: 'center center',
-	        backgroundSize: 'cover'
-	      };
-	      return _react2.default.createElement('div', { className: 'container-img', style: style });
+	      return _react2.default.createElement(_ContainerMedia2.default, {
+	        img: this.props.data.img,
+	        opacity: '0.6',
+	        'class': 'backdrop'
+	      });
 	    }
 	  }, {
 	    key: '_renderDown',
@@ -21728,8 +21722,6 @@
 	  }, {
 	    key: 'render',
 	    value: function render() {
-
-	      console.log(this.props.data.countdown);
 
 	      return _react2.default.createElement(
 	        'div',
@@ -21936,6 +21928,10 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _ContainerMedia = __webpack_require__(223);
+
+	var _ContainerMedia2 = _interopRequireDefault(_ContainerMedia);
+
 	__webpack_require__(187);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -21974,6 +21970,19 @@
 	  }
 
 	  _createClass(AboutContainer, [{
+	    key: '_renderImgBg',
+	    value: function _renderImgBg() {
+	      if (!this.props.data.img) {
+	        return null;
+	      }
+	      return _react2.default.createElement(_ContainerMedia2.default, {
+	        img: this.props.data.img,
+	        size: 'inherit',
+	        repeat: 'repeat',
+	        opacity: '1'
+	      });
+	    }
+	  }, {
 	    key: '_renderTitle',
 	    value: function _renderTitle() {
 	      if (!this.props.data.title) {
@@ -22065,7 +22074,8 @@
 
 	      return _react2.default.createElement(
 	        'div',
-	        { className: 'about-container text-center' },
+	        { className: 'about-container text-center', id: 'AboutContainer' },
+	        this._renderImgBg(),
 	        _react2.default.createElement(
 	          'div',
 	          { className: 'container' },
@@ -22110,6 +22120,10 @@
 	var _react = __webpack_require__(7);
 
 	var _react2 = _interopRequireDefault(_react);
+
+	var _ContainerMedia = __webpack_require__(223);
+
+	var _ContainerMedia2 = _interopRequireDefault(_ContainerMedia);
 
 	__webpack_require__(190);
 
@@ -22177,14 +22191,11 @@
 	      if (!this.props.data.img) {
 	        return null;
 	      }
-	      var style = {
-	        backgroundImage: 'url(' + this.props.data.img + ')',
-	        backgroundRepeat: 'no-repeat',
-	        backgroundPosition: 'center center',
-	        backgroundSize: 'cover',
-	        backgroundAttachment: 'fixed'
-	      };
-	      return _react2.default.createElement('div', { className: 'container-img', style: style });
+	      return _react2.default.createElement(_ContainerMedia2.default, {
+	        img: this.props.data.img,
+	        opacity: '0.5',
+	        'class': 'backdrop'
+	      });
 	    }
 	  }, {
 	    key: '_renderBtn',
@@ -22600,6 +22611,10 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _ContainerMedia = __webpack_require__(223);
+
+	var _ContainerMedia2 = _interopRequireDefault(_ContainerMedia);
+
 	__webpack_require__(200);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -22671,14 +22686,11 @@
 	      if (!this.props.data.img) {
 	        return null;
 	      }
-	      var style = {
-	        backgroundImage: 'url(' + this.props.data.img + ')',
-	        backgroundRepeat: 'no-repeat',
-	        backgroundPosition: 'center center',
-	        backgroundSize: 'cover',
-	        backgroundAttachment: 'fixed'
-	      };
-	      return _react2.default.createElement('div', { className: 'container-img', style: style });
+	      return _react2.default.createElement(_ContainerMedia2.default, {
+	        img: this.props.data.img,
+	        opacity: '0.5',
+	        'class': 'backdrop'
+	      });
 	    }
 	  }, {
 	    key: '_renderBtn',
@@ -22781,9 +22793,6 @@
 	  return Testimonials;
 	}(_react2.default.Component);
 
-	//{this._renderData()}
-	//{this._renderBtn()}
-
 	Testimonials.propTypes = propTypes;
 	Testimonials.defaultProps = defaultProps;
 
@@ -22813,6 +22822,10 @@
 	var _react = __webpack_require__(7);
 
 	var _react2 = _interopRequireDefault(_react);
+
+	var _ContainerMedia = __webpack_require__(223);
+
+	var _ContainerMedia2 = _interopRequireDefault(_ContainerMedia);
 
 	__webpack_require__(205);
 
@@ -22847,6 +22860,19 @@
 	  }
 
 	  _createClass(ContentContainer, [{
+	    key: '_renderImgBg',
+	    value: function _renderImgBg() {
+	      if (!this.props.data.img) {
+	        return null;
+	      }
+	      return _react2.default.createElement(_ContainerMedia2.default, {
+	        img: this.props.data.img,
+	        size: 'inherit',
+	        repeat: 'repeat',
+	        opacity: '1'
+	      });
+	    }
+	  }, {
 	    key: '_renderTitle',
 	    value: function _renderTitle() {
 	      if (!this.props.data.title) {
@@ -22928,6 +22954,7 @@
 	      return _react2.default.createElement(
 	        'div',
 	        { className: 'content-container text-center' },
+	        this._renderImgBg(),
 	        _react2.default.createElement(
 	          'div',
 	          { className: 'container' },
@@ -23842,6 +23869,121 @@
 
 /***/ },
 /* 218 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 219 */,
+/* 220 */,
+/* 221 */,
+/* 222 */,
+/* 223 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(7);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	__webpack_require__(224);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var propTypes = {
+	  video: _react.PropTypes.string,
+	  img: _react.PropTypes.string
+	};
+
+	var defaultProps = {
+	  video: "",
+	  img: ""
+	};
+
+	var ContainerMedia = function (_React$Component) {
+	  _inherits(ContainerMedia, _React$Component);
+
+	  function ContainerMedia(props) {
+	    _classCallCheck(this, ContainerMedia);
+
+	    var _this = _possibleConstructorReturn(this, (ContainerMedia.__proto__ || Object.getPrototypeOf(ContainerMedia)).call(this, props));
+
+	    _this.state = {
+	      size: _this.props.size || 'cover',
+	      repeat: _this.props.repeat || 'no-repeat',
+	      position: _this.props.position || 'center center',
+	      opacity: _this.props.opacity || '0.5',
+	      class: _this.props.class || 'auto'
+	    };
+	    return _this;
+	  }
+
+	  _createClass(ContainerMedia, [{
+	    key: '_renderVideo',
+	    value: function _renderVideo() {
+	      if (!this.props.video) {
+	        return null;
+	      }
+	      return _react2.default.createElement(
+	        'div',
+	        { className: "container-video " + this.state.class },
+	        _react2.default.createElement(
+	          'video',
+	          { className: 'video', autoPlay: 'autoplay', muted: true, loop: true },
+	          _react2.default.createElement('source', { src: this.props.video, type: 'video/mp4' })
+	        )
+	      );
+	    }
+	  }, {
+	    key: '_renderImg',
+	    value: function _renderImg() {
+	      if (!this.props.img) {
+	        return null;
+	      }
+	      var style = {
+	        backgroundImage: 'url(' + this.props.img + ')',
+	        backgroundRepeat: this.state.repeat,
+	        backgroundPosition: this.state.position,
+	        backgroundSize: this.state.size,
+	        opacity: this.state.opacity
+	      };
+	      return _react2.default.createElement('div', { className: "container-img " + this.state.class, style: style });
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        this._renderVideo(),
+	        this._renderImg()
+	      );
+	    }
+	  }]);
+
+	  return ContainerMedia;
+	}(_react2.default.Component);
+
+	ContainerMedia.propTypes = propTypes;
+	ContainerMedia.defaultProps = defaultProps;
+
+	exports.default = ContainerMedia;
+
+/***/ },
+/* 224 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin

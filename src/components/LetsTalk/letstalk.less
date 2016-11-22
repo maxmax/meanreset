@@ -31,7 +31,7 @@
       background: rgba(0, 0, 0, 0.25);
     }
   }
-  .btn{
+  .btn, .btn.btn-default{
     font-size: 0.8em;
     border-radius: 0;
     background: transparent;
@@ -39,5 +39,11 @@
     color: white;
     padding: 1.6rem 3rem;
     margin-top: 10px;
+    opacity: 1;
+    &:hover, &:focus{
+      background: transparent;
+      border: 2px solid white;
+      opacity: 0.9;
+    }
   }
 }

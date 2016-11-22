@@ -1,4 +1,5 @@
 import React, { PropTypes }  from 'react';
+import ContainerMedia from '../../elements/ContainerMedia/ContainerMedia';
 
 import './letstalk.less';
 
@@ -41,15 +42,12 @@ class LetsTalk extends React.Component {
 
   _renderImgBg () {
     if (!this.props.data.img) { return null; }
-    var style = {
-      backgroundImage: 'url(' + this.props.data.img + ')',
-      backgroundRepeat: 'no-repeat',
-      backgroundPosition: 'center center',
-      backgroundSize: 'cover',
-      backgroundAttachment: 'fixed'
-    };
     return (
-      <div className="container-img" style={style}></div>
+      <ContainerMedia
+        img={this.props.data.img}
+        opacity="0.5"
+        class="backdrop"
+      />
     );
   }
 

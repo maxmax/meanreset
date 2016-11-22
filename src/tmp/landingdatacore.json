@@ -1,15 +1,17 @@
 {
   "landingBase": {
-    "logo": "/media/logo-oval.svg",
+    "logo": "/img/fairyappslogo.svg",
     "title": "Hello and a very warm welcome!",
     "description": "We are a customer-service oriented team of developers committed to the highest quality of our work and we stand behind it.",
-    "down": "#AboutContainer"
+    "down": "#AboutContainer",
+    "img": "/media/devbg.jpg"
   },
   "aboutContainer": {
     "title": "About Us",
     "description": "We are a highly skilled and motivated team of developers and designers that will transform your ideas into working business solutions.",
     "text": "Our team provides a wide range of complex services in software development and specific IT solutions. Large scaled projects with high requirements to applied solutions-- flexible business oriented architecture.",
     "services": "We are involved into development of various projects for different professional fields, such as:",
+    "img": "/media/basegrey.jpg",
     "items": [
       {
         "id": 0,
@@ -44,7 +46,8 @@
   "talkContainer": {
     "title": "Lets Talk About Your Disease",
     "description": "WE ARE READY TO WORK WITH YOU",
-    "btn": "GET IN TOUCH"
+    "btn": "GET IN TOUCH",
+    "img": "/media/devbg.jpg"
   },
   "whatsnewContainer": {},
   "productsContainer": {},
@@ -53,6 +56,7 @@
     "title": "Testimonials",
     "description": "What our Customers are Saying",
     "btn": "Show more Testimonials",
+    "img": "/media/devbg.jpg",
     "items": [
       {
         "id": 0,
@@ -75,6 +79,7 @@
   "expertsContainer": {
     "title": "We Are Your Experts",
     "description": "We utilize only the latest technologies and have extensive experience in the following areas:",
+    "img": "/media/basegrey.jpg",
     "items": [
       {
         "text": "JavaScript, Node, Express, React, Redux, Webpack, Angular, MEAN, Ruby and Ruby on Rails, Python, PHP, BaaS, HBase, Babel, Mongodb, SQLite, MySQL, Big Data Apache Spark; Cassandra, HTML5, CSS3, HAML, jade, Sass, PostCSS, Stylus and Gulp, d3js and other UX/UI Design, Material Design, Animation and Motion, scrum, agile etc."

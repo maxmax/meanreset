@@ -1,4 +1,5 @@
 import React, { PropTypes }  from 'react';
+import ContainerMedia from '../../elements/ContainerMedia/ContainerMedia';
 
 import './aboutcontainer.less';
 
@@ -22,6 +23,18 @@ class AboutContainer extends React.Component {
     this.state = {
       active: null
     };
+  }
+
+  _renderImgBg () {
+    if (!this.props.data.img) { return null; }
+    return (
+      <ContainerMedia
+        img={this.props.data.img}
+        size="inherit"
+        repeat="repeat"
+        opacity="1"  
+      />
+    );
   }
 
   _renderTitle () {
@@ -80,7 +93,8 @@ class AboutContainer extends React.Component {
   render() {
 
     return (
-      <div className='about-container text-center'>
+      <div className='about-container text-center' id="AboutContainer">
+        {this._renderImgBg()}
         <div className="container">
           {this._renderTitle()}
           {this._renderDesc()}

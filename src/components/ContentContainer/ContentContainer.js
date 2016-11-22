@@ -1,5 +1,5 @@
 import React, { PropTypes }  from 'react';
-
+import ContainerMedia from '../../elements/ContainerMedia/ContainerMedia';
 import './contentcontainer.less';
 
 const propTypes = {
@@ -17,6 +17,18 @@ class ContentContainer extends React.Component {
     this.state = {
       active: null
     };
+  }
+
+  _renderImgBg () {
+    if (!this.props.data.img) { return null; }
+    return (
+      <ContainerMedia
+        img={this.props.data.img}
+        size="inherit"
+        repeat="repeat"
+        opacity="1"
+      />
+    );
   }
 
   _renderTitle () {
@@ -64,6 +76,7 @@ class ContentContainer extends React.Component {
     if (!this.props.data.title) { return null; }
     return (
       <div className='content-container text-center'>
+        {this._renderImgBg()}
         <div className="container">
           {this._renderTitle()}
           {this._renderDesc()}
