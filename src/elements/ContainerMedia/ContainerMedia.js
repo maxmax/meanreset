@@ -20,6 +20,7 @@ class ContainerMedia extends React.Component {
       size: this.props.size || 'cover',
       repeat: this.props.repeat || 'no-repeat',
       position: this.props.position || 'center center',
+      bgattachment: this.props.bgattachment || 'fixed',
       opacity: this.props.opacity || '0.5',
       class: this.props.class || 'auto'
     };
@@ -43,6 +44,7 @@ class ContainerMedia extends React.Component {
       backgroundRepeat: this.state.repeat,
       backgroundPosition: this.state.position,
       backgroundSize: this.state.size,
+      backgroundAttachment: this.state.bgattachment,
       opacity: this.state.opacity
     };
     return (

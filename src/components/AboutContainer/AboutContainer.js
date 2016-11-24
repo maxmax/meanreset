@@ -1,7 +1,7 @@
 import React, { PropTypes }  from 'react';
 import ContainerMedia from '../../elements/ContainerMedia/ContainerMedia';
 
-import './aboutcontainer.less';
+import './AboutContainer.less';
 
 const propTypes = {
   data: PropTypes.object
@@ -21,7 +21,7 @@ class AboutContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      active: null
+      active: null,
     };
   }
 
@@ -32,7 +32,7 @@ class AboutContainer extends React.Component {
         img={this.props.data.img}
         size="inherit"
         repeat="repeat"
-        opacity="1"  
+        opacity="1"
       />
     );
   }

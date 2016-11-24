@@ -2,8 +2,8 @@ import React, { Component, PropTypes }  from 'react';
 import ContainerMedia from '../../elements/ContainerMedia/ContainerMedia';
 import Countdown from 'react-count-down';
 
-
 import './landingbase.less';
+//import styles from './landingbase.less';
 
 const propTypes = {
   data: PropTypes.object
@@ -32,15 +32,23 @@ class LandingBase extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      active: null
+      active: null,
+      class: this.props.data.class || 'text-center',
+      logowidth: this.props.data.logowidth || '240px',
+      logospace: this.props.data.logospace || '0 auto',
+      containerMediaOpacity: this.props.data.containerMediaOpacity || '1',
+      containerMediaClass: this.props.data.containerMediaClass || 'backdrop'
     };
   }
 
   _renderLogo () {
     if (!this.props.data.logo) { return null; }
+    var style = {
+      margin: this.state.logospace
+    };
     return (
-      <a href="/" className="lang-logo">
-        <img src={this.props.data.logo} />
+      <a href="/" className="lang-logo" style={style}>
+        <img src={this.props.data.logo} width={this.state.logowidth} />
       </a>
     );
   }
@@ -69,10 +77,10 @@ class LandingBase extends React.Component {
   _renderImgBg () {
     if (!this.props.data.img) { return null; }
     return (
-      <ContainerMedia 
+      <ContainerMedia
         img={this.props.data.img}
-        opacity="0.6"
-        class="backdrop"
+        opacity={this.state.containerMediaOpacity}
+        class={this.state.containerMediaClass}
       />
     );
   }
@@ -99,7 +107,7 @@ class LandingBase extends React.Component {
     return (
       <form className="invite">
         <div className="form-group">
-          <label>receive an invitation email</label>
+          <label>{this.props.data.invite}</label>
           <input type="email" className="form-control" placeholder="Email address" />
         </div>
       </form>
@@ -107,9 +115,8 @@ class LandingBase extends React.Component {
   }
 
   render() {
-
     return (
-      <div className='landing-base text-center'>
+      <div className={'landing-base ' + this.state.class}>
         {this._renderVideoBg()}
         {this._renderImgBg()}
         <div className="container">

@@ -18,10 +18,10 @@ import Profs from './components/ProfBase/Profs';
 
 //testdata
 //import baseconfig from './tmp/config.json';
-//
-import basedata from './tmp/landingdata.json';
+//import basedata from './tmp/landingdata.json';
 //import basedata from './tmp/landingdatacore.json';
 //import basedata from './tmp/greencore.json';
+import basedata from './tmp/allui.json';
 
 import './Base/global.less';
 
@@ -30,6 +30,14 @@ export default class BaseWrapper extends React.Component {
     return (
       <section>
         <LandingBase data={this.props.data.landingBase} />
+        <AboutContainer data={this.props.data.aboutContainer} />
+        <LetsTalk data={this.props.data.talkContainer} address={this.props.data.talkContainer.address} />
+        <ContentContainer data={this.props.data.expertsContainer} />
+        <Thumbs data={this.props.data.whatsnewContainer} />
+        <Thumbs data={this.props.data.partnersContainer} />
+        <Testimonials data={this.props.data.testimonials} />
+
+        <Thumbs />
 
         <div className="container">
           <br />
@@ -47,14 +55,8 @@ export default class BaseWrapper extends React.Component {
           <br />
         </div>
 
-        <AboutContainer data={this.props.data.aboutContainer} />
-        <LetsTalk data={this.props.data.talkContainer} />
-        <ContentContainer data={this.props.data.expertsContainer} />
-        <Thumbs data={this.props.data.whatsnewContainer} />
-        <Thumbs data={this.props.data.partnersContainer} />
-        <Testimonials data={this.props.data.testimonials} />
-        <Thumbs />
         <FooterContainer data={this.props.data.footerContainer} />
+
       </section>
     );
   }

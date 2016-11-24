@@ -8,12 +8,20 @@ var COMMENTS_FILE = path.join(__dirname, '../data/comments.json');
 var TERMS_FILE = path.join(__dirname, '../data/terms.json');
 
 var editordate = { title: 'Editor' };
-var tagline = "This edit page";
+var tagline = "This edit page in dev and tests";
+var title = "This Base";
+var style = "/stylesheets/fairyapps.css";
+var icon = "/img/favicon.ico";
+var bundle = "/assets/apps.bundle.js";
 
 router.get('/', function(req, res) {
   res.render('editor/index', {
     editordate,
-    tagline: tagline
+    tagline: tagline,
+    title: title,
+    style: style,
+    icon: icon,
+    bundle: bundle
   });
 });
 

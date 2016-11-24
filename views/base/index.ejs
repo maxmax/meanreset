@@ -1,36 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title><%= title %></title>
   <% include ../partials/header.ejs %>
-  <!--<link rel="stylesheet" href="https://dev.ngoartest.buddyplatform.com/UI/dist/css/main.min.css">-->
   <script src="https://unpkg.com/jquery@3.1.0/dist/jquery.min.js"></script>
 </head>
 
 <body>
 
-  <% include ../partials/nav.ejs %>
-
   <div class="container">
     <div class="alert alert-info" role="alert"><%= tagline %></div>
     <br />
     <ul>
-      <% drinks.forEach(function(drink) { %>
-        <li><%= drink.name %> - <%= drink.drunkness %></li>
+      <% appslist.forEach(function(app) { %>
+        <li><a href="<%= app.href %>"><%= app.name %></a></li>
       <% }); %>
     </ul>
+    <br />
+    <br />
   </div>
 
-  <div class="container">
-    <br />
-    <br />
-    <div id="app"></div>
-    <br />
-    <br />
-    <br />
-    <br />
-  </div>
-  <script src="assets/apps.bundle.js"></script>
+  <div id="app"></div>
+  <script src="<%= bundle %>"></script>
 
 
 </body>

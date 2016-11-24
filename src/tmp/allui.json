@@ -1,13 +1,13 @@
 {
   "landingBase": {
     "logo": "/media/logo-oval.svg",
-    "title": "GSFTRADE ui",
+    "title": "Base ui",
     "description": "Hello and a very warm welcome!",
     "img": "/media/green.jpg",
     "down": "",
     "invite": "receive an invitation email",
     "countdown": {
-      "endDate": "01/15/2017 10:12 AM",
+      "endDate": "11/01/2016 10:12 AM",
       "prefix": "App started!"
     },
     "logowidth": "120px",
@@ -16,6 +16,41 @@
     "containerMediaOpacity": "1",
     "containerMediaClass": "backdrop"
   },
+  "CurentProfile": {
+    "name": "Bhaumik Patel",
+    "profileImage": "https://goo.gl/TDT8jr",
+    "position": "Trade Consultant in GlobalSYS Inc",
+    "address": "San Francisco, USA",
+    "email": "email@example.com",
+    "tel": "48 333 456 789",
+    "site": "www.site.com",
+    "about": "Lorem ipsum dolor sit amet, quis nostrud exercitation ullamco",
+    "purpose": "Lorem ipsum dolor sit amet.",
+    "discount": "0.5%"
+  },
+  "users": [
+    {
+      "id": 0,
+      "name": "Bhaumik Patel",
+      "profileImage": "https://goo.gl/TDT8jr",
+      "position": "Trade Consultant"
+    }, {
+      "id": 1,
+      "name": "John Doe",
+      "profileImage": "https://goo.gl/TDT8jr",
+      "position": "Trade Consultant"
+    }, {
+      "id": 2,
+      "name": "John Doe",
+      "profileImage": "https://goo.gl/TDT8jr",
+      "position": "Trade Consultant"
+    }, {
+      "id": 3,
+      "name": "John Doe",
+      "profileImage": "https://goo.gl/TDT8jr",
+      "position": "Trade Consultant"
+    }
+  ],
   "aboutContainer": {
     "title": "About Us",
     "description": "We are a highly skilled and motivated team of developers and designers that will transform your ideas into working business solutions.",
@@ -56,10 +91,50 @@
   "talkContainer": {
     "title": "Lets Talk About Your Disease",
     "description": "WE ARE READY TO WORK WITH YOU",
-    "img": "/media/green.jpg",
-    "btn": "GET IN TOUCH"
+    "btn": "GET IN TOUCH",
+    "img": "/media/devbg.jpg",
+    "containerMediaOpacity": "0.6",
+    "containerMediaClass": "backdrop",
+    "address": {
+      "title": "Ui Inc.",
+      "int": "1355 Market Street, Suite 900 <br /> San Francisco, CA 94103",
+      "phone": "(123) 456-7890",
+      "items": [
+        {
+          "name": "Office",
+          "mail": "first.last@example.com",
+          "tel": "(063) 456-7890"
+        }, {
+          "name": "Support",
+          "mail": "support.last@example.com",
+          "tel": "(063) 456-7890"
+        }
+      ]
+    }
   },
-  "whatsnewContainer": {},
+  "whatsnewContainer": {
+    "catTitle": "What's New",
+    "role": "",
+    "items": [
+      {
+        "id": 0,
+        "img": "/media/tumblr_static.jpg",
+        "text": "Lorem Ipsum is simply dummy text of the printing."
+      }, {
+        "id": 1,
+        "img": "/media/tumblr_o06war.jpg",
+        "text": "Lorem Ipsum is simply dummy text of the printing."
+      }, {
+        "id": 2,
+        "img": "/media/maxresdefault.jpg",
+        "text": "Lorem Ipsum is simply dummy text of the printing."
+      }, {
+        "id": 3,
+        "img": "/media/HiggsBoson.jpg",
+        "text": "Lorem Ipsum is simply dummy text of the printing."
+      }
+    ]
+  },
   "productsContainer": {
     "catTitle": "Our products",
     "role": "",
@@ -126,10 +201,28 @@
       }
     ]
   },
+  "expertsContainer": {
+    "title": "We Are Your Experts",
+    "description": "We utilize the latest technologies and have extensive experience in the following:",
+    "img": "/media/basegrey.jpg",
+    "items": [
+      {
+        "text": "JavaScript, Node.js, Express.js, React, Redux, Webpack, Angular.js, Ruby, Ruby on Rails"
+      }, {
+        "text": "Python, PHP, BaaS, HBase, Babel"
+      }, {
+        "text": "MongoDB, SQLite, MySQL, HBase, Apache Spark, Cassandra"
+      }, {
+        "text": "HTML5, CSS3, HAML, Jade, SaSS, PostCSS, Stylus, Gulp.js and D3.js"
+      }, {
+        "text": "Material design, animation and motion"
+      }
+    ]
+  },
   "testimonials": {
     "title": "Testimonials",
     "description": "What our Customers are Saying",
-    "img": "/media/green.jpg",
+    "img": "/media/billionphotos.jpg",
     "btn": "Show more Testimonials",
     "items": [
       {
@@ -150,9 +243,8 @@
       }
     ]
   },
-  "expertsContainer": {},
   "footerContainer": {
     "role": "centered",
-    "text": "© 2016 GSFTRADE ui"
+    "text": "© 2016 soilcore ui"
   }
 }

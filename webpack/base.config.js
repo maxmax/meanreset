@@ -8,7 +8,8 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
   entry: {
       apps: './src/apps.js',
-      fairyapps: './src/fairyapps.js' 
+      buddy: './src/buddy.js',
+      fairyapps: './src/fairyapps.js'
   },
   output: {
     path: __dirname,
@@ -46,6 +47,6 @@ module.exports = {
     ]
   },
   plugins: [
-    new ExtractTextPlugin("../public/stylesheets/style.css")
+    new ExtractTextPlugin("../public/stylesheets/[name].css")
   ]
 };

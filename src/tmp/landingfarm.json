@@ -1,13 +1,15 @@
 {
   "landingBase": {
-    "logo": "/img/fairyappslogo.svg",
+    "logo": "/media/landingfarm.svg",
     "title": "Hello and a very warm welcome!",
     "description": "We are a customer focused team of developers committed to the highest quality of work and we stand behind our work.",
     "down": "#AboutContainer",
     "img": "/media/devbg.jpg",
-    "logowidth": "240px",
-    "logospace": "65px auto 45px",
-    "class": "text-center"
+    "logowidth": "400px",
+    "logospace": "65px auto 25px",
+    "class": "text-center",
+    "containerMediaOpacity": "0.6",
+    "containerMediaClass": "backdrop"
   },
   "aboutContainer": {
     "title": "About Us",
@@ -50,7 +52,25 @@
     "title": "Lets Talk About Your Disease",
     "description": "WE ARE READY TO WORK WITH YOU",
     "btn": "GET IN TOUCH",
-    "img": "/media/devbg.jpg"
+    "img": "/media/devbg.jpg",
+    "containerMediaOpacity": "0.6",
+    "containerMediaClass": "backdrop",
+    "address": {
+      "title": "Landingfarm",
+      "int": "1355 Market Street, Suite 900 <br /> San Francisco, CA 94103",
+      "phone": "(123) 456-7890",
+      "items": [
+        {
+          "name": "Office",
+          "mail": "first.last@example.com",
+          "tel": "(063) 456-7890"
+        }, {
+          "name": "Support",
+          "mail": "support.last@example.com",
+          "tel": "(063) 456-7890"
+        }
+      ]
+    }
   },
   "whatsnewContainer": {},
   "productsContainer": {},
@@ -77,7 +97,9 @@
         "text": "Darren was fantastic and really helpful during my visit, and as usual, I was a pain with arrangements out if my control but he accommodated them perfectly and work around it, which was extremely grateful",
         "author": "Janie Doe"
       }
-    ]
+    ],
+    "containerMediaOpacity": "0.6",
+    "containerMediaClass": "backdrop"
   },
   "expertsContainer": {
     "title": "We Are Your Experts",
@@ -98,7 +120,7 @@
     ]
   },
   "footerContainer": {
-    "role": "centered",
-    "text": "© 2016 fairyapps ui"
+    "text": "© 2016 LandingFarm Inc",
+    "class": "text-center"
   }
 }

@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title><%= title %></title>
   <% include ../partials/header.ejs %>
-  <script src="https://unpkg.com/jquery@3.1.0/dist/jquery.min.js"></script>
 </head>
 
 <body class="app-root">
 
   <div id="app"></div>
-  <script src="/assets/buddy.bundle.js"></script>
+  <script src="<%= bundle %>"></script>
 
 </body>
 </html>

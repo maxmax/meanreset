@@ -62,39 +62,35 @@
 
 	var _LandingBase2 = _interopRequireDefault(_LandingBase);
 
-	var _AboutContainer = __webpack_require__(186);
+	var _AboutContainer = __webpack_require__(190);
 
 	var _AboutContainer2 = _interopRequireDefault(_AboutContainer);
 
-	var _LetsTalk = __webpack_require__(189);
+	var _LetsTalk = __webpack_require__(193);
 
 	var _LetsTalk2 = _interopRequireDefault(_LetsTalk);
 
-	var _Thumbs = __webpack_require__(192);
+	var _Thumbs = __webpack_require__(197);
 
 	var _Thumbs2 = _interopRequireDefault(_Thumbs);
 
-	var _Testimonials = __webpack_require__(199);
+	var _Testimonials = __webpack_require__(204);
 
 	var _Testimonials2 = _interopRequireDefault(_Testimonials);
 
-	var _ContentContainer = __webpack_require__(204);
+	var _ContentContainer = __webpack_require__(205);
 
 	var _ContentContainer2 = _interopRequireDefault(_ContentContainer);
 
-	var _FooterContainer = __webpack_require__(207);
+	var _FooterContainer = __webpack_require__(208);
 
 	var _FooterContainer2 = _interopRequireDefault(_FooterContainer);
 
-	var _config = __webpack_require__(221);
+	var _landingfarm = __webpack_require__(291);
 
-	var _config2 = _interopRequireDefault(_config);
+	var _landingfarm2 = _interopRequireDefault(_landingfarm);
 
-	var _landingdatacore = __webpack_require__(222);
-
-	var _landingdatacore2 = _interopRequireDefault(_landingdatacore);
-
-	__webpack_require__(218);
+	__webpack_require__(219);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -103,18 +99,10 @@
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	//
-	//import Jumbotron from './components/Jumbotron/Jumbotron';
-	//import Cards from './components/Cards/Cards';
-	//import AsideTabs from './components/AsideTabs/AsideTabs';
-	//import StickyFooter from './components/StickyFooter/StickyFooter';
 
 	//testdata
-
-	//import basedata from './tmp/landingdata.json';
-	//
-
 	//import basedata from './tmp/greencore.json';
+
 
 	var BaseWrapper = function (_React$Component) {
 	  _inherits(BaseWrapper, _React$Component);
@@ -133,7 +121,7 @@
 	        null,
 	        _react2.default.createElement(_LandingBase2.default, { data: this.props.data.landingBase }),
 	        _react2.default.createElement(_AboutContainer2.default, { data: this.props.data.aboutContainer }),
-	        _react2.default.createElement(_LetsTalk2.default, { data: this.props.data.talkContainer }),
+	        _react2.default.createElement(_LetsTalk2.default, { data: this.props.data.talkContainer, address: this.props.data.talkContainer.address }),
 	        _react2.default.createElement(_ContentContainer2.default, { data: this.props.data.expertsContainer }),
 	        _react2.default.createElement(_Thumbs2.default, { data: this.props.data.whatsnewContainer }),
 	        _react2.default.createElement(_Thumbs2.default, { data: this.props.data.partnersContainer }),
@@ -147,11 +135,10 @@
 	  return BaseWrapper;
 	}(_react2.default.Component);
 
-	//<BaseWrapper data={landingpagedata} />
-
-
 	exports.default = BaseWrapper;
-	(0, _reactDom.render)(_react2.default.createElement(BaseWrapper, { data: _landingdatacore2.default }), document.getElementById('app'));
+
+
+	(0, _reactDom.render)(_react2.default.createElement(BaseWrapper, { data: _landingfarm2.default }), document.getElementById('app'));
 
 /***/ },
 /* 1 */,
@@ -21542,15 +21529,15 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _ContainerMedia = __webpack_require__(223);
+	var _ContainerMedia = __webpack_require__(179);
 
 	var _ContainerMedia2 = _interopRequireDefault(_ContainerMedia);
 
-	var _reactCountDown = __webpack_require__(179);
+	var _reactCountDown = __webpack_require__(184);
 
 	var _reactCountDown2 = _interopRequireDefault(_reactCountDown);
 
-	__webpack_require__(181);
+	__webpack_require__(186);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -21559,6 +21546,8 @@
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	//import styles from './landingbase.less';
 
 	var propTypes = {
 	  data: _react.PropTypes.object
@@ -21591,7 +21580,12 @@
 	    var _this = _possibleConstructorReturn(this, (LandingBase.__proto__ || Object.getPrototypeOf(LandingBase)).call(this, props));
 
 	    _this.state = {
-	      active: null
+	      active: null,
+	      class: _this.props.data.class || 'text-center',
+	      logowidth: _this.props.data.logowidth || '240px',
+	      logospace: _this.props.data.logospace || '0 auto',
+	      containerMediaOpacity: _this.props.data.containerMediaOpacity || '1',
+	      containerMediaClass: _this.props.data.containerMediaClass || 'backdrop'
 	    };
 	    return _this;
 	  }
@@ -21602,10 +21596,13 @@
 	      if (!this.props.data.logo) {
 	        return null;
 	      }
+	      var style = {
+	        margin: this.state.logospace
+	      };
 	      return _react2.default.createElement(
 	        'a',
-	        { href: '/', className: 'lang-logo' },
-	        _react2.default.createElement('img', { src: this.props.data.logo })
+	        { href: '/', className: 'lang-logo', style: style },
+	        _react2.default.createElement('img', { src: this.props.data.logo, width: this.state.logowidth })
 	      );
 	    }
 	  }, {
@@ -21648,8 +21645,8 @@
 	      }
 	      return _react2.default.createElement(_ContainerMedia2.default, {
 	        img: this.props.data.img,
-	        opacity: '0.6',
-	        'class': 'backdrop'
+	        opacity: this.state.containerMediaOpacity,
+	        'class': this.state.containerMediaClass
 	      });
 	    }
 	  }, {
@@ -21688,7 +21685,7 @@
 	          _react2.default.createElement(
 	            'label',
 	            null,
-	            'receive an invitation email'
+	            this.props.data.invite
 	          ),
 	          _react2.default.createElement('input', { type: 'email', className: 'form-control', placeholder: 'Email address' })
 	        )
@@ -21697,10 +21694,9 @@
 	  }, {
 	    key: 'render',
 	    value: function render() {
-
 	      return _react2.default.createElement(
 	        'div',
-	        { className: 'landing-base text-center' },
+	        { className: 'landing-base ' + this.state.class },
 	        this._renderVideoBg(),
 	        this._renderImgBg(),
 	        _react2.default.createElement(
@@ -21737,7 +21733,123 @@
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _DateBetween = __webpack_require__(180);
+	var _react = __webpack_require__(7);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	__webpack_require__(180);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var propTypes = {
+	  video: _react.PropTypes.string,
+	  img: _react.PropTypes.string
+	};
+
+	var defaultProps = {
+	  video: "",
+	  img: ""
+	};
+
+	var ContainerMedia = function (_React$Component) {
+	  _inherits(ContainerMedia, _React$Component);
+
+	  function ContainerMedia(props) {
+	    _classCallCheck(this, ContainerMedia);
+
+	    var _this = _possibleConstructorReturn(this, (ContainerMedia.__proto__ || Object.getPrototypeOf(ContainerMedia)).call(this, props));
+
+	    _this.state = {
+	      size: _this.props.size || 'cover',
+	      repeat: _this.props.repeat || 'no-repeat',
+	      position: _this.props.position || 'center center',
+	      bgattachment: _this.props.bgattachment || 'fixed',
+	      opacity: _this.props.opacity || '0.5',
+	      class: _this.props.class || 'auto'
+	    };
+	    return _this;
+	  }
+
+	  _createClass(ContainerMedia, [{
+	    key: '_renderVideo',
+	    value: function _renderVideo() {
+	      if (!this.props.video) {
+	        return null;
+	      }
+	      return _react2.default.createElement(
+	        'div',
+	        { className: "container-video " + this.state.class },
+	        _react2.default.createElement(
+	          'video',
+	          { className: 'video', autoPlay: 'autoplay', muted: true, loop: true },
+	          _react2.default.createElement('source', { src: this.props.video, type: 'video/mp4' })
+	        )
+	      );
+	    }
+	  }, {
+	    key: '_renderImg',
+	    value: function _renderImg() {
+	      if (!this.props.img) {
+	        return null;
+	      }
+	      var style = {
+	        backgroundImage: 'url(' + this.props.img + ')',
+	        backgroundRepeat: this.state.repeat,
+	        backgroundPosition: this.state.position,
+	        backgroundSize: this.state.size,
+	        backgroundAttachment: this.state.bgattachment,
+	        opacity: this.state.opacity
+	      };
+	      return _react2.default.createElement('div', { className: "container-img " + this.state.class, style: style });
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        this._renderVideo(),
+	        this._renderImg()
+	      );
+	    }
+	  }]);
+
+	  return ContainerMedia;
+	}(_react2.default.Component);
+
+	ContainerMedia.propTypes = propTypes;
+	ContainerMedia.defaultProps = defaultProps;
+
+	exports.default = ContainerMedia;
+
+/***/ },
+/* 180 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 181 */,
+/* 182 */,
+/* 183 */,
+/* 184 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _DateBetween = __webpack_require__(185);
 
 	var _DateBetween2 = _interopRequireDefault(_DateBetween);
 
@@ -21817,7 +21929,7 @@
 	exports.default = Countdown;
 
 /***/ },
-/* 180 */
+/* 185 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -21878,17 +21990,16 @@
 	module.exports = DateBetween;
 
 /***/ },
-/* 181 */
+/* 186 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 182 */,
-/* 183 */,
-/* 184 */,
-/* 185 */,
-/* 186 */
+/* 187 */,
+/* 188 */,
+/* 189 */,
+/* 190 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21903,11 +22014,11 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _ContainerMedia = __webpack_require__(223);
+	var _ContainerMedia = __webpack_require__(179);
 
 	var _ContainerMedia2 = _interopRequireDefault(_ContainerMedia);
 
-	__webpack_require__(187);
+	__webpack_require__(191);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -22074,14 +22185,14 @@
 	exports.default = AboutContainer;
 
 /***/ },
-/* 187 */
+/* 191 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 188 */,
-/* 189 */
+/* 192 */,
+/* 193 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22096,11 +22207,11 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _ContainerMedia = __webpack_require__(223);
+	var _ContainerMedia = __webpack_require__(179);
 
 	var _ContainerMedia2 = _interopRequireDefault(_ContainerMedia);
 
-	__webpack_require__(190);
+	__webpack_require__(194);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -22111,14 +22222,16 @@
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 	var propTypes = {
-	  data: _react.PropTypes.object
+	  data: _react.PropTypes.object,
+	  address: _react.PropTypes.object
 	};
 
 	var defaultProps = {
 	  data: {
 	    title: 'Create Title!',
 	    description: 'Create Description'
-	  }
+	  },
+	  address: null
 	};
 
 	//Shema
@@ -22133,10 +22246,130 @@
 	  function LetsTalk(props) {
 	    _classCallCheck(this, LetsTalk);
 
-	    return _possibleConstructorReturn(this, (LetsTalk.__proto__ || Object.getPrototypeOf(LetsTalk)).call(this, props));
+	    var _this = _possibleConstructorReturn(this, (LetsTalk.__proto__ || Object.getPrototypeOf(LetsTalk)).call(this, props));
+
+	    _this.state = {
+	      active: false,
+	      class: _this.props.data.class || 'text-center',
+	      containerMediaOpacity: _this.props.data.containerMediaOpacity || '1',
+	      containerMediaClass: _this.props.data.containerMediaClass || 'backdrop'
+	    };
+	    _this._openMdal = _this._openMdal.bind(_this);
+	    return _this;
 	  }
 
 	  _createClass(LetsTalk, [{
+	    key: '_openMdal',
+	    value: function _openMdal() {
+	      this.setState({ active: !this.state.active });
+	    }
+	  }, {
+	    key: '_addressItems',
+	    value: function _addressItems() {
+	      //if (!this.props.data.items) { return null; }
+	      if (!this.props.address.items) {
+	        return null;
+	      }
+	      //const { users } = this.props.data;
+	      var intitems = this.props.address.items.map(function (item, index) {
+	        return _react2.default.createElement(
+	          'address',
+	          { key: index },
+	          _react2.default.createElement(
+	            'strong',
+	            null,
+	            item.name
+	          ),
+	          _react2.default.createElement('br', null),
+	          _react2.default.createElement(
+	            'a',
+	            { href: 'mailto:' + item.mail },
+	            item.mail
+	          ),
+	          _react2.default.createElement('br', null),
+	          item.tel
+	        );
+	      });
+	      return intitems ? _react2.default.createElement(
+	        'div',
+	        null,
+	        intitems
+	      ) : null;
+	    }
+	  }, {
+	    key: '_addressInt',
+	    value: function _addressInt() {
+	      if (!this.props.address) {
+	        return _react2.default.createElement(
+	          'section',
+	          { className: 'text-info' },
+	          'Empty'
+	        );
+	      }
+	      return _react2.default.createElement(
+	        'section',
+	        null,
+	        _react2.default.createElement(
+	          'address',
+	          null,
+	          _react2.default.createElement(
+	            'strong',
+	            null,
+	            this.props.address.title
+	          ),
+	          _react2.default.createElement('br', null),
+	          _react2.default.createElement('div', { dangerouslySetInnerHTML: { __html: this.props.address.int } }),
+	          _react2.default.createElement(
+	            'abbr',
+	            { title: 'Phone' },
+	            'P:'
+	          ),
+	          _react2.default.createElement(
+	            'span',
+	            null,
+	            this.props.address.phone
+	          )
+	        ),
+	        this._addressItems()
+	      );
+	    }
+	  }, {
+	    key: '_formBackdrop',
+	    value: function _formBackdrop() {
+	      if (!this.state.active) {
+	        return null;
+	      }
+	      return _react2.default.createElement('div', { className: 'modal-backdrop fade in' });
+	    }
+	  }, {
+	    key: '_formMdal',
+	    value: function _formMdal() {
+	      if (!this.state.active) {
+	        return null;
+	      }
+	      var style = {
+	        display: 'block'
+	      };
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'modal fade in', role: 'dialog', style: style },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'modal-dialog', role: 'document' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'modal-content' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'modal-body' },
+	              _react2.default.createElement('div', { className: 'close', onClick: this._openMdal.bind(this) }),
+	              this._addressInt()
+	            )
+	          )
+	        )
+	      );
+	    }
+	  }, {
 	    key: '_renderTitle',
 	    value: function _renderTitle() {
 	      if (!this.props.data.title) {
@@ -22168,8 +22401,8 @@
 	      }
 	      return _react2.default.createElement(_ContainerMedia2.default, {
 	        img: this.props.data.img,
-	        opacity: '0.5',
-	        'class': 'backdrop'
+	        opacity: this.state.containerMediaOpacity,
+	        'class': this.state.containerMediaClass
 	      });
 	    }
 	  }, {
@@ -22180,17 +22413,16 @@
 	      }
 	      return _react2.default.createElement(
 	        'a',
-	        { className: 'btn btn-default', href: '#', role: 'button' },
+	        { className: 'btn btn-default', role: 'button', onClick: this._openMdal.bind(this) },
 	        this.props.data.btn
 	      );
 	    }
 	  }, {
 	    key: 'render',
 	    value: function render() {
-
 	      return _react2.default.createElement(
 	        'div',
-	        { className: 'lets-talk text-center' },
+	        { className: 'lets-talk ' + this.state.class },
 	        this._renderImgBg(),
 	        _react2.default.createElement(
 	          'div',
@@ -22198,7 +22430,9 @@
 	          this._renderTitle(),
 	          this._renderDesc(),
 	          this._renderBtn()
-	        )
+	        ),
+	        this._formMdal(),
+	        this._formBackdrop()
 	      );
 	    }
 	  }]);
@@ -22212,14 +22446,15 @@
 	exports.default = LetsTalk;
 
 /***/ },
-/* 190 */
+/* 194 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 191 */,
-/* 192 */
+/* 195 */,
+/* 196 */,
+/* 197 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22234,15 +22469,15 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _BaseThumb = __webpack_require__(193);
+	var _BaseThumb = __webpack_require__(198);
 
 	var _BaseThumb2 = _interopRequireDefault(_BaseThumb);
 
-	var _OneThumb = __webpack_require__(194);
+	var _OneThumb = __webpack_require__(199);
 
 	var _OneThumb2 = _interopRequireDefault(_OneThumb);
 
-	__webpack_require__(195);
+	__webpack_require__(200);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -22351,7 +22586,7 @@
 	exports.default = Thumbs;
 
 /***/ },
-/* 193 */
+/* 198 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22460,7 +22695,7 @@
 	exports.default = BaseThumb;
 
 /***/ },
-/* 194 */
+/* 199 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22562,16 +22797,16 @@
 	exports.default = OneThumb;
 
 /***/ },
-/* 195 */
+/* 200 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 196 */,
-/* 197 */,
-/* 198 */,
-/* 199 */
+/* 201 */,
+/* 202 */,
+/* 203 */,
+/* 204 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22586,11 +22821,11 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _ContainerMedia = __webpack_require__(223);
+	var _ContainerMedia = __webpack_require__(179);
 
 	var _ContainerMedia2 = _interopRequireDefault(_ContainerMedia);
 
-	__webpack_require__(200);
+	__webpack_require__(292);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -22606,8 +22841,8 @@
 
 	var defaultProps = {
 	  data: {
-	    title: 'Create Title!',
-	    description: 'Create Description'
+	    title: 'Testimonials!',
+	    description: 'Testimonials Empty'
 	  }
 	};
 
@@ -22626,8 +22861,14 @@
 	    var _this = _possibleConstructorReturn(this, (Testimonials.__proto__ || Object.getPrototypeOf(Testimonials)).call(this, props));
 
 	    _this.state = {
-	      active: 2
+	      active: 0,
+	      data: _this.props.data.items[0] || null,
+	      class: _this.props.data.class || 'text-center',
+	      containerMediaOpacity: _this.props.data.containerMediaOpacity || '1',
+	      containerMediaClass: _this.props.data.containerMediaClass || 'backdrop',
+	      disabled: { pointerEvents: 'none' }
 	    };
+	    _this._newSlide = _this._newSlide.bind(_this);
 	    return _this;
 	  }
 
@@ -22663,8 +22904,8 @@
 	      }
 	      return _react2.default.createElement(_ContainerMedia2.default, {
 	        img: this.props.data.img,
-	        opacity: '0.5',
-	        'class': 'backdrop'
+	        opacity: this.state.containerMediaOpacity,
+	        'class': this.state.containerMediaClass
 	      });
 	    }
 	  }, {
@@ -22680,66 +22921,48 @@
 	      );
 	    }
 	  }, {
-	    key: '_renderData',
-	    value: function _renderData() {
-	      if (!this.props.data.items) {
-	        return null;
-	      }
-	      var items = this.props.data.items;
-
-	      var objlist = items.map(function (item, index) {
-	        return _react2.default.createElement(
-	          'div',
-	          { key: item.id, className: 'slide' },
-	          _react2.default.createElement(
-	            'blockquote',
-	            null,
-	            _react2.default.createElement(
-	              'p',
-	              null,
-	              item.text
-	            ),
-	            _react2.default.createElement(
-	              'small',
-	              null,
-	              item.author
-	            )
-	          )
-	        );
-	      });
-	      return objlist ? _react2.default.createElement(
-	        'div',
-	        { className: 'slides' },
-	        objlist
-	      ) : null;
+	    key: '_newSlide',
+	    value: function _newSlide(event, index) {
+	      this.setState({ data: this.props.data.items[event] || this.props.data.items[0] });
 	    }
 	  }, {
 	    key: '_renderSlide',
 	    value: function _renderSlide() {
-	      if (!this.props.data.items) {
+
+	      if (!this.state.data) {
 	        return null;
 	      }
-	      var current = this.props.data.items[this.state.active];
+	      var current = this.state.data;
+
+	      var disabled = null;
+	      if (current.id === 0) {
+	        var disabled = this.state.disabled;
+	      }
+
 	      return _react2.default.createElement(
 	        'div',
 	        { className: 'slides' },
-	        _react2.default.createElement('div', { className: 'slide-prev' }),
-	        _react2.default.createElement('div', { className: 'slide-next' }),
+	        _react2.default.createElement('div', { className: 'slide-prev', onClick: this._newSlide.bind(this, current.id - 1), style: disabled }),
+	        _react2.default.createElement('div', { className: 'slide-next', onClick: this._newSlide.bind(this, current.id + 1) }),
 	        _react2.default.createElement(
 	          'div',
 	          { className: 'slide' },
 	          _react2.default.createElement(
-	            'blockquote',
-	            null,
+	            'div',
+	            { className: 'wrap' },
 	            _react2.default.createElement(
-	              'p',
+	              'blockquote',
 	              null,
-	              current.text
-	            ),
-	            _react2.default.createElement(
-	              'small',
-	              null,
-	              current.author
+	              _react2.default.createElement(
+	                'p',
+	                null,
+	                current.text
+	              ),
+	              _react2.default.createElement(
+	                'small',
+	                null,
+	                current.author
+	              )
 	            )
 	          )
 	        )
@@ -22748,11 +22971,10 @@
 	  }, {
 	    key: 'render',
 	    value: function render() {
-	      console.log(this.props.data.items[2]);
-	      console.log(this.state.active);
+
 	      return _react2.default.createElement(
 	        'div',
-	        { className: 'testimonials text-center' },
+	        { className: 'testimonials ' + this.state.class },
 	        this._renderImgBg(),
 	        _react2.default.createElement(
 	          'div',
@@ -22774,16 +22996,7 @@
 	exports.default = Testimonials;
 
 /***/ },
-/* 200 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 201 */,
-/* 202 */,
-/* 203 */,
-/* 204 */
+/* 205 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22798,11 +23011,11 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _ContainerMedia = __webpack_require__(223);
+	var _ContainerMedia = __webpack_require__(179);
 
 	var _ContainerMedia2 = _interopRequireDefault(_ContainerMedia);
 
-	__webpack_require__(205);
+	__webpack_require__(206);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -22957,14 +23170,14 @@
 	exports.default = ContentContainer;
 
 /***/ },
-/* 205 */
+/* 206 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 206 */,
-/* 207 */
+/* 207 */,
+/* 208 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22979,7 +23192,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	__webpack_require__(208);
+	__webpack_require__(209);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -23003,7 +23216,12 @@
 	  function FooterContainer(props) {
 	    _classCallCheck(this, FooterContainer);
 
-	    return _possibleConstructorReturn(this, (FooterContainer.__proto__ || Object.getPrototypeOf(FooterContainer)).call(this, props));
+	    var _this = _possibleConstructorReturn(this, (FooterContainer.__proto__ || Object.getPrototypeOf(FooterContainer)).call(this, props));
+
+	    _this.state = {
+	      class: _this.props.data.class || 'text-center'
+	    };
+	    return _this;
 	  }
 
 	  _createClass(FooterContainer, [{
@@ -23014,7 +23232,7 @@
 	      }
 	      return _react2.default.createElement(
 	        'div',
-	        { className: 'footer-container text-center' },
+	        { className: 'footer ' + this.state.class },
 	        _react2.default.createElement(
 	          'p',
 	          null,
@@ -23025,6 +23243,7 @@
 	  }, {
 	    key: 'render',
 	    value: function render() {
+
 	      return this._renderWrapper();
 	    }
 	  }]);
@@ -23038,13 +23257,12 @@
 	exports.default = FooterContainer;
 
 /***/ },
-/* 208 */
+/* 209 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 209 */,
 /* 210 */,
 /* 211 */,
 /* 212 */,
@@ -23053,37 +23271,99 @@
 /* 215 */,
 /* 216 */,
 /* 217 */,
-/* 218 */
+/* 218 */,
+/* 219 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 219 */,
 /* 220 */,
-/* 221 */
-/***/ function(module, exports) {
-
-	module.exports = [
-		{
-			"_id": "582a5e42b8396afcae7a0864",
-			"index": 0,
-			"guid": "26a59453-d5e0-495d-9297-ee1abd96703c",
-			"isActive": false
-		}
-	];
-
-/***/ },
-/* 222 */
+/* 221 */,
+/* 222 */,
+/* 223 */,
+/* 224 */,
+/* 225 */,
+/* 226 */,
+/* 227 */,
+/* 228 */,
+/* 229 */,
+/* 230 */,
+/* 231 */,
+/* 232 */,
+/* 233 */,
+/* 234 */,
+/* 235 */,
+/* 236 */,
+/* 237 */,
+/* 238 */,
+/* 239 */,
+/* 240 */,
+/* 241 */,
+/* 242 */,
+/* 243 */,
+/* 244 */,
+/* 245 */,
+/* 246 */,
+/* 247 */,
+/* 248 */,
+/* 249 */,
+/* 250 */,
+/* 251 */,
+/* 252 */,
+/* 253 */,
+/* 254 */,
+/* 255 */,
+/* 256 */,
+/* 257 */,
+/* 258 */,
+/* 259 */,
+/* 260 */,
+/* 261 */,
+/* 262 */,
+/* 263 */,
+/* 264 */,
+/* 265 */,
+/* 266 */,
+/* 267 */,
+/* 268 */,
+/* 269 */,
+/* 270 */,
+/* 271 */,
+/* 272 */,
+/* 273 */,
+/* 274 */,
+/* 275 */,
+/* 276 */,
+/* 277 */,
+/* 278 */,
+/* 279 */,
+/* 280 */,
+/* 281 */,
+/* 282 */,
+/* 283 */,
+/* 284 */,
+/* 285 */,
+/* 286 */,
+/* 287 */,
+/* 288 */,
+/* 289 */,
+/* 290 */,
+/* 291 */
 /***/ function(module, exports) {
 
 	module.exports = {
 		"landingBase": {
-			"logo": "/img/fairyappslogo.svg",
+			"logo": "/media/landingfarm.svg",
 			"title": "Hello and a very warm welcome!",
 			"description": "We are a customer focused team of developers committed to the highest quality of work and we stand behind our work.",
 			"down": "#AboutContainer",
-			"img": "/media/devbg.jpg"
+			"img": "/media/devbg.jpg",
+			"logowidth": "400px",
+			"logospace": "65px auto 25px",
+			"class": "text-center",
+			"containerMediaOpacity": "0.6",
+			"containerMediaClass": "backdrop"
 		},
 		"aboutContainer": {
 			"title": "About Us",
@@ -23134,7 +23414,26 @@
 			"title": "Lets Talk About Your Disease",
 			"description": "WE ARE READY TO WORK WITH YOU",
 			"btn": "GET IN TOUCH",
-			"img": "/media/devbg.jpg"
+			"img": "/media/devbg.jpg",
+			"containerMediaOpacity": "0.6",
+			"containerMediaClass": "backdrop",
+			"address": {
+				"title": "Landingfarm",
+				"int": "1355 Market Street, Suite 900 <br /> San Francisco, CA 94103",
+				"phone": "(123) 456-7890",
+				"items": [
+					{
+						"name": "Office",
+						"mail": "first.last@example.com",
+						"tel": "(063) 456-7890"
+					},
+					{
+						"name": "Support",
+						"mail": "support.last@example.com",
+						"tel": "(063) 456-7890"
+					}
+				]
+			}
 		},
 		"whatsnewContainer": {},
 		"productsContainer": {},
@@ -23163,7 +23462,9 @@
 					"text": "Darren was fantastic and really helpful during my visit, and as usual, I was a pain with arrangements out if my control but he accommodated them perfectly and work around it, which was extremely grateful",
 					"author": "Janie Doe"
 				}
-			]
+			],
+			"containerMediaOpacity": "0.6",
+			"containerMediaClass": "backdrop"
 		},
 		"expertsContainer": {
 			"title": "We Are Your Experts",
@@ -23188,118 +23489,13 @@
 			]
 		},
 		"footerContainer": {
-			"role": "centered",
-			"text": "© 2016 fairyapps ui"
+			"text": "© 2016 LandingFarm Inc",
+			"class": "text-center"
 		}
 	};
 
 /***/ },
-/* 223 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(7);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	__webpack_require__(224);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var propTypes = {
-	  video: _react.PropTypes.string,
-	  img: _react.PropTypes.string
-	};
-
-	var defaultProps = {
-	  video: "",
-	  img: ""
-	};
-
-	var ContainerMedia = function (_React$Component) {
-	  _inherits(ContainerMedia, _React$Component);
-
-	  function ContainerMedia(props) {
-	    _classCallCheck(this, ContainerMedia);
-
-	    var _this = _possibleConstructorReturn(this, (ContainerMedia.__proto__ || Object.getPrototypeOf(ContainerMedia)).call(this, props));
-
-	    _this.state = {
-	      size: _this.props.size || 'cover',
-	      repeat: _this.props.repeat || 'no-repeat',
-	      position: _this.props.position || 'center center',
-	      opacity: _this.props.opacity || '0.5',
-	      class: _this.props.class || 'auto'
-	    };
-	    return _this;
-	  }
-
-	  _createClass(ContainerMedia, [{
-	    key: '_renderVideo',
-	    value: function _renderVideo() {
-	      if (!this.props.video) {
-	        return null;
-	      }
-	      return _react2.default.createElement(
-	        'div',
-	        { className: "container-video " + this.state.class },
-	        _react2.default.createElement(
-	          'video',
-	          { className: 'video', autoPlay: 'autoplay', muted: true, loop: true },
-	          _react2.default.createElement('source', { src: this.props.video, type: 'video/mp4' })
-	        )
-	      );
-	    }
-	  }, {
-	    key: '_renderImg',
-	    value: function _renderImg() {
-	      if (!this.props.img) {
-	        return null;
-	      }
-	      var style = {
-	        backgroundImage: 'url(' + this.props.img + ')',
-	        backgroundRepeat: this.state.repeat,
-	        backgroundPosition: this.state.position,
-	        backgroundSize: this.state.size,
-	        opacity: this.state.opacity
-	      };
-	      return _react2.default.createElement('div', { className: "container-img " + this.state.class, style: style });
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'div',
-	        null,
-	        this._renderVideo(),
-	        this._renderImg()
-	      );
-	    }
-	  }]);
-
-	  return ContainerMedia;
-	}(_react2.default.Component);
-
-	ContainerMedia.propTypes = propTypes;
-	ContainerMedia.defaultProps = defaultProps;
-
-	exports.default = ContainerMedia;
-
-/***/ },
-/* 224 */
+/* 292 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin

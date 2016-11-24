@@ -9,8 +9,8 @@ const propTypes = {
 
 const defaultProps = {
   data: {
-    title: 'Create Title!',
-    description: 'Create Description'
+    title: 'Testimonials!',
+    description: 'Testimonials Empty'
   }
 };
 
@@ -25,8 +25,14 @@ class Testimonials extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      active: 2
+      active: 0,
+      data: this.props.data.items[0] || null,
+      class: this.props.data.class || 'text-center',
+      containerMediaOpacity: this.props.data.containerMediaOpacity || '1',
+      containerMediaClass: this.props.data.containerMediaClass || 'backdrop',
+      disabled: {pointerEvents: 'none'}
     };
+    this._newSlide = this._newSlide.bind(this);
   }
 
   _renderTitle () {
@@ -48,8 +54,8 @@ class Testimonials extends React.Component {
     return (
       <ContainerMedia
         img={this.props.data.img}
-        opacity="0.5"
-        class="backdrop"
+        opacity={this.state.containerMediaOpacity}
+        class={this.state.containerMediaClass}
       />
     );
   }
@@ -61,44 +67,40 @@ class Testimonials extends React.Component {
     );
   }
 
-  _renderData () {
-    if (!this.props.data.items) { return null; }
-    const { items } = this.props.data;
-    const objlist = items.map((item, index) => {
-      return (
-        <div key={item.id} className="slide">
-          <blockquote>
-            <p>{item.text}</p>
-            <small>{item.author}</small>
-          </blockquote>
-        </div>
-      );
-    });
-    return (objlist ? (<div className="slides">{objlist}</div>) : null);
+  _newSlide(event, index) {
+    this.setState({data: this.props.data.items[event] || this.props.data.items[0],});
   }
 
   _renderSlide () {
-    if (!this.props.data.items) { return null; }
-    const current = this.props.data.items[this.state.active];
+
+    if (!this.state.data) { return null; }
+    const current = this.state.data;
+
+    var disabled = null;
+    if (current.id === 0) {
+      var disabled = this.state.disabled;
+    }
+
     return (
       <div className="slides">
-        <div className="slide-prev"></div>
-        <div className="slide-next"></div>
+        <div className="slide-prev" onClick={this._newSlide.bind(this, current.id - 1)} style={disabled}></div>
+        <div className="slide-next" onClick={this._newSlide.bind(this, current.id + 1)}></div>
         <div className="slide">
-          <blockquote>
-            <p>{current.text}</p>
-            <small>{current.author}</small>
-          </blockquote>
+          <div className="wrap">
+            <blockquote>
+              <p>{current.text}</p>
+              <small>{current.author}</small>
+            </blockquote>
+          </div>
         </div>
       </div>
     );
   }
 
   render() {
-    console.log(this.props.data.items[2]);
-    console.log(this.state.active);
+
     return (
-      <div className='testimonials text-center'>
+      <div className={'testimonials ' + this.state.class}>
         {this._renderImgBg()}
         <div className="container-fluid">
           {this._renderTitle()}

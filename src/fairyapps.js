@@ -7,18 +7,10 @@ import Thumbs from './components/Thumbs/Thumbs';
 import Testimonials from './components/Testimonials/Testimonials';
 import ContentContainer from './components/ContentContainer/ContentContainer';
 import FooterContainer from './components/FooterContainer/FooterContainer';
-//
-//import Jumbotron from './components/Jumbotron/Jumbotron';
-//import Cards from './components/Cards/Cards';
-//import AsideTabs from './components/AsideTabs/AsideTabs';
-//import StickyFooter from './components/StickyFooter/StickyFooter';
 
 //testdata
-import baseconfig from './tmp/config.json';
-//import basedata from './tmp/landingdata.json';
-//
-import basedata from './tmp/landingdatacore.json';
 //import basedata from './tmp/greencore.json';
+import basedata from './tmp/landingfarm.json';
 
 import './Base/global.less';
 
@@ -28,7 +20,7 @@ export default class BaseWrapper extends React.Component {
       <section>
         <LandingBase data={this.props.data.landingBase} />
         <AboutContainer data={this.props.data.aboutContainer} />
-        <LetsTalk data={this.props.data.talkContainer} />
+        <LetsTalk data={this.props.data.talkContainer} address={this.props.data.talkContainer.address} />
         <ContentContainer data={this.props.data.expertsContainer} />
         <Thumbs data={this.props.data.whatsnewContainer} />
         <Thumbs data={this.props.data.partnersContainer} />
@@ -40,8 +32,7 @@ export default class BaseWrapper extends React.Component {
   }
 }
 
-//<BaseWrapper data={landingpagedata} />
 render(
   <BaseWrapper data={basedata} />,
-  document.getElementById( 'app' )
+  document.getElementById('app')
 );
