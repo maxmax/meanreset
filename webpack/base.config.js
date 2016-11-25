@@ -10,7 +10,8 @@ module.exports = {
       apps: './src/apps.js',
       buddy: './src/buddy.js',
       fairyapps: './src/fairyapps.js',
-      soil: './src/soil.js'
+      soil: './src/soil.js',
+      soilmedia: './src/soilmedia.js'
   },
   output: {
     path: __dirname,

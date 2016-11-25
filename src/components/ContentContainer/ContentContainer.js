@@ -16,18 +16,24 @@ class ContentContainer extends React.Component {
     super(props);
     this.state = {
       active: null,
-      itstyle: this.props.data.itstyle || null
+      itstyle: this.props.data.itstyle || null,
+      containerMediaSize: this.props.data.containerMediaSize || 'inherit',
+      containerMediaRepeat: this.props.data.containerMediaRepeat || 'repeat',
+      containerMediaOpacity: this.props.data.containerMediaOpacity || '1',
+      containerMediaClass: this.props.data.containerMediaClass || 'backdrop'
     };
   }
 
   _renderImgBg () {
     if (!this.props.data.img) { return null; }
+    console.log(this.state.containerMediaSize);
     return (
       <ContainerMedia
         img={this.props.data.img}
-        size="inherit"
-        repeat="repeat"
-        opacity="1"
+        size={this.state.containerMediaSize}
+        repeat={this.state.containerMediaRepeat}
+        opacity={this.state.containerMediaOpacity}
+        class={this.state.containerMediaClass}
       />
     );
   }

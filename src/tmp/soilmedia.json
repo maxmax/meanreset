@@ -4,11 +4,11 @@
     "title": "Prime Lab Tech",
     "description": "Ваш партнер з управління врожайністю",
     "down": "#AboutContainer",
-    "img": "",
+    "img": "/media/Imageland.png",
     "logowidth": "220px",
     "logospace": "25px auto 0px",
     "class": "text-center",
-    "containerMediaOpacity": "1",
+    "containerMediaOpacity": "0.9",
     "containerMediaClass": "backdrop",
     "itstyle": {
       "backgroundColor": "#6997b2"
@@ -75,8 +75,8 @@
     "title": "Зв'яжіться з нами саме зараз",
     "description": "Наші фахівці готові відповісти на всі ваші запитання",
     "btn": "Задати питання та наші контакти",
-    "img": "",
-    "containerMediaOpacity": "1",
+    "img": "/media/interpretacja.jpg",
+    "containerMediaOpacity": "0.9",
     "containerMediaClass": "backdrop",
     "address": {
       "title": "Наші контакти:",
@@ -132,7 +132,7 @@
     "title": "Відгуки",
     "description": "Що кажуть наші клієнти",
     "btn": "Show more Testimonials",
-    "img": "",
+    "img": "/media/waterSolution.jpg",
     "items": [
       {
         "id": 0,
@@ -154,10 +154,10 @@
         "position": "Фермер ТОВ Латуре-Агро"
       }
     ],
-    "containerMediaOpacity": "1",
+    "containerMediaOpacity": "0.8",
     "containerMediaClass": "backdrop",
     "itstyle": {
-      "backgroundColor": "#7f995a"
+      "backgroundColor": "rgb(106, 128, 74)"
     }
   },
   "expertsContainer": {
@@ -189,7 +189,7 @@
   "howitworksContainer": {
     "title": "Як ми це робимо?",
     "description": "",
-    "img": "",
+    "img": "/media/Imageland.png",
     "items": [
       {
         "text": "Визначення реальних показників забезпеченості рослин елементами живлення"
@@ -201,6 +201,10 @@
         "text": "Зменшення екологічного навантаження на ґрунт"
       }
     ],
+    "containerMediaOpacity": "0.8",
+    "containerMediaClass": "backdrop",
+    "containerMediaRepeat": "no-repeat",
+    "containerMediaSize": "cover",
     "itstyle": {
       "backgroundColor": "#6997b2",
       "color": "white"

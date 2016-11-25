@@ -23149,7 +23149,11 @@
 
 	    _this.state = {
 	      active: null,
-	      itstyle: _this.props.data.itstyle || null
+	      itstyle: _this.props.data.itstyle || null,
+	      containerMediaSize: _this.props.data.containerMediaSize || 'inherit',
+	      containerMediaRepeat: _this.props.data.containerMediaRepeat || 'repeat',
+	      containerMediaOpacity: _this.props.data.containerMediaOpacity || '1',
+	      containerMediaClass: _this.props.data.containerMediaClass || 'backdrop'
 	    };
 	    return _this;
 	  }
@@ -23160,11 +23164,13 @@
 	      if (!this.props.data.img) {
 	        return null;
 	      }
+	      console.log(this.state.containerMediaSize);
 	      return _react2.default.createElement(_ContainerMedia2.default, {
 	        img: this.props.data.img,
-	        size: 'inherit',
-	        repeat: 'repeat',
-	        opacity: '1'
+	        size: this.state.containerMediaSize,
+	        repeat: this.state.containerMediaRepeat,
+	        opacity: this.state.containerMediaOpacity,
+	        'class': this.state.containerMediaClass
 	      });
 	    }
 	  }, {
