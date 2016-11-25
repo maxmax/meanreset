@@ -6,10 +6,13 @@
     "down": "#AboutContainer",
     "img": "/media/billionphotos.jpg",
     "logowidth": "280px",
-    "logospace": "65px auto 25px",
+    "logospace": "35px auto 25px",
     "class": "text-center",
     "containerMediaOpacity": "1",
-    "containerMediaClass": "backdrop"
+    "containerMediaClass": "backdrop",
+    "itstyle": {
+      "backgroundColor": "#6997b2"
+    }
   },
   "navBar": [
     {
@@ -86,6 +89,9 @@
           "tel": "(063) 456-7890"
         }
       ]
+    },
+    "itstyle": {
+      "backgroundColor": "#6997b2"
     }
   },
   "whatsnewContainer": {},
@@ -140,7 +146,10 @@
       }
     ],
     "containerMediaOpacity": "1",
-    "containerMediaClass": "backdrop"
+    "containerMediaClass": "backdrop",
+    "itstyle": {
+      "backgroundColor": "#7f995a"
+    }
   },
   "expertsContainer": {
     "title": "Наші послуги",
@@ -184,7 +193,8 @@
       }
     ],
     "itstyle": {
-      "backgroundColor": "#cee9fc"
+      "backgroundColor": "#6997b2",
+      "color": "white"
     }
   },
   "benefitsContainer": {

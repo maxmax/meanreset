@@ -32,6 +32,7 @@ class LandingBase extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      itstyle: this.props.data.itstyle || null,
       active: null,
       class: this.props.data.class || 'text-center',
       logowidth: this.props.data.logowidth || '240px',
@@ -116,7 +117,7 @@ class LandingBase extends React.Component {
 
   render() {
     return (
-      <div className={'landing-base ' + this.state.class}>
+      <div className={'landing-base ' + this.state.class} style={this.state.itstyle}>
         {this._renderVideoBg()}
         {this._renderImgBg()}
         <div className="container">

@@ -25,6 +25,7 @@ class Testimonials extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      itstyle: this.props.data.itstyle || null,
       active: 0,
       data: this.props.data.items[0] || null,
       class: this.props.data.class || 'text-center',
@@ -101,7 +102,7 @@ class Testimonials extends React.Component {
   render() {
 
     return (
-      <div className={'testimonials ' + this.state.class}>
+      <div className={'testimonials ' + this.state.class} style={this.state.itstyle}>
         {this._renderImgBg()}
         <div className="container-fluid">
           {this._renderTitle()}

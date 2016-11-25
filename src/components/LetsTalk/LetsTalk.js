@@ -27,6 +27,7 @@ class LetsTalk extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      itstyle: this.props.data.itstyle || null,
       active: false,
       class: this.props.data.class || 'text-center',
       containerMediaOpacity: this.props.data.containerMediaOpacity || '1',
@@ -131,7 +132,7 @@ class LetsTalk extends React.Component {
 
   render() {
     return (
-      <div className={'lets-talk ' + this.state.class}>
+      <div className={'lets-talk ' + this.state.class} style={this.state.itstyle}>
         {this._renderImgBg()}
         <div className="container">
           {this._renderTitle()}

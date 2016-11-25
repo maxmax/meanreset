@@ -21585,6 +21585,7 @@
 	    var _this = _possibleConstructorReturn(this, (LandingBase.__proto__ || Object.getPrototypeOf(LandingBase)).call(this, props));
 
 	    _this.state = {
+	      itstyle: _this.props.data.itstyle || null,
 	      active: null,
 	      class: _this.props.data.class || 'text-center',
 	      logowidth: _this.props.data.logowidth || '240px',
@@ -21701,7 +21702,7 @@
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
-	        { className: 'landing-base ' + this.state.class },
+	        { className: 'landing-base ' + this.state.class, style: this.state.itstyle },
 	        this._renderVideoBg(),
 	        this._renderImgBg(),
 	        _react2.default.createElement(
@@ -22254,6 +22255,7 @@
 	    var _this = _possibleConstructorReturn(this, (LetsTalk.__proto__ || Object.getPrototypeOf(LetsTalk)).call(this, props));
 
 	    _this.state = {
+	      itstyle: _this.props.data.itstyle || null,
 	      active: false,
 	      class: _this.props.data.class || 'text-center',
 	      containerMediaOpacity: _this.props.data.containerMediaOpacity || '1',
@@ -22447,7 +22449,7 @@
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
-	        { className: 'lets-talk ' + this.state.class },
+	        { className: 'lets-talk ' + this.state.class, style: this.state.itstyle },
 	        this._renderImgBg(),
 	        _react2.default.createElement(
 	          'div',
@@ -22901,6 +22903,7 @@
 	    var _this = _possibleConstructorReturn(this, (Testimonials.__proto__ || Object.getPrototypeOf(Testimonials)).call(this, props));
 
 	    _this.state = {
+	      itstyle: _this.props.data.itstyle || null,
 	      active: 0,
 	      data: _this.props.data.items[0] || null,
 	      class: _this.props.data.class || 'text-center',
@@ -23019,7 +23022,7 @@
 
 	      return _react2.default.createElement(
 	        'div',
-	        { className: 'testimonials ' + this.state.class },
+	        { className: 'testimonials ' + this.state.class, style: this.state.itstyle },
 	        this._renderImgBg(),
 	        _react2.default.createElement(
 	          'div',
@@ -28429,10 +28432,13 @@
 			"down": "#AboutContainer",
 			"img": "/media/billionphotos.jpg",
 			"logowidth": "280px",
-			"logospace": "65px auto 25px",
+			"logospace": "35px auto 25px",
 			"class": "text-center",
 			"containerMediaOpacity": "1",
-			"containerMediaClass": "backdrop"
+			"containerMediaClass": "backdrop",
+			"itstyle": {
+				"backgroundColor": "#6997b2"
+			}
 		},
 		"navBar": [
 			{
@@ -28518,6 +28524,9 @@
 						"tel": "(063) 456-7890"
 					}
 				]
+			},
+			"itstyle": {
+				"backgroundColor": "#6997b2"
 			}
 		},
 		"whatsnewContainer": {},
@@ -28576,7 +28585,10 @@
 				}
 			],
 			"containerMediaOpacity": "1",
-			"containerMediaClass": "backdrop"
+			"containerMediaClass": "backdrop",
+			"itstyle": {
+				"backgroundColor": "#7f995a"
+			}
 		},
 		"expertsContainer": {
 			"title": "Наші послуги",
@@ -28631,7 +28643,8 @@
 				}
 			],
 			"itstyle": {
-				"backgroundColor": "#cee9fc"
+				"backgroundColor": "#6997b2",
+				"color": "white"
 			}
 		},
 		"benefitsContainer": {
