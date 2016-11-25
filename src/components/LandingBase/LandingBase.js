@@ -115,6 +115,13 @@ class LandingBase extends React.Component {
     );
   }
 
+  _renderBtn () {
+    if (!this.props.data.btn) { return null; }
+    return (
+      <a className="btn btn-default btn-landing" role="button" href={this.props.data.btn.url}>{this.props.data.btn.text}</a>
+    );
+  }
+
   render() {
     return (
       <div className={'landing-base ' + this.state.class} style={this.state.itstyle}>
@@ -126,6 +133,7 @@ class LandingBase extends React.Component {
           {this._renderDesc()}
           {this._renderCountdown()}
           {this._renderInvite()}
+          {this._renderBtn()}
         </div>
         {this._renderDown()}
       </div>

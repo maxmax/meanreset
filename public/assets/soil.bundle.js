@@ -21698,6 +21698,18 @@
 	      );
 	    }
 	  }, {
+	    key: '_renderBtn',
+	    value: function _renderBtn() {
+	      if (!this.props.data.btn) {
+	        return null;
+	      }
+	      return _react2.default.createElement(
+	        'a',
+	        { className: 'btn btn-default btn-landing', role: 'button', href: this.props.data.btn.url },
+	        this.props.data.btn.text
+	      );
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
@@ -21712,7 +21724,8 @@
 	          this._renderTitle(),
 	          this._renderDesc(),
 	          this._renderCountdown(),
-	          this._renderInvite()
+	          this._renderInvite(),
+	          this._renderBtn()
 	        ),
 	        this._renderDown()
 	      );
@@ -28468,13 +28481,17 @@
 			"description": "Ваш партнер з управління врожайністю",
 			"down": "#AboutContainer",
 			"img": "",
-			"logowidth": "280px",
-			"logospace": "35px auto 25px",
+			"logowidth": "240px",
+			"logospace": "25px auto 25px",
 			"class": "text-center",
 			"containerMediaOpacity": "1",
 			"containerMediaClass": "backdrop",
 			"itstyle": {
 				"backgroundColor": "#6997b2"
+			},
+			"btn": {
+				"text": "Реєстрація",
+				"url": "#"
 			}
 		},
 		"navBar": [

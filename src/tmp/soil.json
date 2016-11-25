@@ -5,13 +5,17 @@
     "description": "Ваш партнер з управління врожайністю",
     "down": "#AboutContainer",
     "img": "",
-    "logowidth": "280px",
-    "logospace": "35px auto 25px",
+    "logowidth": "240px",
+    "logospace": "25px auto 25px",
     "class": "text-center",
     "containerMediaOpacity": "1",
     "containerMediaClass": "backdrop",
     "itstyle": {
       "backgroundColor": "#6997b2"
+    },
+    "btn": {
+      "text": "Реєстрація",
+      "url": "#"
     }
   },
   "navBar": [

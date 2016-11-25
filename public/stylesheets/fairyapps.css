@@ -69,6 +69,28 @@
   display: block;
   max-width: 100%;
 }
+.landing-base .btn,
+.landing-base .btn.btn-default,
+.landing-base .btn.btn-landing {
+  font-size: 0.8em;
+  border-radius: 0;
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 1.6rem 3rem;
+  margin-top: 10px;
+  opacity: 1;
+}
+.landing-base .btn:hover,
+.landing-base .btn.btn-default:hover,
+.landing-base .btn.btn-landing:hover,
+.landing-base .btn:focus,
+.landing-base .btn.btn-default:focus,
+.landing-base .btn.btn-landing:focus {
+  background: transparent;
+  border: 2px solid white;
+  opacity: 0.9;
+}
 .landing-base .down {
   display: block;
   width: 60px;
