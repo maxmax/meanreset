@@ -1,6 +1,18 @@
 .container-fluid.thumbs{
 	width: 100%;
 	padding: 10% 0;
+	.container{
+		position: relative;
+		z-index: 2;
+		> h1, > h2, > h3{
+			margin: 0 0;
+			text-align: center;
+		}
+		> p {
+			margin: 1em 0;
+			text-align: center;
+		}
+	}
 }
 
 .thumbs {
@@ -8,21 +20,16 @@
 	padding: 10% 0;
 	font-size: 1.5em;
 	overflow: hidden;
+	position: relative;
 	& + .thumbs{
 		padding: 0 0 10%;
-	}
-	> h1, > h2, > h3{
-		margin: 0 4em;
-		text-align: center;
-	}
-	> p {
-		margin: 1em 4em;
-		text-align: center;
 	}
 	.row {
 		margin-top: 60px;
 		margin-right: -.5px;
 		margin-left: -.5px;
+		position: relative;
+		z-index: 2;
 		[class*=col-] {
 			padding-right: .5px;
 			padding-left: .5px;

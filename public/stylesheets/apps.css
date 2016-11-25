@@ -202,29 +202,36 @@
   width: 100%;
   padding: 10% 0;
 }
+.container-fluid.thumbs .container {
+  position: relative;
+  z-index: 2;
+}
+.container-fluid.thumbs .container > h1,
+.container-fluid.thumbs .container > h2,
+.container-fluid.thumbs .container > h3 {
+  margin: 0 0;
+  text-align: center;
+}
+.container-fluid.thumbs .container > p {
+  margin: 1em 0;
+  text-align: center;
+}
 .thumbs {
   width: 100%;
   padding: 10% 0;
   font-size: 1.5em;
   overflow: hidden;
+  position: relative;
 }
 .thumbs + .thumbs {
   padding: 0 0 10%;
-}
-.thumbs > h1,
-.thumbs > h2,
-.thumbs > h3 {
-  margin: 0 4em;
-  text-align: center;
-}
-.thumbs > p {
-  margin: 1em 4em;
-  text-align: center;
 }
 .thumbs .row {
   margin-top: 60px;
   margin-right: -0.5px;
   margin-left: -0.5px;
+  position: relative;
+  z-index: 2;
 }
 .thumbs .row [class*=col-] {
   padding-right: .5px;

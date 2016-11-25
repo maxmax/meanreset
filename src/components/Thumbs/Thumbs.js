@@ -1,4 +1,5 @@
 import React, { PropTypes }  from 'react';
+import ContainerMedia from '../../elements/ContainerMedia/ContainerMedia';
 import BaseThumb from './BaseThumb';
 import OneThumb from './OneThumb';
 
@@ -19,8 +20,11 @@ class Thumbs extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      itstyle: this.props.data.itstyle || null,
       active: null,
-      role: this.props.data.role || 'auto'
+      role: this.props.data.role || 'auto',
+      containerMediaOpacity: this.props.data.containerMediaOpacity || '1',
+      containerMediaClass: this.props.data.containerMediaClass || 'backdrop',
     };
   }
 
@@ -35,6 +39,29 @@ class Thumbs extends React.Component {
     if (!this.props.data.catDescription) { return null; }
     return (
       <p>{this.props.data.catDescription}</p>
+    );
+  }
+
+  //_renderImgBg () {
+  //  if (!this.props.data.img) { return null; }
+  //  return (
+  //    <ContainerMedia
+  //      img={this.props.data.img}
+  //      opacity={this.state.containerMediaOpacity}
+  //      class={this.state.containerMediaClass}
+  //    />
+  //  );
+  //}
+
+  _renderImgBg () {
+    if (!this.props.data.img) { return null; }
+    return (
+      <ContainerMedia
+        img={this.props.data.img}
+        size="inherit"
+        repeat="repeat"
+        opacity={this.state.containerMediaOpacity}
+      />
     );
   }
 
@@ -66,9 +93,12 @@ class Thumbs extends React.Component {
   _renderWrap () {
     if (!this.props.data.items) { return null; }
     return (
-      <div className={"container-fluid thumbs role-" + this.state.role}>
-        {this._renderTitle()}
-        {this._renderDesc()}
+      <div className={"container-fluid thumbs role-" + this.state.role} style={this.state.itstyle}>
+        {this._renderImgBg()}
+        <div className="container">
+          {this._renderTitle()}
+          {this._renderDesc()}
+        </div>
         {this._renderData()}
       </div>
     );

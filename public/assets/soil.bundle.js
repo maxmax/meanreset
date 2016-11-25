@@ -22496,6 +22496,10 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _ContainerMedia = __webpack_require__(179);
+
+	var _ContainerMedia2 = _interopRequireDefault(_ContainerMedia);
+
 	var _BaseThumb = __webpack_require__(198);
 
 	var _BaseThumb2 = _interopRequireDefault(_BaseThumb);
@@ -22533,8 +22537,11 @@
 	    var _this = _possibleConstructorReturn(this, (Thumbs.__proto__ || Object.getPrototypeOf(Thumbs)).call(this, props));
 
 	    _this.state = {
+	      itstyle: _this.props.data.itstyle || null,
 	      active: null,
-	      role: _this.props.data.role || 'auto'
+	      role: _this.props.data.role || 'auto',
+	      containerMediaOpacity: _this.props.data.containerMediaOpacity || '1',
+	      containerMediaClass: _this.props.data.containerMediaClass || 'backdrop'
 	    };
 	    return _this;
 	  }
@@ -22562,6 +22569,31 @@
 	        null,
 	        this.props.data.catDescription
 	      );
+	    }
+
+	    //_renderImgBg () {
+	    //  if (!this.props.data.img) { return null; }
+	    //  return (
+	    //    <ContainerMedia
+	    //      img={this.props.data.img}
+	    //      opacity={this.state.containerMediaOpacity}
+	    //      class={this.state.containerMediaClass}
+	    //    />
+	    //  );
+	    //}
+
+	  }, {
+	    key: '_renderImgBg',
+	    value: function _renderImgBg() {
+	      if (!this.props.data.img) {
+	        return null;
+	      }
+	      return _react2.default.createElement(_ContainerMedia2.default, {
+	        img: this.props.data.img,
+	        size: 'inherit',
+	        repeat: 'repeat',
+	        opacity: this.state.containerMediaOpacity
+	      });
 	    }
 	  }, {
 	    key: '_renderData',
@@ -22604,9 +22636,14 @@
 	      }
 	      return _react2.default.createElement(
 	        'div',
-	        { className: "container-fluid thumbs role-" + this.state.role },
-	        this._renderTitle(),
-	        this._renderDesc(),
+	        { className: "container-fluid thumbs role-" + this.state.role, style: this.state.itstyle },
+	        this._renderImgBg(),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'container' },
+	          this._renderTitle(),
+	          this._renderDesc()
+	        ),
 	        this._renderData()
 	      );
 	    }
@@ -28430,7 +28467,7 @@
 			"title": "Prime Lab Tech",
 			"description": "Ваш партнер з управління врожайністю",
 			"down": "#AboutContainer",
-			"img": "/media/billionphotos.jpg",
+			"img": "",
 			"logowidth": "280px",
 			"logospace": "35px auto 25px",
 			"class": "text-center",
@@ -28501,7 +28538,7 @@
 			"title": "Зв'яжіться з нами саме зараз",
 			"description": "Наші фахівці готові відповісти на всі ваші запитання",
 			"btn": "Задати питання та наші контакти",
-			"img": "/media/billionphotos.jpg",
+			"img": "",
 			"containerMediaOpacity": "1",
 			"containerMediaClass": "backdrop",
 			"address": {
@@ -28535,6 +28572,7 @@
 			"catTitle": "Партнери та постачальники",
 			"catDescription": "Наша компанія відкрита до співробітництва з широким колом партнерів та запрошує виробників, постачальників, переробників сільськогосподарської продукції, брокерів та інші компанії аграрної сфери до відкритого діалогу.",
 			"role": "centered",
+			"img": "",
 			"items": [
 				{
 					"id": 0,
@@ -28560,7 +28598,7 @@
 			"title": "Відгуки",
 			"description": "Що кажуть наші клієнти",
 			"btn": "Show more Testimonials",
-			"img": "/media/billionphotos.jpg",
+			"img": "",
 			"items": [
 				{
 					"id": 0,
@@ -28593,7 +28631,7 @@
 		"expertsContainer": {
 			"title": "Наші послуги",
 			"description": "Наше оборудование действительно уникальное. Образцы для анализа в PLT в заданных точках GPS на полях клиентов отбирают автоматические пробоотборники Wintex 1000. После сушки и размола почва поступает на анализ. К примеру, атомно-эмиссионный спектрометр американской фирмы Agilent Technologies позволяет определять подвижные формы микроэлементов в почве в самой малой их концентрации — от 30 ppb. Еще один прибор, двулучевой спектрофотометр от американской UNICO, поможет определить содержание в почве нитратного азота, аммонийного азота, подвижных форм фосфора и серы. С помощью пламенного фотометра от британской компании BWB Technologies поле заказчика исследуется на обменные формы калия, кальция и натрия. А многофункциональные аппараты американской Thermo Fisher Scientific точно измеряют уровень кислоты и щелочи в почве, а также степень ее засоленности.",
-			"img": "/media/basegrey.jpg",
+			"img": "",
 			"items": [
 				{
 					"text": "Визначення агрохімічних показників ґрунту (гумус, N,P,K,Mg,Ca,Na,S,Fe,Cu,Mn,Zn,B)"
@@ -28650,7 +28688,7 @@
 		"benefitsContainer": {
 			"title": "Які переваги Ви отримуєте?",
 			"description": "",
-			"img": "/media/basegrey.jpg",
+			"img": "",
 			"items": [
 				{
 					"text": "Рекомендації відносно оптимальних культур для Вашого ґрунту"

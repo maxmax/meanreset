@@ -22529,6 +22529,10 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _ContainerMedia = __webpack_require__(179);
+
+	var _ContainerMedia2 = _interopRequireDefault(_ContainerMedia);
+
 	var _BaseThumb = __webpack_require__(198);
 
 	var _BaseThumb2 = _interopRequireDefault(_BaseThumb);
@@ -22566,8 +22570,11 @@
 	    var _this = _possibleConstructorReturn(this, (Thumbs.__proto__ || Object.getPrototypeOf(Thumbs)).call(this, props));
 
 	    _this.state = {
+	      itstyle: _this.props.data.itstyle || null,
 	      active: null,
-	      role: _this.props.data.role || 'auto'
+	      role: _this.props.data.role || 'auto',
+	      containerMediaOpacity: _this.props.data.containerMediaOpacity || '1',
+	      containerMediaClass: _this.props.data.containerMediaClass || 'backdrop'
 	    };
 	    return _this;
 	  }
@@ -22595,6 +22602,31 @@
 	        null,
 	        this.props.data.catDescription
 	      );
+	    }
+
+	    //_renderImgBg () {
+	    //  if (!this.props.data.img) { return null; }
+	    //  return (
+	    //    <ContainerMedia
+	    //      img={this.props.data.img}
+	    //      opacity={this.state.containerMediaOpacity}
+	    //      class={this.state.containerMediaClass}
+	    //    />
+	    //  );
+	    //}
+
+	  }, {
+	    key: '_renderImgBg',
+	    value: function _renderImgBg() {
+	      if (!this.props.data.img) {
+	        return null;
+	      }
+	      return _react2.default.createElement(_ContainerMedia2.default, {
+	        img: this.props.data.img,
+	        size: 'inherit',
+	        repeat: 'repeat',
+	        opacity: this.state.containerMediaOpacity
+	      });
 	    }
 	  }, {
 	    key: '_renderData',
@@ -22637,9 +22669,14 @@
 	      }
 	      return _react2.default.createElement(
 	        'div',
-	        { className: "container-fluid thumbs role-" + this.state.role },
-	        this._renderTitle(),
-	        this._renderDesc(),
+	        { className: "container-fluid thumbs role-" + this.state.role, style: this.state.itstyle },
+	        this._renderImgBg(),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'container' },
+	          this._renderTitle(),
+	          this._renderDesc()
+	        ),
 	        this._renderData()
 	      );
 	    }
