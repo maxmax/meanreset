@@ -40,16 +40,14 @@ class LetsTalk extends React.Component {
   }
 
   _addressItems () {
-    //if (!this.props.data.items) { return null; }
     if (!this.props.address.items) {return null;}
-    //const { users } = this.props.data;
     const intitems = this.props.address.items.map((item, index) => {
       return (
         <address key={index}>
-          <strong>{item.name}</strong><br />
-          <a href={'mailto:' + item.mail}>{item.mail}</a>
-          <br />
-          {item.tel}
+          <h3>{item.name}</h3>
+          <div className="description">"{item.description}"</div><br />
+          <a href={'mailto:' + item.mail}>{item.mail}</a><br />
+          <span>{item.tel}</span>
         </address>
       );
     });
@@ -61,11 +59,12 @@ class LetsTalk extends React.Component {
     return (
       <section>
         <address>
-          <strong>{this.props.address.title}</strong>
-          <br />
+          <h2>{this.props.address.title}</h2>
           <div dangerouslySetInnerHTML={{__html: this.props.address.int}} />
           <abbr title="Phone">P:</abbr>
-          <span>{this.props.address.phone}</span>
+          <span>{this.props.address.phone}</span><br />
+          <a href={'mailto:' + this.props.address.mail}>{this.props.address.mail}</a><br />
+          <a href={this.props.address.site}>{this.props.address.site}</a>
         </address>
         {this._addressItems()}
       </section>

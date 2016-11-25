@@ -15,14 +15,15 @@ class FooterContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      class: this.props.data.class || 'text-center'
+      class: this.props.data.class || 'text-center',
+      itstyle: this.props.data.itstyle || null
     };
   }
 
   _renderWrapper () {
     if (!this.props.data.text) { return null; }
     return (
-      <div className={'footer ' + this.state.class}>
+      <div className={'footer ' + this.state.class} style={this.state.itstyle}>
         <p>{this.props.data.text}</p>
       </div>
     );

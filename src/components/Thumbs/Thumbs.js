@@ -31,6 +31,13 @@ class Thumbs extends React.Component {
     );
   }
 
+  _renderDesc () {
+    if (!this.props.data.catDescription) { return null; }
+    return (
+      <p>{this.props.data.catDescription}</p>
+    );
+  }
+
   _renderData () {
     //if (!this.props.data.items) { return null; }
     if (!this.props.data.items) {
@@ -44,12 +51,12 @@ class Thumbs extends React.Component {
     const thumbslist = items.map((item, index) => {
       if (this.state.role == 'auto') {
         return (
-          <BaseThumb key={item.id} img={item.img} caption={item.text} />
+          <BaseThumb key={item.id} img={item.img} caption={item.text} col={item.col} />
         );
       }
       if (this.state.role == 'centered') {
         return (
-          <OneThumb key={item.id} img={item.img} caption={item.text} />
+          <OneThumb key={item.id} img={item.img} caption={item.text} col={item.col} size={item.size} />
         );
       }
     });
@@ -61,6 +68,7 @@ class Thumbs extends React.Component {
     return (
       <div className={"container-fluid thumbs role-" + this.state.role}>
         {this._renderTitle()}
+        {this._renderDesc()}
         {this._renderData()}
       </div>
     );

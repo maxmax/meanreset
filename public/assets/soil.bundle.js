@@ -46,45 +46,104 @@
 
 	'use strict';
 
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 	var _react = __webpack_require__(7);
 
 	var _react2 = _interopRequireDefault(_react);
 
 	var _reactDom = __webpack_require__(40);
 
-	var _reactRouter = __webpack_require__(226);
+	var _LandingBase = __webpack_require__(178);
 
-	var _App = __webpack_require__(281);
+	var _LandingBase2 = _interopRequireDefault(_LandingBase);
 
-	var _App2 = _interopRequireDefault(_App);
+	var _AboutContainer = __webpack_require__(190);
 
-	var _About = __webpack_require__(289);
+	var _AboutContainer2 = _interopRequireDefault(_AboutContainer);
 
-	var _About2 = _interopRequireDefault(_About);
+	var _LetsTalk = __webpack_require__(193);
 
-	var _Terms = __webpack_require__(290);
+	var _LetsTalk2 = _interopRequireDefault(_LetsTalk);
 
-	var _Terms2 = _interopRequireDefault(_Terms);
+	var _Thumbs = __webpack_require__(197);
 
-	var _Privacy = __webpack_require__(294);
+	var _Thumbs2 = _interopRequireDefault(_Thumbs);
 
-	var _Privacy2 = _interopRequireDefault(_Privacy);
+	var _Testimonials = __webpack_require__(204);
+
+	var _Testimonials2 = _interopRequireDefault(_Testimonials);
+
+	var _ContentContainer = __webpack_require__(209);
+
+	var _ContentContainer2 = _interopRequireDefault(_ContentContainer);
+
+	var _FooterContainer = __webpack_require__(212);
+
+	var _FooterContainer2 = _interopRequireDefault(_FooterContainer);
+
+	var _NavBar = __webpack_require__(283);
+
+	var _NavBar2 = _interopRequireDefault(_NavBar);
+
+	var _soil = __webpack_require__(296);
+
+	var _soil2 = _interopRequireDefault(_soil);
 
 	__webpack_require__(223);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	(0, _reactDom.render)(_react2.default.createElement(
-	  _reactRouter.Router,
-	  { history: _reactRouter.hashHistory },
-	  _react2.default.createElement(
-	    _reactRouter.Route,
-	    { path: '/', component: _App2.default },
-	    _react2.default.createElement(_reactRouter.Route, { path: '/about', component: _About2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: '/terms', component: _Terms2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: '/privacy', component: _Privacy2.default })
-	  )
-	), document.getElementById('app'));
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	//testdata
+
+
+	var BaseWrapper = function (_React$Component) {
+	  _inherits(BaseWrapper, _React$Component);
+
+	  function BaseWrapper() {
+	    _classCallCheck(this, BaseWrapper);
+
+	    return _possibleConstructorReturn(this, (BaseWrapper.__proto__ || Object.getPrototypeOf(BaseWrapper)).apply(this, arguments));
+	  }
+
+	  _createClass(BaseWrapper, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'section',
+	        null,
+	        _react2.default.createElement(_NavBar2.default, { data: this.props.data.navBar }),
+	        _react2.default.createElement(_LandingBase2.default, { data: this.props.data.landingBase }),
+	        _react2.default.createElement(_AboutContainer2.default, { data: this.props.data.aboutContainer }),
+	        _react2.default.createElement(_LetsTalk2.default, { data: this.props.data.talkContainer, address: this.props.data.talkContainer.address }),
+	        _react2.default.createElement(_ContentContainer2.default, { data: this.props.data.expertsContainer }),
+	        _react2.default.createElement(_Thumbs2.default, { data: this.props.data.whatsnewContainer }),
+	        _react2.default.createElement(_Testimonials2.default, { data: this.props.data.testimonials }),
+	        _react2.default.createElement(_Thumbs2.default, { data: this.props.data.partnersContainer }),
+	        _react2.default.createElement(_ContentContainer2.default, { data: this.props.data.howitworksContainer }),
+	        _react2.default.createElement(_ContentContainer2.default, { data: this.props.data.benefitsContainer }),
+	        _react2.default.createElement(_FooterContainer2.default, { data: this.props.data.footerContainer })
+	      );
+	    }
+	  }]);
+
+	  return BaseWrapper;
+	}(_react2.default.Component);
+
+	exports.default = BaseWrapper;
+
+
+	(0, _reactDom.render)(_react2.default.createElement(BaseWrapper, { data: _soil2.default }), document.getElementById('app'));
 
 /***/ },
 /* 1 */,
@@ -21460,42 +21519,1806 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9)))
 
 /***/ },
-/* 178 */,
-/* 179 */,
-/* 180 */,
+/* 178 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(7);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _ContainerMedia = __webpack_require__(179);
+
+	var _ContainerMedia2 = _interopRequireDefault(_ContainerMedia);
+
+	var _reactCountDown = __webpack_require__(184);
+
+	var _reactCountDown2 = _interopRequireDefault(_reactCountDown);
+
+	__webpack_require__(186);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	//import styles from './landingbase.less';
+
+	var propTypes = {
+	  data: _react.PropTypes.object
+	};
+
+	var defaultProps = {
+	  data: {
+	    logo: '/lang-logo.png',
+	    title: 'Create Title!',
+	    description: 'Create Description'
+	  }
+	};
+
+	//Shema
+	//logo: '/lang-logo.png',
+	//title: 'Hello and a very warm welcome!',
+	//description: 'We are a customer-service oriented team of web developers committed to the highest quality of our work and we stand behind it.',
+	//video: '/media/videobg.mp4',
+	//img: '/media/billionphotos.jpg',
+	//down: '#AboutContainer'
+	//Countdown: ''
+	//let OPTIONS = { endDate: '06/03/2018 10:12 AM', prefix: 'App started!' }
+
+	var LandingBase = function (_React$Component) {
+	  _inherits(LandingBase, _React$Component);
+
+	  function LandingBase(props) {
+	    _classCallCheck(this, LandingBase);
+
+	    var _this = _possibleConstructorReturn(this, (LandingBase.__proto__ || Object.getPrototypeOf(LandingBase)).call(this, props));
+
+	    _this.state = {
+	      active: null,
+	      class: _this.props.data.class || 'text-center',
+	      logowidth: _this.props.data.logowidth || '240px',
+	      logospace: _this.props.data.logospace || '0 auto',
+	      containerMediaOpacity: _this.props.data.containerMediaOpacity || '1',
+	      containerMediaClass: _this.props.data.containerMediaClass || 'backdrop'
+	    };
+	    return _this;
+	  }
+
+	  _createClass(LandingBase, [{
+	    key: '_renderLogo',
+	    value: function _renderLogo() {
+	      if (!this.props.data.logo) {
+	        return null;
+	      }
+	      var style = {
+	        margin: this.state.logospace
+	      };
+	      return _react2.default.createElement(
+	        'a',
+	        { href: '/', className: 'lang-logo', style: style },
+	        _react2.default.createElement('img', { src: this.props.data.logo, width: this.state.logowidth })
+	      );
+	    }
+	  }, {
+	    key: '_renderTitle',
+	    value: function _renderTitle() {
+	      if (!this.props.data.title) {
+	        return null;
+	      }
+	      return _react2.default.createElement(
+	        'h1',
+	        null,
+	        this.props.data.title
+	      );
+	    }
+	  }, {
+	    key: '_renderDesc',
+	    value: function _renderDesc() {
+	      if (!this.props.data.description) {
+	        return null;
+	      }
+	      return _react2.default.createElement(
+	        'p',
+	        null,
+	        this.props.data.description
+	      );
+	    }
+	  }, {
+	    key: '_renderVideoBg',
+	    value: function _renderVideoBg() {
+	      if (!this.props.data.video) {
+	        return null;
+	      }
+	      return _react2.default.createElement(_ContainerMedia2.default, { video: this.props.data.video });
+	    }
+	  }, {
+	    key: '_renderImgBg',
+	    value: function _renderImgBg() {
+	      if (!this.props.data.img) {
+	        return null;
+	      }
+	      return _react2.default.createElement(_ContainerMedia2.default, {
+	        img: this.props.data.img,
+	        opacity: this.state.containerMediaOpacity,
+	        'class': this.state.containerMediaClass
+	      });
+	    }
+	  }, {
+	    key: '_renderDown',
+	    value: function _renderDown() {
+	      if (!this.props.data.down) {
+	        return null;
+	      }
+	      return _react2.default.createElement('a', { href: this.props.data.down, className: 'down' });
+	    }
+	  }, {
+	    key: '_renderCountdown',
+	    value: function _renderCountdown() {
+	      if (!this.props.data.countdown) {
+	        return null;
+	      }
+	      var OPTIONS = this.props.data.countdown;
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'countdown-wr' },
+	        _react2.default.createElement(_reactCountDown2.default, { options: OPTIONS })
+	      );
+	    }
+	  }, {
+	    key: '_renderInvite',
+	    value: function _renderInvite() {
+	      if (!this.props.data.invite) {
+	        return null;
+	      }
+	      return _react2.default.createElement(
+	        'form',
+	        { className: 'invite' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'form-group' },
+	          _react2.default.createElement(
+	            'label',
+	            null,
+	            this.props.data.invite
+	          ),
+	          _react2.default.createElement('input', { type: 'email', className: 'form-control', placeholder: 'Email address' })
+	        )
+	      );
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'landing-base ' + this.state.class },
+	        this._renderVideoBg(),
+	        this._renderImgBg(),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'container' },
+	          this._renderLogo(),
+	          this._renderTitle(),
+	          this._renderDesc(),
+	          this._renderCountdown(),
+	          this._renderInvite()
+	        ),
+	        this._renderDown()
+	      );
+	    }
+	  }]);
+
+	  return LandingBase;
+	}(_react2.default.Component);
+
+	LandingBase.propTypes = propTypes;
+	LandingBase.defaultProps = defaultProps;
+
+	exports.default = LandingBase;
+
+/***/ },
+/* 179 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(7);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	__webpack_require__(180);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var propTypes = {
+	  video: _react.PropTypes.string,
+	  img: _react.PropTypes.string
+	};
+
+	var defaultProps = {
+	  video: "",
+	  img: ""
+	};
+
+	var ContainerMedia = function (_React$Component) {
+	  _inherits(ContainerMedia, _React$Component);
+
+	  function ContainerMedia(props) {
+	    _classCallCheck(this, ContainerMedia);
+
+	    var _this = _possibleConstructorReturn(this, (ContainerMedia.__proto__ || Object.getPrototypeOf(ContainerMedia)).call(this, props));
+
+	    _this.state = {
+	      size: _this.props.size || 'cover',
+	      repeat: _this.props.repeat || 'no-repeat',
+	      position: _this.props.position || 'center center',
+	      bgattachment: _this.props.bgattachment || 'fixed',
+	      opacity: _this.props.opacity || '0.5',
+	      class: _this.props.class || 'auto'
+	    };
+	    return _this;
+	  }
+
+	  _createClass(ContainerMedia, [{
+	    key: '_renderVideo',
+	    value: function _renderVideo() {
+	      if (!this.props.video) {
+	        return null;
+	      }
+	      return _react2.default.createElement(
+	        'div',
+	        { className: "container-video " + this.state.class },
+	        _react2.default.createElement(
+	          'video',
+	          { className: 'video', autoPlay: 'autoplay', muted: true, loop: true },
+	          _react2.default.createElement('source', { src: this.props.video, type: 'video/mp4' })
+	        )
+	      );
+	    }
+	  }, {
+	    key: '_renderImg',
+	    value: function _renderImg() {
+	      if (!this.props.img) {
+	        return null;
+	      }
+	      var style = {
+	        backgroundImage: 'url(' + this.props.img + ')',
+	        backgroundRepeat: this.state.repeat,
+	        backgroundPosition: this.state.position,
+	        backgroundSize: this.state.size,
+	        backgroundAttachment: this.state.bgattachment,
+	        opacity: this.state.opacity
+	      };
+	      return _react2.default.createElement('div', { className: "container-img " + this.state.class, style: style });
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        this._renderVideo(),
+	        this._renderImg()
+	      );
+	    }
+	  }]);
+
+	  return ContainerMedia;
+	}(_react2.default.Component);
+
+	ContainerMedia.propTypes = propTypes;
+	ContainerMedia.defaultProps = defaultProps;
+
+	exports.default = ContainerMedia;
+
+/***/ },
+/* 180 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
 /* 181 */,
 /* 182 */,
 /* 183 */,
-/* 184 */,
-/* 185 */,
-/* 186 */,
+/* 184 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _DateBetween = __webpack_require__(185);
+
+	var _DateBetween2 = _interopRequireDefault(_DateBetween);
+
+	var _react = __webpack_require__(7);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	/**
+	 * Count down module
+	 * A simple count down component.
+	**/
+
+	var Countdown = function (_Component) {
+	  _inherits(Countdown, _Component);
+
+	  function Countdown(props) {
+	    _classCallCheck(this, Countdown);
+
+	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Countdown).call(this, props));
+
+	    _this.state = { remaining: null };
+	    return _this;
+	  }
+
+	  _createClass(Countdown, [{
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      this.tick();
+	      this.interval = setInterval(this.tick.bind(this), 1000);
+	    }
+	  }, {
+	    key: 'componentWillUnmount',
+	    value: function componentWillUnmount() {
+	      clearInterval(this.interval);
+	    }
+	  }, {
+	    key: 'tick',
+	    value: function tick() {
+	      var startDate = new Date();
+	      var endDate = new Date(this.props.options.endDate);
+	      var remaining = (0, _DateBetween2.default)(startDate, endDate);
+	      this.setState({ remaining: remaining });
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'react-count-down' },
+	        _react2.default.createElement(
+	          'span',
+	          { className: 'date' },
+	          ' ',
+	          this.state.remaining
+	        ),
+	        _react2.default.createElement(
+	          'span',
+	          { className: 'prefix' },
+	          ' ',
+	          this.props.options.prefix
+	        )
+	      );
+	    }
+	  }]);
+
+	  return Countdown;
+	}(_react.Component);
+
+	exports.default = Countdown;
+
+/***/ },
+/* 185 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	var DateBetween = function DateBetween(startDate, endDate) {
+	  var second = 1000;
+	  var minute = second * 60;
+	  var hour = minute * 60;
+	  var day = hour * 24;
+	  var distance = endDate - startDate;
+
+	  if (distance < 0) {
+	    return "count down date expired";
+	  }
+
+	  var days = Math.floor(distance / day);
+	  var hours = Math.floor(distance % day / hour);
+	  var minutes = Math.floor(distance % hour / minute);
+	  var seconds = Math.floor(distance % minute / second);
+
+	  var day_description;
+	  var hour_description;
+	  var min_description;
+	  var sec_description;
+
+	  if (days == 1) {
+	    day_description = ' day ';
+	  } else {
+	    day_description = ' days ';
+	  }
+
+	  if (hours == 1) {
+	    hour_description = ' hour ';
+	  } else {
+	    hour_description = ' hours ';
+	  }
+
+	  if (minutes == 1) {
+	    min_description = ' minute ';
+	  } else {
+	    min_description = ' minutes ';
+	  }
+
+	  if (seconds == 1) {
+	    sec_description = ' second';
+	  } else {
+	    sec_description = ' seconds';
+	  }
+
+	  var between = days + day_description;
+	  between += hours + hour_description;
+	  between += minutes + min_description;
+	  between += seconds + sec_description;
+
+	  return between;
+	};
+
+	module.exports = DateBetween;
+
+/***/ },
+/* 186 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
 /* 187 */,
 /* 188 */,
 /* 189 */,
-/* 190 */,
-/* 191 */,
+/* 190 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(7);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _ContainerMedia = __webpack_require__(179);
+
+	var _ContainerMedia2 = _interopRequireDefault(_ContainerMedia);
+
+	__webpack_require__(191);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var propTypes = {
+	  data: _react.PropTypes.object
+	};
+
+	var defaultProps = {
+	  data: {
+	    title: 'Create Title!',
+	    description: 'Create Description',
+	    text: 'Create text',
+	    services: 'Create services'
+	  }
+	};
+
+	var AboutContainer = function (_React$Component) {
+	  _inherits(AboutContainer, _React$Component);
+
+	  function AboutContainer(props) {
+	    _classCallCheck(this, AboutContainer);
+
+	    var _this = _possibleConstructorReturn(this, (AboutContainer.__proto__ || Object.getPrototypeOf(AboutContainer)).call(this, props));
+
+	    _this.state = {
+	      active: null
+	    };
+	    return _this;
+	  }
+
+	  _createClass(AboutContainer, [{
+	    key: '_renderImgBg',
+	    value: function _renderImgBg() {
+	      if (!this.props.data.img) {
+	        return null;
+	      }
+	      return _react2.default.createElement(_ContainerMedia2.default, {
+	        img: this.props.data.img,
+	        size: 'inherit',
+	        repeat: 'repeat',
+	        opacity: '1'
+	      });
+	    }
+	  }, {
+	    key: '_renderTitle',
+	    value: function _renderTitle() {
+	      if (!this.props.data.title) {
+	        return null;
+	      }
+	      return _react2.default.createElement(
+	        'h2',
+	        null,
+	        this.props.data.title
+	      );
+	    }
+	  }, {
+	    key: '_renderDesc',
+	    value: function _renderDesc() {
+	      if (!this.props.data.description) {
+	        return null;
+	      }
+	      return _react2.default.createElement(
+	        'p',
+	        null,
+	        this.props.data.description
+	      );
+	    }
+	  }, {
+	    key: '_renderText',
+	    value: function _renderText() {
+	      if (!this.props.data.text) {
+	        return null;
+	      }
+	      return _react2.default.createElement(
+	        'p',
+	        null,
+	        this.props.data.text
+	      );
+	    }
+	  }, {
+	    key: '_renderServices',
+	    value: function _renderServices() {
+	      if (!this.props.data.services) {
+	        return null;
+	      }
+	      return _react2.default.createElement(
+	        'p',
+	        null,
+	        this.props.data.services
+	      );
+	    }
+	  }, {
+	    key: '_renderList',
+	    value: function _renderList() {
+	      if (!this.props.data.items) {
+	        return null;
+	      }
+	      var items = this.props.data.items;
+
+	      var objlist = items.map(function (item, index) {
+	        return _react2.default.createElement(
+	          'li',
+	          { key: index, className: 'slide' },
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            item.text
+	          )
+	        );
+	      });
+	      return objlist ? _react2.default.createElement(
+	        'ul',
+	        { className: 'list text-left' },
+	        objlist
+	      ) : null;
+	    }
+	  }, {
+	    key: '_renderPromo',
+	    value: function _renderPromo() {
+	      if (!this.props.data.promo) {
+	        return null;
+	      }
+	      //?autoplay=1
+	      return _react2.default.createElement('iframe', {
+	        width: '800',
+	        height: '413',
+	        src: 'https://www.youtube.com/embed/' + this.props.data.promo + ''
+	      });
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'about-container text-center', id: 'AboutContainer' },
+	        this._renderImgBg(),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'container' },
+	          this._renderTitle(),
+	          this._renderDesc(),
+	          this._renderPromo(),
+	          this._renderText(),
+	          this._renderServices(),
+	          this._renderList()
+	        )
+	      );
+	    }
+	  }]);
+
+	  return AboutContainer;
+	}(_react2.default.Component);
+
+	AboutContainer.propTypes = propTypes;
+	AboutContainer.defaultProps = defaultProps;
+
+	exports.default = AboutContainer;
+
+/***/ },
+/* 191 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
 /* 192 */,
-/* 193 */,
-/* 194 */,
+/* 193 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(7);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _ContainerMedia = __webpack_require__(179);
+
+	var _ContainerMedia2 = _interopRequireDefault(_ContainerMedia);
+
+	__webpack_require__(194);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var propTypes = {
+	  data: _react.PropTypes.object,
+	  address: _react.PropTypes.object
+	};
+
+	var defaultProps = {
+	  data: {
+	    title: 'Create Title!',
+	    description: 'Create Description'
+	  },
+	  address: null
+	};
+
+	//Shema
+	//title: 'Lets Talk About Your Disease',
+	//description: 'WE ARE READY TO WORK WITH YOU',
+	//img: '/media/billionphotos.jpg',
+	//btn: 'GET IN TOUCH'
+
+	var LetsTalk = function (_React$Component) {
+	  _inherits(LetsTalk, _React$Component);
+
+	  function LetsTalk(props) {
+	    _classCallCheck(this, LetsTalk);
+
+	    var _this = _possibleConstructorReturn(this, (LetsTalk.__proto__ || Object.getPrototypeOf(LetsTalk)).call(this, props));
+
+	    _this.state = {
+	      active: false,
+	      class: _this.props.data.class || 'text-center',
+	      containerMediaOpacity: _this.props.data.containerMediaOpacity || '1',
+	      containerMediaClass: _this.props.data.containerMediaClass || 'backdrop'
+	    };
+	    _this._openMdal = _this._openMdal.bind(_this);
+	    return _this;
+	  }
+
+	  _createClass(LetsTalk, [{
+	    key: '_openMdal',
+	    value: function _openMdal() {
+	      this.setState({ active: !this.state.active });
+	    }
+	  }, {
+	    key: '_addressItems',
+	    value: function _addressItems() {
+	      if (!this.props.address.items) {
+	        return null;
+	      }
+	      var intitems = this.props.address.items.map(function (item, index) {
+	        return _react2.default.createElement(
+	          'address',
+	          { key: index },
+	          _react2.default.createElement(
+	            'h3',
+	            null,
+	            item.name
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'description' },
+	            '"',
+	            item.description,
+	            '"'
+	          ),
+	          _react2.default.createElement('br', null),
+	          _react2.default.createElement(
+	            'a',
+	            { href: 'mailto:' + item.mail },
+	            item.mail
+	          ),
+	          _react2.default.createElement('br', null),
+	          _react2.default.createElement(
+	            'span',
+	            null,
+	            item.tel
+	          )
+	        );
+	      });
+	      return intitems ? _react2.default.createElement(
+	        'div',
+	        null,
+	        intitems
+	      ) : null;
+	    }
+	  }, {
+	    key: '_addressInt',
+	    value: function _addressInt() {
+	      if (!this.props.address) {
+	        return _react2.default.createElement(
+	          'section',
+	          { className: 'text-info' },
+	          'Empty'
+	        );
+	      }
+	      return _react2.default.createElement(
+	        'section',
+	        null,
+	        _react2.default.createElement(
+	          'address',
+	          null,
+	          _react2.default.createElement(
+	            'h2',
+	            null,
+	            this.props.address.title
+	          ),
+	          _react2.default.createElement('div', { dangerouslySetInnerHTML: { __html: this.props.address.int } }),
+	          _react2.default.createElement(
+	            'abbr',
+	            { title: 'Phone' },
+	            'P:'
+	          ),
+	          _react2.default.createElement(
+	            'span',
+	            null,
+	            this.props.address.phone
+	          ),
+	          _react2.default.createElement('br', null),
+	          _react2.default.createElement(
+	            'a',
+	            { href: 'mailto:' + this.props.address.mail },
+	            this.props.address.mail
+	          ),
+	          _react2.default.createElement('br', null),
+	          _react2.default.createElement(
+	            'a',
+	            { href: this.props.address.site },
+	            this.props.address.site
+	          )
+	        ),
+	        this._addressItems()
+	      );
+	    }
+	  }, {
+	    key: '_formBackdrop',
+	    value: function _formBackdrop() {
+	      if (!this.state.active) {
+	        return null;
+	      }
+	      return _react2.default.createElement('div', { className: 'modal-backdrop fade in' });
+	    }
+	  }, {
+	    key: '_formMdal',
+	    value: function _formMdal() {
+	      if (!this.state.active) {
+	        return null;
+	      }
+	      var style = {
+	        display: 'block'
+	      };
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'modal fade in', role: 'dialog', style: style },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'modal-dialog', role: 'document' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'modal-content' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'modal-body' },
+	              _react2.default.createElement('div', { className: 'close', onClick: this._openMdal.bind(this) }),
+	              this._addressInt()
+	            )
+	          )
+	        )
+	      );
+	    }
+	  }, {
+	    key: '_renderTitle',
+	    value: function _renderTitle() {
+	      if (!this.props.data.title) {
+	        return null;
+	      }
+	      return _react2.default.createElement(
+	        'h2',
+	        null,
+	        this.props.data.title
+	      );
+	    }
+	  }, {
+	    key: '_renderDesc',
+	    value: function _renderDesc() {
+	      if (!this.props.data.description) {
+	        return null;
+	      }
+	      return _react2.default.createElement(
+	        'p',
+	        null,
+	        this.props.data.description
+	      );
+	    }
+	  }, {
+	    key: '_renderImgBg',
+	    value: function _renderImgBg() {
+	      if (!this.props.data.img) {
+	        return null;
+	      }
+	      return _react2.default.createElement(_ContainerMedia2.default, {
+	        img: this.props.data.img,
+	        opacity: this.state.containerMediaOpacity,
+	        'class': this.state.containerMediaClass
+	      });
+	    }
+	  }, {
+	    key: '_renderBtn',
+	    value: function _renderBtn() {
+	      if (!this.props.data.btn) {
+	        return null;
+	      }
+	      return _react2.default.createElement(
+	        'a',
+	        { className: 'btn btn-default', role: 'button', onClick: this._openMdal.bind(this) },
+	        this.props.data.btn
+	      );
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'lets-talk ' + this.state.class },
+	        this._renderImgBg(),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'container' },
+	          this._renderTitle(),
+	          this._renderDesc(),
+	          this._renderBtn()
+	        ),
+	        this._formMdal(),
+	        this._formBackdrop()
+	      );
+	    }
+	  }]);
+
+	  return LetsTalk;
+	}(_react2.default.Component);
+
+	LetsTalk.propTypes = propTypes;
+	LetsTalk.defaultProps = defaultProps;
+
+	exports.default = LetsTalk;
+
+/***/ },
+/* 194 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
 /* 195 */,
 /* 196 */,
-/* 197 */,
-/* 198 */,
-/* 199 */,
-/* 200 */,
+/* 197 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(7);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _BaseThumb = __webpack_require__(198);
+
+	var _BaseThumb2 = _interopRequireDefault(_BaseThumb);
+
+	var _OneThumb = __webpack_require__(199);
+
+	var _OneThumb2 = _interopRequireDefault(_OneThumb);
+
+	__webpack_require__(200);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var propTypes = {
+	  data: _react.PropTypes.object
+	};
+
+	var defaultProps = {
+	  data: {
+	    role: "auto"
+	  }
+	};
+
+	var Thumbs = function (_React$Component) {
+	  _inherits(Thumbs, _React$Component);
+
+	  function Thumbs(props) {
+	    _classCallCheck(this, Thumbs);
+
+	    var _this = _possibleConstructorReturn(this, (Thumbs.__proto__ || Object.getPrototypeOf(Thumbs)).call(this, props));
+
+	    _this.state = {
+	      active: null,
+	      role: _this.props.data.role || 'auto'
+	    };
+	    return _this;
+	  }
+
+	  _createClass(Thumbs, [{
+	    key: '_renderTitle',
+	    value: function _renderTitle() {
+	      if (!this.props.data.catTitle) {
+	        return null;
+	      }
+	      return _react2.default.createElement(
+	        'h2',
+	        null,
+	        this.props.data.catTitle
+	      );
+	    }
+	  }, {
+	    key: '_renderDesc',
+	    value: function _renderDesc() {
+	      if (!this.props.data.catDescription) {
+	        return null;
+	      }
+	      return _react2.default.createElement(
+	        'p',
+	        null,
+	        this.props.data.catDescription
+	      );
+	    }
+	  }, {
+	    key: '_renderData',
+	    value: function _renderData() {
+	      var _this2 = this;
+
+	      //if (!this.props.data.items) { return null; }
+	      if (!this.props.data.items) {
+	        return _react2.default.createElement(
+	          'div',
+	          { className: 'row' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'col-md-12 text-center' },
+	            '\u0421ategory is empty!'
+	          )
+	        );
+	      }
+	      var items = this.props.data.items;
+
+	      var thumbslist = items.map(function (item, index) {
+	        if (_this2.state.role == 'auto') {
+	          return _react2.default.createElement(_BaseThumb2.default, { key: item.id, img: item.img, caption: item.text, col: item.col });
+	        }
+	        if (_this2.state.role == 'centered') {
+	          return _react2.default.createElement(_OneThumb2.default, { key: item.id, img: item.img, caption: item.text, col: item.col, size: item.size });
+	        }
+	      });
+	      return thumbslist ? _react2.default.createElement(
+	        'div',
+	        { className: 'row' },
+	        thumbslist
+	      ) : null;
+	    }
+	  }, {
+	    key: '_renderWrap',
+	    value: function _renderWrap() {
+	      if (!this.props.data.items) {
+	        return null;
+	      }
+	      return _react2.default.createElement(
+	        'div',
+	        { className: "container-fluid thumbs role-" + this.state.role },
+	        this._renderTitle(),
+	        this._renderDesc(),
+	        this._renderData()
+	      );
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return this._renderWrap();
+	    }
+	  }]);
+
+	  return Thumbs;
+	}(_react2.default.Component);
+
+	Thumbs.propTypes = propTypes;
+	Thumbs.defaultProps = defaultProps;
+
+	exports.default = Thumbs;
+
+/***/ },
+/* 198 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(7);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var propTypes = {
+	  img: _react.PropTypes.string,
+	  caption: _react.PropTypes.string,
+	  col: _react.PropTypes.string
+	};
+
+	var defaultProps = {
+	  img: '',
+	  caption: '',
+	  col: ''
+	};
+
+	var BaseThumb = function (_React$Component) {
+	  _inherits(BaseThumb, _React$Component);
+
+	  function BaseThumb(props) {
+	    _classCallCheck(this, BaseThumb);
+
+	    var _this = _possibleConstructorReturn(this, (BaseThumb.__proto__ || Object.getPrototypeOf(BaseThumb)).call(this, props));
+
+	    _this.state = {
+	      img: _this.props.img || null,
+	      caption: _this.props.caption || null,
+	      col: _this.props.col || 'col-xs-12 col-sm-6 col-lg-3'
+	    };
+	    return _this;
+	  }
+
+	  _createClass(BaseThumb, [{
+	    key: '_renderImg',
+	    value: function _renderImg(el) {
+	      if (!el) {
+	        //var style = ref this... svg color
+	        //var style = {
+	        //  backgroundImage: 'url(./landscape.svg)',
+	        //  backgroundRepeat: 'no-repeat',
+	        //  backgroundPosition: 'center center',
+	        //  backgroundSize: '80px'
+	        //};
+	        return _react2.default.createElement('div', { className: 'thumbs-img thumbs-img-empty' });
+	      }
+	      var style = {
+	        backgroundImage: 'url(' + el + ')',
+	        backgroundRepeat: 'no-repeat',
+	        backgroundPosition: 'center center',
+	        backgroundSize: 'cover'
+	      };
+	      return _react2.default.createElement('div', { className: 'thumbs-img', style: style });
+	    }
+	  }, {
+	    key: '_renderCaption',
+	    value: function _renderCaption() {
+	      if (!this.state.caption) {
+	        return null;
+	      }
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'caption' },
+	        this.state.caption
+	      );
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        { className: this.state.col },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'thumb' },
+	          this._renderImg(this.state.img),
+	          this._renderCaption()
+	        )
+	      );
+	    }
+	  }]);
+
+	  return BaseThumb;
+	}(_react2.default.Component);
+
+	BaseThumb.propTypes = propTypes;
+	BaseThumb.defaultProps = defaultProps;
+
+	exports.default = BaseThumb;
+
+/***/ },
+/* 199 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(7);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var propTypes = {
+	  img: _react.PropTypes.string,
+	  caption: _react.PropTypes.string,
+	  col: _react.PropTypes.string,
+	  size: _react.PropTypes.string
+	};
+
+	var defaultProps = {
+	  img: '',
+	  caption: '',
+	  col: ''
+	};
+
+	var OneThumb = function (_React$Component) {
+	  _inherits(OneThumb, _React$Component);
+
+	  function OneThumb(props) {
+	    _classCallCheck(this, OneThumb);
+
+	    var _this = _possibleConstructorReturn(this, (OneThumb.__proto__ || Object.getPrototypeOf(OneThumb)).call(this, props));
+
+	    _this.state = {
+	      img: _this.props.img || null,
+	      caption: _this.props.caption || null,
+	      col: _this.props.col || 'col-xs-12 col-sm-6 col-lg-3',
+	      size: _this.props.size || '200px'
+	    };
+	    return _this;
+	  }
+
+	  _createClass(OneThumb, [{
+	    key: '_renderImg',
+	    value: function _renderImg(el, size) {
+	      if (!el) {
+	        return _react2.default.createElement('div', { className: 'thumbs-img thumbs-img-empty' });
+	      }
+	      var style = {
+	        backgroundImage: 'url(' + el + ')',
+	        backgroundRepeat: 'no-repeat',
+	        backgroundPosition: 'center center',
+	        backgroundSize: size
+	      };
+	      return _react2.default.createElement('div', { className: 'thumbs-img', style: style });
+	    }
+	  }, {
+	    key: '_renderCaption',
+	    value: function _renderCaption() {
+	      if (!this.state.caption) {
+	        return null;
+	      }
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'caption' },
+	        this.state.caption
+	      );
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        { className: this.state.col },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'thumb' },
+	          this._renderImg(this.state.img, this.state.size),
+	          this._renderCaption()
+	        )
+	      );
+	    }
+	  }]);
+
+	  return OneThumb;
+	}(_react2.default.Component);
+
+	OneThumb.propTypes = propTypes;
+	OneThumb.defaultProps = defaultProps;
+
+	exports.default = OneThumb;
+
+/***/ },
+/* 200 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
 /* 201 */,
 /* 202 */,
 /* 203 */,
-/* 204 */,
-/* 205 */,
+/* 204 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(7);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _ContainerMedia = __webpack_require__(179);
+
+	var _ContainerMedia2 = _interopRequireDefault(_ContainerMedia);
+
+	__webpack_require__(205);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var propTypes = {
+	  data: _react.PropTypes.object
+	};
+
+	var defaultProps = {
+	  data: {
+	    title: 'Testimonials!',
+	    description: 'Testimonials Empty'
+	  }
+	};
+
+	//Shema
+	//title: 'Lets Talk About Your Disease',
+	//description: 'WE ARE READY TO WORK WITH YOU',
+	//img: '/media/billionphotos.jpg',
+	//btn: 'GET IN TOUCH'
+
+	var Testimonials = function (_React$Component) {
+	  _inherits(Testimonials, _React$Component);
+
+	  function Testimonials(props) {
+	    _classCallCheck(this, Testimonials);
+
+	    var _this = _possibleConstructorReturn(this, (Testimonials.__proto__ || Object.getPrototypeOf(Testimonials)).call(this, props));
+
+	    _this.state = {
+	      active: 0,
+	      data: _this.props.data.items[0] || null,
+	      class: _this.props.data.class || 'text-center',
+	      containerMediaOpacity: _this.props.data.containerMediaOpacity || '1',
+	      containerMediaClass: _this.props.data.containerMediaClass || 'backdrop',
+	      disabled: { pointerEvents: 'none' }
+	    };
+	    _this._newSlide = _this._newSlide.bind(_this);
+	    return _this;
+	  }
+
+	  _createClass(Testimonials, [{
+	    key: '_renderTitle',
+	    value: function _renderTitle() {
+	      if (!this.props.data.title) {
+	        return null;
+	      }
+	      return _react2.default.createElement(
+	        'h2',
+	        null,
+	        this.props.data.title
+	      );
+	    }
+	  }, {
+	    key: '_renderDesc',
+	    value: function _renderDesc() {
+	      if (!this.props.data.description) {
+	        return null;
+	      }
+	      return _react2.default.createElement(
+	        'p',
+	        null,
+	        this.props.data.description
+	      );
+	    }
+	  }, {
+	    key: '_renderImgBg',
+	    value: function _renderImgBg() {
+	      if (!this.props.data.img) {
+	        return null;
+	      }
+	      return _react2.default.createElement(_ContainerMedia2.default, {
+	        img: this.props.data.img,
+	        opacity: this.state.containerMediaOpacity,
+	        'class': this.state.containerMediaClass
+	      });
+	    }
+	  }, {
+	    key: '_renderBtn',
+	    value: function _renderBtn() {
+	      if (!this.props.data.btn) {
+	        return null;
+	      }
+	      return _react2.default.createElement(
+	        'a',
+	        { className: 'btn btn-default', href: '#', role: 'button' },
+	        this.props.data.btn
+	      );
+	    }
+	  }, {
+	    key: '_newSlide',
+	    value: function _newSlide(event, index) {
+	      this.setState({ data: this.props.data.items[event] || this.props.data.items[0] });
+	    }
+	  }, {
+	    key: '_renderSlide',
+	    value: function _renderSlide() {
+
+	      if (!this.state.data) {
+	        return null;
+	      }
+	      var current = this.state.data;
+
+	      var disabled = null;
+	      if (current.id === 0) {
+	        var disabled = this.state.disabled;
+	      }
+
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'slides' },
+	        _react2.default.createElement('div', { className: 'slide-prev', onClick: this._newSlide.bind(this, current.id - 1), style: disabled }),
+	        _react2.default.createElement('div', { className: 'slide-next', onClick: this._newSlide.bind(this, current.id + 1) }),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'slide' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'wrap' },
+	            _react2.default.createElement(
+	              'blockquote',
+	              null,
+	              _react2.default.createElement(
+	                'p',
+	                null,
+	                current.text
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'author' },
+	                current.author
+	              ),
+	              _react2.default.createElement(
+	                'small',
+	                null,
+	                current.position
+	              )
+	            )
+	          )
+	        )
+	      );
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'testimonials ' + this.state.class },
+	        this._renderImgBg(),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'container-fluid' },
+	          this._renderTitle(),
+	          this._renderDesc(),
+	          this._renderSlide()
+	        )
+	      );
+	    }
+	  }]);
+
+	  return Testimonials;
+	}(_react2.default.Component);
+
+	Testimonials.propTypes = propTypes;
+	Testimonials.defaultProps = defaultProps;
+
+	exports.default = Testimonials;
+
+/***/ },
+/* 205 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
 /* 206 */,
 /* 207 */,
 /* 208 */,
-/* 209 */,
-/* 210 */,
+/* 209 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(7);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _ContainerMedia = __webpack_require__(179);
+
+	var _ContainerMedia2 = _interopRequireDefault(_ContainerMedia);
+
+	__webpack_require__(210);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var propTypes = {
+	  data: _react.PropTypes.object
+	};
+
+	var defaultProps = {
+	  data: {}
+	};
+
+	var ContentContainer = function (_React$Component) {
+	  _inherits(ContentContainer, _React$Component);
+
+	  function ContentContainer(props) {
+	    _classCallCheck(this, ContentContainer);
+
+	    var _this = _possibleConstructorReturn(this, (ContentContainer.__proto__ || Object.getPrototypeOf(ContentContainer)).call(this, props));
+
+	    _this.state = {
+	      active: null,
+	      itstyle: _this.props.data.itstyle || null
+	    };
+	    return _this;
+	  }
+
+	  _createClass(ContentContainer, [{
+	    key: '_renderImgBg',
+	    value: function _renderImgBg() {
+	      if (!this.props.data.img) {
+	        return null;
+	      }
+	      return _react2.default.createElement(_ContainerMedia2.default, {
+	        img: this.props.data.img,
+	        size: 'inherit',
+	        repeat: 'repeat',
+	        opacity: '1'
+	      });
+	    }
+	  }, {
+	    key: '_renderTitle',
+	    value: function _renderTitle() {
+	      if (!this.props.data.title) {
+	        return null;
+	      }
+	      return _react2.default.createElement(
+	        'h2',
+	        null,
+	        this.props.data.title
+	      );
+	    }
+	  }, {
+	    key: '_renderDesc',
+	    value: function _renderDesc() {
+	      if (!this.props.data.description) {
+	        return null;
+	      }
+	      return _react2.default.createElement(
+	        'p',
+	        null,
+	        this.props.data.description
+	      );
+	    }
+	  }, {
+	    key: '_renderText',
+	    value: function _renderText() {
+	      if (!this.props.data.text) {
+	        return null;
+	      }
+	      return _react2.default.createElement(
+	        'p',
+	        null,
+	        this.props.data.text
+	      );
+	    }
+	  }, {
+	    key: '_renderServices',
+	    value: function _renderServices() {
+	      if (!this.props.data.services) {
+	        return null;
+	      }
+	      return _react2.default.createElement(
+	        'p',
+	        null,
+	        this.props.data.services
+	      );
+	    }
+	  }, {
+	    key: '_renderList',
+	    value: function _renderList() {
+	      if (!this.props.data.items[0]) {
+	        return null;
+	      }
+	      var items = this.props.data.items;
+
+	      var objlist = items.map(function (item, index) {
+	        return _react2.default.createElement(
+	          'li',
+	          { key: index, className: 'slide' },
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            item.text
+	          )
+	        );
+	      });
+	      return objlist ? _react2.default.createElement(
+	        'ul',
+	        { className: 'list text-left' },
+	        objlist
+	      ) : null;
+	    }
+	  }, {
+	    key: '_renderWrapper',
+	    value: function _renderWrapper() {
+	      if (!this.props.data.title) {
+	        return null;
+	      }
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'content-container text-center', style: this.state.itstyle },
+	        this._renderImgBg(),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'container' },
+	          this._renderTitle(),
+	          this._renderDesc(),
+	          this._renderText(),
+	          this._renderServices(),
+	          this._renderList()
+	        )
+	      );
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return this._renderWrapper();
+	    }
+	  }]);
+
+	  return ContentContainer;
+	}(_react2.default.Component);
+
+	ContentContainer.propTypes = propTypes;
+	ContentContainer.defaultProps = defaultProps;
+
+	exports.default = ContentContainer;
+
+/***/ },
+/* 210 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
 /* 211 */,
-/* 212 */,
-/* 213 */,
+/* 212 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(7);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	__webpack_require__(213);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var propTypes = {
+	  data: _react.PropTypes.object
+	};
+
+	var defaultProps = {
+	  data: {}
+	};
+
+	var FooterContainer = function (_React$Component) {
+	  _inherits(FooterContainer, _React$Component);
+
+	  function FooterContainer(props) {
+	    _classCallCheck(this, FooterContainer);
+
+	    var _this = _possibleConstructorReturn(this, (FooterContainer.__proto__ || Object.getPrototypeOf(FooterContainer)).call(this, props));
+
+	    _this.state = {
+	      class: _this.props.data.class || 'text-center',
+	      itstyle: _this.props.data.itstyle || null
+	    };
+	    return _this;
+	  }
+
+	  _createClass(FooterContainer, [{
+	    key: '_renderWrapper',
+	    value: function _renderWrapper() {
+	      if (!this.props.data.text) {
+	        return null;
+	      }
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'footer ' + this.state.class, style: this.state.itstyle },
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          this.props.data.text
+	        )
+	      );
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+
+	      return this._renderWrapper();
+	    }
+	  }]);
+
+	  return FooterContainer;
+	}(_react2.default.Component);
+
+	FooterContainer.propTypes = propTypes;
+	FooterContainer.defaultProps = defaultProps;
+
+	exports.default = FooterContainer;
+
+/***/ },
+/* 213 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
 /* 214 */,
 /* 215 */,
 /* 216 */,
@@ -26418,82 +28241,8 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9)))
 
 /***/ },
-/* 281 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _react = __webpack_require__(7);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactRouter = __webpack_require__(226);
-
-	var _Home = __webpack_require__(282);
-
-	var _Home2 = _interopRequireDefault(_Home);
-
-	var _NavBar = __webpack_require__(283);
-
-	var _NavBar2 = _interopRequireDefault(_NavBar);
-
-	var _StickyFooter = __webpack_require__(286);
-
-	var _StickyFooter2 = _interopRequireDefault(_StickyFooter);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	exports.default = _react2.default.createClass({
-	  displayName: 'App',
-	  render: function render() {
-	    return _react2.default.createElement(
-	      'div',
-	      null,
-	      _react2.default.createElement(_NavBar2.default, null),
-	      _react2.default.createElement('br', null),
-	      _react2.default.createElement('br', null),
-	      _react2.default.createElement(
-	        'div',
-	        { className: 'container' },
-	        this.props.children || _react2.default.createElement(_Home2.default, null)
-	      ),
-	      _react2.default.createElement(_StickyFooter2.default, null)
-	    );
-	  }
-	});
-
-/***/ },
-/* 282 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _react = __webpack_require__(7);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	exports.default = _react2.default.createClass({
-	  displayName: 'Home',
-	  render: function render() {
-	    return _react2.default.createElement(
-	      'div',
-	      null,
-	      'Home'
-	    );
-	  }
-	});
-
-/***/ },
+/* 281 */,
+/* 282 */,
 /* 283 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -26659,667 +28408,268 @@
 
 /***/ },
 /* 285 */,
-/* 286 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(7);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactDom = __webpack_require__(40);
-
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-
-	var _reactRouter = __webpack_require__(226);
-
-	__webpack_require__(287);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var propTypes = {
-	  initialCopy: _react.PropTypes.string,
-	  data: _react.PropTypes.array
-	};
-
-	var defaultProps = {
-	  initialCopy: '© Copy...',
-	  data: [{
-	    title: 'Home',
-	    url: '/'
-	  }, {
-	    title: 'About',
-	    url: '/about'
-	  }, {
-	    title: 'Privacy policy',
-	    url: '/privacy'
-	  }, {
-	    title: 'Terms of Service',
-	    url: '/terms'
-	  }]
-	};
-
-	var NavLink = function (_React$Component) {
-	  _inherits(NavLink, _React$Component);
-
-	  function NavLink() {
-	    _classCallCheck(this, NavLink);
-
-	    return _possibleConstructorReturn(this, (NavLink.__proto__ || Object.getPrototypeOf(NavLink)).apply(this, arguments));
-	  }
-
-	  _createClass(NavLink, [{
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(_reactRouter.Link, _extends({}, this.props, { activeClassName: 'active' }));
-	    }
-	  }]);
-
-	  return NavLink;
-	}(_react2.default.Component);
-
-	var StickyFooter = function (_React$Component2) {
-	  _inherits(StickyFooter, _React$Component2);
-
-	  function StickyFooter(props) {
-	    _classCallCheck(this, StickyFooter);
-
-	    var _this2 = _possibleConstructorReturn(this, (StickyFooter.__proto__ || Object.getPrototypeOf(StickyFooter)).call(this, props));
-
-	    _this2.state = {
-	      toggle: null
-	    };
-	    _this2._itemOnClick = _this2._itemOnClick.bind(_this2);
-	    return _this2;
-	  }
-
-	  _createClass(StickyFooter, [{
-	    key: '_itemOnClick',
-	    value: function _itemOnClick(event) {
-	      this.setState({
-	        toggle: !this.state.toggle
-	      });
-	    }
-	  }, {
-	    key: '_renderItemsMap',
-	    value: function _renderItemsMap() {
-	      if (!this.props.data) {
-	        return null;
-	      }
-	      var listItems = this.props.data.map(function (list, index) {
-	        return _react2.default.createElement(
-	          'li',
-	          { key: 'img-' + index },
-	          _react2.default.createElement(
-	            NavLink,
-	            { to: list.url },
-	            list.title
-	          )
-	        );
-	      });
-	      return _react2.default.createElement(
-	        'ul',
-	        { className: 'list-inline nav-list-inline', role: 'nav' },
-	        listItems
-	      );
-	    }
-	  }, {
-	    key: '_renderCopy',
-	    value: function _renderCopy() {
-	      if (!this.props.initialCopy) {
-	        return null;
-	      }
-	      return _react2.default.createElement(
-	        'span',
-	        { className: 'copy small' },
-	        this.props.initialCopy
-	      );
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'footer',
-	        { className: 'footer sticky-footer' },
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'footer-bar' },
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'container' },
-	            this._renderItemsMap(),
-	            this._renderCopy()
-	          )
-	        ),
-	        _react2.default.createElement('div', { className: 'body-footer' })
-	      );
-	    }
-	  }]);
-
-	  return StickyFooter;
-	}(_react2.default.Component);
-
-	exports.default = StickyFooter;
-
-
-	StickyFooter.propTypes = propTypes;
-	StickyFooter.defaultProps = defaultProps;
-
-/***/ },
-/* 287 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
+/* 286 */,
+/* 287 */,
 /* 288 */,
-/* 289 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _react = __webpack_require__(7);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	exports.default = _react2.default.createClass({
-	  displayName: 'About',
-	  render: function render() {
-	    return _react2.default.createElement(
-	      'div',
-	      null,
-	      'About'
-	    );
-	  }
-	});
-
-/***/ },
-/* 290 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(7);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactDom = __webpack_require__(40);
-
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-
-	var _AsideTabs = __webpack_require__(291);
-
-	var _AsideTabs2 = _interopRequireDefault(_AsideTabs);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var propTypes = {
-	  data: _react.PropTypes.array
-	};
-
-	var defaultProps = {
-	  data: [{
-	    title: 'INTRODUCTION',
-	    text: '<h4>LAST UPDATED: NOVEMBER 24, 2014</h4>\
-	      <p>THESE BUDDY HOSTED APPLICATION SERVICE TERMS (THE "TERMS") COMPRISE A LEGAL AGREEMENT ("AGREEMENT") BETWEEN YOU ("YOU" OR "YOUR" OR "CUSTOMER") AND BUDDY PLATFORM, INC. ("BUDDY") (EACH, A "PARTY" AND TOGETHER, THE "PARTIES"). BY SUBSCRIBING TO THE BUDDY HOSTED APPLICATION SERVICE, YOU AGREE TO BE BOUND BY THESE TERMS, AS MAY BE MODIFIED FROM TIME TO TIME. IF YOU DO NOT AGREE WITH ALL OF THESE TERMS, DO NOT SUBSCRIBE TO, ACCESS OR OTHERWISE USE THIS SITE, SERVICES AND/OR SOFTWARE OR ANY INFORMATION CONTAINED ON THE SITE. YOUR USE OF THIS SITE AND/OR THE SERVICES ON THIS SITE SHALL BE DEEMED TO BE YOUR AGREEMENT TO ABIDE BY ALL OF THE TERMS SET FORTH BELOW. BUDDY MAY MAKE CHANGES TO THE SERVICES AND SOFTWARE OFFERED ON THIS SITE AT ANY TIME. IN ADDITION, BUDDY MAY MAKE CHANGES TO THESE TERMS AT ANY TIME, AND BUDDY WILL POST NOTICE OF THE CHANGES AND THE UPDATED TERMS AND/OR SEND AN E-MAIL NOTIFICATION TO THE E-MAIL ADDRESS OF RECORD FOR CUSTOMERS ADMINISTRATOR. YOUR CONTINUED USE OF THE SERVICES AFTER SUCH CHANGES HAVE BEEN POSTED MEANS THAT YOU AGREE TO THE NEW TERMS, EVEN IF YOU HAVE NOT REVIEWED THE CHANGES.</p>'
-	  }, {
-	    title: 'ARTICLE I: PASSWORD RESTRICTED AREAS',
-	    text: '<p>You must be a current subscriber to the Services or an individual user (such as: an employee and other individual to whom You have issued a valid Buddy login ID) authorized by You to access and use the Services. Each individual user must have a distinct login ID to access the Services. You are solely and fully responsible for the actions of all individual users to whom You have issued Your Buddy login ID or have otherwise permitted access to Your Buddy account. You shall ensure that all users of Your Buddy account will fully comply with these Terms and the terms and limitations of Buddys Privacy Policy. Once You become a subscriber to the Services, Customer will receive or select a password and a login name. You are responsible for maintaining the confidentiality of the password and login name. You agree to notify Buddy immediately of any unauthorized use of Your account, password of any individual user to whom You have issued a Buddy login ID or any other breach of security known to You. You are responsible for activities that occur under Your Buddy account.</p>'
-	  }, {
-	    title: 'ARTICLE II: BUDDY SERVICES, LICENSES AND GENERAL USE RESTRICTIONS',
-	    text: '<h4>2.1 BUDDY SERVICES; SITE; SOFTWARE.</h4> <p>Buddy provides You with a web-based services platform (collectively, the "Services") which are accessible through the website located at www.buddyplatform.com (or any successor URL) (the "Site") that may be used by You in the development of mobile applications distributed under your brand ("Customer Applications"). In addition, Buddy provides You with an application programming interface ("API") available on the Site to assist you in using the Services (the API and any and all related documentation available on the Site herein collectively referred to as the "Software"). Buddy will implement upgrades to the Software solely at Buddys discretion. You must obtain an API key to use the Software ("Software Key") from Buddy. You agree not to share Your Software Key with any third party or use a Software Key that has been issued to a third party by Buddy, and You agree to be responsible for the acts and/or omissions of any third party that uses the Software Key issued to You.</p>\
-	      <h4>2.2 LICENSE.</h4> <p>Subject to the terms and conditions of these Terms, Buddy grants You a royalty-free, fully paid up, worldwide, non-sublicensable, non-transferable, non-exclusive, limited license to: (a) use the Software solely for the purpose of enabling the Customer Applications to connect with the Services and access the End User Data (as defined below) from the Site, subject to the specific Usage Limitation (as defined below) for which You have paid the applicable fees; and (b) pursuant to a EULA (as defined below), provide End Users (as defined herein) access to the Services solely through the API and Your Customer Applications, provided that You shall not embed the Software such that it is accessible in any way to the End Users. "End User(s)" means the individual who uses the Customer Application for personal, non-commercial or internal business use pursuant to the terms of a EULA (as defined below), including, without limitation, any employees of enterprise Customers who are using Customer Applications for such enterprise Customers internal business purposes</p>\
-	      <h4>2.3 BUDDY MATERIALS.</h4> <p>Buddy offers certain information, documents and products on the Site, including content, text, graphics and images that are not Customer Data or Third Party Content (both as defined below) (collectively "Buddy Materials") which are the sole and exclusive property of Buddy or its suppliers. Buddy grants You a non-exclusive, non-sublicensable license to use the Buddy Materials solely in connection with your use of the Site, Software and Services as expressly permitted by the terms and conditions of these Terms. Except as for the limited licenses granted herein, you acknowledge that you have no right, title or interest in or to any Buddy Materials on any legal basis.</p>\
-	      <h4>2.4 RESTRICTED USE.</h4><p>You may use the Site, Software, Services and Buddy Materials only to provide the Services as part of Your Customer Applications developed by You and distributed under your brand, but not to develop or operate a competing service. You shall not provide access to the Services on a stand-alone basis. Except as otherwise expressly provided in these Terms, You agree not to, nor permit any third party to: (a) adapt, alter, modify, decompile, translate, disassemble, reverse engineer or otherwise attempt to derive the source code of the Software or Services or any component thereof; (b) create license keys that enable the Software; (c) copy the Software except as provided in Section 2.5 (End User Terms); (d) use the Software or Services for any high risk activities or non-legitimate purpose; (e) use the Software or Services in any way that adversely affects the functionality or performance of the Software or Services provided by Buddy; (f) sell, rent, lease, sublicense, distribute, transfer, copy, reproduce, display, modify, or timeshare or use for any service bureau purposes the Software or Services, or any portion thereof; (g) remove any proprietary notices from the Software or Services, Buddy Materials furnished or made available hereunder; (h) publish or disclose to third parties any evaluation of the Software or Services without Buddys prior written consent or (i) use the Software or Services in automatic, semi-automatic or manual tools designed to create virus signatures, virus detection routines, or any other data or code for detecting malicious code or data.</p><p>If You are interested in doing anything else than permitted under these Terms, you will have to obtain Buddys prior written consent and explicitly agree upon any further terms and conditions.</p>\
-	      <h4>2.5 END USER TERMS.</h4><p>Before delivering or providing access to a Customer Application to an End User, Customer shall require the End User to accept the terms of a legally binding end user license agreement containing the provisions at least as restrictive as those provisions identified in Exhibit A ("EULA"). Customer agrees to distribute the Customer Applications to End Users only for purposes that are legal and in accordance with these Terms and any applicable laws, rules and regulations. Customer shall be liable for the acts and/or omissions of each End User in breach of the terms set forth in the EULA, these Terms or any applicable laws, rules and regulations.</p>\
-	      <h4>2.6 THIRD PARTY COMPONENTS.</h4><p>Certain Third Party Components included in the Software or Services shall be subject to various other terms and conditions imposed by the licensors of such Third Party Components. As applicable, the terms of Your use of the Third Party Components is subject to and governed by their respective licenses, except that this Section 1.5 ("Third Party Components"), Section 11 ("Disclaimer of Warranties"), Section 12 ("Limitation of Liability") and Section 13 ("Damage Cap") of these Terms also govern Your use of the Third Party Components. Customer may view the relevant licenses for such Third Party Components at the following URL: http://www.factual.com, and You agree to comply with the terms and conditions contained in all such Third Party Component licenses with respect to the applicable Third Party Components.</p>\
-	      '
-	  }, {
-	    title: 'ARTICLE III: USAGE LIMITATION AND OVERAGES',
-	    text: '<p>The usage parameters of the Services offered to you by Buddy shall depend upon the specific Services tier for which you have paid the applicable fees to Buddy ("Usage Limitation"). You agree to pay any and all applicable fees for any usage that exceeds the Usage Limitation ("Overages").</p>'
-	  }, {
-	    title: 'ARTICLE IV: FEES AND PAYMENT TERMS',
-	    text: '<h4>4.1 FEES AND PAYMENT TERMS.</h4> <p>The Services available on the Site require that You purchase a subscription. You are solely responsible for all charges, fees, duties, taxes, and assessments arising out of any use of the Services by You or anyone else using your Buddy account. Buddy may at any time amend the rates and fees for the Services, and will notify all customers by email at least ten (10) business days prior to any such amendment.</p>\
-	      <p>Buddy will bill You through a web-based interface ("Customer Billing Account") for the Services. You agree to pay Buddy all fees for your use of the Services (based on the specific Usage Limitation that You have selected) at the then-current subscription rates as well as for any Overages that may accrue from Your use of the Services, and You hereby authorize Buddy to charge Your PayPal account ("Customer PayPal Account") for such applicable fees. Customer agrees to make payment using its Customer PayPal Account. If the Customer PayPal Account does not process the payment on the 1st day of the initial term, the Services may not be provided. All subscription fees are billed on a monthly basis in advance on a pre-paid basis, whereas all Overages are billed in arrears on a bi-monthly basis (i.e., every two (2) weeks). Charges on Customer Billing Account will be summarized for Customer online ("Customer Online Statement"). No pre-paid fees will be refunded for any reason.</p>\
-	      <p>At any time during Your subscription term, You may contact Buddy to increase or decrease the Usage Limitation associated with your Buddy account. Any increase to the Usage Limitation shall be subject to Buddys then-current rates for the applicable Usage Limitation tier. The fee for any increases in the Usage Limitation shall be assessed on a pro-rated basis and will be included in the online invoice for the immediately preceding billing period following the date on which the adjustment to the Usage Limitation took effect. If you decrease the Usage Limitation at any time, any pre-paid fees that have already been charged to Your Customer PayPal Account for the month in which the adjustment to the Usage Limitation takes effect will not be refunded. Your ability to use the Services subject to the new Usage Limitation will take effect immediately upon the date that Buddy processes your request adjust the Usage Limitation.</p>\
-	      <p>You must provide current, complete and accurate information for the Customer Billing Account in order to receive the Services. You must promptly update all information to keep the Customer Billing Account current, complete and accurate (such as a change in billing address, credit card number or credit card expiration date), and You must promptly notify Buddy if the Customer PayPal Account is cancelled (e.g., for loss or theft). IF YOU FAIL TO PROVIDE BUDDY ANY OF THE FOREGOING INFORMATION, YOU AGREE THAT BUDDY MAY CONTINUE CHARGING YOU FOR ANY SERVICES PROVIDED UNLESS YOU HAVE TERMINATED YOUR SUBSCRIPTION FOR THE SERVICES IN ACCORDANCE WITH THESE TERMS.</p>\
-	      <p>Buddy may submit periodic charges (e.g., monthly) without further authorization from You until such date that You provide notice (confirmed in writing upon Buddys request) that You have terminated Your authorization to charge Your Customer PayPal Account. Such notice will not affect charges submitted before Buddy could reasonably act.</p>\
-	      <h4>4.2 TAXES.</h4> <p>You shall be solely responsible for and shall pay Buddy for all sales, use, transfer, privilege, excise, and all other taxes and all duties, whether international, national, state or local, however designated, which are levied or imposed by reason of Your use of the Site, Software and Services; excluding, however, income taxes on Buddys net income. Buddy will include any such taxes and duties in the Customer Billing Account. You hereby indemnify and hold Buddy harmless from and against the payment of any and all sales or similar taxes, including any penalties or interest thereon. Your obligations pursuant to this Section shall survive any termination or expiration of this Agreement.</p>\
-	      <h4>4.3 ELECTRONIC COMMUNICATIONS.</h4><p>By using all or part of this Site, You consent to receiving electronic communications from Buddy and its partners and affiliates. These electronic communications may include notices about applicable fees and charges, transactional information and other information concerning or related to the Site and/or the Services. These electronic communications are part of your relationship with Buddy and You receive them as part of your use of the Site and the Services. You agree that any notices, agreements, disclosures or other communications that we send you electronically will satisfy any legal communication requirements, including that such communications be in writing.</p>\
-	      '
-	  }, {
-	    title: 'ARTICLE V: CUSTOMER DATA AND CUSTOMER PORTAL',
-	    text: '<h4>5.1 CUSTOMER DATA.</h4><p>You acknowledge that You are responsible for all content, data, information and materials, whether visual, written or audible, that You or Your End Users send through and/or upload onto the Site through the use of the Software and Services, including, without limitation, photos, messages, text and graphics ("Customer Data"), and that you, and not Buddy, will have full responsibility for all Customer Data, including its legality, reliability, appropriateness, originality and copyright. You grant Buddy a non-exclusive, worldwide, royalty-free license to (in any media now known or not currently known or invented) to use, copy, modify, distribute and display the Customer Data, and any portion thereof, to provide to the Services. Buddy agrees to provide access to the Customer Data only to those End Users who are designated to access Customer Data through your Customer Applications. Buddy agrees to manage the Customer Data in accordance with Buddy Privacy Policy.</p>\
-	      <h4>5.2 CUSTOMER PORTAL.</h4><p>You may view certain transactional and usage data related to Your Customer Applications and Your End Users use of Your Customer Applications through a portal located on the Site ("Customer Portal"). Buddy reserves the right to monitor Your End Users transactions and Your and Your End Users usage of the Services through the Customer Portal. Buddy agrees to manage any data collected from the Customer Portal in accordance with Buddy Privacy Policy, located at.</p>\
-	      <h4>5.3 OWNERSHIP OF CUSTOMER DATA.</h4><p>You and/or your End Users retain ownership of the copyrights or other intellectual property rights applicable to any Customer Data You submit to Buddy; provided however that Buddy may use such Customer Data on an aggregated basis for its business purposes. You further agree that you will not upload, post or otherwise make available on the Site or through the Services any material protected by copyright, trademark, or any other proprietary right without the express permission of the owner of such copyright, trademark or other proprietary right, and the burden of determining that any material is not protected by any such right is on you. You shall be solely liable for any damage resulting from any infringement of copyrights, trademarks, proprietary rights, or any other harm resulting from any Customer Data.</p>\
-	      <h4>5.4 CUSTOMER REPRESENTATIONS AND WARRANTIES.</h4><p>You represent and warrant that: (i) you own and/or have obtained all third party rights, licenses, consents, permission and/or authorizations necessary for Buddy to utilize the Customer Data in accordance with the rights grant to Buddy in Section 6 (Customer Data) above, and (ii) the posting of the Customer Data does not violate the privacy rights, publicity rights, trademark rights, copyrights, contract rights or any other rights of any person. You agree to pay for all royalties, fees, and any other monies owing any person by reason of any Customer Data posted or submitted to the Site and/or through the Services.</p>\
-	      <h4>5.5 POSTING ETIQUETTE.</h4><p>When submitting Customer Data to, or otherwise using the Site (including using the forums), You agree not to, nor permit any third party to, without limitation:</p>\
-	      <ul><li>Defame, abuse, harass, stalk, threaten, or otherwise violate the legal rights (such as rights of privacy and publicity) of others.</li>\
-	      <li>Impersonate or represent Buddy, our staff or other industry professionals.</li>\
-	      <li>Solicit a members password or other account information.</li>\
-	      <li>Harvest user names, addresses, or email addresses for any purpose other than to conduct Buddy business.</li>\
-	      <li>Use racially, ethnically, or otherwise offensive language.</li>\
-	      <li>Discuss or incite illegal activity.</li>\
-	      <li>Use explicit/obscene language or solicit/post sexually explicit images (actual or simulated).</li>\
-	      <li>Disrupt the flow of chat in any manner, including without limitation vulgar language or abusiveness.</li>\
-	      <li>Post anything that exploits children or minors or that depicts cruelty to animals.</li>\
-	      <li>Post any copyrighted or trademarked materials without the express permission from the owner.</li>\
-	      <li>Disseminate any unsolicited or unauthorized advertising, promotional materials, "junk mail", "spam", "chain letters", "pyramid schemes", or any other form of such solicitation.</li>\
-	      <li>Post any content that is mature or adult in nature.</li></ul>\
-	      <p>This list of prohibitions is an example and is not complete or exclusive. These prohibitions do not require Buddy to monitor, police or remove any Customer Data or other information submitted by You, any End User or any other user of the Site and/or Services. Buddy reserves the right to (a) terminate Your access to your Buddy account, your ability to submit Customer Data through the Services and (b) refuse, delete or remove any Customer Data; with or without cause and with or without notice, for any reason or no reason, or for any action that Buddy determines is inappropriate or disruptive to the Site and/or Services or to any other user of the Site and/or Services. Buddy may report to law enforcement authorities any actions that may be illegal, and any reports it receives of such conduct. When legally required or at Buddy discretion, Buddy will cooperate with law enforcement agencies in any investigation of alleged illegal activity on the Internet.</p>\
-	      <p><strong><i>These prohibitions do not require Buddy to monitor, police or remove any Customer Data or other information submitted by You, any End User or any other user of the Site and/or Services.</i></strong></p>\
-	      '
-	  }, {
-	    title: 'ARTICLE VI: OWNERSHIP AND RESTRICTED USE; ATTRIBUTION.',
-	    text: '<h4>6.1 BUDDY OWNERSHIP.</h4><p>For purposes of these Terms, "Intellectual Property Rights" means any and all rights existing from time to time under patent law, copyright law, trade secret law, trademark law and any and all other proprietary rights. Buddy shall retain ownership of the Site, Software, Services, Buddy Materials and Demo Apps (including any modifications and enhancements to any and all of the foregoing), including all Intellectual Property Rights therein (but excluding any Customer Data incorporated therein). Except for the rights expressly granted You by Buddy under these Terms, all other rights are expressly reserved. There are no implied rights.</p>\
-	      <h4>6.2 ATTRIBUTION.</h4><p>You may opt to, but have no obligation to, provide Buddy with attribution as the source of any functionality provided by the Services that You incorporate in Your Customer Applications by including a Buddy Marks (as defined herein) in Your Customer Applications. Buddy grants You a royalty-free, fully paid-up, worldwide, non-transferable, non-exclusive, limited license to the specific Buddy logo and/or name provided on the Site for attribution purposes (collectively, the "Buddy Marks") solely for the purposes of attributing Buddy as the source of certain functionality provided by the Services that You incorporate in Your Customer Applications. Your use of the Buddy Marks shall be in accordance with applicable trademark law and Buddy then-current trademark and attribution guidelines, which Buddy reserves the right to revise from time to time. The current version of the Buddy trademark and attribution guidelines are located in our Press & Media section. You agree that Your use of the Buddy Marks shall inure solely to the benefit of Buddy, and that You shall not obtain any rights in the Buddy Marks beyond the rights expressly granted pursuant to these Terms. You further agree not to register Buddy trademarks or confusingly similar trademarks with any governmental authority, and not to challenge the rights of Buddy in the Buddy Marks. You shall take all actions necessary, in Buddy discretion, to preserve and protect the reputation and good name of Buddy.</p>\
-	      '
-	  }, {
-	    title: 'ARTICLE VII: TRADEMARKS',
-	    text: '<p>Buddy is a trademark of Buddy. All other trademarks, names and logos on this Site are the property of their respective owners.</p><p>Unless otherwise specified, all information and screens appearing on this Site including documents, services, site design, text, graphics, logos, images and icons, as well as the selection and arrangement thereof, are the sole property of Buddy, Copyright © 2012 Buddy Platform, Inc. All rights not expressly granted herein are reserved. Except as otherwise required by applicable law, any reproduction, distribution, modification, retransmission, or publication of any copyrighted material is strictly prohibited without the express written consent of the copyright owner.</p>'
-	  }, {
-	    title: 'ARTICLE VIII: THIRD PARTY CONTENT',
-	    text: '<p>Certain information and content that are not Customer Data may be provided by third party licensors and suppliers to Buddy ("Third Party Content"). The Third Party Content is, in each case, the copyrighted work of the creator/licensor. Unless you have permission from the owner of the Third Party Content, You agree to use such Third Party Content pursuant to the licenses of such Third Party Content. You acknowledge and agree that you have no right to download, cache, reproduce, modify, display (except as set forth in this paragraph), edit, alter or enhance any of the Third Party Content in any manner unless you have permission from the owner of the Third Party Content. BUDDY DISCLAIMS ALL EXPRESS, IMPLIED AND STATUTORY WARRANTIES AND CONDITIONS WITH REGARD TO THIRD PARTY CONTENT, INCLUDING, BUT NOT LIMITED TO, ALL IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT OF THIRD PARTY RIGHTS.</p>'
-	  }, {
-	    title: 'ARTICLE IX: LINKS TO THIRD PARTY SITES',
-	    text: '<p>This Site may be linked to other third party sites that are not affiliated with Buddy. Buddy provides these links to You only as a convenience, and Buddy is not responsible for the content or links displayed on such third party websites. The third party websites may have different privacy policies and terms and conditions and business practices than Buddy. Your use of any third party website is subject to the terms of use and privacy policies located on the linked to third party websites. Your dealings and communications with any party other than Buddy are solely between You and such third party. Any reference on the Site to any product, process, publication or service of any third party, by trade name, domain name, trademark, trade identity, service mark, logo, manufacturer or otherwise does not constitute or imply Buddy endorsement or recommendation.</p>'
-	  }, {
-	    title: 'ARTICLE X: DISPUTES',
-	    text: '<p>You understand that Your interactions and dealings with other users of this Site and/or any End User of a Customer Application are solely between You and such other user or End User. Buddy is not responsible for any loss or damage of any sort incurred as a result of any such interactions or dealings, and Buddy has no obligation to become involved in any resulting dispute.</p>'
-	  }, {
-	    title: 'ARTICLE XI: DISCLAIMER OF WARRANTIES',
-	    text: '<p>DISCLAIMER OF WARRANTIES. CUSTOMER AGREES THAT THE SITE, SOFTWARE, SERVICES, BUDDY MATERIALS AND DEMO APPS, AND ANY OTHER DATA, MATERIALS AND INFORMATION OBTAINED ON OR THROUGH THE SITE OR FROM BUDDY ARE USED BY CUSTOMER AT ITS OWN RISK. CUSTOMER ACKNOWLEDGES AND UNDERSTANDS THAT BUDDY DOES NOT WARRANT THAT THE SITE, SOFTWARE, SERVICES, BUDDY MATERIALS AND DEMO APPS OFFERED OR PROVIDED HEREUNDER WILL BE UNINTERRUPTED OR ERROR FREE, NOR DO THEY MAKE ANY WARRANTY OR REPRESENTATION AS TO THE RESULTS THAT MAY BE OBTAINED FROM THE USE OF THE SITE, SOFTWARE, SERVICES AND BUDDY MATERIAL OR AS TO THE ACCURACY, RELIABILITY OR CONTENT OF ANY INFORMATION OR CONTENT CONTAINED IN OR PROVIDED THROUGH THE SITE, SOFTWARE, DEMO APPS, SERVICES AND BUDDY MATERIAL. BUDDY EXPRESSLY DISCLAIMS AND EXCLUDES ALL WARRANTIES OF ANY KIND, EXPRESS, IMPLIED, STATUTORY OR OTHERWISE, INCLUDING, WITHOUT LIMITATION, THE WARRANTIES OF TITLE, MERCHANTABILITY, AND FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT OF THIRD PARTY RIGHTS.</p>'
-	  }, {
-	    title: 'ARTICLE XII. LIMITATION OF LIABILITY',
-	    text: '<p>Customer agrees that Buddy is not responsible or liable for the deletion of or failure to store documents or other information. UNDER NO CIRCUMSTANCES SHALL BUDDY BE LIABLE TO CUSTOMER OR ANY OTHER THIRD PARTY FOR ANY SPECIAL, INCIDENTAL, INDIRECT OR CONSEQUENTIAL DAMAGES, INCLUDING, BUT NOT LIMITED TO, ANY LOST PROFITS, REPLACEMENT OF GOODS, LOSS OF DATA OR INTERRUPTION OF BUSINESS, WHETHER UNDER A THEORY OF CONTRACT, TORT (INCLUDING NEGLIGENCE), PRODUCT LIABILITY OR OTHERWISE, EVEN IF BUDDY HAS SPECIFICALLY BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.</p>\
-	      <p>Customer shall assert no claims against Buddy after one (1) year from the date of the occurrence of the events giving rise to the claim.</p>'
-	  }, {
-	    title: 'ARTICLE XIII. DAMAGES CAP',
-	    text: '<p>IN NO EVENT SHALL BUDDY TOTAL, AGGREGATE LIABILITY FOR ANY LOSS, INJURY, DAMAGE OR EXPENSE ARISING DIRECTLY OR INDIRECTLY IN CONNECTION WITH THE SITE, THE SERVICES, THE SOFTWARE AND/OR THIS AGREEMENT EXCEED THE AMOUNT EQUAL TO THE TOTAL FEES PAID BY CUSTOMER TO BUDDY FOR THE MOST RECENT SIX MONTH PERIOD PRIOR TO WHICH ANY SUCH LOSS, INJURY, DAMAGE OR EXPENSE OCCURRED.</p>'
-	  }, {
-	    title: 'ARTICLE XIV. CUSTOMER REPRESENTATIONS AND WARRANTIES; INDEMNITY',
-	    text: '<p><strong>14.1</strong> You represent, warrant and covenant to Buddy all of the following:<p>\
-	      <p>a) Your Customer Applications must comply with all applicable criminal, civil and statutory laws and regulations in any jurisdictions in which Your Customer Applications may be offered or made available.</p>\
-	      <p>b) You and Your Customer Applications must comply with all applicable privacy and data collection laws and regulations with respect to any collection, transmission, maintenance, processing, use, etc. of personal information. You and Your Customer Applications must also take appropriate steps to protect any such location data or personal information from unauthorized disclosure or access.</p>\
-	      <p>c) You must either own all the content and materials in Your Customer Applications or have permission from the content owner to use it in Your Customer Applications.</p>\
-	      <p>d) To the best of Your knowledge and belief, Your Customer Applications do not and will not violate, misappropriate, or infringe any Buddy or third party copyrights, trademarks, rights of privacy and publicity, trade secrets, patents, or other proprietary or legal rights (e.g. musical composition or performance rights, video rights, photography or image rights, logo rights, third party data rights, etc. for content and materials that may be included in Your Customer Applications.</p>\
-	      <p>e) You will not create any Customer Applications or other program that would disable, hack or otherwise interfere with any security, digital signing, digital rights management, verification or authentication mechanisms implemented in or by any services or other Bundle software or technology, or enable others to do so.</p>\
-	      <p>f) Your Customer Applications will not contain content or materials of any kind (text, graphics, images, photographs, sounds, etc.) that in Buddy reasonable judgment may be found objectionable, for example, materials that may be considered obscene, pornographic, or defamatory.</p>\
-	      <p>g) Your Customer Applications must not contain any malware, malicious or harmful code, program, or other internal component (e.g. computer viruses, trojan horses, "backdoors") which could damage, destroy, or adversely affect other software, firmware, hardware, data, systems, services, or networks.</p>\
-	      <p>h) If Your Customer Applications include any FOSS (as defined herein), You agree to comply with all applicable FOSS licensing terms. "FOSS" (Free and Open Source Software) means any software that is subject to terms that, as a condition of use, copying, modification or redistribution, require such software and/or derivative works thereof to be disclosed or distributed in source code form, to be licensed for the purpose of making derivative works, or to be redistributed free of charge, including without limitation software distributed under the GNU General Public License or GNU Lesser/Library GPL.</p>\
-	      <p><strong>14.2 Indemnity.</strong> Customer agrees to indemnify, defend and hold Buddy and its respective directors, officers, agents and affiliates harmless from and against all actions, losses, claims, obligations, demands, assessments, penalties, liabilities, costs, damages, attorneys fees and expenses (collectively, "Claims"), asserted against or incurred by such persons or entities by reason of or resulting from: (1) the use of the Site, Software, Services, Buddy Materials or Demo Apps by Customer, (2) the use of any Customer Applications provided or sold by Customer to End Users, or (3) any acts or omissions of the Customer or third parties authorized by Customer to use Customers Buddy account. The provisions of this Section shall survive the expiration or termination of this Agreement.</p>\
-	      '
-	  }, {
-	    title: 'ARTICLE XV. PRIVACY POLICY',
-	    text: '<p>Your use of the Site is governed by the Buddy Privacy Policy (the "Privacy Policy").</p>'
-	  }, {
-	    title: 'ARTICLE XVI: TERM OF AGREEMENT AND TERMINATION',
-	    text: '<h4>16.1 TERM.</h4><p>These Terms commence on the date that you first access the Site and Services and shall continue until terminated as set forth herein. You shall be responsible for all fees for the applicable month in which termination occurs, and Buddy shall not issue any refunds for any pre-paid subscription fees.</p>\
-	      <h4>16.2 TERMINATION.</h4>\
-	      <p>a) Customer may terminate this Agreement at any time upon written notice to Buddy. In the event of such Customer termination no pre-paid subscription fees will be refunded.</p>\
-	      <p>b) If You violate any of these Terms, Buddy shall notify You in writing of such failure and allow You ten (10) business days to cure such breach. In the event that You fail to cure within such 10-day period, then Buddy may terminate these Terms and Your access to the Services, including deletion of all Customer Data.</p>\
-	      <p>c) In the event You fail to pay all amounts due Buddy in accordance with the terms of these Terms, Buddy shall notify You in writing of such failure and allow You ten (10) business days to cure such breach. In the event that You fail to cure within such 10-day period, then Buddy may suspend the Services and/or terminate these Terms. Any suspension or termination does not relieve You from paying all fees and charges due under these Terms, and, in the event of collection enforcement, You shall be liable for any costs associated with such collection, including, but not limited to, attorneys fees, court costs, and collection agency fees. Your are responsible for all fees, previously not disputed, from the time Your account is established.<p>\
-	      <p>d) Buddy may terminate these Terms and Your access to the Services at any time without cause by providing You with thirty (30) days prior written notice, including, without limitation, notice given by electronic mail of such termination.</p>\
-	      <p>e) IN THE EVENT OF TERMINATION, ALL CUSTOMER DATA AND YOUR ACCOUNT INFORMATION WILL BE PERMANENTLY DELETED, AND BUDDY HAS NO OBLIGATION TO RETAIN ANY CUSTOMER DATA OR YOUR ACCOUNT INFORMATION FOR ANY PERIOD OF TIME.</p>\
-	      <p>f) In the event of termination of these Terms, you agree to immediately: (i) cease using the Software and Services, (ii) destroy any downloaded or printed Buddy Materials and (iii) return or destroy, at Buddy option, any Buddy Confidential Information in Your possession and control (and upon Buddy request, provide written certification that You have complied with (i), (ii) and (iiii)).</p>'
-	  }, {
-	    title: 'ARTICLE XVII: CONFIDENTIALITY',
-	    text: '<h4>17.1 INFORMATION DEEMED BUDDY CONFIDENTIAL.</h4>\
-	      <p>Under these Terms, certain information, whether in tangible, intangible, visual or electronic form, that You know or should know that Buddy considers confidential and/or proprietary, whether or not the information is specifically marked as "confidential" or with any similar designation, including, but not limited to the Software (including the source code of the API) and any financial information; technical information, research, development, procedures, algorithms, data and designs of Buddy ("Buddy Confidential Information"). You agree to protect Buddy Confidential Information using at least the same degree of care that You use to protect Your own confidential information of similar importance, but no less than a reasonable degree of care. You agree to use Buddy Confidential Information solely for the purpose of exercising Your rights and performing Your obligations under this Agreement and agree not to use Buddy Confidential Information for any other purpose, for Your own or any third partys benefit, without Buddy prior written consent. You further agree not to disclose or disseminate Buddy Confidential Information to anyone other than: (i) those of Your employees and contractors if You are a business entity, who have a need to know and who are bound by a written agreement that prohibits unauthorized use or disclosure of the Buddy Confidential Information; or (ii) except as otherwise agreed or permitted in writing by Buddy. Notwithstanding the foregoing, Buddy Confidential Information shall not include information that: (i) is or becomes publicly available through no act or omission of You or Your employees or contractors; (ii) was in Your possession without restriction on disclosure prior to the disclosure by Buddy; (iii) is disclosed to You without restriction on disclosure by a third party that is not in breach of any confidentiality obligations to Buddy; (iv) is independently developed by You without reference or access to Buddy Confidential Information. You may disclose Buddy Confidential Information to the extent required by law, provided that You take reasonable steps to notify Buddy of such requirement before disclosing the Buddy Confidential Information and to obtain protective treatment of the Buddy Confidential Information. You acknowledge that damages for improper disclosure of Buddy Confidential Information may be irreparable; therefore, Buddy is entitled to seek equitable relief, including injunction and preliminary injunction, in addition to all other remedies.</p>\
-	      <h4>17.2 INFORMATION SUBMITTED TO BUDDY NOT DEEMED CONFIDENTIAL.</h4>\
-	      <p>You acknowledge and agree that Buddy works with many application and software developers and some of their products may be similar to or compete with Your Customer Applications. Buddy may also be developing its own similar or competing applications and products or may decide to do so in the future. To avoid potential misunderstandings, Buddy cannot agree, and expressly disclaims, any confidentiality obligations or use restrictions, express or implied, with respect to any information that You may provide in connection with these Terms, including information about Your Customer Applications and metadata (such disclosures will be referred to as "Your Disclosures"). You agree that any of Your Disclosures will be non-confidential. Buddy will be free to use and disclose any of Your Disclosures on an unrestricted basis without notifying or compensating You. You release Buddy from all liability and obligations that may arise from the receipt, review, use, or disclosure of any portion of any Your Disclosures. Any physical materials You submit to Buddy will become Buddy property and Buddy will have no obligation to return those materials to You or to certify their destruction.</p>\
-	      <h4>17.3 PRESS RELEASES AND OTHER PUBLICITY.</h4>\
-	      <p>You may not issue any press releases or make any other public statements regarding this Agreement, its terms and conditions, or the relationship of the parties without Buddys express prior written approval, which may be withheld at Buddys discretion.</p>\
-	      '
-	  }, {
-	    title: 'ARTICLE XVIII: SECURITY',
-	    text: '<p>Buddy will maintain the Services at a reputable third party Internet service provider and hosting facility and will implement industry standard security precautions intended to prevent unauthorized access to Customer Data. You acknowledge that, notwithstanding such security precautions, use of, or connection to, the Internet provides the opportunity for unauthorized third parties to circumvent such precautions and illegally gain access to the Services and Customer Data. Accordingly, Buddy cannot and does not guaranty the privacy, security, integrity or authenticity of any information so transmitted over or stored in any system connected to the Internet or that any such security precautions will be adequate or sufficient.</p>'
-	  }, {
-	    title: 'ARTICLE XIX: LOCAL LAWS; EXPORT CONTROL',
-	    text: '<p>a) Buddy controls and operates this Site from its headquarters in the United States of America and the Buddy Materials may not be appropriate or available for use in other locations. If you use this Site outside the United States of America, you are responsible for following applicable local laws, rules and regulations.</p>\
-	      <p>b) You shall comply with all applicable export control laws and regulations of the United States and any other applicable foreign jurisdiction. You shall not without prior U.S. government authorization, export, re-export, or transfer any goods, software, electronic certification records, technical data, information related to the Software or the Services or technology subject to these Terms, either directly or indirectly, to any country subject to a U.S. trade embargo or to any resident or national of any such country, or to any person or entity listed on the "Entity List" or "Denied Persons List" maintained by the U.S. Department of Commerce or the list of "Specifically Designated Nationals and Blocked Persons" maintained by the U.S. Department of Treasury.</p>'
-	  }, {
-	    title: 'ARTICLE XX: U.S. GOVERNMENT RESTRICTED RIGHTS',
-	    text: '<p>The Software under this Agreement is "commercial computer software" (as that term is described in DFAR 252.227-7014(a)(1)). If acquired by or on behalf of a civilian agency, the U.S. Government acquires this commercial computer software and/or commercial computer software documentation subject to the terms and this Agreement as specified in 48 C.F.R. 12.212 (Computer Software) and 12.11 (Technical Data) of the Federal Acquisition Regulations ("FAR") and its successors. If acquired by or on behalf of any agency within the Department of Defense ("DOD"), the U.S. Government acquires this commercial computer software and/or commercial computer software documentation subject to the terms of this Agreement as specified in 48 C.F.R. 227.7202 of the DOD FAR Supplement and its successors.</p>'
-	  }, {
-	    title: 'ARTICLE XXI: ADDITIONAL TERMS',
-	    text: '<h4>20.1 ASSIGNMENT.</h4> </p>These Terms or any of your rights hereunder may not be assigned, nor may any of Your obligations under this Agreement be delegated, in whole or in part, by You by operation of law, merger, or any other means without Budd express prior written consent and any attempted assignment without such consent will be null and void.</p>\
-	      <h4>20.2 RELATIONSHIP OF PARTIES.</h4></p>These Terms will not be construed as creating any other agency relationship, or a partnership, joint venture, fiduciary duty, or any other form of legal association between You and Buddy, and You will not represent to the contrary, whether expressly, by implication, appearance or otherwise.</p>\
-	      <h4>20.3 NOTICES.</h4><p>Any notices relating to these Terms shall be in writing. Notices will be deemed given by Buddy when sent to You at the email address or mailing address You provided during the sign-up process. All notices to Buddy relating to these Terms will be deemed given (a) when delivered personally, (b) three (3) business days after having been sent by commercial overnight carrier with written proof of delivery, and (c) ten (10) business days after having been sent by first class or certified mail, postage prepaid, to this Buddy address: 1418 3rd AVE #300 Seattle WA 98101. You consent to receive notices by email and agree that any such notices that Buddy sends You electronically will satisfy any legal communication requirements. A party may change its email or mailing address by giving the other written notice as described above.</p>\
-	      <h4>20.4 SEVERABILITY.</h4><p>If a court of competent jurisdiction finds any clause of these Terms to be unenforceable for any reason, that clause of these Terms shall be enforced to the maximum extent permissible so as to effect the intent of the parties, and the remainder of these Terms shall continue in full force and effect.</p>\
-	      <h4>20.5 WAIVER AND CONSTRUCTION.</h4><p>Failure by Buddy to enforce any provision of these Terms shall not be deemed a waiver of future enforcement of that or any other provision. Any laws or regulations that provide that the language of a contract will be construed against the drafter will not apply to these Terms. Section headings are for convenience only and are not to be considered in construing or interpreting this Agreement.</p>\
-	      <h4>20.6 DISPUTE RESOLUTION; GOVERNING LAW.</h4>\
-	      <p>a) Any litigation or other dispute resolution between You and Buddy arising out of or relating to this Agreement or Your relationship with Buddy will take place in King County, Washington, and You and Buddy hereby consent to the personal jurisdiction of and exclusive venue in the state and federal courts within King County, Washington with respect to any such litigation or dispute resolution. This Agreement will be governed by and construed in accordance with the laws of the United States and the State of Washington, except that body of Washington law concerning conflicts of law.<p>\
-	      <p>b) Notwithstanding the foregoing, if You are an agency, instrumentality or department of the federal government of the United States, then these Terms shall be governed in accordance with the laws of the United States of America, and in the absence of applicable federal law, the laws of the State of Washington will apply.</p>\
-	      <p>c) These Terms shall not be governed by the United Nations Convention on Contracts for the International Sale of Goods, the application of which is expressly excluded.</p>\
-	      <h4>20.7 ENTIRE AGREEMENT; GOVERNING LANGUAGE.</h4><p>These Terms constitute the entire agreement between the parties with respect to the subject matter hereof and supersedes all prior and contemporaneous understandings, communications and agreements, written or oral regarding its subject matter. Any translation of these Terms is done for local requirements and in the event of a dispute between the English and any non-English version, the English version of these Terms shall govern.</p>\
-	      '
-	  }, {
-	    title: 'Exhibit A',
-	    text: '<p>Instructions for Minimum Terms for End User License Agreement</p>\
-	      <p>As set forth in Section 2.5 of the Terms, You must include the following provisions, or their substantial equivalent, in the EULA governing End Users use of the Customer Applications. All capitalized terms herein shall have the meaning set forth in the Terms.</p>\
-	      <p><strong>1. Acknowledgement: </strong> You and the End User must acknowledge that the EULA is concluded between You and the End User only, and not with Buddy, and You, not Buddy, are solely responsible for the Customer Application and the content thereof. The EULA may not provide for usage rules for Services that are less restrictive than the Usage Limitation for which You have paid the applicable fees.</p>\
-	      <p><strong>2. Personal Use Only: </strong> The End User must agree that the Services as incorporated into the Customer Applications may be used solely for personal use purposes for which the Customer Application was licensed. You must not grant any End User a license to use the Services as incorporated into the Customer Applications that exceeds the scope of the license granted in Section 2.2(b) of the Terms. The End User must agree abide by all restrictions on the use of the Services set forth in Section 2.4 of the Terms.</p>\
-	      <p><strong>3. Maintenance and Support: </strong> You must be solely responsible for providing any maintenance and support services with respect to Your Customer Applications, as specified in the EULA, or as required under applicable law. You and the End User must acknowledge that Buddy has no obligation whatsoever to furnish any maintenance and support services with respect to the Customer Applications.</p>\
-	      <p><strong>4. Warranty:  </strong>You must be solely responsible for any product warranties, whether express or implied by law, to the extent not effectively disclaimed. To the maximum extent permitted by applicable law, Buddy will have no other warranty obligation whatsoever with respect to the Customer Applications, and any other claims, losses, liabilities, damages, costs or expenses attributable to any failure to conform to any warranty will be Your sole responsibility and You will include a provision disclaiming such obligations for Buddy.</p>\
-	      <p><strong>5. Product Claims: </strong> You and the End User must acknowledge that You, not Buddy, are responsible for addressing any claims of the End User or any third party relating to the Customer Applications or the End Users possession and/or use of that Customer Application, including, but not limited to: (i) product liability claims; (ii) any claim that the Customer Application fails to conform to any applicable legal or regulatory requirement; and (iii) claims arising under consumer protection or similar legislation. The EULA may not limit Your liability to the End User beyond what is permitted by applicable law.</p>\
-	      <p><strong>6. Intellectual Property Rights: </strong> You and the End User must acknowledge that, in the event of any third party claim that the Customer Application or the End Users possession and use of that Customer Application infringes that third partys intellectual property rights other than the Services, You, not Buddy, will be solely responsible for the investigation, defense, settlement and discharge of any such intellectual property infringement claim.</p>\
-	      <p><strong>7. Disclaimer of Liability: </strong> To the maximum extent permitted by applicable law, Buddy will not be liable to End User or any third party for any indirect, incidental, special or consequential damages arising out of or related to the Customer Applications, including, without limitation, any loss of profit, revenue or data, irrespective of the nature of the claim, whether in contact, tort (including negligence), product liability, based on warranty or otherwise, even if Buddy has been advised of the possibility of such damages.</p>\
-	      <p><strong>8. Confidential Information: </strong> You must include a provision that protects any confidential information provided to the End User under the EULA that is at least as protective as the terms of Section XVII of the Terms.</p>\
-	      <p><strong>9. Legal Compliance: </strong> The End User must represent and warrant that (i) any Customer Data does not and will not violate, misappropriate, or infringe any third party copyrights, trademarks, rights of privacy and publicity, trade secrets, patents, or other proprietary or legal rights (e.g. musical composition or performance rights, video rights, photography or image rights, logo rights, third party data rights, etc., (ii) he/she is not located in a country that is subject to a U.S. Government embargo, or that has been designated by the U.S. Government as a "terrorist supporting" country; (iii) he/she is not listed on any U.S. Government list of prohibited or restricted parties and (iv) he/she will comply with all applicable laws, rules and regulations that apply to his/her use of the Customer Application, including, without limitation, any export control laws.</p>\
-	      <p><strong>10. Developer Name and Address: </strong> You must state in the EULA Your name and address, and the contact information (telephone number; e-mail address) to which any End Users questions, complaints or claims with respect to the Customer Application should be directed.</p>\
-	      <p><strong>11. Third Party Terms of Agreement: </strong> You must state in the EULA that the End User must comply with applicable third party terms of agreement when using Your Customer Application, e.g., if You have a VoIP application, then the end-user must not be in violation of their wireless data service agreement when using Your Customer Application.</p>\
-	      <p><strong>12. Third Party Beneficiary: </strong> You and the End User must acknowledge and agree that Buddy is a third party beneficiary of the EULA, and that, upon the End Users acceptance of the terms and conditions of the EULA, Buddy will have the right (and will be deemed to have accepted the right) to enforce the EULA against the End User as a third party beneficiary thereof.</p>\
-	      '
-	  }]
-	};
-
-	//const defaultProps = [
-	//];
-
-
-	var Terms = function (_React$Component) {
-	  _inherits(Terms, _React$Component);
-
-	  function Terms(props) {
-	    _classCallCheck(this, Terms);
-
-	    return _possibleConstructorReturn(this, (Terms.__proto__ || Object.getPrototypeOf(Terms)).call(this, props));
-	  }
-
-	  _createClass(Terms, [{
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(_AsideTabs2.default, { data: this.props.data });
-	    }
-	  }]);
-
-	  return Terms;
-	}(_react2.default.Component);
-
-	exports.default = Terms;
-
-
-	Terms.propTypes = propTypes;
-	Terms.defaultProps = defaultProps;
-
-/***/ },
-/* 291 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(7);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactDom = __webpack_require__(40);
-
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-
-	__webpack_require__(292);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var propTypes = {
-	  data: _react.PropTypes.array
-	};
-
-	var defaultProps = {
-	  data: [{
-	    title: '',
-	    text: 'Empty'
-	  }]
-	};
-
-	var AsideTabs = function (_React$Component) {
-	  _inherits(AsideTabs, _React$Component);
-
-	  function AsideTabs(props) {
-	    _classCallCheck(this, AsideTabs);
-
-	    var _this = _possibleConstructorReturn(this, (AsideTabs.__proto__ || Object.getPrototypeOf(AsideTabs)).call(this, props));
-
-	    _this.state = {
-	      activeIndex: 0
-	    };
-	    return _this;
-	  }
-
-	  _createClass(AsideTabs, [{
-	    key: 'getAllTabs',
-	    value: function getAllTabs() {
-	      var _this2 = this;
-
-	      return Object.keys(this.props.data).map(function (key, index) {
-	        return _react2.default.createElement(
-	          'li',
-	          { className: 'tab-item ' + (_this2.state.activeIndex === index && 'active'),
-	            onClick: function onClick() {
-	              return _this2.setState({ activeIndex: index });
-	            }, key: 'tab-item-' + index },
-	          _react2.default.createElement(
-	            'span',
-	            null,
-	            _this2.props.data[index].title
-	          )
-	        );
-	      });
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      var _this3 = this;
-
-	      //console.log("test:", this);
-	      //console.log(this.props);
-
-	      var nextButton = null;
-	      var nextActiveIndex = parseInt(this.state.activeIndex) + 1;
-
-	      if (this.props.data[nextActiveIndex]) {
-	        nextButton = _react2.default.createElement(
-	          'a',
-	          { onClick: function onClick() {
-	              return _this3.setState({ activeIndex: nextActiveIndex });
-	            } },
-	          _react2.default.createElement(
-	            'span',
-	            null,
-	            'Next:'
-	          ),
-	          _react2.default.createElement(
-	            'span',
-	            null,
-	            this.props.data[nextActiveIndex].title
-	          )
-	        );
-	      }
-
-	      return _react2.default.createElement(
-	        'div',
-	        { className: 'panel panel-default panel-aside' },
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'panel-body' },
-	          _react2.default.createElement(
-	            'ul',
-	            { className: 'nav nav-tabs nav-stacked' },
-	            this.getAllTabs()
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'tab-content' },
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'tab-pane active' },
-	              _react2.default.createElement('div', { dangerouslySetInnerHTML: { __html: this.props.data[this.state.activeIndex].text } }),
-	              _react2.default.createElement(
-	                'nav',
-	                null,
-	                _react2.default.createElement(
-	                  'ul',
-	                  { className: 'pager' },
-	                  _react2.default.createElement(
-	                    'li',
-	                    { className: 'next' },
-	                    nextButton
-	                  )
-	                )
-	              )
-	            )
-	          )
-	        )
-	      );
-	    }
-	  }]);
-
-	  return AsideTabs;
-	}(_react2.default.Component);
-
-	exports.default = AsideTabs;
-
-
-	AsideTabs.propTypes = propTypes;
-	AsideTabs.defaultProps = defaultProps;
-
-	//AsideTabs.propTypes = {
-	//  data: PropTypes.arrayOf(PropTypes.shape({
-	//    title: PropTypes.string.isRequired,
-	//    text: PropTypes.string.isRequired
-	//  }).isRequired).isRequired
-	//};
-
-	//AsideTabs.propTypes = {
-	//  data: PropTypes.array.describe(
-	//    'All data.'
-	//  )
-	//};
-	//AsideTabs.propTypes = {
-	//  data: PropTypes.array.describe(
-	//    'All data.'
-	//  )
-	//};
-
-/***/ },
-/* 292 */
+/* 289 */,
+/* 290 */,
+/* 291 */,
+/* 292 */,
+/* 293 */,
+/* 294 */,
+/* 295 */,
+/* 296 */
 /***/ function(module, exports) {
 
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 293 */,
-/* 294 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(7);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactDom = __webpack_require__(40);
-
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-
-	var _AsideTabs = __webpack_require__(291);
-
-	var _AsideTabs2 = _interopRequireDefault(_AsideTabs);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var propTypes = {
-	  data: _react.PropTypes.array
+	module.exports = {
+		"landingBase": {
+			"logo": "/media/PLTwhite.svg",
+			"title": "Prime Lab Tech",
+			"description": "Ваш партнер з управління врожайністю",
+			"down": "#AboutContainer",
+			"img": "/media/billionphotos.jpg",
+			"logowidth": "280px",
+			"logospace": "65px auto 25px",
+			"class": "text-center",
+			"containerMediaOpacity": "1",
+			"containerMediaClass": "backdrop"
+		},
+		"navBar": [
+			{
+				"title": "Головна",
+				"url": "/base/soil",
+				"role": "auto"
+			},
+			{
+				"title": "О нас",
+				"url": "/base/soil#AboutContainer",
+				"role": "auto"
+			},
+			{
+				"title": "Наші послуги",
+				"url": "#",
+				"role": "auto"
+			},
+			{
+				"title": "Співпраця",
+				"url": "#",
+				"role": "auto"
+			},
+			{
+				"title": "Відгуки",
+				"url": "#",
+				"role": "auto"
+			},
+			{
+				"title": "Контакти",
+				"url": "/contacts",
+				"role": "link"
+			}
+		],
+		"aboutContainer": {
+			"title": "О нас",
+			"description": "«PLT», это современная агрохимическая лаборатория и дистрибьютор всемирно известных производителей высококачественных семян, удобрений и средств защиты сельскохозяйственных культур.",
+			"text": "Практически каждому владельцу садового участка или загородного дома с приусадебной территорией хочется наслаждаться шумом зеленой листвы и собирать хороший урожай с грядок. Но как быть, если растения не приживаются, несмотря на соблюдение всех правил посадки? Возможно, дело в состоянии почвы. Не стоит торопиться и заказывать дорогостоящую услугу по обновлению грунтового слоя — для начала можно сдать пробу почвы на специальный анализ, который покажет, насколько плодородной она является (а может, и вовсе отравленной теми или иными веществами) и какие удобрения рекомендуется использовать.",
+			"services": "Чому саме PLT?",
+			"img": "/media/basegrey.jpg",
+			"items": [
+				{
+					"id": 0,
+					"text": "Лише сучасні і стандартизовані методики;"
+				},
+				{
+					"id": 1,
+					"text": "Сучасне обладнання, атестоване і відкаліброване;"
+				},
+				{
+					"id": 2,
+					"text": "Спеціалісти аналітики, що мають багаторічний досвід роботи і лабораторіях агрохімічного профілю;"
+				},
+				{
+					"id": 3,
+					"text": "Спеціалісти експерти з досвідом роботи у виробництві (вирощування зернових, технічних, олійних культур);"
+				}
+			]
+		},
+		"talkContainer": {
+			"title": "Зв'яжіться з нами саме зараз",
+			"description": "Наші фахівці готові відповісти на всі ваші запитання",
+			"btn": "Задати питання та наші контакти",
+			"img": "/media/billionphotos.jpg",
+			"containerMediaOpacity": "1",
+			"containerMediaClass": "backdrop",
+			"address": {
+				"title": "Наші контакти:",
+				"int": "03040 м. Київ, вул.. Васильківська 1, офіс 200",
+				"phone": "(123) 456-7890",
+				"mail": "office@example.com",
+				"site": "www.example.com",
+				"items": [
+					{
+						"name": "Тетяна Широбокова",
+						"description": "Директор",
+						"mail": "boss@example.com",
+						"tel": "(067) 442 9229"
+					},
+					{
+						"name": "Джон Доу",
+						"description": "Керівник сектору комплексного супроводу агротехнологій",
+						"mail": "tech@example.com",
+						"tel": "(063) 456-7890"
+					}
+				]
+			}
+		},
+		"whatsnewContainer": {},
+		"productsContainer": {},
+		"partnersContainer": {
+			"catTitle": "Партнери та постачальники",
+			"catDescription": "Наша компанія відкрита до співробітництва з широким колом партнерів та запрошує виробників, постачальників, переробників сільськогосподарської продукції, брокерів та інші компанії аграрної сфери до відкритого діалогу.",
+			"role": "centered",
+			"items": [
+				{
+					"id": 0,
+					"img": "/media/partners01.svg",
+					"col": "col-xs-12 col-sm-4 col-lg-4",
+					"size": "240px"
+				},
+				{
+					"id": 1,
+					"img": "/media/partners02.svg",
+					"col": "col-xs-12 col-sm-4 col-lg-4",
+					"size": "220px"
+				},
+				{
+					"id": 2,
+					"img": "/media/partners03.svg",
+					"col": "col-xs-12 col-sm-4 col-lg-4",
+					"size": "150px"
+				}
+			]
+		},
+		"testimonials": {
+			"title": "Відгуки",
+			"description": "Що кажуть наші клієнти",
+			"btn": "Show more Testimonials",
+			"img": "/media/billionphotos.jpg",
+			"items": [
+				{
+					"id": 0,
+					"img": "/media/tumblr_static.jpg",
+					"text": "З PLT ми розпочали роботу близько чотирьох років тому. Завдяки PLT нині 30% наших площ цукрових буряків засіяні гібридами Сингенти. Сьогодні ми показуємо близько 90 гібридів кукурудзи, близько 40 гібридів цукрових буряків і чотири сорти сої...",
+					"author": "Михайло Савченко",
+					"position": "Директор СТОВ Агрофірма"
+				},
+				{
+					"id": 1,
+					"img": "/media/tumblr_o06war.jpg",
+					"text": "Господарюємо на площі 1500га. Вирощуємо озимий ріпак, озиму пшеницю, ячмінь, сою, кукурудзу. Із компанією PLT працюємо від року її заснування. У них здебільшого беремо різні засоби захисту рослин, гібриди соняшнику PLT...",
+					"author": "Василь Гордійко",
+					"position": "Специалист ПСП АФ Урожай"
+				},
+				{
+					"id": 2,
+					"img": "/media/tumblr_o06war.jpg",
+					"text": "У співпраці з компанією “PLT” нас приваблює надійність партнерства та високий потенціал урожайності тих продуктів, які нам постачає компанія. Ми працюємо з ними тільки в сегменті насіння соняшнику та кукурудзи...",
+					"author": "Анатолій Кущ",
+					"position": "Фермер ТОВ Латуре-Агро"
+				}
+			],
+			"containerMediaOpacity": "1",
+			"containerMediaClass": "backdrop"
+		},
+		"expertsContainer": {
+			"title": "Наші послуги",
+			"description": "Наше оборудование действительно уникальное. Образцы для анализа в PLT в заданных точках GPS на полях клиентов отбирают автоматические пробоотборники Wintex 1000. После сушки и размола почва поступает на анализ. К примеру, атомно-эмиссионный спектрометр американской фирмы Agilent Technologies позволяет определять подвижные формы микроэлементов в почве в самой малой их концентрации — от 30 ppb. Еще один прибор, двулучевой спектрофотометр от американской UNICO, поможет определить содержание в почве нитратного азота, аммонийного азота, подвижных форм фосфора и серы. С помощью пламенного фотометра от британской компании BWB Technologies поле заказчика исследуется на обменные формы калия, кальция и натрия. А многофункциональные аппараты американской Thermo Fisher Scientific точно измеряют уровень кислоты и щелочи в почве, а также степень ее засоленности.",
+			"img": "/media/basegrey.jpg",
+			"items": [
+				{
+					"text": "Визначення агрохімічних показників ґрунту (гумус, N,P,K,Mg,Ca,Na,S,Fe,Cu,Mn,Zn,B)"
+				},
+				{
+					"text": "Визначення фізико-хімічних показників ґрунту (засоленість, кислотність, ємність катіонного обміну)"
+				},
+				{
+					"text": "Визначення агрофізичних показників ґрунту (вміст глини/мулу/піску, показники водного режиму)"
+				},
+				{
+					"text": "Розрахунок норм добрив за результатами аналізу"
+				},
+				{
+					"text": "Розроблення системи удобрення"
+				},
+				{
+					"text": "Визначення потреби у меліорації"
+				},
+				{
+					"text": "Визначення лімітуючих факторів живлення"
+				},
+				{
+					"text": "Автоматизований відбір зразків ґрунту"
+				},
+				{
+					"text": "Рекомендації щодо доцільності проведення додаткових аналізів"
+				}
+			]
+		},
+		"howitworksContainer": {
+			"title": "Як ми це робимо?",
+			"description": "",
+			"img": "",
+			"items": [
+				{
+					"text": "Визначення реальних показників забезпеченості рослин елементами живлення"
+				},
+				{
+					"text": "Визначення точної потреби сільськогосподарських культур у добривах"
+				},
+				{
+					"text": "Оптимізація фінансових витрат"
+				},
+				{
+					"text": "Зменшення екологічного навантаження на ґрунт"
+				}
+			],
+			"itstyle": {
+				"backgroundColor": "#cee9fc"
+			}
+		},
+		"benefitsContainer": {
+			"title": "Які переваги Ви отримуєте?",
+			"description": "",
+			"img": "/media/basegrey.jpg",
+			"items": [
+				{
+					"text": "Рекомендації відносно оптимальних культур для Вашого ґрунту"
+				},
+				{
+					"text": "Оптимальний рівень внесення макро- і мікроелементів під вирощувану культуру"
+				},
+				{
+					"text": "Досягнення запланованої врожайності"
+				},
+				{
+					"text": "Позитивний баланс елементів за умови дотримання рекомен-дованих норм внесення добрив та регулювання рН в ґрунті"
+				},
+				{
+					"text": "Підвищення стійкості рослин до хвороби"
+				},
+				{
+					"text": "Підвищення ґрунтової родючості"
+				},
+				{
+					"text": "Завершений методологічний цикл, починаючи від відбору проб до надання рекомендацій, враховуючи особливості українських ґрунтів"
+				}
+			]
+		},
+		"footerContainer": {
+			"text": "© 2016 PLT Inc",
+			"class": "text-center",
+			"itstyle": {
+				"backgroundColor": "rgb(206, 233, 252)"
+			}
+		}
 	};
-
-	var defaultProps = {
-	  data: [{
-	    title: '',
-	    text: 'Page Empty'
-	  }]
-	};
-
-	var Privacy = function (_React$Component) {
-	  _inherits(Privacy, _React$Component);
-
-	  function Privacy(props) {
-	    _classCallCheck(this, Privacy);
-
-	    return _possibleConstructorReturn(this, (Privacy.__proto__ || Object.getPrototypeOf(Privacy)).call(this, props));
-	  }
-
-	  _createClass(Privacy, [{
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(_AsideTabs2.default, { data: this.props.data });
-	    }
-	  }]);
-
-	  return Privacy;
-	}(_react2.default.Component);
-
-	exports.default = Privacy;
-
-
-	Privacy.propTypes = propTypes;
-	Privacy.defaultProps = defaultProps;
 
 /***/ }
 /******/ ]);

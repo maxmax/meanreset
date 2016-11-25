@@ -78,31 +78,31 @@
 
 	var _Testimonials2 = _interopRequireDefault(_Testimonials);
 
-	var _ContentContainer = __webpack_require__(205);
+	var _ContentContainer = __webpack_require__(209);
 
 	var _ContentContainer2 = _interopRequireDefault(_ContentContainer);
 
-	var _FooterContainer = __webpack_require__(208);
+	var _FooterContainer = __webpack_require__(212);
 
 	var _FooterContainer2 = _interopRequireDefault(_FooterContainer);
 
-	var _ProjectHeader = __webpack_require__(211);
+	var _ProjectHeader = __webpack_require__(215);
 
 	var _ProjectHeader2 = _interopRequireDefault(_ProjectHeader);
 
-	var _ProfBase = __webpack_require__(214);
+	var _ProfBase = __webpack_require__(218);
 
 	var _ProfBase2 = _interopRequireDefault(_ProfBase);
 
-	var _Profs = __webpack_require__(217);
+	var _Profs = __webpack_require__(221);
 
 	var _Profs2 = _interopRequireDefault(_Profs);
 
-	var _allui = __webpack_require__(218);
+	var _allui = __webpack_require__(222);
 
 	var _allui2 = _interopRequireDefault(_allui);
 
-	__webpack_require__(219);
+	__webpack_require__(223);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -22304,19 +22304,24 @@
 	  }, {
 	    key: '_addressItems',
 	    value: function _addressItems() {
-	      //if (!this.props.data.items) { return null; }
 	      if (!this.props.address.items) {
 	        return null;
 	      }
-	      //const { users } = this.props.data;
 	      var intitems = this.props.address.items.map(function (item, index) {
 	        return _react2.default.createElement(
 	          'address',
 	          { key: index },
 	          _react2.default.createElement(
-	            'strong',
+	            'h3',
 	            null,
 	            item.name
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'description' },
+	            '"',
+	            item.description,
+	            '"'
 	          ),
 	          _react2.default.createElement('br', null),
 	          _react2.default.createElement(
@@ -22325,7 +22330,11 @@
 	            item.mail
 	          ),
 	          _react2.default.createElement('br', null),
-	          item.tel
+	          _react2.default.createElement(
+	            'span',
+	            null,
+	            item.tel
+	          )
 	        );
 	      });
 	      return intitems ? _react2.default.createElement(
@@ -22351,11 +22360,10 @@
 	          'address',
 	          null,
 	          _react2.default.createElement(
-	            'strong',
+	            'h2',
 	            null,
 	            this.props.address.title
 	          ),
-	          _react2.default.createElement('br', null),
 	          _react2.default.createElement('div', { dangerouslySetInnerHTML: { __html: this.props.address.int } }),
 	          _react2.default.createElement(
 	            'abbr',
@@ -22366,6 +22374,18 @@
 	            'span',
 	            null,
 	            this.props.address.phone
+	          ),
+	          _react2.default.createElement('br', null),
+	          _react2.default.createElement(
+	            'a',
+	            { href: 'mailto:' + this.props.address.mail },
+	            this.props.address.mail
+	          ),
+	          _react2.default.createElement('br', null),
+	          _react2.default.createElement(
+	            'a',
+	            { href: this.props.address.site },
+	            this.props.address.site
 	          )
 	        ),
 	        this._addressItems()
@@ -22563,6 +22583,18 @@
 	      );
 	    }
 	  }, {
+	    key: '_renderDesc',
+	    value: function _renderDesc() {
+	      if (!this.props.data.catDescription) {
+	        return null;
+	      }
+	      return _react2.default.createElement(
+	        'p',
+	        null,
+	        this.props.data.catDescription
+	      );
+	    }
+	  }, {
 	    key: '_renderData',
 	    value: function _renderData() {
 	      var _this2 = this;
@@ -22583,10 +22615,10 @@
 
 	      var thumbslist = items.map(function (item, index) {
 	        if (_this2.state.role == 'auto') {
-	          return _react2.default.createElement(_BaseThumb2.default, { key: item.id, img: item.img, caption: item.text });
+	          return _react2.default.createElement(_BaseThumb2.default, { key: item.id, img: item.img, caption: item.text, col: item.col });
 	        }
 	        if (_this2.state.role == 'centered') {
-	          return _react2.default.createElement(_OneThumb2.default, { key: item.id, img: item.img, caption: item.text });
+	          return _react2.default.createElement(_OneThumb2.default, { key: item.id, img: item.img, caption: item.text, col: item.col, size: item.size });
 	        }
 	      });
 	      return thumbslist ? _react2.default.createElement(
@@ -22605,6 +22637,7 @@
 	        'div',
 	        { className: "container-fluid thumbs role-" + this.state.role },
 	        this._renderTitle(),
+	        this._renderDesc(),
 	        this._renderData()
 	      );
 	    }
@@ -22759,7 +22792,8 @@
 	var propTypes = {
 	  img: _react.PropTypes.string,
 	  caption: _react.PropTypes.string,
-	  col: _react.PropTypes.string
+	  col: _react.PropTypes.string,
+	  size: _react.PropTypes.string
 	};
 
 	var defaultProps = {
@@ -22779,14 +22813,15 @@
 	    _this.state = {
 	      img: _this.props.img || null,
 	      caption: _this.props.caption || null,
-	      col: _this.props.col || 'col-xs-12 col-sm-6 col-lg-3'
+	      col: _this.props.col || 'col-xs-12 col-sm-6 col-lg-3',
+	      size: _this.props.size || '200px'
 	    };
 	    return _this;
 	  }
 
 	  _createClass(OneThumb, [{
 	    key: '_renderImg',
-	    value: function _renderImg(el) {
+	    value: function _renderImg(el, size) {
 	      if (!el) {
 	        return _react2.default.createElement('div', { className: 'thumbs-img thumbs-img-empty' });
 	      }
@@ -22794,7 +22829,7 @@
 	        backgroundImage: 'url(' + el + ')',
 	        backgroundRepeat: 'no-repeat',
 	        backgroundPosition: 'center center',
-	        backgroundSize: '200px'
+	        backgroundSize: size
 	      };
 	      return _react2.default.createElement('div', { className: 'thumbs-img', style: style });
 	    }
@@ -22819,7 +22854,7 @@
 	        _react2.default.createElement(
 	          'div',
 	          { className: 'thumb' },
-	          this._renderImg(this.state.img),
+	          this._renderImg(this.state.img, this.state.size),
 	          this._renderCaption()
 	        )
 	      );
@@ -22863,7 +22898,7 @@
 
 	var _ContainerMedia2 = _interopRequireDefault(_ContainerMedia);
 
-	__webpack_require__(292);
+	__webpack_require__(205);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -22997,9 +23032,14 @@
 	                current.text
 	              ),
 	              _react2.default.createElement(
+	                'div',
+	                { className: 'author' },
+	                current.author
+	              ),
+	              _react2.default.createElement(
 	                'small',
 	                null,
-	                current.author
+	                current.position
 	              )
 	            )
 	          )
@@ -23035,6 +23075,15 @@
 
 /***/ },
 /* 205 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 206 */,
+/* 207 */,
+/* 208 */,
+/* 209 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -23053,7 +23102,7 @@
 
 	var _ContainerMedia2 = _interopRequireDefault(_ContainerMedia);
 
-	__webpack_require__(206);
+	__webpack_require__(210);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -23080,7 +23129,8 @@
 	    var _this = _possibleConstructorReturn(this, (ContentContainer.__proto__ || Object.getPrototypeOf(ContentContainer)).call(this, props));
 
 	    _this.state = {
-	      active: null
+	      active: null,
+	      itstyle: _this.props.data.itstyle || null
 	    };
 	    return _this;
 	  }
@@ -23179,7 +23229,7 @@
 	      }
 	      return _react2.default.createElement(
 	        'div',
-	        { className: 'content-container text-center' },
+	        { className: 'content-container text-center', style: this.state.itstyle },
 	        this._renderImgBg(),
 	        _react2.default.createElement(
 	          'div',
@@ -23208,14 +23258,14 @@
 	exports.default = ContentContainer;
 
 /***/ },
-/* 206 */
+/* 210 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 207 */,
-/* 208 */
+/* 211 */,
+/* 212 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -23230,7 +23280,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	__webpack_require__(209);
+	__webpack_require__(213);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -23257,7 +23307,8 @@
 	    var _this = _possibleConstructorReturn(this, (FooterContainer.__proto__ || Object.getPrototypeOf(FooterContainer)).call(this, props));
 
 	    _this.state = {
-	      class: _this.props.data.class || 'text-center'
+	      class: _this.props.data.class || 'text-center',
+	      itstyle: _this.props.data.itstyle || null
 	    };
 	    return _this;
 	  }
@@ -23270,7 +23321,7 @@
 	      }
 	      return _react2.default.createElement(
 	        'div',
-	        { className: 'footer ' + this.state.class },
+	        { className: 'footer ' + this.state.class, style: this.state.itstyle },
 	        _react2.default.createElement(
 	          'p',
 	          null,
@@ -23295,14 +23346,14 @@
 	exports.default = FooterContainer;
 
 /***/ },
-/* 209 */
+/* 213 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 210 */,
-/* 211 */
+/* 214 */,
+/* 215 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -23317,7 +23368,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	__webpack_require__(212);
+	__webpack_require__(216);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -23394,14 +23445,14 @@
 	exports.default = ProjectHeader;
 
 /***/ },
-/* 212 */
+/* 216 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 213 */,
-/* 214 */
+/* 217 */,
+/* 218 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -23416,7 +23467,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	__webpack_require__(215);
+	__webpack_require__(219);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -23775,14 +23826,14 @@
 	exports.default = ProfBase;
 
 /***/ },
-/* 215 */
+/* 219 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 216 */,
-/* 217 */
+/* 220 */,
+/* 221 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -23902,7 +23953,7 @@
 	exports.default = Profs;
 
 /***/ },
-/* 218 */
+/* 222 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -24192,85 +24243,7 @@
 	};
 
 /***/ },
-/* 219 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 220 */,
-/* 221 */,
-/* 222 */,
-/* 223 */,
-/* 224 */,
-/* 225 */,
-/* 226 */,
-/* 227 */,
-/* 228 */,
-/* 229 */,
-/* 230 */,
-/* 231 */,
-/* 232 */,
-/* 233 */,
-/* 234 */,
-/* 235 */,
-/* 236 */,
-/* 237 */,
-/* 238 */,
-/* 239 */,
-/* 240 */,
-/* 241 */,
-/* 242 */,
-/* 243 */,
-/* 244 */,
-/* 245 */,
-/* 246 */,
-/* 247 */,
-/* 248 */,
-/* 249 */,
-/* 250 */,
-/* 251 */,
-/* 252 */,
-/* 253 */,
-/* 254 */,
-/* 255 */,
-/* 256 */,
-/* 257 */,
-/* 258 */,
-/* 259 */,
-/* 260 */,
-/* 261 */,
-/* 262 */,
-/* 263 */,
-/* 264 */,
-/* 265 */,
-/* 266 */,
-/* 267 */,
-/* 268 */,
-/* 269 */,
-/* 270 */,
-/* 271 */,
-/* 272 */,
-/* 273 */,
-/* 274 */,
-/* 275 */,
-/* 276 */,
-/* 277 */,
-/* 278 */,
-/* 279 */,
-/* 280 */,
-/* 281 */,
-/* 282 */,
-/* 283 */,
-/* 284 */,
-/* 285 */,
-/* 286 */,
-/* 287 */,
-/* 288 */,
-/* 289 */,
-/* 290 */,
-/* 291 */,
-/* 292 */
+/* 223 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin

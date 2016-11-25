@@ -3,7 +3,8 @@ import React, { PropTypes }  from 'react';
 const propTypes = {
   img: PropTypes.string,
   caption: PropTypes.string,
-  col: PropTypes.string
+  col: PropTypes.string,
+  size: PropTypes.string
 };
 
 const defaultProps = {
@@ -19,17 +20,18 @@ class OneThumb extends React.Component {
     this.state = {
       img: this.props.img || null,
       caption: this.props.caption || null,
-      col: this.props.col || 'col-xs-12 col-sm-6 col-lg-3'
+      col: this.props.col || 'col-xs-12 col-sm-6 col-lg-3',
+      size: this.props.size || '200px'
     };
   }
 
-  _renderImg (el) {
+  _renderImg (el,size) {
     if (!el) { return <div className="thumbs-img thumbs-img-empty"></div>; }
     var style = {
       backgroundImage: 'url(' + el + ')',
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'center center',
-      backgroundSize: '200px'
+      backgroundSize: size
     };
     return (
       <div className="thumbs-img" style={style}></div>
@@ -49,7 +51,7 @@ class OneThumb extends React.Component {
     return (
       <div className={this.state.col}>
         <div className='thumb'>
-          {this._renderImg(this.state.img)}
+          {this._renderImg(this.state.img, this.state.size)}
           {this._renderCaption()}
         </div>
       </div>

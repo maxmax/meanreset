@@ -50,8 +50,12 @@
   color: inherit;
   background: white;
 }
+.landing-base.contrast > h1 {
+  display: block;
+}
 .landing-base.contrast .down {
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHZlcnNpb249IjEuMSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCA0OTAuNCA0OTAuNCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDkwLjQgNDkwLjQ7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iNjBweCIgaGVpZ2h0PSI2MHB4Ij4KPGc+Cgk8cGF0aCBkPSJNNDkwLjQsMjQ1LjJDNDkwLjQsMTEwLDM4MC40LDAsMjQ1LjIsMFMwLDExMCwwLDI0NS4yczExMCwyNDUuMiwyNDUuMiwyNDUuMlM0OTAuNCwzODAuNCw0OTAuNCwyNDUuMnogTTI0LjUsMjQ1LjIgICAgYzAtMTIxLjcsOTktMjIwLjcsMjIwLjctMjIwLjdzMjIwLjcsOTksMjIwLjcsMjIwLjdzLTk5LDIyMC43LTIyMC43LDIyMC43UzI0LjUsMzY2LjksMjQuNSwyNDUuMnoiIGZpbGw9IiMwMDAwMDAiLz4KCTxwYXRoIGQ9Ik0yNTMuOSwzNjAuNGw2OC45LTY4LjljNC44LTQuOCw0LjgtMTIuNSwwLTE3LjNzLTEyLjUtNC44LTE3LjMsMGwtNDgsNDhWMTM4LjdjMC02LjgtNS41LTEyLjMtMTIuMy0xMi4zICAgIHMtMTIuMyw1LjUtMTIuMywxMi4zdjE4My40bC00OC00OGMtNC44LTQuOC0xMi41LTQuOC0xNy4zLDBzLTQuOCwxMi41LDAsMTcuM2w2OC45LDY4LjljMi40LDIuNCw1LjUsMy42LDguNywzLjYgICAgUzI1MS41LDM2Mi44LDI1My45LDM2MC40eiIgZmlsbD0iIzAwMDAwMCIvPgo8L2c+Cjwvc3ZnPgo=);
+  cursor: pointer;
 }
 .landing-base .container {
   position: relative;
@@ -168,8 +172,31 @@
   opacity: 1;
   transition: all 0.2s ease;
 }
+.lets-talk .modal-content .modal-body section {
+  margin: 30px 0px;
+}
 .lets-talk address {
   color: black;
+}
+.lets-talk address h1,
+.lets-talk address h2 {
+  font-size: 1.5em;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+.lets-talk address h3 {
+  font-size: 1em;
+  margin-top: 0;
+  margin-bottom: 0.1em;
+}
+.lets-talk address .description {
+  display: inline-block;
+  width: 300px;
+  max-width: 100%;
+  font-size: 0.8em;
+}
+.lets-talk address:last-child {
+  margin-bottom: 0px;
 }
 .container-fluid.thumbs {
   width: 100%;
@@ -187,10 +214,15 @@
 .thumbs > h1,
 .thumbs > h2,
 .thumbs > h3 {
-  margin: 0px 0 60px;
+  margin: 0 4em;
+  text-align: center;
+}
+.thumbs > p {
+  margin: 1em 4em;
   text-align: center;
 }
 .thumbs .row {
+  margin-top: 60px;
   margin-right: -0.5px;
   margin-left: -0.5px;
 }
@@ -303,7 +335,6 @@
   width: 700px;
   max-width: 100%;
   margin: 1em auto;
-  overflow: hidden;
 }
 .testimonials .slides .slide-prev,
 .testimonials .slides .slide-next {
@@ -330,9 +361,9 @@
 }
 .testimonials .wrap {
   display: table-cell;
-  height: 200px;
+  height: 240px;
   vertical-align: middle;
-  padding: 0px 40px;
+  padding: 0px 0px;
   margin: 0 auto;
 }
 .testimonials blockquote {
@@ -343,8 +374,17 @@
   position: relative;
   font-weight: 200;
 }
-.testimonials blockquote:before,
-.testimonials blockquote:after {
+.testimonials blockquote p {
+  position: relative;
+  padding: 0 40px;
+  margin: 0 0;
+  display: inline-block;
+  max-height: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.testimonials blockquote p:before,
+.testimonials blockquote p:after {
   content: '"';
   display: inline-block;
   font-size: 2.5em;
@@ -353,15 +393,14 @@
   top: 0px;
   left: -25px;
 }
-.testimonials blockquote:after {
+.testimonials blockquote p:after {
   top: auto;
   bottom: 0px;
   left: auto;
   right: -25px;
 }
-.testimonials blockquote p {
-  padding: 0 0;
-  margin: 0 0;
+.testimonials blockquote .author:before {
+  content: '\2014   \A0';
 }
 .testimonials blockquote .small,
 .testimonials blockquote small {
@@ -369,6 +408,10 @@
   line-height: 1.42857143;
   color: #ffffff;
   margin-top: 0.5em;
+}
+.testimonials blockquote .small:before,
+.testimonials blockquote small:before {
+  display: none;
 }
 .content-container {
   position: relative;
@@ -7737,6 +7780,13 @@ body {
   font-size: 20px;
   font-size: 1.4285714285714286em;
   color: #484848;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Helvetica Neue', helvetica, arial, sans-serif;
 }
 p {
   margin: 0.5em 0;

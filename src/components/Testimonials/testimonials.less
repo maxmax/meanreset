@@ -29,7 +29,7 @@
       width: 700px;
       max-width: 100%;
       margin: 1em auto;
-      overflow: hidden;
+      //overflow: hidden;
     }
     .slide-prev, .slide-next{
       display: block;
@@ -56,9 +56,9 @@
   }
   .wrap{
     display: table-cell;
-    height: 200px;
+    height: 240px;
     vertical-align: middle;
-    padding: 0px 40px;
+    padding: 0px 0px;
     margin: 0 auto;
   }
   blockquote {
@@ -68,30 +68,43 @@
     border-width: 0px;
     position: relative;
     font-weight: 200;
-    &:before, &:after{
-      content: '"';
-      display: inline-block;
-      font-size: 2.5em;
-      line-height: 1;
-      position: absolute;
-      top: 0px;
-      left: -25px;
-    }
-    &:after{
-      top: auto;
-      bottom: 0px;
-      left: auto;
-      right: -25px;
-    }
     p{
-      padding: 0 0;
+      position: relative;
+      padding: 0 40px;
       margin: 0 0;
+      display: inline-block;
+      max-height: 200px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      &:before, &:after{
+        content: '"';
+        display: inline-block;
+        font-size: 2.5em;
+        line-height: 1;
+        position: absolute;
+        top: 0px;
+        left: -25px;
+      }
+      &:after{
+        top: auto;
+        bottom: 0px;
+        left: auto;
+        right: -25px;
+      }
+    }
+    .author {
+      &:before {
+        content: '\2014 \A0';
+      }
     }
     .small, small {
       font-size: 70%;
       line-height: 1.42857143;
       color: #ffffff;
       margin-top: 0.5em;
+      &:before {
+        display: none;
+      }
     }
   }
 }

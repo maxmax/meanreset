@@ -1,6 +1,6 @@
-import React, { PropTypes } from 'react'
-import ReactDom from 'react-dom'
-import { Link } from 'react-router'
+import React, { PropTypes } from 'react';
+import ReactDom from 'react-dom';
+import { Link } from 'react-router';
 
 import './navbar.less';
 
@@ -9,53 +9,67 @@ const propTypes = {
 };
 
 const defaultProps = {
-  data: [
-    {
-      title: 'Home',
-      url: '/'
-    }, {
-      title: 'About',
-      url: '/about'
-    }, {
-      title: 'Privacy policy',
-      url: '/privacy'
-    }, {
-      title: 'Terms of Service',
-      url: '/terms'
-    }
-  ]
+  data: []
 };
 
-class NavLink extends React.Component {
+class NavHref extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      int: (<a href={this.props.to}>{this.props.children}</a>)
+    };
+  }
+
   render() {
-    return (
-      <Link {...this.props} activeClassName="active"/>
-    );
+    return this.state.int;
+  }
+}
+
+class NavLink extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      link: this.props.role === 'link' ? (<Link {...this.props} activeClassName="active"/>) : (<NavHref {...this.props} />)
+    };
+  }
+
+  render() {
+    return this.state.link;
   }
 }
 
 export default class NavBar extends React.Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      active: null,
+      role: this.props.data.role || null
+    };
+  }
+
   _renderItemsMap () {
-    if (!this.props.data) { return null; }
+    if (!this.props.data[0]) { return null; }
+
     const listItems = this.props.data.map((list, index) =>
       <li key={`img-${index}`} >
-        <NavLink to={list.url}>{list.title}</NavLink>
+        <NavLink to={list.url} role={list.role}>{list.title}</NavLink>
       </li>
     );
+
     return (
-      <ul className="nav navbar-nav" role="nav">{listItems}</ul>
+      <nav className="navbar navbar-default navbar-inverse navbar-fixed-top navbar-center">
+        <div className="container">
+          <ul className="nav navbar-nav" role="nav">{listItems}</ul>
+        </div>
+      </nav>
     );
   }
 
   render() {
-    return (
-      <nav className="navbar navbar-default navbar-inverse">
-        <div className="container">
-          { this._renderItemsMap() }
-        </div>
-      </nav>
-    );
+    return this._renderItemsMap();
   }
 
 }

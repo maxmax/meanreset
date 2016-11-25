@@ -38,6 +38,7 @@ router.get('/apps', function(req, res, next) {
   });
 });
 
+//buddy & router tests
 router.get('/buddy', function(req, res, next) {
   var title = "This Buddy";
   var style = "/stylesheets/buddy.css";
@@ -50,12 +51,26 @@ router.get('/buddy', function(req, res, next) {
   });
 });
 
+//Landing farm app
 router.get('/fairyapps', function(req, res, next) {
   var title = "This fairyapps";
   var style = "/stylesheets/fairyapps.css";
   var icon = "/img/favicondev.ico";
   var bundle = "/assets/fairyapps.bundle.js";
   res.render('base/fairyapps', {
+    title: title,
+    style: style,
+    bundle: bundle,
+    icon: icon
+  });
+});
+
+//Soil
+router.get('/soil', function(req, res, next) {
+  var title = "This fairyapps";
+  var style = "/stylesheets/soil.css";
+  var bundle = "/assets/soil.bundle.js";
+  res.render('base/apps', {
     title: title,
     style: style,
     bundle: bundle,

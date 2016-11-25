@@ -15,7 +15,8 @@ class ContentContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      active: null
+      active: null,
+      itstyle: this.props.data.itstyle || null
     };
   }
 
@@ -75,7 +76,7 @@ class ContentContainer extends React.Component {
   _renderWrapper () {
     if (!this.props.data.title) { return null; }
     return (
-      <div className='content-container text-center'>
+      <div className='content-container text-center' style={this.state.itstyle}>
         {this._renderImgBg()}
         <div className="container">
           {this._renderTitle()}

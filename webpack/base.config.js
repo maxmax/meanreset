@@ -9,7 +9,8 @@ module.exports = {
   entry: {
       apps: './src/apps.js',
       buddy: './src/buddy.js',
-      fairyapps: './src/fairyapps.js'
+      fairyapps: './src/fairyapps.js',
+      soil: './src/soil.js'
   },
   output: {
     path: __dirname,

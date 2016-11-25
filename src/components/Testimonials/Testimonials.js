@@ -89,7 +89,8 @@ class Testimonials extends React.Component {
           <div className="wrap">
             <blockquote>
               <p>{current.text}</p>
-              <small>{current.author}</small>
+              <div className="author">{current.author}</div>
+              <small>{current.position}</small>
             </blockquote>
           </div>
         </div>
