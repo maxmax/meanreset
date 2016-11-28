@@ -174,10 +174,12 @@ export default class Terms extends React.Component {
   constructor(props) {
     super(props);
   }
-  
+
   render() {
     return (
-      <AsideTabs data={this.props.data}/>
+      <div className="container page">
+        <AsideTabs data={this.props.data}/>
+      </div>
     );
   }
 }

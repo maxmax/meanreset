@@ -21,28 +21,47 @@
   "navBar": [
     {
       "title": "Головна",
-      "url": "/base/soil",
-      "role": "auto"
+      "url": "/",
+      "role": "link"
     }, {
       "title": "О нас",
-      "url": "/base/soil#AboutContainer",
-      "role": "auto"
+      "url": "/about",
+      "role": "link"
     }, {
       "title": "Наші послуги",
-      "url": "#",
-      "role": "auto"
+      "url": "/services",
+      "role": "link"
     }, {
       "title": "Співпраця",
-      "url": "#",
-      "role": "auto"
+      "url": "/cooperation",
+      "role": "link"
     }, {
       "title": "Новини",
-      "url": "#",
-      "role": "auto"
+      "url": "/news",
+      "role": "link"
     }, {
       "title": "Відгуки",
-      "url": "#",
-      "role": "auto"
+      "url": "/reviews",
+      "role": "link"
+    }, {
+      "title": "Контакти",
+      "url": "/contacts",
+      "role": "link"
+    }
+  ],
+  "navFooterBar": [
+    {
+      "title": "Головна",
+      "url": "/",
+      "role": "link"
+    }, {
+      "title": "О нас",
+      "url": "/about",
+      "role": "link"
+    }, {
+      "title": "Відгуки",
+      "url": "/reviews",
+      "role": "link"
     }, {
       "title": "Контакти",
       "url": "/contacts",
@@ -228,11 +247,30 @@
       }
     ]
   },
+  "Worldwide": {
+    "title": "PLT worldwide by companies and people like you",
+    "items": [
+      {
+        "text": "Facebook",
+        "ico": "facebook"
+      }, {
+        "text": "Twitter",
+        "ico": "twitter"
+      }, {
+        "text": "Google",
+        "ico": "google"
+      }
+    ],
+    "itstyle": {
+      "backgroundColor": "#f6f9fa",
+      "color": "#384047"
+    }
+  },
   "footerContainer": {
     "text": "© 2016 PLT Inc",
     "class": "text-center",
     "itstyle": {
-      "backgroundColor": "rgb(206, 233, 252)"
+      "backgroundColor": "#f9fafa"
     }
   }
 }

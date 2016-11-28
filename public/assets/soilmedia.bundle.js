@@ -90,7 +90,11 @@
 
 	var _NavBar2 = _interopRequireDefault(_NavBar);
 
-	var _soilmedia = __webpack_require__(297);
+	var _Worldwide = __webpack_require__(296);
+
+	var _Worldwide2 = _interopRequireDefault(_Worldwide);
+
+	var _soilmedia = __webpack_require__(300);
 
 	var _soilmedia2 = _interopRequireDefault(_soilmedia);
 
@@ -132,6 +136,7 @@
 	        _react2.default.createElement(_Thumbs2.default, { data: this.props.data.partnersContainer }),
 	        _react2.default.createElement(_ContentContainer2.default, { data: this.props.data.howitworksContainer }),
 	        _react2.default.createElement(_ContentContainer2.default, { data: this.props.data.benefitsContainer }),
+	        _react2.default.createElement(_Worldwide2.default, { data: this.props.data.Worldwide }),
 	        _react2.default.createElement(_FooterContainer2.default, { data: this.props.data.footerContainer })
 	      );
 	    }
@@ -23165,7 +23170,6 @@
 	      if (!this.props.data.img) {
 	        return null;
 	      }
-	      console.log(this.state.containerMediaSize);
 	      return _react2.default.createElement(_ContainerMedia2.default, {
 	        img: this.props.data.img,
 	        size: this.state.containerMediaSize,
@@ -28477,8 +28481,195 @@
 /* 293 */,
 /* 294 */,
 /* 295 */,
-/* 296 */,
+/* 296 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(7);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _ContainerMedia = __webpack_require__(179);
+
+	var _ContainerMedia2 = _interopRequireDefault(_ContainerMedia);
+
+	__webpack_require__(297);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var propTypes = {
+	  data: _react.PropTypes.object
+	};
+
+	var defaultProps = {
+	  data: {}
+	};
+
+	var Worldwide = function (_React$Component) {
+	  _inherits(Worldwide, _React$Component);
+
+	  function Worldwide(props) {
+	    _classCallCheck(this, Worldwide);
+
+	    var _this = _possibleConstructorReturn(this, (Worldwide.__proto__ || Object.getPrototypeOf(Worldwide)).call(this, props));
+
+	    _this.state = {
+	      active: null,
+	      itstyle: _this.props.data.itstyle || null,
+	      containerMediaSize: _this.props.data.containerMediaSize || 'inherit',
+	      containerMediaRepeat: _this.props.data.containerMediaRepeat || 'repeat',
+	      containerMediaOpacity: _this.props.data.containerMediaOpacity || '1',
+	      containerMediaClass: _this.props.data.containerMediaClass || 'backdrop'
+	    };
+	    return _this;
+	  }
+
+	  _createClass(Worldwide, [{
+	    key: '_renderImgBg',
+	    value: function _renderImgBg() {
+	      if (!this.props.data.img) {
+	        return null;
+	      }
+	      return _react2.default.createElement(_ContainerMedia2.default, {
+	        img: this.props.data.img,
+	        size: this.state.containerMediaSize,
+	        repeat: this.state.containerMediaRepeat,
+	        opacity: this.state.containerMediaOpacity,
+	        'class': this.state.containerMediaClass
+	      });
+	    }
+	  }, {
+	    key: '_renderTitle',
+	    value: function _renderTitle() {
+	      if (!this.props.data.title) {
+	        return null;
+	      }
+	      return _react2.default.createElement(
+	        'h2',
+	        null,
+	        this.props.data.title
+	      );
+	    }
+	  }, {
+	    key: '_renderDesc',
+	    value: function _renderDesc() {
+	      if (!this.props.data.description) {
+	        return null;
+	      }
+	      return _react2.default.createElement(
+	        'p',
+	        null,
+	        this.props.data.description
+	      );
+	    }
+	  }, {
+	    key: '_renderText',
+	    value: function _renderText() {
+	      if (!this.props.data.text) {
+	        return null;
+	      }
+	      return _react2.default.createElement(
+	        'p',
+	        null,
+	        this.props.data.text
+	      );
+	    }
+	  }, {
+	    key: '_renderServices',
+	    value: function _renderServices() {
+	      if (!this.props.data.services) {
+	        return null;
+	      }
+	      return _react2.default.createElement(
+	        'p',
+	        null,
+	        this.props.data.services
+	      );
+	    }
+	  }, {
+	    key: '_renderList',
+	    value: function _renderList() {
+	      if (!this.props.data.items[0]) {
+	        return null;
+	      }
+	      var items = this.props.data.items;
+
+	      var objlist = items.map(function (item, index) {
+	        return _react2.default.createElement(
+	          'li',
+	          { key: index, className: 'slide' },
+	          _react2.default.createElement(
+	            'span',
+	            { className: item.ico },
+	            item.text
+	          )
+	        );
+	      });
+	      return objlist ? _react2.default.createElement(
+	        'ul',
+	        { className: 'list-inline' },
+	        objlist
+	      ) : null;
+	    }
+	  }, {
+	    key: '_renderWrapper',
+	    value: function _renderWrapper() {
+	      if (!this.props.data.title) {
+	        return null;
+	      }
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'worldwide text-center', style: this.state.itstyle },
+	        this._renderImgBg(),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'container' },
+	          this._renderTitle(),
+	          this._renderDesc(),
+	          this._renderText(),
+	          this._renderServices(),
+	          this._renderList()
+	        )
+	      );
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return this._renderWrapper();
+	    }
+	  }]);
+
+	  return Worldwide;
+	}(_react2.default.Component);
+
+	Worldwide.propTypes = propTypes;
+	Worldwide.defaultProps = defaultProps;
+
+	exports.default = Worldwide;
+
+/***/ },
 /* 297 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 298 */,
+/* 299 */,
+/* 300 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -28568,7 +28759,7 @@
 			"description": "Наші фахівці готові відповісти на всі ваші запитання",
 			"btn": "Задати питання та наші контакти",
 			"img": "/media/interpretacja.jpg",
-			"containerMediaOpacity": "0.9",
+			"containerMediaOpacity": "0.8",
 			"containerMediaClass": "backdrop",
 			"address": {
 				"title": "Наші контакти:",
@@ -28745,6 +28936,27 @@
 					"text": "Завершений методологічний цикл, починаючи від відбору проб до надання рекомендацій, враховуючи особливості українських ґрунтів"
 				}
 			]
+		},
+		"Worldwide": {
+			"title": "PLT worldwide by companies and people like you",
+			"items": [
+				{
+					"text": "Facebook",
+					"ico": "facebook"
+				},
+				{
+					"text": "Twitter",
+					"ico": "twitter"
+				},
+				{
+					"text": "Google",
+					"ico": "google"
+				}
+			],
+			"itstyle": {
+				"backgroundColor": "#f6f9fa",
+				"color": "#384047"
+			}
 		},
 		"footerContainer": {
 			"text": "© 2016 PLT Inc",

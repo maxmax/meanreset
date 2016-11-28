@@ -8,6 +8,7 @@ import Testimonials from './components/Testimonials/Testimonials';
 import ContentContainer from './components/ContentContainer/ContentContainer';
 import FooterContainer from './components/FooterContainer/FooterContainer';
 import NavBar from './components/NavBar/NavBar';
+import Worldwide from './components/Worldwide/Worldwide';
 
 //testdata
 import basedata from './tmp/soil.json';
@@ -28,6 +29,7 @@ export default class BaseWrapper extends React.Component {
         <Thumbs data={this.props.data.partnersContainer} />
         <ContentContainer data={this.props.data.howitworksContainer} />
         <ContentContainer data={this.props.data.benefitsContainer} />
+        <Worldwide data={this.props.data.Worldwide} />
         <FooterContainer data={this.props.data.footerContainer} />
       </section>
     );

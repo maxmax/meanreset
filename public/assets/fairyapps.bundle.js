@@ -23164,7 +23164,6 @@
 	      if (!this.props.data.img) {
 	        return null;
 	      }
-	      console.log(this.state.containerMediaSize);
 	      return _react2.default.createElement(_ContainerMedia2.default, {
 	        img: this.props.data.img,
 	        size: this.state.containerMediaSize,
@@ -28596,6 +28595,8 @@
 			"title": "We Are Your Experts",
 			"description": "We utilize the latest technologies and have extensive experience in the following:",
 			"img": "/media/basegrey.jpg",
+			"containerMediaOpacity": "1",
+			"containerMediaClass": "auto",
 			"items": [
 				{
 					"text": "JavaScript, Node.js, Express.js, React, Redux, Webpack, Angular.js, Ruby, Ruby on Rails"

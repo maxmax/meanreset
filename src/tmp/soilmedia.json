@@ -76,7 +76,7 @@
     "description": "Наші фахівці готові відповісти на всі ваші запитання",
     "btn": "Задати питання та наші контакти",
     "img": "/media/interpretacja.jpg",
-    "containerMediaOpacity": "0.9",
+    "containerMediaOpacity": "0.8",
     "containerMediaClass": "backdrop",
     "address": {
       "title": "Наші контакти:",
@@ -231,6 +231,25 @@
         "text": "Завершений методологічний цикл, починаючи від відбору проб до надання рекомендацій, враховуючи особливості українських ґрунтів"
       }
     ]
+  },
+  "Worldwide": {
+    "title": "PLT worldwide by companies and people like you",
+    "items": [
+      {
+        "text": "Facebook",
+        "ico": "facebook"
+      }, {
+        "text": "Twitter",
+        "ico": "twitter"
+      }, {
+        "text": "Google",
+        "ico": "google"
+      }
+    ],
+    "itstyle": {
+      "backgroundColor": "#f6f9fa",
+      "color": "#384047"
+    }
   },
   "footerContainer": {
     "text": "© 2016 PLT Inc",

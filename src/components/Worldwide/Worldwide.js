@@ -1,6 +1,6 @@
 import React, { PropTypes }  from 'react';
 import ContainerMedia from '../../elements/ContainerMedia/ContainerMedia';
-import './contentcontainer.less';
+import './worldwide.less';
 
 const propTypes = {
   data: PropTypes.object
@@ -10,7 +10,7 @@ const defaultProps = {
   data: {}
 };
 
-class ContentContainer extends React.Component {
+class Worldwide extends React.Component {
 
   constructor(props) {
     super(props);
@@ -71,17 +71,17 @@ class ContentContainer extends React.Component {
     const objlist = items.map((item, index) => {
       return (
         <li key={index} className="slide">
-          <p>{item.text}</p>
+          <span className={item.ico}>{item.text}</span>
         </li>
       );
     });
-    return (objlist ? (<ul className="list text-left">{objlist}</ul>) : null);
+    return (objlist ? (<ul className="list-inline">{objlist}</ul>) : null);
   }
 
   _renderWrapper () {
     if (!this.props.data.title) { return null; }
     return (
-      <div className='content-container text-center' style={this.state.itstyle}>
+      <div className='worldwide text-center' style={this.state.itstyle}>
         {this._renderImgBg()}
         <div className="container">
           {this._renderTitle()}
@@ -99,7 +99,7 @@ class ContentContainer extends React.Component {
   }
 }
 
-ContentContainer.propTypes = propTypes;
-ContentContainer.defaultProps = defaultProps;
+Worldwide.propTypes = propTypes;
+Worldwide.defaultProps = defaultProps;
 
-export default ContentContainer;
+export default Worldwide;

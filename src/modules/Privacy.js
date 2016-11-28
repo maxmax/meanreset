@@ -23,7 +23,9 @@ export default class Privacy extends React.Component {
 
   render() {
     return (
-      <AsideTabs data={this.props.data}/>
+      <div className="container page">
+        <AsideTabs data={this.props.data}/>
+      </div>
     );
   }
 }

@@ -23198,7 +23198,6 @@
 	      if (!this.props.data.img) {
 	        return null;
 	      }
-	      console.log(this.state.containerMediaSize);
 	      return _react2.default.createElement(_ContainerMedia2.default, {
 	        img: this.props.data.img,
 	        size: this.state.containerMediaSize,

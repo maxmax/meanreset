@@ -105,6 +105,8 @@
     "title": "We Are Your Experts",
     "description": "We utilize the latest technologies and have extensive experience in the following:",
     "img": "/media/basegrey.jpg",
+    "containerMediaOpacity": "1",
+    "containerMediaClass": "auto",
     "items": [
       {
         "text": "JavaScript, Node.js, Express.js, React, Redux, Webpack, Angular.js, Ruby, Ruby on Rails"

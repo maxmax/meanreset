@@ -16,6 +16,9 @@ const defaultProps = {
       title: 'Home',
       url: '/'
     }, {
+      title: 'News',
+      url: '/news'
+    }, {
       title: 'About',
       url: '/about'
     }, {
