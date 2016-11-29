@@ -10,6 +10,7 @@ import Reviews from './modules/Reviews'
 import Contacts from './modules/Contacts'
 import Terms from './modules/Terms'
 import Privacy from './modules/Privacy'
+import Profile from './modules/Profile'
 
 import LandingBase from './components/LandingBase/LandingBase';
 import AboutContainer from './components/AboutContainer/AboutContainer';
@@ -18,6 +19,9 @@ import ContentContainer from './components/ContentContainer/ContentContainer';
 import Thumbs from './components/Thumbs/Thumbs';
 import Testimonials from './components/Testimonials/Testimonials';
 import Worldwide from './components/Worldwide/Worldwide';
+
+import ProjectHeader from './components/ProjectHeader/ProjectHeader';
+import ProfBase from './components/ProfBase/ProfBase';
 
 import basedata from './tmp/soil.json';
 import './Base/global.less';
@@ -37,6 +41,17 @@ const reservBaseTest = (
   </div>
 );
 
+const profsBaseTest = (
+  <div className="container page">
+    <ProjectHeader title="User Profile" />
+    <ProfBase data={basedata.CurentProfile} />
+  </div>
+);
+
+//const reservBaseTest = (
+//
+//);
+
 render((
   <Router history={hashHistory}>
     <Route path="/" component={App} indata={basedata} incomponents={reservBaseTest}>
@@ -49,6 +64,7 @@ render((
       <Route path="/contacts" component={Contacts}/>
       <Route path="/terms" component={Terms}/>
       <Route path="/privacy" component={Privacy}/>
+      <Route path="/profile" component={Profile}  incomponents={profsBaseTest}/>
     </Route>
   </Router>
 ), document.getElementById('app'))

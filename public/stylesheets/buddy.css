@@ -473,6 +473,95 @@
   position: relative;
   z-index: 2;
 }
+.project-header {
+  border-bottom: 1px solid #eaebec;
+  margin-bottom: 2em;
+  padding-bottom: 1.5em;
+}
+.project-header .title {
+  padding: 0;
+  margin: 0;
+  color: #555;
+  font-weight: 400;
+  line-height: 1;
+}
+.project-header .aside-col .action {
+  display: inline-block;
+  margin-top: 0;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.prof-base {
+  position: relative;
+}
+.prof-base .user-name {
+  margin: 0 0;
+}
+.prof-base .profile-image {
+  border-radius: 3px;
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+.prof-base .profile-image img {
+  border-radius: 3px;
+  display: block;
+  margin: 0;
+  width: 100%;
+  max-width: 100%;
+}
+.prof-base .edit-image {
+  position: relative;
+}
+.prof-base .edit-image .btn-edit-image {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  border-radius: 3px;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+.prof-base .edit-image .btn-edit-image:hover {
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 1;
+  transition: all 0.2s ease;
+}
+.prof-base .edit-image .btn-edit-image > span {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 90%;
+  text-align: center;
+  color: white;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+.prof-base .edit-image .btn-edit-image > span i {
+  display: block;
+  margin: 0 auto;
+  font-size: 2.5em;
+  cursor: pointer;
+}
+.profs .prof {
+  color: black;
+  text-decoration: none;
+}
+.profs .prof h4 {
+  margin-bottom: 0;
+}
+.profs .prof img {
+  border-radius: 3px;
+  display: block;
+  margin: 0;
+  width: 100%;
+  max-width: 100%;
+}
 /*!
  * bootswatch v3.3.7
  * Homepage: http://bootswatch.com

@@ -272,5 +272,40 @@
     "itstyle": {
       "backgroundColor": "#f9fafa"
     }
-  }
+  },
+  "CurentProfile": {
+    "name": "Bhaumik Patel",
+    "profileImage": "https://goo.gl/TDT8jr",
+    "position": "Trade Consultant in GlobalSYS Inc",
+    "address": "San Francisco, USA",
+    "email": "email@example.com",
+    "tel": "48 333 456 789",
+    "site": "www.site.com",
+    "about": "Lorem ipsum dolor sit amet, quis nostrud exercitation ullamco",
+    "purpose": "Lorem ipsum dolor sit amet.",
+    "discount": "0.5%"
+  },
+  "users": [
+    {
+      "id": 0,
+      "name": "Bhaumik Patel",
+      "profileImage": "https://goo.gl/TDT8jr",
+      "position": "Trade Consultant"
+    }, {
+      "id": 1,
+      "name": "John Doe",
+      "profileImage": "https://goo.gl/TDT8jr",
+      "position": "Trade Consultant"
+    }, {
+      "id": 2,
+      "name": "John Doe",
+      "profileImage": "https://goo.gl/TDT8jr",
+      "position": "Trade Consultant"
+    }, {
+      "id": 3,
+      "name": "John Doe",
+      "profileImage": "https://goo.gl/TDT8jr",
+      "position": "Trade Consultant"
+    }
+  ]
 }

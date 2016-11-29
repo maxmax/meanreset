@@ -90,11 +90,11 @@
 
 	var _NavBar2 = _interopRequireDefault(_NavBar);
 
-	var _Worldwide = __webpack_require__(296);
+	var _Worldwide = __webpack_require__(297);
 
 	var _Worldwide2 = _interopRequireDefault(_Worldwide);
 
-	var _soil = __webpack_require__(299);
+	var _soil = __webpack_require__(303);
 
 	var _soil2 = _interopRequireDefault(_soil);
 
@@ -28481,7 +28481,8 @@
 /* 293 */,
 /* 294 */,
 /* 295 */,
-/* 296 */
+/* 296 */,
+/* 297 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -28500,7 +28501,7 @@
 
 	var _ContainerMedia2 = _interopRequireDefault(_ContainerMedia);
 
-	__webpack_require__(297);
+	__webpack_require__(298);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -28661,14 +28662,17 @@
 	exports.default = Worldwide;
 
 /***/ },
-/* 297 */
+/* 298 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 298 */,
-/* 299 */
+/* 299 */,
+/* 300 */,
+/* 301 */,
+/* 302 */,
+/* 303 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -28981,7 +28985,45 @@
 			"itstyle": {
 				"backgroundColor": "#f9fafa"
 			}
-		}
+		},
+		"CurentProfile": {
+			"name": "Bhaumik Patel",
+			"profileImage": "https://goo.gl/TDT8jr",
+			"position": "Trade Consultant in GlobalSYS Inc",
+			"address": "San Francisco, USA",
+			"email": "email@example.com",
+			"tel": "48 333 456 789",
+			"site": "www.site.com",
+			"about": "Lorem ipsum dolor sit amet, quis nostrud exercitation ullamco",
+			"purpose": "Lorem ipsum dolor sit amet.",
+			"discount": "0.5%"
+		},
+		"users": [
+			{
+				"id": 0,
+				"name": "Bhaumik Patel",
+				"profileImage": "https://goo.gl/TDT8jr",
+				"position": "Trade Consultant"
+			},
+			{
+				"id": 1,
+				"name": "John Doe",
+				"profileImage": "https://goo.gl/TDT8jr",
+				"position": "Trade Consultant"
+			},
+			{
+				"id": 2,
+				"name": "John Doe",
+				"profileImage": "https://goo.gl/TDT8jr",
+				"position": "Trade Consultant"
+			},
+			{
+				"id": 3,
+				"name": "John Doe",
+				"profileImage": "https://goo.gl/TDT8jr",
+				"position": "Trade Consultant"
+			}
+		]
 	};
 
 /***/ }
