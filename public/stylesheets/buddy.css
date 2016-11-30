@@ -562,6 +562,75 @@
   width: 100%;
   max-width: 100%;
 }
+.modal-base .close {
+  display: inline-block;
+  border: 0;
+  padding: 0;
+  width: 26px;
+  height: 26px;
+  position: absolute;
+  top: 30px;
+  right: -66px;
+  z-index: 3;
+  opacity: 0.8;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCA0ODkgNDg5IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA0ODkgNDg5OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjUxMnB4IiBoZWlnaHQ9IjUxMnB4Ij4KPGc+Cgk8cGF0aCBkPSJNMjQ0LjUsMEMxMDkuMywwLDAsMTA5LjMsMCwyNDQuNVMxMDkuMyw0ODksMjQ0LjUsNDg5UzQ4OSwzNzkuNyw0ODksMjQ0LjVTMzc5LjcsMCwyNDQuNSwweiBNMjQ0LjUsNDQ4LjQgICAgYy0xMTIuNCwwLTIwMy45LTkxLjUtMjAzLjktMjAzLjlTMTMyLjEsNDAuNiwyNDQuNSw0MC42czIwMy45LDkxLjUsMjAzLjksMjAzLjlTMzU2LjksNDQ4LjQsMjQ0LjUsNDQ4LjR6IiBmaWxsPSIjZmZmZmZmIi8+Cgk8cGF0aCBkPSJNMzU0LjgsMTM0LjJjLTguMy04LjMtMjAuOC04LjMtMjkuMSwwbC04MS4yLDgxLjJsLTgxLjEtODEuMWMtOC4zLTguMy0yMC44LTguMy0yOS4xLDBzLTguMywyMC44LDAsMjkuMWw4MS4xLDgxLjEgICAgbC04MS4xLDgxLjFjLTguMyw4LjMtOC42LDIxLjEsMCwyOS4xYzYuNSw2LDE4LjgsMTAuNCwyOS4xLDBsODEuMS04MS4xbDgxLjEsODEuMWMxMi40LDExLjcsMjUsNC4yLDI5LjEsMCAgICBjOC4zLTguMyw4LjMtMjAuOCwwLTI5LjFsLTgxLjEtODEuMWw4MS4xLTgxLjFDMzYzLjEsMTU1LDM2My4xLDE0Mi41LDM1NC44LDEzNC4yeiIgZmlsbD0iI2ZmZmZmZiIvPgo8L2c+Cjwvc3ZnPgo=) center center no-repeat;
+  background-size: 22px 22px;
+  text-indent: -10000%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.modal-base .close:hover {
+  opacity: 1;
+  transition: all 0.2s ease;
+}
+.modal-base .modal-content .modal-body section {
+  margin: 30px 0px;
+}
+.user-requests {
+  position: relative;
+  padding: 2% 0;
+}
+.user-requests .container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  margin: 0 0;
+  padding: 0 0;
+}
+.user-requests h1,
+.user-requests h2,
+.user-requests h3 {
+  margin: 0 0 20px;
+}
+.user-requests .new-requests .well {
+  padding: 0 19px 0 0;
+  margin-bottom: 20px;
+  background-color: transparent;
+  border: 0px solid #e3e3e3;
+  border-radius: 0;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0);
+}
+.user-requests .request {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(204, 204, 204, 0.5);
+}
+.user-requests .request .date {
+  margin: 10px 0 5px;
+  line-height: 1;
+}
+.user-requests .request:last-child {
+  border-bottom: 0px;
+}
+.user-requests .request.status-close .title,
+.user-requests .request.status-close .date,
+.user-requests .request.status-close p,
+.user-requests .request.status-close .btn-group {
+  opacity: 0.6;
+}
+.user-requests .request.status-close .btn-group {
+  pointer-events: none;
+}
 /*!
  * bootswatch v3.3.7
  * Homepage: http://bootswatch.com

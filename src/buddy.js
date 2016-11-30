@@ -22,11 +22,13 @@ import Worldwide from './components/Worldwide/Worldwide';
 
 import ProjectHeader from './components/ProjectHeader/ProjectHeader';
 import ProfBase from './components/ProfBase/ProfBase';
+import UserRequest from './components/UserRequest/UserRequest';
 
 import basedata from './tmp/soil.json';
+import userrequests from './components/UserRequest/userrequest.json';
 import './Base/global.less';
 
-const reservBaseTest = (
+const landingBase = (
   <div>
     <LandingBase data={basedata.landingBase} />
     <AboutContainer data={basedata.aboutContainer} />
@@ -45,6 +47,8 @@ const profsBaseTest = (
   <div className="container page">
     <ProjectHeader title="User Profile" />
     <ProfBase data={basedata.CurentProfile} />
+    <UserRequest data={userrequests.CurentRequests} />
+    <ProfBase data={basedata.CurentProfile} isCurrentIn="true" />
   </div>
 );
 
@@ -54,7 +58,7 @@ const profsBaseTest = (
 
 render((
   <Router history={hashHistory}>
-    <Route path="/" component={App} indata={basedata} incomponents={reservBaseTest}>
+    <Route path="/" component={App} indata={basedata} incomponents={landingBase}>
       {/* make them children of `App` */}
       <Route path="/news" component={News}/>
       <Route path="/about" component={About}/>
@@ -64,7 +68,7 @@ render((
       <Route path="/contacts" component={Contacts}/>
       <Route path="/terms" component={Terms}/>
       <Route path="/privacy" component={Privacy}/>
-      <Route path="/profile" component={Profile}  incomponents={profsBaseTest}/>
+      <Route path="/profile" component={Profile} incomponents={profsBaseTest}/>
     </Route>
   </Router>
 ), document.getElementById('app'))

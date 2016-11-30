@@ -11,6 +11,97 @@ const defaultProps = {
   data: {}
 };
 
+function ProfEdit(props) {
+  return (
+    <section className={props.name}>
+      <form className="edit-data">
+        <section>
+          <div className="form-group">
+            <label>Name</label>
+            <input type="text" className="form-control" value="" placeholder="You Name..." />
+          </div>
+          <div className="form-group">
+            <label>Position</label>
+            <input type="text" className="form-control" value="" placeholder="You Position..." />
+          </div>
+          <div className="form-group">
+            <label>Address</label>
+            <input type="text" className="form-control" value="" placeholder="You Address..." />
+          </div>
+          <div className="form-group">
+            <label>Email</label>
+            <input type="email" className="form-control" value="" placeholder="You Email..." />
+          </div>
+          <div className="form-group">
+            <label>Tel</label>
+            <input type="text" className="form-control" value="" placeholder="You Tel..." />
+          </div>
+          <div className="form-group">
+            <label>Site</label>
+            <input type="text" className="form-control" value="" placeholder="You Site..." />
+          </div>
+          <div className="form-group">
+            <label>About</label>
+            <textarea className="form-control" rows="4" placeholder="Create about..."></textarea>
+          </div>
+          <div className="form-group">
+            <label>Purpose</label>
+            <textarea className="form-control" rows="4" placeholder="Create purpose..."></textarea>
+          </div>
+        </section>
+        <div className="submit-group">
+          <div className="container-m">
+            <button type="submit" className="btn btn-primary btn-sm" disabled="disabled">Save</button> <button className="btn btn-default btn-sm">Cancel</button>
+          </div>
+        </div>
+      </form>
+    </section>
+  );
+}
+
+function ProfView(props) {
+  return (
+    <section className={props.name}>
+      <section>
+        <h4 className="user-name">{props.data.name}</h4>
+        <div><strong>"{props.data.position}"</strong></div>
+      </section>
+      <section>
+        <h4>Contacts</h4>
+        <small>
+          <cite title={props.data.address}>
+            <span>{props.data.address}</span>
+          </cite>
+        </small>
+        <p>
+          <span>{props.data.mail}</span>
+          <br />
+          <span>{props.data.tel}</span>
+          <br />
+          <a href={props.data.site} target="_blank">{props.data.site}</a>
+          <br />
+        </p>
+      </section>
+      <section>
+        <h4>About - Activity</h4>
+        <p>{props.data.about}</p>
+      </section>
+      <section>
+        <h4>Purpose of registration</h4>
+        <p>{props.data.purpose}</p>
+      </section>
+    </section>
+  );
+}
+
+function DiscountView(props) {
+  return (
+    <div className={props.name}>
+      <h5>Discount <small>{props.data}</small></h5>
+    </div>
+  );
+}
+
 //Shema
 //logo: '/lang-logo.png',
 //title: 'Hello and a very warm welcome!',
@@ -26,17 +117,10 @@ class ProfBase extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      active: null
+      active: null,
+      edit: (<ProfEdit name="profile-edit" />),
+      discount: this.props.data.discount ? (<DiscountView name="discount" data={this.props.data.discount} />) : null
     };
-  }
-
-  _renderProfDiscount () {
-    if (!this.props.data.discount) { return null; }
-    return (
-      <div>
-        <h5>Discount <small>{this.props.data.discount}</small></h5>
-      </div>
-    );
   }
 
   _renderUserImg () {
@@ -53,7 +137,7 @@ class ProfBase extends React.Component {
         <div className="btn-edit-image">
           <span>
             <span>Click here to change profile image</span>
-            <i className="glyphicon glyphicon-camera"></i>
+            <i className="icon"></i>
           </span>
         </div>
       </div>
@@ -64,95 +148,19 @@ class ProfBase extends React.Component {
     ;
   }
 
-  //
   _renderProfileData () {
-    return this.props.isCurrentIn ?
-      <section className="profile-edit">
-        <form className="edit-data">
-          <section>
-            <div className="form-group">
-              <label>Name</label>
-              <input type="text" className="form-control" value={this.props.data.name} placeholder="You Name..." />
-            </div>
-            <div className="form-group">
-              <label>Position</label>
-              <input type="text" className="form-control" value={this.props.data.position} placeholder="You Position..." />
-            </div>
-            <div className="form-group">
-              <label>Address</label>
-              <input type="text" className="form-control" value={this.props.data.address} placeholder="You Address..." />
-            </div>
-            <div className="form-group">
-              <label>Email</label>
-              <input type="email" className="form-control" value={this.props.data.email} placeholder="You Email..." />
-            </div>
-            <div className="form-group">
-              <label>Tel</label>
-              <input type="text" className="form-control" value={this.props.data.tel} placeholder="You Tel..." />
-            </div>
-            <div className="form-group">
-              <label>Site</label>
-              <input type="text" className="form-control" value={this.props.data.site} placeholder="You Site..." />
-            </div>
-            <div className="form-group">
-              <label>About</label>
-              <textarea className="form-control" rows="4" placeholder="Create about...">{this.props.data.about}</textarea>
-            </div>
-            <div className="form-group">
-              <label>Purpose</label>
-              <textarea className="form-control" rows="4" placeholder="Create purpose...">{this.props.data.purpose}</textarea>
-            </div>
-          </section>
-          <div className="submit-group">
-            <div className="container-m">
-              <button type="submit" className="btn btn-primary btn-sm" disabled="disabled">Save</button> <button className="btn btn-default btn-sm">Cancel</button>
-            </div>
-          </div>
-        </form>
-      </section>
-    :
-      <section className="profile-view">
-        <section>
-          <h4 className="user-name">{this.props.data.name}</h4>
-          <div><strong>"{this.props.data.position}"</strong></div>
-        </section>
-        <section>
-          <h4>Contacts</h4>
-          <small>
-            <cite title={this.props.data.address}>
-              <span>{this.props.data.address}</span>
-            </cite>
-          </small>
-          <p>
-            <span>{this.props.data.mail}</span>
-            <br />
-            <span>{this.props.data.tel}</span>
-            <br />
-            <a href={this.props.data.site} target="_blank">{this.props.data.site}</a>
-            <br />
-          </p>
-        </section>
-        <section>
-          <h4>About - Activity</h4>
-          <p>{this.props.data.about}</p>
-        </section>
-        <section>
-          <h4>Purpose of registration</h4>
-          <p>{this.props.data.purpose}</p>
-        </section>
-      </section>
-    ;
+    return this.props.isCurrentIn ? this.state.edit : (<ProfView name="view" data={this.props.data} />);
   }
-  //
 
   render() {
-    console.log("User:", this.props);
     return (
       <div className="prof-base">
         <div className="row">
           <div className="col-sm-6 col-md-4">
             {this._renderProfileImage()}
-            {this._renderProfDiscount()}
+            <span>{this.state.discount}</span>
+            <br />
+            <br />
           </div>
           <div className="col-sm-6 col-md-8">
             {this._renderProfileData()}

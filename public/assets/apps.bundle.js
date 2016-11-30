@@ -98,11 +98,19 @@
 
 	var _Profs2 = _interopRequireDefault(_Profs);
 
-	var _allui = __webpack_require__(222);
+	var _RegistrationForm = __webpack_require__(222);
+
+	var _RegistrationForm2 = _interopRequireDefault(_RegistrationForm);
+
+	var _UserRequest = __webpack_require__(223);
+
+	var _UserRequest2 = _interopRequireDefault(_UserRequest);
+
+	var _allui = __webpack_require__(230);
 
 	var _allui2 = _interopRequireDefault(_allui);
 
-	__webpack_require__(223);
+	__webpack_require__(231);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -111,6 +119,7 @@
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
 	//
 	//import Jumbotron from './components/Jumbotron/Jumbotron';
 	//import Cards from './components/Cards/Cards';
@@ -136,6 +145,7 @@
 	  _createClass(BaseWrapper, [{
 	    key: 'render',
 	    value: function render() {
+	      console.log("Is!");
 	      return _react2.default.createElement(
 	        'section',
 	        null,
@@ -152,8 +162,12 @@
 	          { className: 'container' },
 	          _react2.default.createElement('br', null),
 	          _react2.default.createElement('br', null),
+	          _react2.default.createElement(_RegistrationForm2.default, null),
+	          _react2.default.createElement('br', null),
+	          _react2.default.createElement('br', null),
 	          _react2.default.createElement(_ProjectHeader2.default, { title: 'User Profile' }),
 	          _react2.default.createElement(_ProfBase2.default, { data: this.props.data.CurentProfile }),
+	          _react2.default.createElement(_UserRequest2.default, { data: this.props.data.CurentRequests }),
 	          _react2.default.createElement('br', null),
 	          _react2.default.createElement('br', null),
 	          _react2.default.createElement(_ProfBase2.default, { data: this.props.data.CurentProfile, isCurrentIn: 'true' }),
@@ -23544,6 +23558,236 @@
 	  data: {}
 	};
 
+	function ProfEdit(props) {
+	  return _react2.default.createElement(
+	    'section',
+	    { className: props.name },
+	    _react2.default.createElement(
+	      'form',
+	      { className: 'edit-data' },
+	      _react2.default.createElement(
+	        'section',
+	        null,
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'form-group' },
+	          _react2.default.createElement(
+	            'label',
+	            null,
+	            'Name'
+	          ),
+	          _react2.default.createElement('input', { type: 'text', className: 'form-control', value: '', placeholder: 'You Name...' })
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'form-group' },
+	          _react2.default.createElement(
+	            'label',
+	            null,
+	            'Position'
+	          ),
+	          _react2.default.createElement('input', { type: 'text', className: 'form-control', value: '', placeholder: 'You Position...' })
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'form-group' },
+	          _react2.default.createElement(
+	            'label',
+	            null,
+	            'Address'
+	          ),
+	          _react2.default.createElement('input', { type: 'text', className: 'form-control', value: '', placeholder: 'You Address...' })
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'form-group' },
+	          _react2.default.createElement(
+	            'label',
+	            null,
+	            'Email'
+	          ),
+	          _react2.default.createElement('input', { type: 'email', className: 'form-control', value: '', placeholder: 'You Email...' })
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'form-group' },
+	          _react2.default.createElement(
+	            'label',
+	            null,
+	            'Tel'
+	          ),
+	          _react2.default.createElement('input', { type: 'text', className: 'form-control', value: '', placeholder: 'You Tel...' })
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'form-group' },
+	          _react2.default.createElement(
+	            'label',
+	            null,
+	            'Site'
+	          ),
+	          _react2.default.createElement('input', { type: 'text', className: 'form-control', value: '', placeholder: 'You Site...' })
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'form-group' },
+	          _react2.default.createElement(
+	            'label',
+	            null,
+	            'About'
+	          ),
+	          _react2.default.createElement('textarea', { className: 'form-control', rows: '4', placeholder: 'Create about...' })
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'form-group' },
+	          _react2.default.createElement(
+	            'label',
+	            null,
+	            'Purpose'
+	          ),
+	          _react2.default.createElement('textarea', { className: 'form-control', rows: '4', placeholder: 'Create purpose...' })
+	        )
+	      ),
+	      _react2.default.createElement(
+	        'div',
+	        { className: 'submit-group' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'container-m' },
+	          _react2.default.createElement(
+	            'button',
+	            { type: 'submit', className: 'btn btn-primary btn-sm', disabled: 'disabled' },
+	            'Save'
+	          ),
+	          ' ',
+	          _react2.default.createElement(
+	            'button',
+	            { className: 'btn btn-default btn-sm' },
+	            'Cancel'
+	          )
+	        )
+	      )
+	    )
+	  );
+	}
+
+	function ProfView(props) {
+	  return _react2.default.createElement(
+	    'section',
+	    { className: props.name },
+	    _react2.default.createElement(
+	      'section',
+	      null,
+	      _react2.default.createElement(
+	        'h4',
+	        { className: 'user-name' },
+	        props.data.name
+	      ),
+	      _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	          'strong',
+	          null,
+	          '"',
+	          props.data.position,
+	          '"'
+	        )
+	      )
+	    ),
+	    _react2.default.createElement(
+	      'section',
+	      null,
+	      _react2.default.createElement(
+	        'h4',
+	        null,
+	        'Contacts'
+	      ),
+	      _react2.default.createElement(
+	        'small',
+	        null,
+	        _react2.default.createElement(
+	          'cite',
+	          { title: props.data.address },
+	          _react2.default.createElement(
+	            'span',
+	            null,
+	            props.data.address
+	          )
+	        )
+	      ),
+	      _react2.default.createElement(
+	        'p',
+	        null,
+	        _react2.default.createElement(
+	          'span',
+	          null,
+	          props.data.mail
+	        ),
+	        _react2.default.createElement('br', null),
+	        _react2.default.createElement(
+	          'span',
+	          null,
+	          props.data.tel
+	        ),
+	        _react2.default.createElement('br', null),
+	        _react2.default.createElement(
+	          'a',
+	          { href: props.data.site, target: '_blank' },
+	          props.data.site
+	        ),
+	        _react2.default.createElement('br', null)
+	      )
+	    ),
+	    _react2.default.createElement(
+	      'section',
+	      null,
+	      _react2.default.createElement(
+	        'h4',
+	        null,
+	        'About - Activity'
+	      ),
+	      _react2.default.createElement(
+	        'p',
+	        null,
+	        props.data.about
+	      )
+	    ),
+	    _react2.default.createElement(
+	      'section',
+	      null,
+	      _react2.default.createElement(
+	        'h4',
+	        null,
+	        'Purpose of registration'
+	      ),
+	      _react2.default.createElement(
+	        'p',
+	        null,
+	        props.data.purpose
+	      )
+	    )
+	  );
+	}
+
+	function DiscountView(props) {
+	  return _react2.default.createElement(
+	    'div',
+	    { className: props.name },
+	    _react2.default.createElement(
+	      'h5',
+	      null,
+	      'Discount ',
+	      _react2.default.createElement(
+	        'small',
+	        null,
+	        props.data
+	      )
+	    )
+	  );
+	}
+
 	//Shema
 	//logo: '/lang-logo.png',
 	//title: 'Hello and a very warm welcome!',
@@ -23563,33 +23807,14 @@
 	    var _this = _possibleConstructorReturn(this, (ProfBase.__proto__ || Object.getPrototypeOf(ProfBase)).call(this, props));
 
 	    _this.state = {
-	      active: null
+	      active: null,
+	      edit: _react2.default.createElement(ProfEdit, { name: 'profile-edit' }),
+	      discount: _this.props.data.discount ? _react2.default.createElement(DiscountView, { name: 'discount', data: _this.props.data.discount }) : null
 	    };
 	    return _this;
 	  }
 
 	  _createClass(ProfBase, [{
-	    key: '_renderProfDiscount',
-	    value: function _renderProfDiscount() {
-	      if (!this.props.data.discount) {
-	        return null;
-	      }
-	      return _react2.default.createElement(
-	        'div',
-	        null,
-	        _react2.default.createElement(
-	          'h5',
-	          null,
-	          'Discount ',
-	          _react2.default.createElement(
-	            'small',
-	            null,
-	            this.props.data.discount
-	          )
-	        )
-	      );
-	    }
-	  }, {
 	    key: '_renderUserImg',
 	    value: function _renderUserImg() {
 	      if (!this.props.data.profileImage) {
@@ -23615,7 +23840,7 @@
 	              null,
 	              'Click here to change profile image'
 	            ),
-	            _react2.default.createElement('i', { className: 'glyphicon glyphicon-camera' })
+	            _react2.default.createElement('i', { className: 'icon' })
 	          )
 	        )
 	      ) : _react2.default.createElement(
@@ -23624,233 +23849,14 @@
 	        this._renderUserImg()
 	      );
 	    }
-
-	    //
-
 	  }, {
 	    key: '_renderProfileData',
 	    value: function _renderProfileData() {
-	      return this.props.isCurrentIn ? _react2.default.createElement(
-	        'section',
-	        { className: 'profile-edit' },
-	        _react2.default.createElement(
-	          'form',
-	          { className: 'edit-data' },
-	          _react2.default.createElement(
-	            'section',
-	            null,
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'form-group' },
-	              _react2.default.createElement(
-	                'label',
-	                null,
-	                'Name'
-	              ),
-	              _react2.default.createElement('input', { type: 'text', className: 'form-control', value: this.props.data.name, placeholder: 'You Name...' })
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'form-group' },
-	              _react2.default.createElement(
-	                'label',
-	                null,
-	                'Position'
-	              ),
-	              _react2.default.createElement('input', { type: 'text', className: 'form-control', value: this.props.data.position, placeholder: 'You Position...' })
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'form-group' },
-	              _react2.default.createElement(
-	                'label',
-	                null,
-	                'Address'
-	              ),
-	              _react2.default.createElement('input', { type: 'text', className: 'form-control', value: this.props.data.address, placeholder: 'You Address...' })
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'form-group' },
-	              _react2.default.createElement(
-	                'label',
-	                null,
-	                'Email'
-	              ),
-	              _react2.default.createElement('input', { type: 'email', className: 'form-control', value: this.props.data.email, placeholder: 'You Email...' })
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'form-group' },
-	              _react2.default.createElement(
-	                'label',
-	                null,
-	                'Tel'
-	              ),
-	              _react2.default.createElement('input', { type: 'text', className: 'form-control', value: this.props.data.tel, placeholder: 'You Tel...' })
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'form-group' },
-	              _react2.default.createElement(
-	                'label',
-	                null,
-	                'Site'
-	              ),
-	              _react2.default.createElement('input', { type: 'text', className: 'form-control', value: this.props.data.site, placeholder: 'You Site...' })
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'form-group' },
-	              _react2.default.createElement(
-	                'label',
-	                null,
-	                'About'
-	              ),
-	              _react2.default.createElement(
-	                'textarea',
-	                { className: 'form-control', rows: '4', placeholder: 'Create about...' },
-	                this.props.data.about
-	              )
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'form-group' },
-	              _react2.default.createElement(
-	                'label',
-	                null,
-	                'Purpose'
-	              ),
-	              _react2.default.createElement(
-	                'textarea',
-	                { className: 'form-control', rows: '4', placeholder: 'Create purpose...' },
-	                this.props.data.purpose
-	              )
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'submit-group' },
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'container-m' },
-	              _react2.default.createElement(
-	                'button',
-	                { type: 'submit', className: 'btn btn-primary btn-sm', disabled: 'disabled' },
-	                'Save'
-	              ),
-	              ' ',
-	              _react2.default.createElement(
-	                'button',
-	                { className: 'btn btn-default btn-sm' },
-	                'Cancel'
-	              )
-	            )
-	          )
-	        )
-	      ) : _react2.default.createElement(
-	        'section',
-	        { className: 'profile-view' },
-	        _react2.default.createElement(
-	          'section',
-	          null,
-	          _react2.default.createElement(
-	            'h4',
-	            { className: 'user-name' },
-	            this.props.data.name
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            null,
-	            _react2.default.createElement(
-	              'strong',
-	              null,
-	              '"',
-	              this.props.data.position,
-	              '"'
-	            )
-	          )
-	        ),
-	        _react2.default.createElement(
-	          'section',
-	          null,
-	          _react2.default.createElement(
-	            'h4',
-	            null,
-	            'Contacts'
-	          ),
-	          _react2.default.createElement(
-	            'small',
-	            null,
-	            _react2.default.createElement(
-	              'cite',
-	              { title: this.props.data.address },
-	              _react2.default.createElement(
-	                'span',
-	                null,
-	                this.props.data.address
-	              )
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            _react2.default.createElement(
-	              'span',
-	              null,
-	              this.props.data.mail
-	            ),
-	            _react2.default.createElement('br', null),
-	            _react2.default.createElement(
-	              'span',
-	              null,
-	              this.props.data.tel
-	            ),
-	            _react2.default.createElement('br', null),
-	            _react2.default.createElement(
-	              'a',
-	              { href: this.props.data.site, target: '_blank' },
-	              this.props.data.site
-	            ),
-	            _react2.default.createElement('br', null)
-	          )
-	        ),
-	        _react2.default.createElement(
-	          'section',
-	          null,
-	          _react2.default.createElement(
-	            'h4',
-	            null,
-	            'About - Activity'
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            this.props.data.about
-	          )
-	        ),
-	        _react2.default.createElement(
-	          'section',
-	          null,
-	          _react2.default.createElement(
-	            'h4',
-	            null,
-	            'Purpose of registration'
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            this.props.data.purpose
-	          )
-	        )
-	      );
+	      return this.props.isCurrentIn ? this.state.edit : _react2.default.createElement(ProfView, { name: 'view', data: this.props.data });
 	    }
-	    //
-
 	  }, {
 	    key: 'render',
 	    value: function render() {
-	      console.log("User:", this.props);
 	      return _react2.default.createElement(
 	        'div',
 	        { className: 'prof-base' },
@@ -23861,7 +23867,13 @@
 	            'div',
 	            { className: 'col-sm-6 col-md-4' },
 	            this._renderProfileImage(),
-	            this._renderProfDiscount()
+	            _react2.default.createElement(
+	              'span',
+	              null,
+	              this.state.discount
+	            ),
+	            _react2.default.createElement('br', null),
+	            _react2.default.createElement('br', null)
 	          ),
 	          _react2.default.createElement(
 	            'div',
@@ -23918,7 +23930,7 @@
 
 	var propTypes = {
 	  isCurrentIn: _react.PropTypes.string,
-	  data: _react.PropTypes.object
+	  data: _react.PropTypes.array
 	};
 
 	var defaultProps = {
@@ -24012,6 +24024,738 @@
 
 /***/ },
 /* 222 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(7);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	//import './profbase.less';
+
+	var propTypes = {
+	  isCurrentIn: _react.PropTypes.string,
+	  data: _react.PropTypes.object,
+	  typeprof: _react.PropTypes.string
+	};
+
+	var defaultProps = {
+	  data: {},
+	  typeprof: "option1"
+	};
+
+	function SignupReq(props) {
+	  return _react2.default.createElement(
+	    "section",
+	    { className: props.name },
+	    _react2.default.createElement(
+	      "div",
+	      { className: "form-group" },
+	      _react2.default.createElement(
+	        "label",
+	        null,
+	        "Name"
+	      ),
+	      _react2.default.createElement("input", { type: "text", className: "form-control", value: "", placeholder: "You Name..." })
+	    ),
+	    _react2.default.createElement(
+	      "div",
+	      { className: "form-group" },
+	      _react2.default.createElement(
+	        "label",
+	        null,
+	        "Email"
+	      ),
+	      _react2.default.createElement("input", { type: "email", className: "form-control", value: "", placeholder: "You Email..." })
+	    ),
+	    _react2.default.createElement(
+	      "div",
+	      { className: "form-group" },
+	      _react2.default.createElement(
+	        "label",
+	        null,
+	        "Password"
+	      ),
+	      _react2.default.createElement("input", { type: "password", className: "form-control", placeholder: "Password" })
+	    )
+	  );
+	}
+
+	function BaseInfo(props) {
+	  return _react2.default.createElement(
+	    "section",
+	    { className: props.name },
+	    _react2.default.createElement(
+	      "div",
+	      { className: "form-group" },
+	      _react2.default.createElement(
+	        "label",
+	        null,
+	        "Address"
+	      ),
+	      _react2.default.createElement("input", { type: "text", className: "form-control", value: "", placeholder: "address..." })
+	    ),
+	    _react2.default.createElement(
+	      "div",
+	      { className: "form-group" },
+	      _react2.default.createElement(
+	        "label",
+	        null,
+	        "Telephone"
+	      ),
+	      _react2.default.createElement("input", { type: "text", className: "form-control", value: "", placeholder: "Telephone..." })
+	    ),
+	    _react2.default.createElement(
+	      "div",
+	      { className: "form-group" },
+	      _react2.default.createElement(
+	        "label",
+	        null,
+	        "Company"
+	      ),
+	      _react2.default.createElement("input", { type: "text", className: "form-control", value: "", placeholder: "Company name..." })
+	    ),
+	    _react2.default.createElement(
+	      "div",
+	      { className: "form-group" },
+	      _react2.default.createElement(
+	        "label",
+	        null,
+	        "Position"
+	      ),
+	      _react2.default.createElement("input", { type: "text", className: "form-control", value: "", placeholder: "Trade Consultant..." })
+	    ),
+	    _react2.default.createElement(
+	      "div",
+	      { className: "form-group" },
+	      _react2.default.createElement(
+	        "label",
+	        null,
+	        "Photo"
+	      ),
+	      _react2.default.createElement("input", { type: "file" })
+	    )
+	  );
+	}
+
+	function LegalInfo(props) {
+	  return _react2.default.createElement(
+	    "section",
+	    { className: props.name },
+	    _react2.default.createElement(
+	      "div",
+	      { className: "form-group" },
+	      _react2.default.createElement(
+	        "label",
+	        null,
+	        "Address"
+	      ),
+	      _react2.default.createElement("input", { type: "text", className: "form-control", value: "", placeholder: "address..." })
+	    ),
+	    _react2.default.createElement(
+	      "div",
+	      { className: "form-group" },
+	      _react2.default.createElement(
+	        "label",
+	        null,
+	        "Telephone"
+	      ),
+	      _react2.default.createElement("input", { type: "text", className: "form-control", value: "", placeholder: "Telephone..." })
+	    ),
+	    _react2.default.createElement(
+	      "div",
+	      { className: "form-group" },
+	      _react2.default.createElement(
+	        "label",
+	        null,
+	        "Company"
+	      ),
+	      _react2.default.createElement("input", { type: "text", className: "form-control", value: "", placeholder: "Company name..." })
+	    ),
+	    _react2.default.createElement(
+	      "div",
+	      { className: "form-group" },
+	      _react2.default.createElement(
+	        "label",
+	        null,
+	        "Company Type"
+	      ),
+	      _react2.default.createElement("input", { type: "text", className: "form-control", value: "", placeholder: "Inc..." })
+	    ),
+	    _react2.default.createElement(
+	      "div",
+	      { className: "form-group" },
+	      _react2.default.createElement(
+	        "label",
+	        null,
+	        "Company logo"
+	      ),
+	      _react2.default.createElement("input", { type: "file" }),
+	      _react2.default.createElement(
+	        "p",
+	        { className: "help-block" },
+	        "Downloaded company logo (svg, png, jpg)"
+	      )
+	    ),
+	    _react2.default.createElement(
+	      "div",
+	      { className: "form-group" },
+	      _react2.default.createElement(
+	        "label",
+	        null,
+	        "Services"
+	      ),
+	      _react2.default.createElement("input", { type: "text", className: "form-control", value: "", placeholder: "Company Services..." })
+	    )
+	  );
+	}
+
+	var RegistrationForm = function (_React$Component) {
+	  _inherits(RegistrationForm, _React$Component);
+
+	  function RegistrationForm(props) {
+	    _classCallCheck(this, RegistrationForm);
+
+	    var _this = _possibleConstructorReturn(this, (RegistrationForm.__proto__ || Object.getPrototypeOf(RegistrationForm)).call(this, props));
+
+	    _this.state = {
+	      checkebbar: true,
+	      signup: _react2.default.createElement(SignupReq, { name: "base-signup" }),
+	      typeprof: _this.props.typeprof,
+	      typestate: _this.props.typeprof === 'option1' ? _react2.default.createElement(BaseInfo, { name: "base-info" }) : _react2.default.createElement(LegalInfo, { name: "legal-info" })
+	    };
+	    _this.handleChange = _this.handleChange.bind(_this);
+	    return _this;
+	  }
+
+	  _createClass(RegistrationForm, [{
+	    key: "handleChange",
+	    value: function handleChange(event) {
+	      this.setState({
+	        typeprof: event.target.value,
+	        typestate: event.target.value === 'option1' ? _react2.default.createElement(BaseInfo, { name: "base-info" }) : _react2.default.createElement(LegalInfo, { name: "legal-info" })
+	      });
+	    }
+	  }, {
+	    key: "_checkebType",
+	    value: function _checkebType() {
+	      if (!this.state.checkebbar) {
+	        return null;
+	      }
+	      return _react2.default.createElement(
+	        "section",
+	        null,
+	        _react2.default.createElement(
+	          "div",
+	          { className: "form-group" },
+	          _react2.default.createElement(
+	            "div",
+	            { className: "checkbox" },
+	            _react2.default.createElement(
+	              "label",
+	              { className: "checkbox-inline" },
+	              _react2.default.createElement("input", { type: "radio", name: "inlineRadioOptions", id: "inlineRadio1", value: "option1", checked: this.state.typeprof == "option1", onClick: this.handleChange }),
+	              " Base"
+	            ),
+	            _react2.default.createElement(
+	              "label",
+	              { className: "checkbox-inline" },
+	              _react2.default.createElement("input", { type: "radio", name: "inlineRadioOptions", id: "inlineRadio2", value: "option2", checked: this.state.typeprof == "option2", onClick: this.handleChange }),
+	              " Legal entity"
+	            )
+	          )
+	        ),
+	        _react2.default.createElement(
+	          "section",
+	          null,
+	          this.state.typestate
+	        )
+	      );
+	    }
+	  }, {
+	    key: "_renderForm",
+	    value: function _renderForm() {
+	      return _react2.default.createElement(
+	        "section",
+	        { className: "profile-edit" },
+	        _react2.default.createElement(
+	          "form",
+	          { className: "edit-data" },
+	          _react2.default.createElement(
+	            "section",
+	            null,
+	            this.state.signup
+	          ),
+	          _react2.default.createElement(
+	            "section",
+	            null,
+	            this._checkebType()
+	          ),
+	          _react2.default.createElement(
+	            "section",
+	            null,
+	            _react2.default.createElement(
+	              "div",
+	              { className: "form-group" },
+	              _react2.default.createElement(
+	                "div",
+	                { className: "checkbox" },
+	                _react2.default.createElement(
+	                  "label",
+	                  null,
+	                  _react2.default.createElement("input", { type: "checkbox" }),
+	                  " If you agree with the terms"
+	                )
+	              )
+	            )
+	          ),
+	          _react2.default.createElement(
+	            "div",
+	            { className: "submit-group" },
+	            _react2.default.createElement(
+	              "div",
+	              { className: "container-m" },
+	              _react2.default.createElement(
+	                "button",
+	                { type: "submit", className: "btn btn-primary", disabled: "disabled" },
+	                "Create Account"
+	              )
+	            )
+	          )
+	        )
+	      );
+	    }
+	  }, {
+	    key: "render",
+	    value: function render() {
+	      console.log("typeprof:", this.state.typeprof);
+	      return this._renderForm();
+	    }
+	  }]);
+
+	  return RegistrationForm;
+	}(_react2.default.Component);
+
+	RegistrationForm.propTypes = propTypes;
+	RegistrationForm.defaultProps = defaultProps;
+
+	exports.default = RegistrationForm;
+
+/***/ },
+/* 223 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(7);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _ModalBase = __webpack_require__(224);
+
+	var _ModalBase2 = _interopRequireDefault(_ModalBase);
+
+	__webpack_require__(228);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var propTypes = {
+	  title: _react.PropTypes.string,
+	  data: _react.PropTypes.object
+	};
+
+	var defaultProps = {
+	  title: "My Requests",
+	  data: {}
+	};
+
+	//Shema
+	//title: 'Lets Talk About Your Disease',
+	//description: 'WE ARE READY TO WORK WITH YOU',
+	//img: '/media/billionphotos.jpg',
+	//btn: 'GET IN TOUCH'
+
+	var UserRequest = function (_React$Component) {
+	  _inherits(UserRequest, _React$Component);
+
+	  function UserRequest(props) {
+	    _classCallCheck(this, UserRequest);
+
+	    var _this = _possibleConstructorReturn(this, (UserRequest.__proto__ || Object.getPrototypeOf(UserRequest)).call(this, props));
+
+	    _this.state = {
+	      value: 'select',
+	      newform: null
+	    };
+	    _this.handleChange = _this.handleChange.bind(_this);
+	    return _this;
+	  }
+
+	  _createClass(UserRequest, [{
+	    key: 'handleChange',
+	    value: function handleChange(event) {
+	      //console.log(event.target.value)
+	      this.setState({
+	        value: event.target.value,
+	        newform: event.target.value
+	      });
+	    }
+	  }, {
+	    key: '_updateData',
+	    value: function _updateData(config) {
+	      this.setState({
+	        value: 'select',
+	        newform: null
+	      });
+	    }
+
+	    //_renderTitle () {
+	    //  //if (!this.props.data.title) { return null; }
+	    //  return (
+	    //    <h2>{this.props.title}</h2>
+	    //  );
+	    //}
+
+	  }, {
+	    key: '_newRequests',
+	    value: function _newRequests() {
+	      //if (!this.props.data.title) { return null; }
+	      //<a href="#" className="btn btn-primary btn-lg">New Requests</a>
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'new-requests' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'well' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'form-group' },
+	            _react2.default.createElement(
+	              'label',
+	              null,
+	              'Create Requests'
+	            ),
+	            _react2.default.createElement(
+	              'select',
+	              { value: this.state.value, onChange: this.handleChange, className: 'form-control' },
+	              _react2.default.createElement(
+	                'option',
+	                { value: 'select' },
+	                'Select Requests'
+	              ),
+	              _react2.default.createElement(
+	                'option',
+	                { value: 'legal' },
+	                'Legal'
+	              ),
+	              _react2.default.createElement(
+	                'option',
+	                { value: 'manufacturer' },
+	                'Manufacturer'
+	              ),
+	              _react2.default.createElement(
+	                'option',
+	                { value: 'insurance' },
+	                'Insurance'
+	              ),
+	              _react2.default.createElement(
+	                'option',
+	                { value: 'bank' },
+	                'Bank'
+	              ),
+	              _react2.default.createElement(
+	                'option',
+	                { value: 'question' },
+	                'Question'
+	              )
+	            )
+	          )
+	        )
+	      );
+	    }
+	  }, {
+	    key: '_renderList',
+	    value: function _renderList() {
+	      if (!this.props.data.request[0]) {
+	        return null;
+	      }
+	      var request = this.props.data.request;
+
+	      var objlist = request.map(function (item, index) {
+	        return _react2.default.createElement(
+	          'li',
+	          { key: index, className: "request role-" + item.role + " status-" + item.status.role },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'title' },
+	            item.title
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'date small' },
+	            _react2.default.createElement(
+	              'div',
+	              null,
+	              item.status.openDate
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              null,
+	              item.status.closeDate
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            null,
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              item.text
+	            )
+	          ),
+	          _react2.default.createElement('div', { className: 'clearfix' }),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'pull-left' },
+	            _react2.default.createElement(
+	              'span',
+	              { className: "label label-" + item.status.label },
+	              item.status.text
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            null,
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'btn-group btn-group-xs pull-right', role: 'group' },
+	              _react2.default.createElement(
+	                'button',
+	                { type: 'button', className: 'btn btn-info' },
+	                'View'
+	              ),
+	              _react2.default.createElement(
+	                'button',
+	                { type: 'button', className: 'btn btn-primary' },
+	                'Edit'
+	              )
+	            ),
+	            _react2.default.createElement('div', { className: 'clearfix' })
+	          )
+	        );
+	      });
+	      return objlist ? _react2.default.createElement(
+	        'ul',
+	        { className: 'list-unstyled' },
+	        objlist
+	      ) : null;
+	    }
+	  }, {
+	    key: '_formMdal',
+	    value: function _formMdal() {
+	      if (!this.state.newform) {
+	        return null;
+	      }
+	      return _react2.default.createElement(_ModalBase2.default, { active: this.state.newform, update: this._updateData.bind(this) });
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      //console.log("value:", this.state.value)
+	      //console.log("newform:", this.state.newform)
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'user-requests' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'container' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'row' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'col-md-4' },
+	              this._newRequests()
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'col-md-8' },
+	              _react2.default.createElement(
+	                'h2',
+	                null,
+	                this.props.title
+	              ),
+	              this._renderList()
+	            )
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          null,
+	          this._formMdal()
+	        )
+	      );
+	    }
+	  }]);
+
+	  return UserRequest;
+	}(_react2.default.Component);
+
+	UserRequest.propTypes = propTypes;
+	UserRequest.defaultProps = defaultProps;
+
+	exports.default = UserRequest;
+
+/***/ },
+/* 224 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(7);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	__webpack_require__(225);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var propTypes = {
+	  active: _react.PropTypes.string
+	};
+
+	var defaultProps = {
+	  active: null
+	};
+
+	var ModalBase = function (_React$Component) {
+	  _inherits(ModalBase, _React$Component);
+
+	  function ModalBase(props) {
+	    _classCallCheck(this, ModalBase);
+
+	    var _this = _possibleConstructorReturn(this, (ModalBase.__proto__ || Object.getPrototypeOf(ModalBase)).call(this, props));
+
+	    _this.state = {
+	      active: _this.props.active || null
+	    };
+	    return _this;
+	  }
+
+	  _createClass(ModalBase, [{
+	    key: '_renderWrapper',
+	    value: function _renderWrapper() {
+	      if (!this.state.active) {
+	        return null;
+	      }
+
+	      var style = {
+	        display: 'block'
+	      };
+
+	      var intmodal = _react2.default.createElement(
+	        'div',
+	        { className: 'modal fade in modal-base', role: 'dialog', style: style },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'modal-dialog', role: 'document' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'modal-content' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'modal-body' },
+	              _react2.default.createElement('div', { className: 'close', onClick: this.props.update }),
+	              _react2.default.createElement(
+	                'h2',
+	                null,
+	                this.state.active
+	              )
+	            )
+	          )
+	        )
+	      );
+
+	      var intbackdrop = _react2.default.createElement('div', { className: 'modal-backdrop fade in' });
+
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        intmodal,
+	        intbackdrop
+	      );
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return this._renderWrapper();
+	    }
+	  }]);
+
+	  return ModalBase;
+	}(_react2.default.Component);
+
+	ModalBase.propTypes = propTypes;
+	ModalBase.defaultProps = defaultProps;
+
+	exports.default = ModalBase;
+
+/***/ },
+/* 225 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 226 */,
+/* 227 */,
+/* 228 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 229 */,
+/* 230 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -24043,6 +24787,88 @@
 			"about": "Lorem ipsum dolor sit amet, quis nostrud exercitation ullamco",
 			"purpose": "Lorem ipsum dolor sit amet.",
 			"discount": "0.5%"
+		},
+		"CurentRequests": {
+			"request": [
+				{
+					"id": 0,
+					"title": "New Legal",
+					"text": "Creation of highload portals and social networking products, web services;",
+					"role": "legal",
+					"status": {
+						"openDate": "11/01/2016 10:12 AM",
+						"closeDate": "",
+						"text": "Approved",
+						"role": "approved",
+						"label": "success"
+					}
+				},
+				{
+					"id": 1,
+					"title": "New Manufacturer",
+					"text": "Management and development of corporate (business) applications;",
+					"role": "manufacturer",
+					"status": {
+						"openDate": "11/01/2016 10:12 AM",
+						"closeDate": "",
+						"text": "Inprogress",
+						"role": "inprogress",
+						"label": "primary"
+					}
+				},
+				{
+					"id": 2,
+					"title": "New Question",
+					"text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+					"role": "question",
+					"status": {
+						"openDate": "11/01/2016 10:12 AM",
+						"closeDate": "",
+						"text": "To Test",
+						"role": "inprogress",
+						"label": "danger"
+					}
+				},
+				{
+					"id": 3,
+					"title": "New Question",
+					"text": "Sample bug?",
+					"role": "question",
+					"status": {
+						"openDate": "09/10/2016 10:12 AM",
+						"closeDate": "10/10/2016 10:12 AM",
+						"text": "Closed",
+						"role": "close",
+						"label": "default"
+					}
+				},
+				{
+					"id": 4,
+					"title": "New Question",
+					"text": "Solutions for tourist, hotel and restaurant business?",
+					"role": "question",
+					"status": {
+						"openDate": "05/10/2016 14:00 AM",
+						"closeDate": "06/10/2016 03:32 AM",
+						"text": "Closed",
+						"role": "close",
+						"label": "default"
+					}
+				},
+				{
+					"id": 5,
+					"title": "New Order",
+					"text": "Product name or product info",
+					"role": "order",
+					"status": {
+						"openDate": "05/10/2016 14:00 AM",
+						"closeDate": "06/10/2016 03:32 AM",
+						"text": "Closed",
+						"role": "close",
+						"label": "default"
+					}
+				}
+			]
 		},
 		"users": [
 			{
@@ -24301,7 +25127,7 @@
 	};
 
 /***/ },
-/* 223 */
+/* 231 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin

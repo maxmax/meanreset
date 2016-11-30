@@ -10,6 +10,9 @@ import FooterContainer from './components/FooterContainer/FooterContainer';
 import ProjectHeader from './components/ProjectHeader/ProjectHeader';
 import ProfBase from './components/ProfBase/ProfBase';
 import Profs from './components/ProfBase/Profs';
+import RegistrationForm from './components/RegistrationForm/RegistrationForm';
+import UserRequest from './components/UserRequest/UserRequest';
+
 //
 //import Jumbotron from './components/Jumbotron/Jumbotron';
 //import Cards from './components/Cards/Cards';
@@ -27,6 +30,7 @@ import './Base/global.less';
 
 export default class BaseWrapper extends React.Component {
   render() {
+    console.log("Is!");
     return (
       <section>
         <LandingBase data={this.props.data.landingBase} />
@@ -42,8 +46,12 @@ export default class BaseWrapper extends React.Component {
         <div className="container">
           <br />
           <br />
+          <RegistrationForm />
+          <br />
+          <br />
           <ProjectHeader title="User Profile" />
           <ProfBase data={this.props.data.CurentProfile} />
+          <UserRequest data={this.props.data.CurentRequests} />
           <br />
           <br />
           <ProfBase data={this.props.data.CurentProfile} isCurrentIn="true" />

@@ -4,7 +4,7 @@ import React, { PropTypes }  from 'react';
 
 const propTypes = {
   isCurrentIn: PropTypes.string,
-  data: PropTypes.object
+  data: PropTypes.array
 };
 
 const defaultProps = {

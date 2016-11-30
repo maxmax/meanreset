@@ -15,7 +15,7 @@
     },
     "btn": {
       "text": "Реєстрація",
-      "url": "#"
+      "url": "/base/buddy#/profile"
     }
   },
   "navBar": [
@@ -46,6 +46,10 @@
     }, {
       "title": "Контакти",
       "url": "/contacts",
+      "role": "link"
+    }, {
+      "title": "Проф",
+      "url": "/profile",
       "role": "link"
     }
   ],

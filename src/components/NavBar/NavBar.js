@@ -46,7 +46,8 @@ export default class NavBar extends React.Component {
     super(props);
     this.state = {
       active: null,
-      role: this.props.data.role || null
+      role: this.props.data.role || null,
+      profilelink: this.props.prof || null
     };
   }
 
@@ -63,6 +64,7 @@ export default class NavBar extends React.Component {
       <nav className="navbar navbar-default navbar-inverse navbar-fixed-top navbar-center">
         <div className="container">
           <ul className="nav navbar-nav" role="nav">{listItems}</ul>
+          {this.state.profilelink}
         </div>
       </nav>
     );
