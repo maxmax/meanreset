@@ -148,8 +148,8 @@
 	          intid: this.props.data.expertsContainer.id
 	        }),
 	        _react2.default.createElement(_Thumbs2.default, {
-	          data: this.props.data.whatsnewContainer,
-	          intid: this.props.data.whatsnewContainer.id
+	          data: this.props.data.homeServ,
+	          intid: this.props.data.homeServ.id
 	        }),
 	        _react2.default.createElement(_Testimonials2.default, {
 	          data: this.props.data.testimonials,
@@ -29096,6 +29096,57 @@
 				}
 			]
 		},
+		"homeServ": {
+			"catTitle": "Аналіз грунту",
+			"catDescription": "Наше оборудование действительно уникальное. Образцы для анализа в PLT в заданных точках GPS на полях клиентов отбирают автоматические пробоотборники Wintex 1000. После сушки и размола почва поступает на анализ.",
+			"role": "centered",
+			"img": "",
+			"id": "homeServ",
+			"items": [
+				{
+					"id": 0,
+					"img": "/media/chemistry.svg",
+					"col": "col-xs-12 col-sm-4 col-lg-4",
+					"size": "80px",
+					"text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+				},
+				{
+					"id": 1,
+					"img": "/media/chemistry.svg",
+					"col": "col-xs-12 col-sm-4 col-lg-4",
+					"size": "80px",
+					"text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+				},
+				{
+					"id": 2,
+					"img": "/media/chemistry.svg",
+					"col": "col-xs-12 col-sm-4 col-lg-4",
+					"size": "80px",
+					"text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+				},
+				{
+					"id": 3,
+					"img": "/media/chemistry.svg",
+					"col": "col-xs-12 col-sm-4 col-lg-4",
+					"size": "80px",
+					"text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+				},
+				{
+					"id": 4,
+					"img": "/media/chemistry.svg",
+					"col": "col-xs-12 col-sm-4 col-lg-4",
+					"size": "80px",
+					"text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+				},
+				{
+					"id": 5,
+					"img": "/media/chemistry.svg",
+					"col": "col-xs-12 col-sm-4 col-lg-4",
+					"size": "80px",
+					"text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+				}
+			]
+		},
 		"testimonials": {
 			"title": "Відгуки",
 			"description": "Що кажуть наші клієнти",
@@ -29140,12 +29191,12 @@
 				{
 					"id": 0,
 					"img": "/media/billionphotos.jpg",
-					"text": ""
+					"text": "LOREM IPSUM IS SIMPLY DUMMY TEXT OF THE PRINTING AND TYPESETTING INDUSTRY."
 				},
 				{
 					"id": 1,
 					"img": "/media/waterSolution.jpg",
-					"text": ""
+					"text": "THE PRINTING AND TYPESETTING INDUSTRY."
 				}
 			],
 			"containerMediaOpacity": "0.8",

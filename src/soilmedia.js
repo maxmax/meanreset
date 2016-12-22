@@ -42,8 +42,8 @@ export default class BaseWrapper extends React.Component {
         />
 
         <Thumbs
-          data={this.props.data.whatsnewContainer}
-          intid={this.props.data.whatsnewContainer.id}
+          data={this.props.data.homeServ}
+          intid={this.props.data.homeServ.id}
         />
 
         <Testimonials

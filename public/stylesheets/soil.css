@@ -252,7 +252,6 @@
   padding: 0 0 10%;
 }
 .thumbs .row {
-  margin-top: 60px;
   margin-right: -0.5px;
   margin-left: -0.5px;
   position: relative;
@@ -316,6 +315,17 @@
 .thumbs.role-centered .thumb {
   background-color: white;
   height: 200px;
+}
+.thumbs.role-centered .thumb .caption {
+  margin: 0 auto;
+  color: inherit;
+  text-shadow: 0 0 0;
+  text-align: center;
+  width: 100%;
+  padding: 15px 40px 0px 40px;
+  font-size: 0.7em;
+  font-weight: normal;
+  line-height: 1.2;
 }
 .thumbs.role-centered .thumb .thumbs-img {
   background-color: white;
