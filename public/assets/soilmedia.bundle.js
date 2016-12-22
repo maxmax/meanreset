@@ -140,7 +140,8 @@
 	        }),
 	        _react2.default.createElement(_LetsTalk2.default, {
 	          data: this.props.data.talkContainer,
-	          address: this.props.data.talkContainer.address
+	          address: this.props.data.talkContainer.address,
+	          intid: this.props.data.talkContainer.id
 	        }),
 	        _react2.default.createElement(_ContentContainer2.default, {
 	          data: this.props.data.expertsContainer,
@@ -22277,7 +22278,8 @@
 
 	var propTypes = {
 	  data: _react.PropTypes.object,
-	  address: _react.PropTypes.object
+	  address: _react.PropTypes.object,
+	  intid: _react.PropTypes.string
 	};
 
 	var defaultProps = {
@@ -22285,7 +22287,8 @@
 	    title: 'Create Title!',
 	    description: 'Create Description'
 	  },
-	  address: null
+	  address: null,
+	  intid: null
 	};
 
 	//Shema
@@ -22497,7 +22500,7 @@
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
-	        { className: 'lets-talk ' + this.state.class, style: this.state.itstyle },
+	        { className: 'lets-talk ' + this.state.class, style: this.state.itstyle, id: this.props.intid },
 	        this._renderImgBg(),
 	        _react2.default.createElement(
 	          'div',
@@ -28974,7 +28977,7 @@
 		"navBar": [
 			{
 				"title": "Головна",
-				"url": "/base/soil",
+				"url": "/base/soilmedia",
 				"role": "auto"
 			},
 			{
@@ -29004,8 +29007,8 @@
 			},
 			{
 				"title": "Контакти",
-				"url": "/contacts",
-				"role": "link"
+				"url": "#homeTalk",
+				"role": "auto"
 			}
 		],
 		"aboutContainer": {
@@ -29038,6 +29041,7 @@
 			"description": "Наші фахівці готові відповісти на всі ваші запитання",
 			"btn": "Задати питання та наші контакти",
 			"img": "",
+			"id": "homeTalk",
 			"address": {
 				"title": "Наші контакти:",
 				"int": "03040 м. Київ, вул.. Васильківська 1, офіс 200",

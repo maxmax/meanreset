@@ -21,7 +21,7 @@ export default class BaseWrapper extends React.Component {
   render() {
     return (
       <section className="soilmedia-th">
-      
+
         <NavBar data={this.props.data.navBar} />
         <LandingBase data={this.props.data.landingBase} />
 
@@ -33,6 +33,7 @@ export default class BaseWrapper extends React.Component {
         <LetsTalk
           data={this.props.data.talkContainer}
           address={this.props.data.talkContainer.address}
+          intid={this.props.data.talkContainer.id}
         />
 
         <ContentContainer

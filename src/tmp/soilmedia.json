@@ -21,7 +21,7 @@
   "navBar": [
     {
       "title": "Головна",
-      "url": "/base/soil",
+      "url": "/base/soilmedia",
       "role": "auto"
     }, {
       "title": "О нас",
@@ -45,8 +45,8 @@
       "role": "auto"
     }, {
       "title": "Контакти",
-      "url": "/contacts",
-      "role": "link"
+      "url": "#homeTalk",
+      "role": "auto"
     }
   ],
   "aboutContainer": {
@@ -76,6 +76,7 @@
     "description": "Наші фахівці готові відповісти на всі ваші запитання",
     "btn": "Задати питання та наші контакти",
     "img": "",
+    "id": "homeTalk",
     "address": {
       "title": "Наші контакти:",
       "int": "03040 м. Київ, вул.. Васильківська 1, офіс 200",

@@ -5,7 +5,8 @@ import './letstalk.less';
 
 const propTypes = {
   data: PropTypes.object,
-  address: PropTypes.object
+  address: PropTypes.object,
+  intid: PropTypes.string
 };
 
 const defaultProps = {
@@ -13,7 +14,8 @@ const defaultProps = {
     title: 'Create Title!',
     description: 'Create Description'
   },
-  address: null
+  address: null,
+  intid: null
 };
 
 //Shema
@@ -132,7 +134,7 @@ class LetsTalk extends React.Component {
 
   render() {
     return (
-      <div className={'lets-talk ' + this.state.class} style={this.state.itstyle}>
+      <div className={'lets-talk ' + this.state.class} style={this.state.itstyle} id={this.props.intid}>
         {this._renderImgBg()}
         <div className="container">
           {this._renderTitle()}

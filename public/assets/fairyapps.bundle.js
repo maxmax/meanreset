@@ -22245,7 +22245,8 @@
 
 	var propTypes = {
 	  data: _react.PropTypes.object,
-	  address: _react.PropTypes.object
+	  address: _react.PropTypes.object,
+	  intid: _react.PropTypes.string
 	};
 
 	var defaultProps = {
@@ -22253,7 +22254,8 @@
 	    title: 'Create Title!',
 	    description: 'Create Description'
 	  },
-	  address: null
+	  address: null,
+	  intid: null
 	};
 
 	//Shema
@@ -22465,7 +22467,7 @@
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
-	        { className: 'lets-talk ' + this.state.class, style: this.state.itstyle },
+	        { className: 'lets-talk ' + this.state.class, style: this.state.itstyle, id: this.props.intid },
 	        this._renderImgBg(),
 	        _react2.default.createElement(
 	          'div',
