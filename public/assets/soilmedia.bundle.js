@@ -143,6 +143,10 @@
 	          address: this.props.data.talkContainer.address,
 	          intid: this.props.data.talkContainer.id
 	        }),
+	        _react2.default.createElement(_Thumbs2.default, {
+	          data: this.props.data.homeNews,
+	          intid: this.props.data.homeNews.id
+	        }),
 	        _react2.default.createElement(_ContentContainer2.default, {
 	          data: this.props.data.expertsContainer,
 	          intid: this.props.data.expertsContainer.id
@@ -29143,10 +29147,9 @@
 			"logo": "/media/PLTwhite.svg",
 			"title": "Prime Lab Tech",
 			"description": "Ваш партнер з управління врожайністю",
-			"down": "#AboutContainer",
 			"img": "/media/Imageland.png",
 			"logowidth": "220px",
-			"logospace": "25px auto 0px",
+			"logospace": "75px auto 0px",
 			"class": "text-center",
 			"containerMediaOpacity": "0.9",
 			"containerMediaClass": "backdrop",
@@ -29181,7 +29184,7 @@
 			},
 			{
 				"title": "Новини",
-				"url": "#",
+				"url": "#homeNews",
 				"role": "auto"
 			},
 			{
@@ -29332,6 +29335,39 @@
 					"img": "/media/chemistry.svg",
 					"col": "col-xs-12 col-sm-4 col-lg-4",
 					"size": "80px",
+					"text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+					"link": "#test"
+				}
+			]
+		},
+		"homeNews": {
+			"catTitle": "Новини",
+			"catDescription": "",
+			"role": "centered",
+			"img": "",
+			"id": "homeNews",
+			"items": [
+				{
+					"id": 0,
+					"img": "/media/234717.svg",
+					"col": "col-xs-12 col-sm-4 col-lg-4",
+					"size": "110px",
+					"text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+					"link": "#test"
+				},
+				{
+					"id": 1,
+					"img": "/media/234717.svg",
+					"col": "col-xs-12 col-sm-4 col-lg-4",
+					"size": "110px",
+					"text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+					"link": "#test"
+				},
+				{
+					"id": 2,
+					"img": "/media/234717.svg",
+					"col": "col-xs-12 col-sm-4 col-lg-4",
+					"size": "110px",
 					"text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
 					"link": "#test"
 				}

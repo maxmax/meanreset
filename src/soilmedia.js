@@ -36,6 +36,11 @@ export default class BaseWrapper extends React.Component {
           intid={this.props.data.talkContainer.id}
         />
 
+        <Thumbs
+          data={this.props.data.homeNews}
+          intid={this.props.data.homeNews.id}
+        />
+
         <ContentContainer
           data={this.props.data.expertsContainer}
           intid={this.props.data.expertsContainer.id}
