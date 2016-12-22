@@ -40,7 +40,9 @@ class AboutContainer extends React.Component {
   _renderTitle () {
     if (!this.props.data.title) { return null; }
     return (
-      <h2>{this.props.data.title}</h2>
+      <h2>
+        <span>{this.props.data.title}</span>
+      </h2>
     );
   }
 

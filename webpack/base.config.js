@@ -11,7 +11,8 @@ module.exports = {
       buddy: './src/buddy.js',
       fairyapps: './src/fairyapps.js',
       soil: './src/soil.js',
-      soilmedia: './src/soilmedia.js'
+      soilmedia: './src/soilmedia.js',
+      greentrade: './src/greentrade.js'
   },
   output: {
     path: __dirname,

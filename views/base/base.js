@@ -78,11 +78,24 @@ router.get('/soil', function(req, res, next) {
   });
 });
 
-//Soil
+//Soilmedia
 router.get('/soilmedia', function(req, res, next) {
   var title = "This fairyapps";
   var style = "/stylesheets/soilmedia.css";
   var bundle = "/assets/soilmedia.bundle.js";
+  res.render('base/apps', {
+    title: title,
+    style: style,
+    bundle: bundle,
+    icon: icon
+  });
+});
+
+//Soil
+router.get('/greentrade', function(req, res, next) {
+  var title = "This fairyapps";
+  var style = "/stylesheets/greentrade.css";
+  var bundle = "/assets/greentrade.bundle.js";
   res.render('base/apps', {
     title: title,
     style: style,

@@ -12,6 +12,7 @@ import ProfBase from './components/ProfBase/ProfBase';
 import Profs from './components/ProfBase/Profs';
 import RegistrationForm from './components/RegistrationForm/RegistrationForm';
 import UserRequest from './components/UserRequest/UserRequest';
+import PreCode from './components/PreCode/PreCode';
 
 //
 //import Jumbotron from './components/Jumbotron/Jumbotron';
@@ -31,6 +32,15 @@ import './Base/global.less';
 export default class BaseWrapper extends React.Component {
   render() {
     console.log("Is!");
+
+    var codeSnippetsTest = {
+      active: true,
+      codes: [48348, 28923, 39080],
+      city: "London"
+    };
+
+    var codeSnippetsTest2 = [{ name: 'Earth', order: 3, stats: { life: true, mass: 5.9736 * Math.pow(10, 24) } }, { name: 'Saturn', order: 6, stats: { life: null, mass: 568.46 * Math.pow(10, 24) } }];
+
     return (
       <section>
         <LandingBase data={this.props.data.landingBase} />
@@ -62,6 +72,11 @@ export default class BaseWrapper extends React.Component {
           <br />
           <br />
         </div>
+
+        <PreCode value={codeSnippetsTest} />
+        <br />
+        <PreCode value={codeSnippetsTest2} />
+        <br />
 
         <FooterContainer data={this.props.data.footerContainer} />
 

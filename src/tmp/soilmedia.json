@@ -25,15 +25,15 @@
       "role": "auto"
     }, {
       "title": "О нас",
-      "url": "/base/soil#AboutContainer",
+      "url": "#AboutContainer",
       "role": "auto"
     }, {
       "title": "Наші послуги",
-      "url": "#",
+      "url": "#homeExperts",
       "role": "auto"
     }, {
       "title": "Співпраця",
-      "url": "#",
+      "url": "#homePartners",
       "role": "auto"
     }, {
       "title": "Новини",
@@ -41,7 +41,7 @@
       "role": "auto"
     }, {
       "title": "Відгуки",
-      "url": "#",
+      "url": "#homeTestimonials",
       "role": "auto"
     }, {
       "title": "Контакти",
@@ -75,9 +75,7 @@
     "title": "Зв'яжіться з нами саме зараз",
     "description": "Наші фахівці готові відповісти на всі ваші запитання",
     "btn": "Задати питання та наші контакти",
-    "img": "/media/interpretacja.jpg",
-    "containerMediaOpacity": "0.8",
-    "containerMediaClass": "backdrop",
+    "img": "",
     "address": {
       "title": "Наші контакти:",
       "int": "03040 м. Київ, вул.. Васильківська 1, офіс 200",
@@ -99,7 +97,7 @@
       ]
     },
     "itstyle": {
-      "backgroundColor": "#6997b2"
+      "backgroundColor": "#3498DB"
     }
   },
   "whatsnewContainer": {},
@@ -108,6 +106,7 @@
     "catTitle": "Партнери та постачальники",
     "catDescription": "Наша компанія відкрита до співробітництва з широким колом партнерів та запрошує виробників, постачальників, переробників сільськогосподарської продукції, брокерів та інші компанії аграрної сфери до відкритого діалогу.",
     "role": "centered",
+    "id": "homePartners",
     "img": "",
     "items": [
       {
@@ -132,7 +131,8 @@
     "title": "Відгуки",
     "description": "Що кажуть наші клієнти",
     "btn": "Show more Testimonials",
-    "img": "/media/waterSolution.jpg",
+    "img": "",
+    "id": "homeTestimonials",
     "items": [
       {
         "id": 0,
@@ -157,13 +157,14 @@
     "containerMediaOpacity": "0.8",
     "containerMediaClass": "backdrop",
     "itstyle": {
-      "backgroundColor": "rgb(106, 128, 74)"
+      "backgroundColor": "#3498DB"
     }
   },
   "expertsContainer": {
     "title": "Наші послуги",
     "description": "Наше оборудование действительно уникальное. Образцы для анализа в PLT в заданных точках GPS на полях клиентов отбирают автоматические пробоотборники Wintex 1000. После сушки и размола почва поступает на анализ. К примеру, атомно-эмиссионный спектрометр американской фирмы Agilent Technologies позволяет определять подвижные формы микроэлементов в почве в самой малой их концентрации — от 30 ppb. Еще один прибор, двулучевой спектрофотометр от американской UNICO, поможет определить содержание в почве нитратного азота, аммонийного азота, подвижных форм фосфора и серы. С помощью пламенного фотометра от британской компании BWB Technologies поле заказчика исследуется на обменные формы калия, кальция и натрия. А многофункциональные аппараты американской Thermo Fisher Scientific точно измеряют уровень кислоты и щелочи в почве, а также степень ее засоленности.",
     "img": "",
+    "id": "homeExperts",
     "items": [
       {
         "text": "Визначення агрохімічних показників ґрунту (гумус, N,P,K,Mg,Ca,Na,S,Fe,Cu,Mn,Zn,B)"
@@ -189,7 +190,7 @@
   "howitworksContainer": {
     "title": "Як ми це робимо?",
     "description": "",
-    "img": "/media/Imageland.png",
+    "img": "",
     "items": [
       {
         "text": "Визначення реальних показників забезпеченості рослин елементами живлення"
@@ -205,8 +206,9 @@
     "containerMediaClass": "backdrop",
     "containerMediaRepeat": "no-repeat",
     "containerMediaSize": "cover",
+    "intclass": "contrast",
     "itstyle": {
-      "backgroundColor": "#6997b2",
+      "backgroundColor": "#3498DB",
       "color": "white"
     }
   },
@@ -255,7 +257,8 @@
     "text": "© 2016 PLT Inc",
     "class": "text-center",
     "itstyle": {
-      "backgroundColor": "rgb(206, 233, 252)"
+      "backgroundColor": "#3498DB",
+      "color": "white"
     }
   }
 }

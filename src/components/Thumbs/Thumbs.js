@@ -6,13 +6,15 @@ import OneThumb from './OneThumb';
 import './thumbs.less';
 
 const propTypes = {
-  data: PropTypes.object
+  data: PropTypes.object,
+  intid: PropTypes.string
 };
 
 const defaultProps = {
   data: {
-    role: "auto"
-  }
+    role: "auto",
+  },
+  intid: null
 };
 
 class Thumbs extends React.Component {
@@ -31,7 +33,9 @@ class Thumbs extends React.Component {
   _renderTitle () {
     if (!this.props.data.catTitle) { return null; }
     return (
-      <h2>{this.props.data.catTitle}</h2>
+      <h2>
+        <span>{this.props.data.catTitle}</span>
+      </h2>
     );
   }
 
@@ -93,7 +97,7 @@ class Thumbs extends React.Component {
   _renderWrap () {
     if (!this.props.data.items) { return null; }
     return (
-      <div className={"container-fluid thumbs role-" + this.state.role} style={this.state.itstyle}>
+      <div className={"container-fluid thumbs role-" + this.state.role} style={this.state.itstyle} id={this.props.intid}>
         {this._renderImgBg()}
         <div className="container">
           {this._renderTitle()}

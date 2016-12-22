@@ -1,7 +1,7 @@
 import React, { PropTypes }  from 'react';
 import ContainerMedia from '../../elements/ContainerMedia/ContainerMedia';
 
-import './testimonials.less';
+import './slidehot.less';
 
 const propTypes = {
   data: PropTypes.object,
@@ -22,7 +22,7 @@ const defaultProps = {
 //img: '/media/billionphotos.jpg',
 //btn: 'GET IN TOUCH'
 
-class Testimonials extends React.Component {
+class SlideHot extends React.Component {
 
   constructor(props) {
     super(props);
@@ -104,7 +104,7 @@ class Testimonials extends React.Component {
   render() {
 
     return (
-      <div className={'testimonials ' + this.state.class} style={this.state.itstyle} id={this.props.intid}>
+      <div className={'slidehot ' + this.state.class} style={this.state.itstyle} id={this.props.intid}>
         {this._renderImgBg()}
         <div className="container-fluid">
           {this._renderTitle()}
@@ -116,7 +116,7 @@ class Testimonials extends React.Component {
   }
 }
 
-Testimonials.propTypes = propTypes;
-Testimonials.defaultProps = defaultProps;
+SlideHot.propTypes = propTypes;
+SlideHot.defaultProps = defaultProps;
 
-export default Testimonials;
+export default SlideHot;

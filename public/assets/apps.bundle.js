@@ -106,11 +106,15 @@
 
 	var _UserRequest2 = _interopRequireDefault(_UserRequest);
 
-	var _allui = __webpack_require__(230);
+	var _PreCode = __webpack_require__(230);
+
+	var _PreCode2 = _interopRequireDefault(_PreCode);
+
+	var _allui = __webpack_require__(231);
 
 	var _allui2 = _interopRequireDefault(_allui);
 
-	__webpack_require__(231);
+	__webpack_require__(232);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -146,6 +150,15 @@
 	    key: 'render',
 	    value: function render() {
 	      console.log("Is!");
+
+	      var codeSnippetsTest = {
+	        active: true,
+	        codes: [48348, 28923, 39080],
+	        city: "London"
+	      };
+
+	      var codeSnippetsTest2 = [{ name: 'Earth', order: 3, stats: { life: true, mass: 5.9736 * Math.pow(10, 24) } }, { name: 'Saturn', order: 6, stats: { life: null, mass: 568.46 * Math.pow(10, 24) } }];
+
 	      return _react2.default.createElement(
 	        'section',
 	        null,
@@ -178,6 +191,10 @@
 	          _react2.default.createElement('br', null),
 	          _react2.default.createElement('br', null)
 	        ),
+	        _react2.default.createElement(_PreCode2.default, { value: codeSnippetsTest }),
+	        _react2.default.createElement('br', null),
+	        _react2.default.createElement(_PreCode2.default, { value: codeSnippetsTest2 }),
+	        _react2.default.createElement('br', null),
 	        _react2.default.createElement(_FooterContainer2.default, { data: this.props.data.footerContainer })
 	      );
 	    }
@@ -22143,7 +22160,11 @@
 	      return _react2.default.createElement(
 	        'h2',
 	        null,
-	        this.props.data.title
+	        _react2.default.createElement(
+	          'span',
+	          null,
+	          this.props.data.title
+	        )
 	      );
 	    }
 	  }, {
@@ -22579,13 +22600,15 @@
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 	var propTypes = {
-	  data: _react.PropTypes.object
+	  data: _react.PropTypes.object,
+	  intid: _react.PropTypes.string
 	};
 
 	var defaultProps = {
 	  data: {
 	    role: "auto"
-	  }
+	  },
+	  intid: null
 	};
 
 	var Thumbs = function (_React$Component) {
@@ -22615,7 +22638,11 @@
 	      return _react2.default.createElement(
 	        'h2',
 	        null,
-	        this.props.data.catTitle
+	        _react2.default.createElement(
+	          'span',
+	          null,
+	          this.props.data.catTitle
+	        )
 	      );
 	    }
 	  }, {
@@ -22696,7 +22723,7 @@
 	      }
 	      return _react2.default.createElement(
 	        'div',
-	        { className: "container-fluid thumbs role-" + this.state.role, style: this.state.itstyle },
+	        { className: "container-fluid thumbs role-" + this.state.role, style: this.state.itstyle, id: this.props.intid },
 	        this._renderImgBg(),
 	        _react2.default.createElement(
 	          'div',
@@ -22975,14 +23002,16 @@
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 	var propTypes = {
-	  data: _react.PropTypes.object
+	  data: _react.PropTypes.object,
+	  intid: _react.PropTypes.string
 	};
 
 	var defaultProps = {
 	  data: {
 	    title: 'Testimonials!',
 	    description: 'Testimonials Empty'
-	  }
+	  },
+	  intid: null
 	};
 
 	//Shema
@@ -23119,7 +23148,7 @@
 
 	      return _react2.default.createElement(
 	        'div',
-	        { className: 'testimonials ' + this.state.class, style: this.state.itstyle },
+	        { className: 'testimonials ' + this.state.class, style: this.state.itstyle, id: this.props.intid },
 	        this._renderImgBg(),
 	        _react2.default.createElement(
 	          'div',
@@ -23180,11 +23209,15 @@
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 	var propTypes = {
-	  data: _react.PropTypes.object
+	  data: _react.PropTypes.object,
+	  intid: _react.PropTypes.string,
+	  intclass: _react.PropTypes.string
 	};
 
 	var defaultProps = {
-	  data: {}
+	  data: {},
+	  intid: null,
+	  intclass: null
 	};
 
 	var ContentContainer = function (_React$Component) {
@@ -23229,7 +23262,11 @@
 	      return _react2.default.createElement(
 	        'h2',
 	        null,
-	        this.props.data.title
+	        _react2.default.createElement(
+	          'span',
+	          null,
+	          this.props.data.title
+	        )
 	      );
 	    }
 	  }, {
@@ -23301,7 +23338,7 @@
 	      }
 	      return _react2.default.createElement(
 	        'div',
-	        { className: 'content-container text-center', style: this.state.itstyle },
+	        { className: 'content-container text-center ' + this.props.intclass, style: this.state.itstyle, id: this.props.intid },
 	        this._renderImgBg(),
 	        _react2.default.createElement(
 	          'div',
@@ -24756,6 +24793,108 @@
 /***/ },
 /* 229 */,
 /* 230 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(7);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /*
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  Button with progress spinned support
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+
+	//import PropTypes from './../PropTypes/PropTypes';
+
+	var PreCode = function (_React$Component) {
+	  _inherits(PreCode, _React$Component);
+
+	  function PreCode(props) {
+	    _classCallCheck(this, PreCode);
+
+	    return _possibleConstructorReturn(this, (PreCode.__proto__ || Object.getPrototypeOf(PreCode)).call(this, props));
+	  }
+
+	  _createClass(PreCode, [{
+	    key: '_renderWrapper',
+	    value: function _renderWrapper() {
+	      if (!this.props.value) {
+	        return null;
+	      }
+	      //
+	      if (!library) var library = {};
+	      library.json = {
+	        replacer: function replacer(match, pIndent, pKey, pVal, pEnd) {
+	          var key = '<span class=json-key>';
+	          var val = '<span class=json-value>';
+	          var str = '<span class=json-string>';
+	          var r = pIndent || '';
+	          if (pKey) r = r + key + pKey.replace(/[": ]/g, '') + '</span>: ';
+	          if (pVal) r = r + (pVal[0] == '"' ? str : val) + pVal + '</span>';
+	          return r + (pEnd || '');
+	        },
+	        prettyPrint: function prettyPrint(obj) {
+	          var jsonLine = /^( *)("[\w]+": )?("[^"]*"|[\w.+-]*)?([,[{])?$/mg;
+	          return JSON.stringify(obj, null, 3).replace(/&/g, '&amp;').replace(/\\"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(jsonLine, library.json.replacer);
+	        }
+	      };
+
+	      console.log(this.props.value);
+	      //var waccount = { active: true, codes: [48348, 28923, 39080], city: "London" };
+	      var codeint = library.json.prettyPrint(this.props.value);
+
+	      return _react2.default.createElement('code', { dangerouslySetInnerHTML: { __html: codeint } });
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'pre-code' },
+	        _react2.default.createElement(
+	          'pre',
+	          null,
+	          this._renderWrapper()
+	        )
+	      );
+	    }
+	  }]);
+
+	  return PreCode;
+	}(_react2.default.Component);
+
+	//<pre><code id="account" data-language={this.props.language}>{this.props.data}</code></pre>
+
+	//PreCode.propTypes = {
+	//  data: PropTypes.string,
+	//  language: PropTypes.string
+	//};
+
+	//PreCode.defaultProps = {
+	//  data: null,
+	//  language: ""
+	//};
+
+
+	exports.default = PreCode;
+
+/***/ },
+/* 231 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -25127,7 +25266,7 @@
 	};
 
 /***/ },
-/* 231 */
+/* 232 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin

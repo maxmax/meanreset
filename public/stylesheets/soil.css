@@ -23,8 +23,11 @@
   width: 100%;
   height: 100%;
   background-color: black;
-  z-index: 1;
+  z-index: 2;
   overflow: hidden;
+}
+.container-video video {
+  width: 100%;
 }
 .container-video.backdrop:after {
   content: "";
@@ -7882,13 +7885,14 @@ label {
   float: left;
 }
 .navbar-inverse {
-  background: #6997b2;
-  border-color: #6997b2;
+  background: #3498DB;
+  border-color: #3498DB;
 }
 .navbar-inverse .navbar-nav > li > a {
   color: white;
   cursor: pointer;
-  font-size: 1.2em;
+  font-size: 1.1em;
+  font-weight: 500;
 }
 .navbar-inverse .navbar-nav > li > a.active,
 .navbar-inverse .navbar-nav > li > a:hover,

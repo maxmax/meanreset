@@ -1,0 +1,52 @@
+{
+  "landingBase": {
+    "logo": "/media/greentrade-logo-sm.png",
+    "title": "Green Trade House",
+    "description": "Hello and a very warm welcome!",
+    "down": "#AboutContainer",
+    "video": "/media/videobg.mp4",
+    "logowidth": "300px",
+    "logospace": "25px auto 25px",
+    "countdown": {
+      "endDate": "01/01/2017 10:12 AM",
+      "prefix": "GTH started!"
+    },
+    "class": "text-center",
+    "containerMediaOpacity": "0.9",
+    "containerMediaClass": "backdrop"
+  },
+  "aboutContainer": {
+    "title": "About Us",
+    "description": "Trading online platform dedicated solutions in the field of renewable energy and energy efficiency. Green Trade House enables users of different sectors and different levels of income, order any technology in the field of alternative energy sources from around the world.",
+    "text": "",
+    "promo": "4-GbFVOzM28",
+    "services": "",
+    "img": "/media/basegrey.jpg",
+    "items": []
+  },
+  "talkContainer": {
+    "title": "Contact Us",
+    "description": "WE ARE READY TO WORK WITH YOU",
+    "btn": "GET IN TOUCH",
+    "img": "/media/green.jpg",
+    "containerMediaOpacity": "0.9",
+    "containerMediaClass": "backdrop",
+    "address": {
+      "title": "Green Trade House",
+      "int": "pr. Wossoedinenia 15, 02160 Kiev, Ukraine",
+      "phone": "+380443930670, +380677351398",
+      "mail": "eurotorgdim@ukr.net",
+      "site": "http://greentradehouse.com",
+      "items": []
+    }
+  },
+  "whatsnewContainer": {},
+  "productsContainer": {},
+  "partnersContainer": {},
+  "testimonials": {},
+  "expertsContainer": {},
+  "footerContainer": {
+    "text": "© 2016 Green Trade House",
+    "class": "text-center"
+  }
+}

@@ -3,11 +3,15 @@ import ContainerMedia from '../../elements/ContainerMedia/ContainerMedia';
 import './contentcontainer.less';
 
 const propTypes = {
-  data: PropTypes.object
+  data: PropTypes.object,
+  intid: PropTypes.string,
+  intclass: PropTypes.string
 };
 
 const defaultProps = {
-  data: {}
+  data: {},
+  intid: null,
+  intclass: null
 };
 
 class ContentContainer extends React.Component {
@@ -40,7 +44,9 @@ class ContentContainer extends React.Component {
   _renderTitle () {
     if (!this.props.data.title) { return null; }
     return (
-      <h2>{this.props.data.title}</h2>
+      <h2>
+        <span>{this.props.data.title}</span>
+      </h2>
     );
   }
 
@@ -81,7 +87,7 @@ class ContentContainer extends React.Component {
   _renderWrapper () {
     if (!this.props.data.title) { return null; }
     return (
-      <div className='content-container text-center' style={this.state.itstyle}>
+      <div className={'content-container text-center ' + this.props.intclass} style={this.state.itstyle} id={this.props.intid}>
         {this._renderImgBg()}
         <div className="container">
           {this._renderTitle()}
