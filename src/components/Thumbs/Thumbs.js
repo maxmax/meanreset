@@ -87,7 +87,14 @@ class Thumbs extends React.Component {
       }
       if (this.state.role == 'centered') {
         return (
-          <OneThumb key={item.id} img={item.img} caption={item.text} col={item.col} size={item.size} />
+          <OneThumb
+            key={item.id}
+            img={item.img}
+            caption={item.text}
+            col={item.col}
+            size={item.size}
+            link={item.link} 
+          />
         );
       }
     });

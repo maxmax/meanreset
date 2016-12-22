@@ -22676,7 +22676,14 @@
 	          return _react2.default.createElement(_BaseThumb2.default, { key: item.id, img: item.img, caption: item.text, col: item.col });
 	        }
 	        if (_this2.state.role == 'centered') {
-	          return _react2.default.createElement(_OneThumb2.default, { key: item.id, img: item.img, caption: item.text, col: item.col, size: item.size });
+	          return _react2.default.createElement(_OneThumb2.default, {
+	            key: item.id,
+	            img: item.img,
+	            caption: item.text,
+	            col: item.col,
+	            size: item.size,
+	            link: item.link
+	          });
 	        }
 	      });
 	      return thumbslist ? _react2.default.createElement(
@@ -22856,13 +22863,15 @@
 	  img: _react.PropTypes.string,
 	  caption: _react.PropTypes.string,
 	  col: _react.PropTypes.string,
-	  size: _react.PropTypes.string
+	  size: _react.PropTypes.string,
+	  link: _react.PropTypes.string
 	};
 
 	var defaultProps = {
 	  img: '',
 	  caption: '',
-	  col: ''
+	  col: '',
+	  link: null
 	};
 
 	var OneThumb = function (_React$Component) {
@@ -22877,12 +22886,27 @@
 	      img: _this.props.img || null,
 	      caption: _this.props.caption || null,
 	      col: _this.props.col || 'col-xs-12 col-sm-6 col-lg-3',
-	      size: _this.props.size || '200px'
+	      size: _this.props.size || '200px',
+	      active: false
 	    };
+	    _this._openMdal = _this._openMdal.bind(_this);
 	    return _this;
 	  }
 
 	  _createClass(OneThumb, [{
+	    key: '_openMdal',
+	    value: function _openMdal() {
+	      this.setState({ active: !this.state.active });
+	    }
+	  }, {
+	    key: '_formBackdrop',
+	    value: function _formBackdrop() {
+	      if (!this.state.active) {
+	        return null;
+	      }
+	      return _react2.default.createElement('div', { className: 'modal-backdrop fade in' });
+	    }
+	  }, {
 	    key: '_renderImg',
 	    value: function _renderImg(el, size) {
 	      if (!el) {
@@ -22909,6 +22933,163 @@
 	      );
 	    }
 	  }, {
+	    key: '_renderLink',
+	    value: function _renderLink() {
+	      if (!this.props.link) {
+	        return null;
+	      }
+	      return _react2.default.createElement('div', { className: 'thumb-link', onClick: this._openMdal.bind(this) });
+	    }
+	  }, {
+	    key: '_formMdal',
+	    value: function _formMdal() {
+	      if (!this.state.active) {
+	        return null;
+	      }
+	      var style = {
+	        display: 'block'
+	      };
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'modal fade in', role: 'dialog', style: style },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'modal-dialog modal-lg', role: 'document' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'modal-content' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'modal-body' },
+	              _react2.default.createElement('div', { className: 'close', onClick: this._openMdal.bind(this) }),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'row' },
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'col-xs-12 col-sm-4 col-lg-4' },
+	                  _react2.default.createElement(
+	                    'div',
+	                    { 'class': 'main-icon' },
+	                    _react2.default.createElement('img', { src: 'http://image.flaticon.com/icons/svg/184/184635.svg', width: '224', height: '224', alt: 'Chemistry free icon', title: 'Chemistry free icon' })
+	                  )
+	                ),
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'col-xs-12 col-sm-8 col-lg-8' },
+	                  _react2.default.createElement(
+	                    'h3',
+	                    null,
+	                    'Make modals accessible'
+	                  ),
+	                  _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'Lead is a particularly dangerous soil component. The following table from the University of Minnesota categorizes typical soil concentration levels and their associated health risks.'
+	                  )
+	                ),
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'col-xs-12 col-sm-12 col-lg-12' },
+	                  _react2.default.createElement('br', null),
+	                  _react2.default.createElement('br', null),
+	                  _react2.default.createElement(
+	                    'table',
+	                    { className: 'table' },
+	                    _react2.default.createElement(
+	                      'caption',
+	                      null,
+	                      'Children and pregnant women should avoid contact with soil estimated total lead levels above 300 ppm.'
+	                    ),
+	                    _react2.default.createElement(
+	                      'thead',
+	                      null,
+	                      _react2.default.createElement(
+	                        'tr',
+	                        null,
+	                        _react2.default.createElement(
+	                          'th',
+	                          null,
+	                          '#'
+	                        ),
+	                        _react2.default.createElement(
+	                          'th',
+	                          null,
+	                          'Lead Level'
+	                        ),
+	                        _react2.default.createElement(
+	                          'th',
+	                          null,
+	                          'Extracted lead (ppm)'
+	                        ),
+	                        _react2.default.createElement(
+	                          'th',
+	                          null,
+	                          'Estimated total lead (ppm)'
+	                        )
+	                      )
+	                    ),
+	                    _react2.default.createElement(
+	                      'tbody',
+	                      null,
+	                      _react2.default.createElement(
+	                        'tr',
+	                        null,
+	                        _react2.default.createElement(
+	                          'th',
+	                          { scope: 'row' },
+	                          '1'
+	                        ),
+	                        _react2.default.createElement(
+	                          'td',
+	                          null,
+	                          'Low'
+	                        ),
+	                        _react2.default.createElement(
+	                          'td',
+	                          null,
+	                          '43'
+	                        ),
+	                        _react2.default.createElement(
+	                          'td',
+	                          null,
+	                          '500'
+	                        )
+	                      ),
+	                      _react2.default.createElement(
+	                        'tr',
+	                        null,
+	                        _react2.default.createElement(
+	                          'th',
+	                          { scope: 'row' },
+	                          '2'
+	                        ),
+	                        _react2.default.createElement(
+	                          'td',
+	                          null,
+	                          'Medium'
+	                        ),
+	                        _react2.default.createElement(
+	                          'td',
+	                          null,
+	                          '43'
+	                        ),
+	                        _react2.default.createElement(
+	                          'td',
+	                          null,
+	                          '500'
+	                        )
+	                      )
+	                    )
+	                  )
+	                )
+	              )
+	            )
+	          )
+	        )
+	      );
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
@@ -22918,8 +23099,11 @@
 	          'div',
 	          { className: 'thumb' },
 	          this._renderImg(this.state.img, this.state.size),
-	          this._renderCaption()
-	        )
+	          this._renderCaption(),
+	          this._renderLink()
+	        ),
+	        this._formMdal(),
+	        this._formBackdrop()
 	      );
 	    }
 	  }]);
@@ -29108,42 +29292,48 @@
 					"img": "/media/chemistry.svg",
 					"col": "col-xs-12 col-sm-4 col-lg-4",
 					"size": "80px",
-					"text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+					"text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+					"link": "#test"
 				},
 				{
 					"id": 1,
 					"img": "/media/chemistry.svg",
 					"col": "col-xs-12 col-sm-4 col-lg-4",
 					"size": "80px",
-					"text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+					"text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+					"link": "#test"
 				},
 				{
 					"id": 2,
 					"img": "/media/chemistry.svg",
 					"col": "col-xs-12 col-sm-4 col-lg-4",
 					"size": "80px",
-					"text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+					"text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+					"link": "#test"
 				},
 				{
 					"id": 3,
 					"img": "/media/chemistry.svg",
 					"col": "col-xs-12 col-sm-4 col-lg-4",
 					"size": "80px",
-					"text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+					"text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+					"link": "#test"
 				},
 				{
 					"id": 4,
 					"img": "/media/chemistry.svg",
 					"col": "col-xs-12 col-sm-4 col-lg-4",
 					"size": "80px",
-					"text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+					"text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+					"link": "#test"
 				},
 				{
 					"id": 5,
 					"img": "/media/chemistry.svg",
 					"col": "col-xs-12 col-sm-4 col-lg-4",
 					"size": "80px",
-					"text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+					"text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+					"link": "#test"
 				}
 			]
 		},
