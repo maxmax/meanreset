@@ -30,7 +30,7 @@ class SlideHot extends React.Component {
       itstyle: this.props.data.itstyle || null,
       active: 0,
       data: this.props.data.items[0] || null,
-      class: this.props.data.class || 'text-center',
+      class: this.props.data.class || 'auto',
       containerMediaOpacity: this.props.data.containerMediaOpacity || '1',
       containerMediaClass: this.props.data.containerMediaClass || 'backdrop',
       disabled: {pointerEvents: 'none'}
@@ -84,18 +84,21 @@ class SlideHot extends React.Component {
       var disabled = this.state.disabled;
     }
 
+    var style = {
+      backgroundImage: 'url(' + current.img + ')',
+      backgroundRepeat: "no-repeat",
+      backgroundPosition: "center",
+      backgroundSize: "cover"
+    };
+
+    console.log(current);
+
     return (
       <div className="slides">
         <div className="slide-prev" onClick={this._newSlide.bind(this, current.id - 1)} style={disabled}></div>
         <div className="slide-next" onClick={this._newSlide.bind(this, current.id + 1)}></div>
-        <div className="slide">
-          <div className="wrap">
-            <blockquote>
-              <p>{current.text}</p>
-              <div className="author">{current.author}</div>
-              <small>{current.position}</small>
-            </blockquote>
-          </div>
+        <div className="slide" style={style}>
+          <p>{current.text}</p>
         </div>
       </div>
     );
@@ -107,9 +110,17 @@ class SlideHot extends React.Component {
       <div className={'slidehot ' + this.state.class} style={this.state.itstyle} id={this.props.intid}>
         {this._renderImgBg()}
         <div className="container-fluid">
-          {this._renderTitle()}
-          {this._renderDesc()}
-          {this._renderSlide()}
+          <div className="row">
+            <div className="col-xs-12 col-sm-8 col-lg-8">
+              {this._renderSlide()}
+            </div>
+            <div className="col-xs-12 col-sm-4 col-lg-4">
+              <div className="well-auto">
+                {this._renderTitle()}
+                {this._renderDesc()}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     );

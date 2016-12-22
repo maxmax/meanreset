@@ -21,38 +21,49 @@ export default class BaseWrapper extends React.Component {
   render() {
     return (
       <section className="soilmedia-th">
+      
         <NavBar data={this.props.data.navBar} />
         <LandingBase data={this.props.data.landingBase} />
 
         <SlideHot
-          data={this.props.data.testimonials}
-          intid={this.props.data.testimonials.id}
+          data={this.props.data.aboutHot}
+          intid={this.props.data.aboutHot.id}
         />
 
-        <AboutContainer data={this.props.data.aboutContainer} />
-        <LetsTalk data={this.props.data.talkContainer} address={this.props.data.talkContainer.address} />
+        <LetsTalk
+          data={this.props.data.talkContainer}
+          address={this.props.data.talkContainer.address}
+        />
+
         <ContentContainer
           data={this.props.data.expertsContainer}
           intid={this.props.data.expertsContainer.id}
         />
+
         <Thumbs
           data={this.props.data.whatsnewContainer}
           intid={this.props.data.whatsnewContainer.id}
         />
+
         <Testimonials
           data={this.props.data.testimonials}
           intid={this.props.data.testimonials.id}
         />
+
         <Thumbs
           data={this.props.data.partnersContainer}
           intid={this.props.data.partnersContainer.id}
         />
+
         <ContentContainer
           data={this.props.data.howitworksContainer}
           intclass={this.props.data.howitworksContainer.intclass}
         />
+
         <ContentContainer data={this.props.data.benefitsContainer} />
+
         <FooterContainer data={this.props.data.footerContainer} />
+
       </section>
     );
   }

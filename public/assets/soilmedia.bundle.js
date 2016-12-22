@@ -135,11 +135,13 @@
 	        _react2.default.createElement(_NavBar2.default, { data: this.props.data.navBar }),
 	        _react2.default.createElement(_LandingBase2.default, { data: this.props.data.landingBase }),
 	        _react2.default.createElement(_SlideHot2.default, {
-	          data: this.props.data.testimonials,
-	          intid: this.props.data.testimonials.id
+	          data: this.props.data.aboutHot,
+	          intid: this.props.data.aboutHot.id
 	        }),
-	        _react2.default.createElement(_AboutContainer2.default, { data: this.props.data.aboutContainer }),
-	        _react2.default.createElement(_LetsTalk2.default, { data: this.props.data.talkContainer, address: this.props.data.talkContainer.address }),
+	        _react2.default.createElement(_LetsTalk2.default, {
+	          data: this.props.data.talkContainer,
+	          address: this.props.data.talkContainer.address
+	        }),
 	        _react2.default.createElement(_ContentContainer2.default, {
 	          data: this.props.data.expertsContainer,
 	          intid: this.props.data.expertsContainer.id
@@ -28792,7 +28794,7 @@
 	      itstyle: _this.props.data.itstyle || null,
 	      active: 0,
 	      data: _this.props.data.items[0] || null,
-	      class: _this.props.data.class || 'text-center',
+	      class: _this.props.data.class || 'auto',
 	      containerMediaOpacity: _this.props.data.containerMediaOpacity || '1',
 	      containerMediaClass: _this.props.data.containerMediaClass || 'backdrop',
 	      disabled: { pointerEvents: 'none' }
@@ -28868,6 +28870,15 @@
 	        var disabled = this.state.disabled;
 	      }
 
+	      var style = {
+	        backgroundImage: 'url(' + current.img + ')',
+	        backgroundRepeat: "no-repeat",
+	        backgroundPosition: "center",
+	        backgroundSize: "cover"
+	      };
+
+	      console.log(current);
+
 	      return _react2.default.createElement(
 	        'div',
 	        { className: 'slides' },
@@ -28875,29 +28886,11 @@
 	        _react2.default.createElement('div', { className: 'slide-next', onClick: this._newSlide.bind(this, current.id + 1) }),
 	        _react2.default.createElement(
 	          'div',
-	          { className: 'slide' },
+	          { className: 'slide', style: style },
 	          _react2.default.createElement(
-	            'div',
-	            { className: 'wrap' },
-	            _react2.default.createElement(
-	              'blockquote',
-	              null,
-	              _react2.default.createElement(
-	                'p',
-	                null,
-	                current.text
-	              ),
-	              _react2.default.createElement(
-	                'div',
-	                { className: 'author' },
-	                current.author
-	              ),
-	              _react2.default.createElement(
-	                'small',
-	                null,
-	                current.position
-	              )
-	            )
+	            'p',
+	            null,
+	            current.text
 	          )
 	        )
 	      );
@@ -28913,9 +28906,25 @@
 	        _react2.default.createElement(
 	          'div',
 	          { className: 'container-fluid' },
-	          this._renderTitle(),
-	          this._renderDesc(),
-	          this._renderSlide()
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'row' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'col-xs-12 col-sm-8 col-lg-8' },
+	              this._renderSlide()
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'col-xs-12 col-sm-4 col-lg-4' },
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'well-auto' },
+	                this._renderTitle(),
+	                this._renderDesc()
+	              )
+	            )
+	          )
 	        )
 	      );
 	    }
@@ -29116,6 +29125,30 @@
 			"containerMediaClass": "backdrop",
 			"itstyle": {
 				"backgroundColor": "#3498DB"
+			}
+		},
+		"aboutHot": {
+			"title": "О нас",
+			"description": "«PLT», это современная агрохимическая лаборатория и дистрибьютор всемирно известных производителей высококачественных семян, удобрений и средств защиты сельскохозяйственных культур.",
+			"img": "",
+			"id": "AboutContainer",
+			"items": [
+				{
+					"id": 0,
+					"img": "/media/billionphotos.jpg",
+					"text": ""
+				},
+				{
+					"id": 1,
+					"img": "/media/waterSolution.jpg",
+					"text": ""
+				}
+			],
+			"containerMediaOpacity": "0.8",
+			"containerMediaClass": "backdrop",
+			"itstyle": {
+				"backgroundColor": "#fff",
+				"color": "#333333"
 			}
 		},
 		"expertsContainer": {
