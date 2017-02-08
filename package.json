@@ -1,7 +1,7 @@
 {
-  "name": "meanreset",
+  "name": "mernreset",
   "version": "0.0.1",
-  "description": "A sample Node.js app using Express 4 on Heroku",
+  "description": "A sample MERN apps tests",
   "engines": {
     "node": "5.9.1"
   },
@@ -44,7 +44,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/maxmax/meanreset.git"
+    "url": "git+https://github.com/maxmax/mernreset.git"
   },
   "keywords": [
     "node",
@@ -54,8 +54,8 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/maxmax/meanreset/issues"
+    "url": "https://github.com/maxmax/mernreset/issues"
   },
-  "homepage": "https://github.com/maxmax/meanreset#readme",
+  "homepage": "https://github.com/maxmax/mernreset#readme",
   "author": "maxmax"
 }
