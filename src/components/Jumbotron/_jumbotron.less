@@ -1,0 +1,41 @@
+// Color variables (appears count calculates by raw css)
+@color0: #845ac7;
+@color1: green;
+@black: black;
+@blue: #03A9F4;
+@green: #4CAF50;
+@orange: #FF5722;
+
+.jumbotron {
+	background: #532F8C;
+	color: white;
+	border: 0px solid transparent;
+	position: relative;
+	padding: 10% 0;
+
+	> section{
+		z-index: 2;
+	}
+	//options
+	&._landing{
+		height: 100vh;
+    min-height: 500px;
+	}
+	//colors
+	&._white{
+		background: white;
+		color: @black;
+	}
+	&._blue{
+		background: @blue;
+		color: white;
+	}
+	&._green{
+		background: @green;
+		color: white;
+	}
+	&._orange{
+		background: @orange;
+		color: white;
+	}
+}

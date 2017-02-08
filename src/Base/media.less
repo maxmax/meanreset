@@ -9,6 +9,14 @@
 @desktop:     ~"only screen and (min-width: 950px) and (max-width: 1128px)";
 @desktop-xl:  ~"only screen and (min-width: 1129px)";
 
+//
+.afterinfo(@queries) {
+  &:after{
+    content: @queries;
+    display: block;
+  }
+}
+
 //tests
 .media-queries {
     display: block;
@@ -16,17 +24,22 @@
     margin-bottom: 10px;
     @media @mobile {
       background: orange;
+      .afterinfo("mobile");
     }
     @media @tablet {
       background: purple;
+      .afterinfo("tablet");
     }
     @media @desktop {
       background: green;
+      .afterinfo("desktop");
     }
     @media @desktop-xl {
       background: blue;
+      .afterinfo("desktop-xl");
     }
     @media @desktop, @desktop-xl {
       color: black;
+      .afterinfo("@desktop - desktop-xl");
     }
 }

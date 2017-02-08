@@ -1,7 +1,15 @@
-@import "./bootstrap.css";
+//@import "./bootstrap.css";
+@import (optional) './_mixin';
+
 @import "./media.less";
 @import "./grid.less";
-//@import "../Type/type.less";
-//@import "../Type/buttons.less";
-//@import "../Type/nav.less";
-//@import "../Type/forms.less";
+
+@import (optional) './_helper';
+
+//components
+@import (optional) '../components/Jumbotron/_jumbotron';
+
+//elements
+@import (optional) '../elements/ContainerMedia/_containermedia';
+@import (optional) '../elements/Section/_section';
+@import (optional) '../elements/Button/_button';
