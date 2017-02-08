@@ -6,7 +6,6 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var app = express();
 
-var editor = require('./views/editor/editor.js');
 var base = require('./views/base/base.js');
 
 //var COMMENTS_FILE = path.join(__dirname, '/views/date/comments.json');
@@ -66,8 +65,6 @@ app.get('/times', function(request, response) {
 //app.get('/app', function(request, response) {
 //  response.render('app/index');
 //});
-
-app.use('/editor', editor);
 
 app.use('/base', base);
 

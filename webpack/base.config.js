@@ -8,11 +8,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
   entry: {
       apps: './src/apps.js',
-      buddy: './src/buddy.js',
-      fairyapps: './src/fairyapps.js',
-      soil: './src/soil.js',
-      soilmedia: './src/soilmedia.js',
-      greentrade: './src/greentrade.js'
+      buddy: './src/buddy.js'
   },
   output: {
     path: __dirname,
