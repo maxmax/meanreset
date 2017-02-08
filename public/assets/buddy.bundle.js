@@ -26529,7 +26529,7 @@
 /* 235 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -26539,15 +26539,62 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _reactRouter = __webpack_require__(179);
+
+	var _Jumbotron = __webpack_require__(243);
+
+	var _Jumbotron2 = _interopRequireDefault(_Jumbotron);
+
+	var _ContainerMedia = __webpack_require__(244);
+
+	var _ContainerMedia2 = _interopRequireDefault(_ContainerMedia);
+
+	var _Section = __webpack_require__(245);
+
+	var _Section2 = _interopRequireDefault(_Section);
+
+	var _Button = __webpack_require__(246);
+
+	var _Button2 = _interopRequireDefault(_Button);
+
+	var _AsideLayout = __webpack_require__(252);
+
+	var _AsideLayout2 = _interopRequireDefault(_AsideLayout);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	exports.default = _react2.default.createClass({
-	  displayName: "Home",
+	  displayName: 'Home',
 	  render: function render() {
+
+	    var instanceJumbotron = _react2.default.createElement(
+	      _Jumbotron2.default,
+	      { className: 'text-center _green _landing' },
+	      _react2.default.createElement(
+	        _Section2.default,
+	        { className: '_xs _center' },
+	        _react2.default.createElement(
+	          'h2',
+	          null,
+	          'Home'
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          'Hello!'
+	        ),
+	        _react2.default.createElement(
+	          _Button2.default,
+	          { className: '_primary _lg' },
+	          'Touch'
+	        )
+	      )
+	    );
+
 	    return _react2.default.createElement(
-	      "div",
-	      { className: "container page" },
-	      "Home"
+	      _AsideLayout2.default,
+	      null,
+	      instanceJumbotron
 	    );
 	  }
 	});
@@ -26556,7 +26603,7 @@
 /* 236 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -26566,15 +26613,63 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _reactRouter = __webpack_require__(179);
+
+	var _Jumbotron = __webpack_require__(243);
+
+	var _Jumbotron2 = _interopRequireDefault(_Jumbotron);
+
+	var _ContainerMedia = __webpack_require__(244);
+
+	var _ContainerMedia2 = _interopRequireDefault(_ContainerMedia);
+
+	var _Section = __webpack_require__(245);
+
+	var _Section2 = _interopRequireDefault(_Section);
+
+	var _Button = __webpack_require__(246);
+
+	var _Button2 = _interopRequireDefault(_Button);
+
+	var _AsideLayout = __webpack_require__(252);
+
+	var _AsideLayout2 = _interopRequireDefault(_AsideLayout);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	exports.default = _react2.default.createClass({
-	  displayName: "About",
+	  displayName: 'About',
 	  render: function render() {
+
+	    var instanceJumbotron = _react2.default.createElement(
+	      _Jumbotron2.default,
+	      { className: 'text-center _green' },
+	      _react2.default.createElement(_ContainerMedia2.default, { img: '/media/devbg.jpg' }),
+	      _react2.default.createElement(
+	        _Section2.default,
+	        { className: '_xs _center' },
+	        _react2.default.createElement(
+	          'h2',
+	          null,
+	          'About'
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          'Head description...'
+	        ),
+	        _react2.default.createElement(
+	          _Button2.default,
+	          { className: '_primary _lg' },
+	          'Touch'
+	        )
+	      )
+	    );
+
 	    return _react2.default.createElement(
-	      "div",
-	      { className: "container page" },
-	      "About"
+	      _AsideLayout2.default,
+	      null,
+	      instanceJumbotron
 	    );
 	  }
 	});
@@ -26583,7 +26678,7 @@
 /* 237 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -26593,15 +26688,57 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _reactRouter = __webpack_require__(179);
+
+	var _Jumbotron = __webpack_require__(243);
+
+	var _Jumbotron2 = _interopRequireDefault(_Jumbotron);
+
+	var _ContainerMedia = __webpack_require__(244);
+
+	var _ContainerMedia2 = _interopRequireDefault(_ContainerMedia);
+
+	var _Section = __webpack_require__(245);
+
+	var _Section2 = _interopRequireDefault(_Section);
+
+	var _Button = __webpack_require__(246);
+
+	var _Button2 = _interopRequireDefault(_Button);
+
+	var _AsideLayout = __webpack_require__(252);
+
+	var _AsideLayout2 = _interopRequireDefault(_AsideLayout);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	exports.default = _react2.default.createClass({
-	  displayName: "News",
+	  displayName: 'News',
 	  render: function render() {
+
+	    var instanceJumbotron = _react2.default.createElement(
+	      _Jumbotron2.default,
+	      { className: 'text-center _blue' },
+	      _react2.default.createElement(
+	        _Section2.default,
+	        { className: '_xs _center' },
+	        _react2.default.createElement(
+	          'h2',
+	          null,
+	          'News'
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          'Head description...'
+	        )
+	      )
+	    );
+
 	    return _react2.default.createElement(
-	      "div",
-	      { className: "container page" },
-	      "News"
+	      _AsideLayout2.default,
+	      null,
+	      instanceJumbotron
 	    );
 	  }
 	});
@@ -26610,7 +26747,7 @@
 /* 238 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -26620,15 +26757,62 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _reactRouter = __webpack_require__(179);
+
+	var _Jumbotron = __webpack_require__(243);
+
+	var _Jumbotron2 = _interopRequireDefault(_Jumbotron);
+
+	var _ContainerMedia = __webpack_require__(244);
+
+	var _ContainerMedia2 = _interopRequireDefault(_ContainerMedia);
+
+	var _Section = __webpack_require__(245);
+
+	var _Section2 = _interopRequireDefault(_Section);
+
+	var _Button = __webpack_require__(246);
+
+	var _Button2 = _interopRequireDefault(_Button);
+
+	var _AsideLayout = __webpack_require__(252);
+
+	var _AsideLayout2 = _interopRequireDefault(_AsideLayout);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	exports.default = _react2.default.createClass({
-	  displayName: "Contacts",
+	  displayName: 'Contacts',
 	  render: function render() {
+
+	    var instanceJumbotron = _react2.default.createElement(
+	      _Jumbotron2.default,
+	      { className: 'text-center _green' },
+	      _react2.default.createElement(
+	        _Section2.default,
+	        { className: '_xs _center' },
+	        _react2.default.createElement(
+	          'h2',
+	          null,
+	          'Contacts'
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          'Head description...'
+	        ),
+	        _react2.default.createElement(
+	          _Button2.default,
+	          { className: '_primary _lg' },
+	          'Contacts'
+	        )
+	      )
+	    );
+
 	    return _react2.default.createElement(
-	      "div",
-	      { className: "container page" },
-	      "Contacts"
+	      _AsideLayout2.default,
+	      null,
+	      instanceJumbotron
 	    );
 	  }
 	});
@@ -26638,6 +26822,551 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 240 */,
+/* 241 */,
+/* 242 */,
+/* 243 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(8);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var propTypes = {
+	  title: _react.PropTypes.string,
+	  modifiers: _react.PropTypes.string,
+	  className: _react.PropTypes.string
+	};
+
+	var defaultProps = {
+	  title: "",
+	  modifiers: "",
+	  className: ""
+	};
+
+	//export function getModifiersForDay(modifiers, day) {
+	//  return day ? Object.keys(modifiers).filter(key => modifiers[key](day)) : [];
+	//}
+
+	var Jumbotron = function (_React$Component) {
+	  _inherits(Jumbotron, _React$Component);
+
+	  function Jumbotron() {
+	    _classCallCheck(this, Jumbotron);
+
+	    return _possibleConstructorReturn(this, (Jumbotron.__proto__ || Object.getPrototypeOf(Jumbotron)).apply(this, arguments));
+	  }
+
+	  _createClass(Jumbotron, [{
+	    key: "render",
+	    value: function render() {
+	      var _props = this.props,
+	          title = _props.title,
+	          modifiers = _props.modifiers,
+	          className = _props.className,
+	          children = _props.children;
+
+
+	      return _react2.default.createElement(
+	        "div",
+	        { className: "jumbotron " + className },
+	        children
+	      );
+	    }
+	  }]);
+
+	  return Jumbotron;
+	}(_react2.default.Component);
+
+	exports.default = Jumbotron;
+
+
+	Jumbotron.propTypes = propTypes;
+	Jumbotron.defaultProps = defaultProps;
+
+/***/ },
+/* 244 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(8);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var propTypes = {
+	  video: _react.PropTypes.string,
+	  img: _react.PropTypes.string,
+	  size: _react.PropTypes.string,
+	  repeat: _react.PropTypes.string,
+	  position: _react.PropTypes.string,
+	  bgattachment: _react.PropTypes.string,
+	  opacity: _react.PropTypes.string,
+	  filter: _react.PropTypes.string,
+	  className: _react.PropTypes.string
+	};
+
+	var defaultProps = {
+	  video: "",
+	  img: "",
+	  size: "cover",
+	  repeat: "no-repeat",
+	  position: "center center",
+	  bgattachment: "fixed",
+	  opacity: "0.5",
+	  filter: "inherit",
+	  className: "auto"
+	};
+
+	var ContainerMedia = function (_React$Component) {
+	  _inherits(ContainerMedia, _React$Component);
+
+	  function ContainerMedia() {
+	    _classCallCheck(this, ContainerMedia);
+
+	    return _possibleConstructorReturn(this, (ContainerMedia.__proto__ || Object.getPrototypeOf(ContainerMedia)).apply(this, arguments));
+	  }
+
+	  _createClass(ContainerMedia, [{
+	    key: "_renderVideo",
+
+
+	    //To furthur simplify this code using ES7's property initializer
+	    //state = {
+	    //  defstate: this.props.title
+	    //};
+
+	    //refactor this!
+	    value: function _renderVideo() {
+	      if (!this.props.video) {
+	        return null;
+	      }
+	      var _props = this.props,
+	          video = _props.video,
+	          className = _props.className;
+
+	      return _react2.default.createElement(
+	        "div",
+	        { className: "container-video " + className },
+	        _react2.default.createElement(
+	          "video",
+	          { className: "video", autoPlay: "autoplay", muted: true, loop: true },
+	          _react2.default.createElement("source", { src: video, type: "video/mp4" })
+	        )
+	      );
+	    }
+	  }, {
+	    key: "_renderImg",
+	    value: function _renderImg() {
+	      if (!this.props.img) {
+	        return null;
+	      }
+
+	      var _props2 = this.props,
+	          img = _props2.img,
+	          repeat = _props2.repeat,
+	          position = _props2.position,
+	          size = _props2.size,
+	          bgattachment = _props2.bgattachment,
+	          opacity = _props2.opacity,
+	          filter = _props2.filter,
+	          className = _props2.className;
+
+
+	      var style = {
+	        backgroundImage: 'url(' + img + ')',
+	        backgroundRepeat: repeat,
+	        backgroundPosition: position,
+	        backgroundSize: size,
+	        backgroundAttachment: bgattachment,
+	        opacity: opacity,
+	        filter: filter
+	      };
+	      return _react2.default.createElement("div", { className: "container-img " + className, style: style });
+	    }
+	  }, {
+	    key: "render",
+	    value: function render() {
+	      return _react2.default.createElement(
+	        "div",
+	        null,
+	        this._renderVideo(),
+	        this._renderImg()
+	      );
+	    }
+	  }]);
+
+	  return ContainerMedia;
+	}(_react2.default.Component);
+
+	exports.default = ContainerMedia;
+
+
+	ContainerMedia.propTypes = propTypes;
+	ContainerMedia.defaultProps = defaultProps;
+
+/***/ },
+/* 245 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(8);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var propTypes = {
+	  className: _react.PropTypes.string
+	};
+
+	var defaultProps = {
+	  className: "_auto"
+	};
+
+	var Section = function (_React$Component) {
+	  _inherits(Section, _React$Component);
+
+	  function Section() {
+	    _classCallCheck(this, Section);
+
+	    return _possibleConstructorReturn(this, (Section.__proto__ || Object.getPrototypeOf(Section)).apply(this, arguments));
+	  }
+
+	  _createClass(Section, [{
+	    key: "render",
+	    value: function render() {
+	      var _props = this.props,
+	          className = _props.className,
+	          children = _props.children;
+
+
+	      return _react2.default.createElement(
+	        "section",
+	        { className: "container " + className },
+	        children
+	      );
+	    }
+	  }]);
+
+	  return Section;
+	}(_react2.default.Component);
+
+	exports.default = Section;
+
+
+	Section.propTypes = propTypes;
+	Section.defaultProps = defaultProps;
+
+/***/ },
+/* 246 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(8);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var propTypes = {
+	  className: _react.PropTypes.string
+	};
+
+	var defaultProps = {
+	  className: "_auto"
+	};
+
+	var Button = function (_React$Component) {
+	  _inherits(Button, _React$Component);
+
+	  function Button() {
+	    _classCallCheck(this, Button);
+
+	    return _possibleConstructorReturn(this, (Button.__proto__ || Object.getPrototypeOf(Button)).apply(this, arguments));
+	  }
+
+	  _createClass(Button, [{
+	    key: "render",
+	    value: function render() {
+	      var _props = this.props,
+	          className = _props.className,
+	          children = _props.children;
+
+
+	      return _react2.default.createElement(
+	        "button",
+	        { className: "button " + className },
+	        children
+	      );
+	    }
+	  }]);
+
+	  return Button;
+	}(_react2.default.Component);
+
+	exports.default = Button;
+
+
+	Button.propTypes = propTypes;
+	Button.defaultProps = defaultProps;
+
+/***/ },
+/* 247 */,
+/* 248 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(8);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var propTypes = {
+	  className: _react.PropTypes.string
+	};
+
+	var defaultProps = {
+	  className: ""
+	};
+
+	var LeftAside = function (_React$Component) {
+	  _inherits(LeftAside, _React$Component);
+
+	  function LeftAside() {
+	    _classCallCheck(this, LeftAside);
+
+	    return _possibleConstructorReturn(this, (LeftAside.__proto__ || Object.getPrototypeOf(LeftAside)).apply(this, arguments));
+	  }
+
+	  _createClass(LeftAside, [{
+	    key: "render",
+	    value: function render() {
+	      var _props = this.props,
+	          className = _props.className,
+	          children = _props.children;
+
+
+	      return _react2.default.createElement(
+	        "div",
+	        { className: "left-aside " + className },
+	        children
+	      );
+	    }
+	  }]);
+
+	  return LeftAside;
+	}(_react2.default.Component);
+
+	exports.default = LeftAside;
+
+
+	LeftAside.propTypes = propTypes;
+	LeftAside.defaultProps = defaultProps;
+
+/***/ },
+/* 249 */,
+/* 250 */,
+/* 251 */,
+/* 252 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(8);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(179);
+
+	var _LeftAside = __webpack_require__(248);
+
+	var _LeftAside2 = _interopRequireDefault(_LeftAside);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var propTypes = {
+	  className: _react.PropTypes.string
+	};
+
+	var defaultProps = {
+	  className: ""
+	};
+
+	var AsideLayout = function (_React$Component) {
+	  _inherits(AsideLayout, _React$Component);
+
+	  function AsideLayout(props) {
+	    _classCallCheck(this, AsideLayout);
+
+	    var _this = _possibleConstructorReturn(this, (AsideLayout.__proto__ || Object.getPrototypeOf(AsideLayout)).call(this, props));
+
+	    _this.state = { isToggleOn: true };
+	    _this.handleClick = _this.handleClick.bind(_this);
+	    return _this;
+	  }
+
+	  _createClass(AsideLayout, [{
+	    key: 'handleClick',
+	    value: function handleClick() {
+	      this.setState(function (prevState) {
+	        return {
+	          isToggleOn: !prevState.isToggleOn
+	        };
+	      });
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+
+	      var instanceLeftAside = _react2.default.createElement(
+	        _LeftAside2.default,
+	        null,
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          _react2.default.createElement(
+	            _reactRouter.Link,
+	            { to: '/' },
+	            'Home'
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          _react2.default.createElement(
+	            _reactRouter.Link,
+	            { to: 'about' },
+	            'About'
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          _react2.default.createElement(
+	            _reactRouter.Link,
+	            { to: 'news' },
+	            'News'
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          _react2.default.createElement(
+	            _reactRouter.Link,
+	            { to: 'contacts' },
+	            'Contacts'
+	          )
+	        )
+	      );
+
+	      var _props = this.props,
+	          className = _props.className,
+	          children = _props.children;
+
+
+	      return _react2.default.createElement(
+	        'div',
+	        { className: "aside-layout " + className, 'data-view': this.state.isToggleOn ? 'off' : 'on' },
+	        _react2.default.createElement('span', { className: 'collapse', onClick: this.handleClick }),
+	        instanceLeftAside,
+	        children
+	      );
+	    }
+	  }]);
+
+	  return AsideLayout;
+	}(_react2.default.Component);
+
+	exports.default = AsideLayout;
+
+
+	AsideLayout.propTypes = propTypes;
+	AsideLayout.defaultProps = defaultProps;
 
 /***/ }
 /******/ ]);

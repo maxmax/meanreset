@@ -340,6 +340,56 @@ body:after {
 .text-center {
   text-align: center;
 }
+._test {
+  border: 1px solid red;
+}
+.aside-layout {
+  padding-left: 300px;
+}
+.aside-layout[data-view="off"] {
+  padding: 0px;
+}
+.aside-layout[data-view="off"] .left-aside {
+  display: none;
+}
+.aside-layout .collapse {
+  display: block;
+  width: 28px;
+  height: 28px;
+  border: 2px solid #ccc;
+  position: fixed;
+  top: 30px;
+  left: 30px;
+  cursor: pointer;
+  z-index: 3;
+}
+.aside-layout .collapse::before {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: 15%;
+  width: 70%;
+  height: 2px;
+  background: #ccc;
+}
+.aside-layout .collapse::after {
+  content: "";
+  position: absolute;
+  bottom: 7px;
+  left: 15%;
+  width: 70%;
+  height: 2px;
+  background: #ccc;
+}
+.aside-layout .left-aside {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 300px;
+  padding-top: 80px;
+  background: whitesmoke;
+}
 .jumbotron {
   background: #532F8C;
   color: white;
@@ -369,6 +419,9 @@ body:after {
 .jumbotron._orange {
   background: #FF5722;
   color: white;
+}
+.left-aside {
+  padding: 30px;
 }
 .container-img {
   position: absolute;
@@ -425,7 +478,6 @@ body:after {
   max-width: 100%;
   padding: 0 10px;
   margin: 0 auto;
-  border: 1px solid red;
 }
 .container._md {
   width: 800px;
@@ -446,14 +498,65 @@ body:after {
   border-radius: 3px;
   display: inline-block;
   margin: 5px 0;
-  padding: 6px 14px;
+  padding: 8px 18px;
   border: none;
   font-weight: bold;
   text-align: center;
   text-decoration: none;
-  background: #fff;
+  background: #e1e1e1;
   font-size: 13px;
   outline: none;
   position: relative;
   cursor: pointer;
+  margin-right: 8px;
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  transition-duration: 0.3s;
+  transition-property: box-shadow, transform;
+}
+.button:hover {
+  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+  transform: scale(1.05);
+  z-index: 2;
+}
+.button:last-child {
+  margin-right: 0px;
+}
+.button._lg {
+  padding: 12px 22px;
+  font-size: 15px;
+}
+.button._sm {
+  padding: 6px 12px;
+  font-size: 12px;
+}
+.button._xs {
+  padding: 4px 6px;
+  font-size: 12px;
+}
+.button._primary {
+  background: #337ab7;
+  color: white;
+}
+.button._success {
+  background: #5cb85c;
+  color: white;
+}
+.button._info {
+  background: #5bc0de;
+  color: white;
+}
+.button._error {
+  background: #d9534f;
+  color: white;
+}
+.button._link {
+  background: transparent;
+  color: #337ab7;
+  text-decoration: underline;
+}
+.button._block {
+  display: block;
+  text-align: center;
+  width: 100%;
 }

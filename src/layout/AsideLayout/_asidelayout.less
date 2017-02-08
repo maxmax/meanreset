@@ -1,0 +1,54 @@
+.aside-layout {
+  //border: 2px solid red;
+  padding-left: 300px;
+  //width: 300px;
+  //padding: 30px;
+  //transition-duration: 0.2s;
+  &[data-view="off"]{
+    padding: 0px;
+    //transition-duration: 0.2s;
+    .left-aside{
+      display: none;
+    }
+  }
+  .collapse{
+    display: block;
+    width: 28px;
+    height: 28px;
+    //background: #fff;
+    border: 2px solid #ccc;
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    cursor: pointer;
+    z-index: 3;
+    &::before{
+      content: "";
+      position: absolute;
+      top: 7px;
+      left: 15%;
+      width: 70%;
+      height: 2px;
+      background: #ccc;
+    }
+    &::after{
+      content: "";
+      position: absolute;
+      bottom: 7px;
+      left: 15%;
+      width: 70%;
+      height: 2px;
+      background: #ccc;
+    }
+  }
+  .left-aside{
+    //border: 1px solid green;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 300px;
+    padding-top: 80px;
+    background: whitesmoke;
+  }
+}
