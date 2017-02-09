@@ -27,16 +27,30 @@
   //
   //&._loaded
   //&._error
-  &._loading{
+  &._loading, &._loaded{
+    //opacity: 0.5;
     &::before{
-      content: "\B0\B0\B0";
-      display: inline-block;
+      //content: "\B0\B0\B0";
+      content: "";
+      display: block;
+      box-sizing: border-box;
       font-size: 32px;
       color: #82e586;
       position: absolute;
-      top: 60px;
-      left: 50%;
-      margin-left: -18px;
+      top: 0px;
+      left: 0%;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      padding-top: 40px;
+      opacity: 1;
+      transition-duration: 0.2s;
+    }
+  }
+  &._loaded{
+    &::before{
+      opacity: 0;
+      transition-duration: 0.2s;
     }
   }
   //
