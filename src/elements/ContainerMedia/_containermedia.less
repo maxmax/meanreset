@@ -7,6 +7,11 @@
   z-index: 1;
   //filter: blur(2px);
   //filter: blur(20px) grayscale(20%);
+  img{
+    display: block;
+    width: 0;
+    height: 0;
+  }
   &.backdrop{
     &:after{
       content: "";
@@ -19,6 +24,22 @@
       background: rgba(0, 0, 0, 0.25);
     }
   }
+  //
+  //&._loaded
+  //&._error
+  &._loading{
+    &::before{
+      content: "\B0\B0\B0";
+      display: inline-block;
+      font-size: 32px;
+      color: #82e586;
+      position: absolute;
+      top: 60px;
+      left: 50%;
+      margin-left: -18px;
+    }
+  }
+  //
 }
 
 .container-video{

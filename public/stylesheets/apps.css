@@ -431,6 +431,11 @@ body:after {
   height: 100%;
   z-index: 1;
 }
+.container-img img {
+  display: block;
+  width: 0;
+  height: 0;
+}
 .container-img.backdrop:after {
   content: "";
   display: block;
@@ -440,6 +445,16 @@ body:after {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.25);
+}
+.container-img._loading::before {
+  content: "\B0\B0\B0";
+  display: inline-block;
+  font-size: 32px;
+  color: #82e586;
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  margin-left: -18px;
 }
 .container-video {
   position: absolute;

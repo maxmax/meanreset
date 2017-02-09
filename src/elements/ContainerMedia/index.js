@@ -30,6 +30,18 @@ export default class ContainerMedia extends React.Component {
   //state = {
   //  defstate: this.props.title
   //};
+  constructor(props) {
+    super(props);
+    this.state = { imageStatus: 'loading' };
+  }
+
+  handleImageLoaded() {
+    this.setState({ imageStatus: 'loaded' });
+  }
+
+  handleImageErrored() {
+    this.setState({ imageStatus: 'error' });
+  }
 
   //refactor this!
   _renderVideo () {
@@ -41,7 +53,10 @@ export default class ContainerMedia extends React.Component {
     return (
       <div className={"container-video " + className}>
         <video className="video" autoPlay="autoplay" muted loop>
-          <source src={video} type="video/mp4" />
+          <source
+            src={video}
+            type="video/mp4"
+          />
         </video>
       </div>
     );
@@ -71,7 +86,16 @@ export default class ContainerMedia extends React.Component {
       filter: filter
     };
     return (
-      <div className={"container-img " + className} style={style}></div>
+      <div
+        className={"container-img " + className + " _" + this.state.imageStatus}
+        style={style}
+      >
+        <img
+          src={this.props.img}
+          onLoad={this.handleImageLoaded.bind(this)}
+          onError={this.handleImageErrored.bind(this)}
+        />
+      </div>
     );
   }
 
