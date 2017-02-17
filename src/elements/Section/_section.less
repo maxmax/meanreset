@@ -1,19 +1,25 @@
+@container-p: 0 20px;
+@container-w: 1300px;
+@container-w-md: 900px;
+@container-w-sm: 700px;
+@container-w-xs: 300px;
+
 .container {
   position: relative;
-  width: 1200px;
+  width: @container-w;
   max-width: 100%;
-  padding: 0 10px;
+  padding: @container-p;
   margin: 0 auto;
   //border: 1px solid red;
   //Sizes
   &._md{
-    width: 800px;
+    width: @container-w-md;
   }
   &._sm{
-    width: 600px;
+    width: @container-w-sm;
   }
   &._xs{
-    width: 300px;
+    width: @container-w-xs;
   }
   //Position
   &._center{
@@ -21,5 +27,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+  &._auto{
+    padding: 0 0;
   }
 }

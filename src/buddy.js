@@ -6,6 +6,12 @@ import About from './modules/About'
 import News from './modules/News'
 import Contacts from './modules/Contacts'
 
+import JumbotronDoc from './modules/JumbotronDoc'
+import FlexDoc from './modules/FlexDoc'
+import SectionDoc from './modules/SectionDoc'
+import MediaDoc from './modules/MediaDoc'
+import ButtonDoc from './modules/ButtonDoc'
+
 
 //import basedata from './tmp/soil.json';
 //import userrequests from './components/UserRequest/userrequest.json';
@@ -19,6 +25,11 @@ render((
       <Route path="/news" component={News}/>
       <Route path="/about" component={About}/>
       <Route path="/contacts" component={Contacts}/>
+      <Route path="/jumbotron" component={JumbotronDoc}/>
+      <Route path="/flex" component={FlexDoc}/>
+      <Route path="/section" component={SectionDoc}/>
+      <Route path="/media" component={MediaDoc}/>
+      <Route path="/buttons" component={ButtonDoc}/>
     </Route>
   </Router>
 ), document.getElementById('app'))

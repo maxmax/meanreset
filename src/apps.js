@@ -3,6 +3,7 @@ import { render } from 'react-dom';
 
 import Jumbotron from './components/Jumbotron';
 import LeftAside from './components/LeftAside';
+import FlexContainer from './components/FlexContainer';
 
 import ContainerMedia from './elements/ContainerMedia';
 import Section from './elements/Section';
@@ -20,6 +21,19 @@ export default class BaseWrapper extends React.Component {
       codes: [48348, 28923, 39080],
       city: "London"
     };
+
+    const instanceFlexContainer = (
+      <div>
+        <FlexContainer>
+          <div className="flex-item">1</div>
+          <div className="flex-item">2</div>
+          <div className="flex-item">3</div>
+          <div className="flex-item">4</div>
+          <div className="flex-item">5</div>
+          <div className="flex-item">6</div>
+        </FlexContainer>
+      </div>
+    );
 
     const instanceLeftAside = (
       <LeftAside>
@@ -209,6 +223,7 @@ export default class BaseWrapper extends React.Component {
           {instanceJumbotronV7}
           {instanceJumbotronV8}
           {instanceJumbotronV9}
+          {instanceFlexContainer}
           <br />
           <br />
           {instanceSection}

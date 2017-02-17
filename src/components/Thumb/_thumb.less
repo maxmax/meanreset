@@ -1,0 +1,72 @@
+.thumb{
+  position: relative;
+  display: block;
+  margin-bottom: 20px;
+  background-color: #fff;
+  border: 0px solid #ddd;
+  border-radius: 2px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0);
+  color: #767676;
+  text-decoration: none;
+  padding: 0px;
+  //height: 340px;
+  .thumbs-img{
+    height: 120px;
+    background-size: 160px;
+  }
+  > a{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: block;
+    cursor: pointer;
+    z-index: 2;
+  }
+  .thumbs-img + .caption{
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+  }
+  > .caption{
+    position: absolute;
+    width: 100%;
+    padding: 20px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: block;
+    z-index: 1;
+    > div{
+      position: absolute;
+      bottom: 20px;
+    }
+  }
+  //&:hover{
+  //  border-color: @brand-success;
+  //}
+  &._h-xs{
+    .thumbs-img{
+      min-height: 140px;
+      max-height: 140px;
+    }
+  }
+  &._h-md{
+    .thumbs-img{
+      min-height: 160px;
+      max-height: 160px;
+    }
+  }
+  &._h-sm{
+    .thumbs-img{
+      min-height: 220px;
+      max-height: 220px;
+    }
+  }
+  &._h-lg{
+    .thumbs-img{
+      min-height: 280px;
+      max-height: 280px;
+    }
+  }
+}

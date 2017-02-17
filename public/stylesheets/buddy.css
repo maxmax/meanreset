@@ -1,14 +1,14 @@
 .media-queries {
   display: block;
-  height: 40px;
-  margin-bottom: 10px;
+  padding: 10px;
+  margin-bottom: 0px;
 }
 @media only screen and (max-width: 599px) {
   .media-queries {
     background: orange;
   }
   .media-queries:after {
-    content: "mobile";
+    content: "@mobile";
     display: block;
   }
 }
@@ -17,7 +17,7 @@
     background: purple;
   }
   .media-queries:after {
-    content: "tablet";
+    content: "@tablet";
     display: block;
   }
 }
@@ -26,7 +26,7 @@
     background: green;
   }
   .media-queries:after {
-    content: "desktop";
+    content: "@desktop";
     display: block;
   }
 }
@@ -35,16 +35,16 @@
     background: blue;
   }
   .media-queries:after {
-    content: "desktop-xl";
+    content: "@desktop-xl";
     display: block;
   }
 }
 @media only screen and (min-width: 950px) and (max-width: 1128px), only screen and (min-width: 1129px) {
   .media-queries {
-    color: black;
+    color: white;
   }
   .media-queries:after {
-    content: "@desktop - desktop-xl";
+    content: "@desktop, @desktop-xl";
     display: block;
   }
 }
@@ -343,52 +343,33 @@ body:after {
 ._test {
   border: 1px solid red;
 }
-.aside-layout {
-  padding-left: 300px;
+.thumb-test {
+  background: tomato;
+  padding: 10px;
+  min-height: 180px;
+  border: 1px solid #ccc;
 }
-.aside-layout[data-view="off"] {
-  padding: 0px;
-}
-.aside-layout[data-view="off"] .left-aside {
-  display: none;
-}
-.aside-layout .collapse {
-  display: block;
-  width: 28px;
-  height: 28px;
-  border: 2px solid #ccc;
-  position: fixed;
-  top: 30px;
-  left: 30px;
-  cursor: pointer;
-  z-index: 3;
-}
-.aside-layout .collapse::before {
-  content: "";
-  position: absolute;
-  top: 7px;
-  left: 15%;
-  width: 70%;
-  height: 2px;
-  background: #ccc;
-}
-.aside-layout .collapse::after {
-  content: "";
-  position: absolute;
-  bottom: 7px;
-  left: 15%;
-  width: 70%;
-  height: 2px;
-  background: #ccc;
-}
-.aside-layout .left-aside {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 300px;
-  padding-top: 80px;
+.thumb-test._smoke {
   background: whitesmoke;
+}
+.thumb-test._h-xs {
+  min-height: 140px;
+  max-height: 140px;
+}
+.thumb-test._h-md {
+  min-height: 160px;
+  max-height: 160px;
+}
+.thumb-test._h-sm {
+  min-height: 220px;
+  max-height: 220px;
+}
+.thumb-test._h-lg {
+  min-height: 280px;
+  max-height: 280px;
+}
+.thumb-test > section {
+  padding: 15px;
 }
 .jumbotron {
   background: #532F8C;
@@ -422,6 +403,130 @@ body:after {
 }
 .left-aside {
   padding: 30px;
+}
+.flex-container {
+  padding: 0;
+  margin: 0 -5px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.flex-container._vertical {
+  min-height: 100vh;
+}
+.flex-container._align_center {
+  align-items: center;
+}
+.flex-container._auto {
+  margin: 0 0px;
+}
+.flex-container._vertical-cols > .col {
+  padding: 5px 5px;
+}
+.flex-container > .col-test {
+  padding: 0 5px;
+  width: 300px;
+}
+.flex-container > .col-test.half {
+  width: 50%;
+}
+.flex-container > .col-test.col-3 {
+  width: 25%;
+}
+.flex-container > .col-test.col-4 {
+  width: 33.33333333%;
+}
+.flex-container > .col-test.col-6 {
+  width: 50%;
+}
+.flex-container > .col-test.col-8 {
+  width: 66.66666667%;
+}
+.flex-container > .col-test.col-12 {
+  width: 100%;
+}
+.col {
+  padding: 0 5px;
+  width: 300px;
+}
+.col.half {
+  width: 50%;
+}
+.col.col-3 {
+  width: 25%;
+}
+.col.col-4 {
+  width: 33.33333333%;
+}
+.col.col-6 {
+  width: 50%;
+}
+.col.col-8 {
+  width: 66.66666667%;
+}
+.col.col-12 {
+  width: 100%;
+}
+.thumb {
+  position: relative;
+  display: block;
+  margin-bottom: 20px;
+  background-color: #fff;
+  border: 0px solid #ddd;
+  border-radius: 2px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0);
+  color: #767676;
+  text-decoration: none;
+  padding: 0px;
+}
+.thumb .thumbs-img {
+  height: 120px;
+  background-size: 160px;
+}
+.thumb > a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: block;
+  cursor: pointer;
+  z-index: 2;
+}
+.thumb .thumbs-img + .caption {
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+}
+.thumb > .caption {
+  position: absolute;
+  width: 100%;
+  padding: 20px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: block;
+  z-index: 1;
+}
+.thumb > .caption > div {
+  position: absolute;
+  bottom: 20px;
+}
+.thumb._h-xs .thumbs-img {
+  min-height: 140px;
+  max-height: 140px;
+}
+.thumb._h-md .thumbs-img {
+  min-height: 160px;
+  max-height: 160px;
+}
+.thumb._h-sm .thumbs-img {
+  min-height: 220px;
+  max-height: 220px;
+}
+.thumb._h-lg .thumbs-img {
+  min-height: 280px;
+  max-height: 280px;
 }
 .container-img {
   position: absolute;
@@ -500,16 +605,16 @@ body:after {
 }
 .container {
   position: relative;
-  width: 1200px;
+  width: 1300px;
   max-width: 100%;
-  padding: 0 10px;
+  padding: 0 20px;
   margin: 0 auto;
 }
 .container._md {
-  width: 800px;
+  width: 900px;
 }
 .container._sm {
-  width: 600px;
+  width: 700px;
 }
 .container._xs {
   width: 300px;
@@ -519,6 +624,9 @@ body:after {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.container._auto {
+  padding: 0 0;
 }
 .button {
   border-radius: 3px;
@@ -573,7 +681,7 @@ body:after {
   color: white;
 }
 .button._error {
-  background: #d9534f;
+  background: #E52424;
   color: white;
 }
 .button._link {
@@ -585,4 +693,51 @@ body:after {
   display: block;
   text-align: center;
   width: 100%;
+}
+.aside-layout {
+  padding-left: 300px;
+}
+.aside-layout[data-view="off"] {
+  padding: 0px;
+}
+.aside-layout[data-view="off"] .left-aside {
+  display: none;
+}
+.aside-layout .collapse {
+  display: block;
+  width: 28px;
+  height: 28px;
+  border: 2px solid #ccc;
+  position: fixed;
+  top: 30px;
+  left: 30px;
+  cursor: pointer;
+  z-index: 3;
+}
+.aside-layout .collapse::before {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: 15%;
+  width: 70%;
+  height: 2px;
+  background: #ccc;
+}
+.aside-layout .collapse::after {
+  content: "";
+  position: absolute;
+  bottom: 7px;
+  left: 15%;
+  width: 70%;
+  height: 2px;
+  background: #ccc;
+}
+.aside-layout .left-aside {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 300px;
+  padding-top: 80px;
+  background: whitesmoke;
 }

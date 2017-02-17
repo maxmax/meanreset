@@ -20,26 +20,30 @@
 //tests
 .media-queries {
     display: block;
-    height: 40px;
-    margin-bottom: 10px;
+    //height: 40px;
+    padding: 10px;
+    margin-bottom: 0px;
+    //color: white;
     @media @mobile {
       background: orange;
-      .afterinfo("mobile");
+      .afterinfo("@mobile");
     }
     @media @tablet {
       background: purple;
-      .afterinfo("tablet");
+      .afterinfo("@tablet");
     }
     @media @desktop {
       background: green;
-      .afterinfo("desktop");
+      .afterinfo("@desktop");
     }
     @media @desktop-xl {
       background: blue;
-      .afterinfo("desktop-xl");
+      //color: white;
+      .afterinfo("@desktop-xl");
     }
     @media @desktop, @desktop-xl {
-      color: black;
-      .afterinfo("@desktop - desktop-xl");
+      //color: black;
+      color: white;
+      .afterinfo("@desktop, @desktop-xl");
     }
 }

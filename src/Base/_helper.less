@@ -6,3 +6,33 @@
 ._test{
   border: 1px solid red;
 }
+
+.thumb-test{
+  background: tomato;
+  padding: 10px;
+  //width: 100%;
+  min-height: 180px;
+  border: 1px solid #ccc;
+  &._smoke{
+    background: whitesmoke;
+  }
+  &._h-xs{
+    min-height: 140px;
+    max-height: 140px;
+  }
+  &._h-md{
+    min-height: 160px;
+    max-height: 160px;
+  }
+  &._h-sm{
+    min-height: 220px;
+    max-height: 220px;
+  }
+  &._h-lg{
+    min-height: 280px;
+    max-height: 280px;
+  }
+  > section{
+    padding: 15px;
+  }
+}
