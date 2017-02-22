@@ -62,41 +62,73 @@ export default React.createClass({
             <Thumb
               image="/media/book/b7.png"
               size="cover"
-              className="_h-sm"
-            />
+              className="_h-sm text-center"
+            >
+              <small>1. Lorem Ipsum</small>
+            </Thumb>
           </Col>
           <Col>
             <Thumb
               image="/media/book/b8.png"
               size="cover"
-              className="_h-sm"
-            />
+              className="_h-sm text-center"
+            >
+              <small>2. Lorem Simply</small>
+            </Thumb>
           </Col>
           <Col>
             <Thumb
               image="/media/book/b9.png"
               size="cover"
-              className="_h-sm"
-            />
+              className="_h-sm text-center"
+            >
+              <small>3. Lorem Dummy</small>
+            </Thumb>
           </Col>
+        </FlexContainer>
+      </Section>
+    );
+
+    const instanceFlexContainer0 = (
+      <Section>
+        <FlexContainer>
           <Col>
             <Thumb
               image="/media/book/b01.jpg"
               size="cover"
-              className="_h-lg-2"
+              className="_h-lg-2 _screen"
+              link="#"
             >
               <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</span>
             </Thumb>
           </Col>
           <Col>
             <Thumb
-              image="/media/book/b02.jpg"
+              image="/media/book/a7.jpg"
               size="cover"
-              className="_h-lg-2"
+              className="_h-lg-2 _screen"
+              link="#"
             >
               <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</span>
             </Thumb>
           </Col>
+          <Col>
+            <Thumb
+              image="/media/book/a8.jpg"
+              size="cover"
+              className="_h-lg-2 _screen"
+              link="#"
+            >
+              <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</span>
+            </Thumb>
+          </Col>
+        </FlexContainer>
+      </Section>
+    );
+
+    const instanceFlexContainer1 = (
+      <Section>
+        <FlexContainer>
           <Col>
             <Thumb>
               <p>
@@ -136,7 +168,7 @@ export default React.createClass({
           </Col>
           <Col className="col-3">
             <Thumb
-              image="/media/book/retro-science-fiction-covers-4.jpg"
+              image="/media/book/b10.png"
               size="cover"
               className="_h-sm"
             />
@@ -156,35 +188,56 @@ export default React.createClass({
         <FlexContainer>
           <Col className="col-6">
             <Thumb
-              image="/media/book/f43ad56004888100bc41e60e4f0e9932.jpg"
+              image="/media/book/bb1.png"
               size="cover"
               className="_h-lg-2"
             />
           </Col>
           <Col className="col-6">
             <Thumb
-              image="/media/book/oyster-stand.jpg"
+              image="/media/book/bb2.png"
               size="cover"
               className="_h-lg-2"
             />
           </Col>
           <Col className="col-4">
             <Thumb
-              image="/media/book/bef295ff57b0c5994fea8a7428fecb5f.jpg"
+              image="/media/book/a1.jpg"
               size="cover"
               className="_h-lg-2"
             />
           </Col>
           <Col className="col-4">
             <Thumb
-              image="/media/book/bef295ff57b0c5994fea8a7428fecb5f.jpg"
+              image="/media/book/a2.jpg"
               size="cover"
               className="_h-lg-2"
             />
           </Col>
           <Col className="col-4">
             <Thumb
-              image="/media/book/bef295ff57b0c5994fea8a7428fecb5f.jpg"
+              image="/media/book/a3.jpg"
+              size="cover"
+              className="_h-lg-2"
+            />
+          </Col>
+          <Col className="col-4">
+            <Thumb
+              image="/media/book/a4.jpg"
+              size="cover"
+              className="_h-lg-2"
+            />
+          </Col>
+          <Col className="col-4">
+            <Thumb
+              image="/media/book/a6.jpg"
+              size="cover"
+              className="_h-lg-2"
+            />
+          </Col>
+          <Col className="col-4">
+            <Thumb
+              image="/media/book/a5.jpg"
               size="cover"
               className="_h-lg-2"
             />
@@ -198,6 +251,11 @@ export default React.createClass({
         <br />
         <br />
         {instanceFlexContainer}
+        <hr />
+        {instanceFlexContainer0}
+        <hr />
+        {instanceFlexContainer1}
+        <hr />
         {instanceFlexContainer2}
         {instanceFlexContainer3}
         <br />

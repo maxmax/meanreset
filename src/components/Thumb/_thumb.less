@@ -3,10 +3,10 @@
   display: block;
   margin-bottom: 20px;
   background-color: #fff;
-  border: 0px solid #ddd;
-  border-radius: 2px;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0);
-  color: #767676;
+  //border: 0px solid #ddd;
+  //border-radius: 2px;
+  //box-shadow: 0 1px 1px rgba(0, 0, 0, 0);
+  //color: #767676;
   text-decoration: none;
   padding: 0px;
   //height: 340px;
@@ -24,22 +24,6 @@
     cursor: pointer;
     z-index: 2;
   }
-  .thumbs-img + .caption{
-    background: rgba(0, 0, 0, 0.6);
-    color: white;
-    position: absolute;
-    width: 100%;
-    padding: 20px;
-    height: 100%;
-    top: 0;
-    left: 0;
-    display: block;
-    z-index: 1;
-    > div{
-      position: absolute;
-      bottom: 20px;
-    }
-  }
   > .caption{
     position: relative;
     h1, h2, h3, h4, p{
@@ -49,6 +33,32 @@
   //&:hover{
   //  border-color: @brand-success;
   //}
+  &._screen{
+    .thumbs-img + .caption{
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      position: absolute;
+      width: 100%;
+      padding: 20px;
+      height: 100%;
+      top: 0;
+      left: 0;
+      display: block;
+      z-index: 1;
+      opacity: 1;
+      transition: all 0.2s;
+      > div{
+        position: absolute;
+        bottom: 20px;
+      }
+    }
+    &:hover{
+      .thumbs-img + .caption{
+        opacity: 0;
+        transition: all 0.3s;
+      }
+    }
+  }
   &._h-xs{
     .thumbs-img{
       min-height: 140px;
@@ -78,5 +88,15 @@
       min-height: 480px;
       max-height: 480px;
     }
+  }
+  //wrappers
+  &._wrapper{
+    .caption{
+      padding: 10px;
+    }
+  }
+  //colors
+  &._tomato{
+    background: tomato;
   }
 }

@@ -30,6 +30,7 @@ export default class AsideLayout extends React.Component {
     const instanceLeftAside = (
       <LeftAside>
         <h3>Components</h3>
+        <p><Link to="base">Base</Link></p>
         <p><Link to="jumbotron">Jumbotron</Link></p>
         <p><Link to="flex">Flex</Link></p>
         <p><Link to="section">Section</Link></p>
@@ -50,7 +51,7 @@ export default class AsideLayout extends React.Component {
     } = this.props;
 
     return (
-      <div className={"aside-layout " + className} data-view={this.state.isToggleOn ? 'off' : 'on'}>
+      <div className={"aside-layout " + className} data-view={this.state.isToggleOn ? 'on' : 'off'}>
         <span className="collapse" onClick={this.handleClick}></span>
         {instanceLeftAside}
         {children}

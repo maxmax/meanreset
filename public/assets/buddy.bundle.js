@@ -70,6 +70,10 @@
 
 	var _Contacts2 = _interopRequireDefault(_Contacts);
 
+	var _BaseDoc = __webpack_require__(514);
+
+	var _BaseDoc2 = _interopRequireDefault(_BaseDoc);
+
 	var _JumbotronDoc = __webpack_require__(256);
 
 	var _JumbotronDoc2 = _interopRequireDefault(_JumbotronDoc);
@@ -107,6 +111,7 @@
 	    _react2.default.createElement(_reactRouter.Route, { path: '/news', component: _News2.default }),
 	    _react2.default.createElement(_reactRouter.Route, { path: '/about', component: _About2.default }),
 	    _react2.default.createElement(_reactRouter.Route, { path: '/contacts', component: _Contacts2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: '/base', component: _BaseDoc2.default }),
 	    _react2.default.createElement(_reactRouter.Route, { path: '/jumbotron', component: _JumbotronDoc2.default }),
 	    _react2.default.createElement(_reactRouter.Route, { path: '/flex', component: _FlexDoc2.default }),
 	    _react2.default.createElement(_reactRouter.Route, { path: '/section', component: _SectionDoc2.default }),
@@ -22090,6 +22095,15 @@
 	          null,
 	          _react2.default.createElement(
 	            _reactRouter.Link,
+	            { to: 'base' },
+	            'Base'
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          _react2.default.createElement(
+	            _reactRouter.Link,
 	            { to: 'jumbotron' },
 	            'Jumbotron'
 	          )
@@ -22189,7 +22203,7 @@
 
 	      return _react2.default.createElement(
 	        'div',
-	        { className: "aside-layout " + className, 'data-view': this.state.isToggleOn ? 'off' : 'on' },
+	        { className: "aside-layout " + className, 'data-view': this.state.isToggleOn ? 'on' : 'off' },
 	        _react2.default.createElement('span', { className: 'collapse', onClick: this.handleClick }),
 	        instanceLeftAside,
 	        children
@@ -27886,62 +27900,87 @@
 	    var instanceFlexContainer = _react2.default.createElement(
 	      _Section2.default,
 	      { className: '_test' },
+	      _react2.default.createElement('br', null),
 	      _react2.default.createElement(
 	        _FlexContainer2.default,
 	        null,
 	        _react2.default.createElement(
 	          _Col2.default,
 	          null,
-	          _react2.default.createElement(_Thumb2.default, {
-	            image: '/media/book/retro-science-fiction-covers-4.jpg',
-	            size: 'cover',
-	            className: '_h-sm'
-	          })
+	          _react2.default.createElement(
+	            _Thumb2.default,
+	            { className: '_tomato _wrapper' },
+	            _react2.default.createElement(
+	              'span',
+	              null,
+	              'Base col'
+	            )
+	          )
 	        ),
 	        _react2.default.createElement(
 	          _Col2.default,
 	          null,
-	          _react2.default.createElement(_Thumb2.default, {
-	            image: '/media/wallhaven.jpg',
-	            size: 'cover',
-	            className: '_h-sm'
-	          })
+	          _react2.default.createElement(
+	            _Thumb2.default,
+	            { className: '_tomato _wrapper' },
+	            _react2.default.createElement(
+	              'span',
+	              null,
+	              'Base col'
+	            )
+	          )
 	        ),
 	        _react2.default.createElement(
 	          _Col2.default,
 	          null,
-	          _react2.default.createElement(_Thumb2.default, {
-	            image: '/media/book/oyster-stand.jpg',
-	            size: 'cover',
-	            className: '_h-sm'
-	          })
+	          _react2.default.createElement(
+	            _Thumb2.default,
+	            { className: '_tomato _wrapper' },
+	            _react2.default.createElement(
+	              'span',
+	              null,
+	              'Base col'
+	            )
+	          )
 	        ),
 	        _react2.default.createElement(
 	          _Col2.default,
 	          null,
-	          _react2.default.createElement(_Thumb2.default, {
-	            image: '/media/book/gettyimages-73553620.jpg',
-	            size: 'cover',
-	            className: '_h-sm'
-	          })
+	          _react2.default.createElement(
+	            _Thumb2.default,
+	            { className: '_tomato _wrapper' },
+	            _react2.default.createElement(
+	              'span',
+	              null,
+	              'Base col'
+	            )
+	          )
 	        ),
 	        _react2.default.createElement(
 	          _Col2.default,
 	          null,
-	          _react2.default.createElement(_Thumb2.default, {
-	            image: '/media/book/ef60aff78548b2bac52b08c456deb4e6.jpg',
-	            size: 'cover',
-	            className: '_h-sm'
-	          })
+	          _react2.default.createElement(
+	            _Thumb2.default,
+	            { className: '_tomato _wrapper' },
+	            _react2.default.createElement(
+	              'span',
+	              null,
+	              'Base col'
+	            )
+	          )
 	        ),
 	        _react2.default.createElement(
 	          _Col2.default,
 	          null,
-	          _react2.default.createElement(_Thumb2.default, {
-	            image: '/media/book/by_themascot.jpg',
-	            size: 'cover',
-	            className: '_h-sm'
-	          })
+	          _react2.default.createElement(
+	            _Thumb2.default,
+	            { className: '_tomato _wrapper' },
+	            _react2.default.createElement(
+	              'span',
+	              null,
+	              'Base col'
+	            )
+	          )
 	        )
 	      )
 	    );
@@ -27958,7 +27997,7 @@
 	          _react2.default.createElement(
 	            _Thumb2.default,
 	            {
-	              image: '/media/book/bef295ff57b0c5994fea8a7428fecb5f.jpg',
+	              image: '/media/book/b5.png',
 	              size: 'cover',
 	              className: '_h-sm'
 	            },
@@ -27975,7 +28014,7 @@
 	          _react2.default.createElement(
 	            _Thumb2.default,
 	            {
-	              image: '/media/book/f43ad56004888100bc41e60e4f0e9932.jpg',
+	              image: '/media/book/b3.png',
 	              size: 'cover',
 	              className: '_h-sm'
 	            },
@@ -28352,6 +28391,14 @@
 	      );
 	    }
 	  }, {
+	    key: '_renderLink',
+	    value: function _renderLink(el, title) {
+	      if (!el) {
+	        return null;
+	      }
+	      return _react2.default.createElement(_reactRouter.Link, { to: el, title: title });
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
 	      var _props = this.props,
@@ -28369,7 +28416,7 @@
 	        { className: "thumb " + className },
 	        this._renderImg(image, size),
 	        this._renderCaption(children),
-	        _react2.default.createElement(_reactRouter.Link, { to: link, title: title })
+	        this._renderLink(link, title)
 	      );
 	    }
 	  }]);
@@ -47411,30 +47458,63 @@
 	        _react2.default.createElement(
 	          _Col2.default,
 	          null,
-	          _react2.default.createElement(_Thumb2.default, {
-	            image: '/media/book/b7.png',
-	            size: 'cover',
-	            className: '_h-sm'
-	          })
+	          _react2.default.createElement(
+	            _Thumb2.default,
+	            {
+	              image: '/media/book/b7.png',
+	              size: 'cover',
+	              className: '_h-sm text-center'
+	            },
+	            _react2.default.createElement(
+	              'small',
+	              null,
+	              '1. Lorem Ipsum'
+	            )
+	          )
 	        ),
 	        _react2.default.createElement(
 	          _Col2.default,
 	          null,
-	          _react2.default.createElement(_Thumb2.default, {
-	            image: '/media/book/b8.png',
-	            size: 'cover',
-	            className: '_h-sm'
-	          })
+	          _react2.default.createElement(
+	            _Thumb2.default,
+	            {
+	              image: '/media/book/b8.png',
+	              size: 'cover',
+	              className: '_h-sm text-center'
+	            },
+	            _react2.default.createElement(
+	              'small',
+	              null,
+	              '2. Lorem Simply'
+	            )
+	          )
 	        ),
 	        _react2.default.createElement(
 	          _Col2.default,
 	          null,
-	          _react2.default.createElement(_Thumb2.default, {
-	            image: '/media/book/b9.png',
-	            size: 'cover',
-	            className: '_h-sm'
-	          })
-	        ),
+	          _react2.default.createElement(
+	            _Thumb2.default,
+	            {
+	              image: '/media/book/b9.png',
+	              size: 'cover',
+	              className: '_h-sm text-center'
+	            },
+	            _react2.default.createElement(
+	              'small',
+	              null,
+	              '3. Lorem Dummy'
+	            )
+	          )
+	        )
+	      )
+	    );
+
+	    var instanceFlexContainer0 = _react2.default.createElement(
+	      _Section2.default,
+	      null,
+	      _react2.default.createElement(
+	        _FlexContainer2.default,
+	        null,
 	        _react2.default.createElement(
 	          _Col2.default,
 	          null,
@@ -47443,7 +47523,8 @@
 	            {
 	              image: '/media/book/b01.jpg',
 	              size: 'cover',
-	              className: '_h-lg-2'
+	              className: '_h-lg-2 _screen',
+	              link: '#'
 	            },
 	            _react2.default.createElement(
 	              'span',
@@ -47458,9 +47539,10 @@
 	          _react2.default.createElement(
 	            _Thumb2.default,
 	            {
-	              image: '/media/book/b02.jpg',
+	              image: '/media/book/a7.jpg',
 	              size: 'cover',
-	              className: '_h-lg-2'
+	              className: '_h-lg-2 _screen',
+	              link: '#'
 	            },
 	            _react2.default.createElement(
 	              'span',
@@ -47469,6 +47551,33 @@
 	            )
 	          )
 	        ),
+	        _react2.default.createElement(
+	          _Col2.default,
+	          null,
+	          _react2.default.createElement(
+	            _Thumb2.default,
+	            {
+	              image: '/media/book/a8.jpg',
+	              size: 'cover',
+	              className: '_h-lg-2 _screen',
+	              link: '#'
+	            },
+	            _react2.default.createElement(
+	              'span',
+	              null,
+	              'Lorem Ipsum is simply dummy text of the printing and typesetting industry...'
+	            )
+	          )
+	        )
+	      )
+	    );
+
+	    var instanceFlexContainer1 = _react2.default.createElement(
+	      _Section2.default,
+	      null,
+	      _react2.default.createElement(
+	        _FlexContainer2.default,
+	        null,
 	        _react2.default.createElement(
 	          _Col2.default,
 	          null,
@@ -47572,7 +47681,7 @@
 	          _Col2.default,
 	          { className: 'col-3' },
 	          _react2.default.createElement(_Thumb2.default, {
-	            image: '/media/book/retro-science-fiction-covers-4.jpg',
+	            image: '/media/book/b10.png',
 	            size: 'cover',
 	            className: '_h-sm'
 	          })
@@ -47608,7 +47717,7 @@
 	          _Col2.default,
 	          { className: 'col-6' },
 	          _react2.default.createElement(_Thumb2.default, {
-	            image: '/media/book/f43ad56004888100bc41e60e4f0e9932.jpg',
+	            image: '/media/book/bb1.png',
 	            size: 'cover',
 	            className: '_h-lg-2'
 	          })
@@ -47617,7 +47726,7 @@
 	          _Col2.default,
 	          { className: 'col-6' },
 	          _react2.default.createElement(_Thumb2.default, {
-	            image: '/media/book/oyster-stand.jpg',
+	            image: '/media/book/bb2.png',
 	            size: 'cover',
 	            className: '_h-lg-2'
 	          })
@@ -47626,7 +47735,7 @@
 	          _Col2.default,
 	          { className: 'col-4' },
 	          _react2.default.createElement(_Thumb2.default, {
-	            image: '/media/book/bef295ff57b0c5994fea8a7428fecb5f.jpg',
+	            image: '/media/book/a1.jpg',
 	            size: 'cover',
 	            className: '_h-lg-2'
 	          })
@@ -47635,7 +47744,7 @@
 	          _Col2.default,
 	          { className: 'col-4' },
 	          _react2.default.createElement(_Thumb2.default, {
-	            image: '/media/book/bef295ff57b0c5994fea8a7428fecb5f.jpg',
+	            image: '/media/book/a2.jpg',
 	            size: 'cover',
 	            className: '_h-lg-2'
 	          })
@@ -47644,7 +47753,34 @@
 	          _Col2.default,
 	          { className: 'col-4' },
 	          _react2.default.createElement(_Thumb2.default, {
-	            image: '/media/book/bef295ff57b0c5994fea8a7428fecb5f.jpg',
+	            image: '/media/book/a3.jpg',
+	            size: 'cover',
+	            className: '_h-lg-2'
+	          })
+	        ),
+	        _react2.default.createElement(
+	          _Col2.default,
+	          { className: 'col-4' },
+	          _react2.default.createElement(_Thumb2.default, {
+	            image: '/media/book/a4.jpg',
+	            size: 'cover',
+	            className: '_h-lg-2'
+	          })
+	        ),
+	        _react2.default.createElement(
+	          _Col2.default,
+	          { className: 'col-4' },
+	          _react2.default.createElement(_Thumb2.default, {
+	            image: '/media/book/a6.jpg',
+	            size: 'cover',
+	            className: '_h-lg-2'
+	          })
+	        ),
+	        _react2.default.createElement(
+	          _Col2.default,
+	          { className: 'col-4' },
+	          _react2.default.createElement(_Thumb2.default, {
+	            image: '/media/book/a5.jpg',
 	            size: 'cover',
 	            className: '_h-lg-2'
 	          })
@@ -47658,10 +47794,435 @@
 	      _react2.default.createElement('br', null),
 	      _react2.default.createElement('br', null),
 	      instanceFlexContainer,
+	      _react2.default.createElement('hr', null),
+	      instanceFlexContainer0,
+	      _react2.default.createElement('hr', null),
+	      instanceFlexContainer1,
+	      _react2.default.createElement('hr', null),
 	      instanceFlexContainer2,
 	      instanceFlexContainer3,
 	      _react2.default.createElement('br', null),
 	      _react2.default.createElement('br', null)
+	    );
+	  }
+	});
+
+/***/ },
+/* 514 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(14);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(192);
+
+	var _ContainerMedia = __webpack_require__(188);
+
+	var _ContainerMedia2 = _interopRequireDefault(_ContainerMedia);
+
+	var _Section = __webpack_require__(189);
+
+	var _Section2 = _interopRequireDefault(_Section);
+
+	var _Button = __webpack_require__(190);
+
+	var _Button2 = _interopRequireDefault(_Button);
+
+	var _AsideLayout = __webpack_require__(191);
+
+	var _AsideLayout2 = _interopRequireDefault(_AsideLayout);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = _react2.default.createClass({
+	  displayName: 'BaseDoc',
+	  render: function render() {
+
+	    var instanceSection = _react2.default.createElement(
+	      'div',
+	      null,
+	      _react2.default.createElement(
+	        _Section2.default,
+	        { className: '_md' },
+	        _react2.default.createElement(
+	          'h1',
+	          null,
+	          'h1. Base heading'
+	        ),
+	        _react2.default.createElement(
+	          'h2',
+	          null,
+	          'h2. Base heading'
+	        ),
+	        _react2.default.createElement(
+	          'h3',
+	          null,
+	          'h3. Base heading'
+	        ),
+	        _react2.default.createElement(
+	          'h4',
+	          null,
+	          'h4. Base heading'
+	        ),
+	        _react2.default.createElement(
+	          'h5',
+	          null,
+	          'h5. Base heading'
+	        ),
+	        _react2.default.createElement(
+	          'h6',
+	          null,
+	          'h6. Base heading'
+	        ),
+	        _react2.default.createElement('br', null),
+	        _react2.default.createElement(
+	          'h1',
+	          null,
+	          'h1. Base heading ',
+	          _react2.default.createElement(
+	            'small',
+	            null,
+	            'Secondary text'
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'h2',
+	          null,
+	          'h2. Base heading ',
+	          _react2.default.createElement(
+	            'small',
+	            null,
+	            'Secondary text'
+	          )
+	        ),
+	        _react2.default.createElement('br', null),
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          { className: 'lead' },
+	          'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
+	        ),
+	        _react2.default.createElement('br', null),
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          'You can use the mark tag to ',
+	          _react2.default.createElement(
+	            'mark',
+	            null,
+	            'highlight'
+	          ),
+	          ' text.'
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          _react2.default.createElement(
+	            'del',
+	            null,
+	            'This line of text is meant to be treated as deleted text.'
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          _react2.default.createElement(
+	            's',
+	            null,
+	            'This line of text is meant to be treated as no longer accurate.'
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          _react2.default.createElement(
+	            'ins',
+	            null,
+	            'This line of text is meant to be treated as an addition to the document.'
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          _react2.default.createElement(
+	            'u',
+	            null,
+	            'This line of text will render as underlined'
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          _react2.default.createElement(
+	            'small',
+	            null,
+	            'This line of text is meant to be treated as fine print.'
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          _react2.default.createElement(
+	            'strong',
+	            null,
+	            'rendered as bold text'
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          _react2.default.createElement(
+	            'em',
+	            null,
+	            'rendered as italicized text'
+	          )
+	        ),
+	        _react2.default.createElement('br', null),
+	        _react2.default.createElement(
+	          'p',
+	          { className: 'text-left' },
+	          'Left aligned text.'
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          { className: 'text-center' },
+	          'Center aligned text.'
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          { className: 'text-right' },
+	          'Right aligned text.'
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          { className: 'text-justify' },
+	          'Justified text.'
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          { className: 'text-nowrap' },
+	          'No wrap text.'
+	        ),
+	        _react2.default.createElement('br', null),
+	        _react2.default.createElement(
+	          'p',
+	          { className: 'text-lowercase' },
+	          'Lowercased text.'
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          { className: 'text-uppercase' },
+	          'Uppercased text.'
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          { className: 'text-capitalize' },
+	          'Capitalized text.'
+	        ),
+	        _react2.default.createElement('br', null),
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          'An abbreviation of the word attribute is ',
+	          _react2.default.createElement(
+	            'abbr',
+	            { title: 'attribute' },
+	            'attr'
+	          )
+	        ),
+	        _react2.default.createElement('br', null),
+	        _react2.default.createElement(
+	          'blockquote',
+	          null,
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.'
+	          ),
+	          _react2.default.createElement(
+	            'footer',
+	            null,
+	            'Someone famous in ',
+	            _react2.default.createElement(
+	              'cite',
+	              { title: 'Source Title' },
+	              'Source Title'
+	            )
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'blockquote',
+	          { className: 'blockquote-reverse' },
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.'
+	          ),
+	          _react2.default.createElement(
+	            'footer',
+	            null,
+	            'Someone famous in ',
+	            _react2.default.createElement(
+	              'cite',
+	              { title: 'Source Title' },
+	              'Source Title'
+	            )
+	          )
+	        ),
+	        _react2.default.createElement('br', null),
+	        _react2.default.createElement(
+	          'ul',
+	          null,
+	          _react2.default.createElement(
+	            'li',
+	            null,
+	            'Lorem ipsum dolor sit amet'
+	          ),
+	          _react2.default.createElement(
+	            'li',
+	            null,
+	            'Consectetur adipiscing elit'
+	          ),
+	          _react2.default.createElement(
+	            'li',
+	            null,
+	            'Integer molestie lorem at massa'
+	          ),
+	          _react2.default.createElement(
+	            'li',
+	            null,
+	            'Facilisis in pretium nisl aliquet'
+	          ),
+	          _react2.default.createElement(
+	            'li',
+	            null,
+	            'Nulla volutpat aliquam velit'
+	          ),
+	          _react2.default.createElement(
+	            'li',
+	            null,
+	            'Faucibus porta lacus fringilla vel'
+	          ),
+	          _react2.default.createElement(
+	            'li',
+	            null,
+	            'Aenean sit amet erat nunc'
+	          ),
+	          _react2.default.createElement(
+	            'li',
+	            null,
+	            'Eget porttitor lorem'
+	          )
+	        ),
+	        _react2.default.createElement('br', null),
+	        _react2.default.createElement(
+	          'ol',
+	          null,
+	          _react2.default.createElement(
+	            'li',
+	            null,
+	            'Lorem ipsum dolor sit amet'
+	          ),
+	          _react2.default.createElement(
+	            'li',
+	            null,
+	            'Consectetur adipiscing elit'
+	          ),
+	          _react2.default.createElement(
+	            'li',
+	            null,
+	            'Integer molestie lorem at massa'
+	          ),
+	          _react2.default.createElement(
+	            'li',
+	            null,
+	            'Facilisis in pretium nisl aliquet'
+	          ),
+	          _react2.default.createElement(
+	            'li',
+	            null,
+	            'Nulla volutpat aliquam velit'
+	          ),
+	          _react2.default.createElement(
+	            'li',
+	            null,
+	            'Faucibus porta lacus fringilla vel'
+	          ),
+	          _react2.default.createElement(
+	            'li',
+	            null,
+	            'Aenean sit amet erat nunc'
+	          ),
+	          _react2.default.createElement(
+	            'li',
+	            null,
+	            'Eget porttitor lorem'
+	          )
+	        ),
+	        _react2.default.createElement('br', null),
+	        _react2.default.createElement(
+	          'ul',
+	          { className: 'list-inline' },
+	          _react2.default.createElement(
+	            'li',
+	            null,
+	            'Lorem ipsum dolor sit amet'
+	          ),
+	          _react2.default.createElement(
+	            'li',
+	            null,
+	            'Consectetur adipiscing elit'
+	          ),
+	          _react2.default.createElement(
+	            'li',
+	            null,
+	            'Integer molestie lorem at massa'
+	          ),
+	          _react2.default.createElement(
+	            'li',
+	            null,
+	            'Facilisis in pretium nisl aliquet'
+	          ),
+	          _react2.default.createElement(
+	            'li',
+	            null,
+	            'Nulla volutpat aliquam velit'
+	          ),
+	          _react2.default.createElement(
+	            'li',
+	            null,
+	            'Faucibus porta lacus fringilla vel'
+	          ),
+	          _react2.default.createElement(
+	            'li',
+	            null,
+	            'Aenean sit amet erat nunc'
+	          ),
+	          _react2.default.createElement(
+	            'li',
+	            null,
+	            'Eget porttitor lorem'
+	          )
+	        ),
+	        _react2.default.createElement('br', null)
+	      )
+	    );
+
+	    return _react2.default.createElement(
+	      _AsideLayout2.default,
+	      null,
+	      instanceSection
 	    );
 	  }
 	});

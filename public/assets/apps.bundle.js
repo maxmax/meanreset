@@ -22528,6 +22528,15 @@
 	          null,
 	          _react2.default.createElement(
 	            _reactRouter.Link,
+	            { to: 'base' },
+	            'Base'
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          _react2.default.createElement(
+	            _reactRouter.Link,
 	            { to: 'jumbotron' },
 	            'Jumbotron'
 	          )
@@ -22627,7 +22636,7 @@
 
 	      return _react2.default.createElement(
 	        'div',
-	        { className: "aside-layout " + className, 'data-view': this.state.isToggleOn ? 'off' : 'on' },
+	        { className: "aside-layout " + className, 'data-view': this.state.isToggleOn ? 'on' : 'off' },
 	        _react2.default.createElement('span', { className: 'collapse', onClick: this.handleClick }),
 	        instanceLeftAside,
 	        children

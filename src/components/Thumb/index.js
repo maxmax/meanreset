@@ -40,6 +40,13 @@ export default class Thumb extends Component {
     );
   }
 
+  _renderLink (el, title) {
+    if (!el) { return null; }
+    return (
+      <Link to={el} title={title}></Link>
+    );
+  }
+
   render() {
 
     const { title, link, className, price, image, size, children } = this.props;
@@ -48,7 +55,7 @@ export default class Thumb extends Component {
       <div className={"thumb " + className}>
         {this._renderImg(image, size)}
         {this._renderCaption(children)}
-        <Link to={link} title={title}></Link>
+        {this._renderLink(link, title)}
       </div>
     );
   }

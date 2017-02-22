@@ -15,48 +15,37 @@ export default React.createClass({
 
     const instanceFlexContainer = (
       <Section className="_test">
+        <br />
         <FlexContainer>
           <Col>
-            <Thumb
-              image="/media/book/retro-science-fiction-covers-4.jpg"
-              size="cover"
-              className="_h-sm"
-            />
+            <Thumb className="_tomato _wrapper">
+              <span>Base col</span>
+            </Thumb>
           </Col>
           <Col>
-            <Thumb
-              image="/media/wallhaven.jpg"
-              size="cover"
-              className="_h-sm"
-            />
+            <Thumb className="_tomato _wrapper">
+              <span>Base col</span>
+            </Thumb>
           </Col>
           <Col>
-            <Thumb
-              image="/media/book/oyster-stand.jpg"
-              size="cover"
-              className="_h-sm"
-            />
+            <Thumb className="_tomato _wrapper">
+              <span>Base col</span>
+            </Thumb>
           </Col>
           <Col>
-            <Thumb
-              image="/media/book/gettyimages-73553620.jpg"
-              size="cover"
-              className="_h-sm"
-            />
+            <Thumb className="_tomato _wrapper">
+              <span>Base col</span>
+            </Thumb>
           </Col>
           <Col>
-            <Thumb
-              image="/media/book/ef60aff78548b2bac52b08c456deb4e6.jpg"
-              size="cover"
-              className="_h-sm"
-            />
+            <Thumb className="_tomato _wrapper">
+              <span>Base col</span>
+            </Thumb>
           </Col>
           <Col>
-            <Thumb
-              image="/media/book/by_themascot.jpg"
-              size="cover"
-              className="_h-sm"
-            />
+            <Thumb className="_tomato _wrapper">
+              <span>Base col</span>
+            </Thumb>
           </Col>
         </FlexContainer>
       </Section>
@@ -67,7 +56,7 @@ export default React.createClass({
         <FlexContainer className="_vertical _align_center">
           <Col>
             <Thumb
-              image="/media/book/bef295ff57b0c5994fea8a7428fecb5f.jpg"
+              image="/media/book/b5.png"
               size="cover"
               className="_h-sm"
             >
@@ -76,7 +65,7 @@ export default React.createClass({
           </Col>
           <Col>
             <Thumb
-              image="/media/book/f43ad56004888100bc41e60e4f0e9932.jpg"
+              image="/media/book/b3.png"
               size="cover"
               className="_h-sm"
             >

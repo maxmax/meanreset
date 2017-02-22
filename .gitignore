@@ -2,6 +2,7 @@
 node_modules
 npm-debug.log
 media.psd
+media2.psd
 
 # Local development
 *.env
