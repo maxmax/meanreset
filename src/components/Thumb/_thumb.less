@@ -27,8 +27,6 @@
   .thumbs-img + .caption{
     background: rgba(0, 0, 0, 0.6);
     color: white;
-  }
-  > .caption{
     position: absolute;
     width: 100%;
     padding: 20px;
@@ -40,6 +38,12 @@
     > div{
       position: absolute;
       bottom: 20px;
+    }
+  }
+  > .caption{
+    position: relative;
+    h1, h2, h3, h4, p{
+      margin-top: 0px;
     }
   }
   //&:hover{
@@ -67,6 +71,12 @@
     .thumbs-img{
       min-height: 280px;
       max-height: 280px;
+    }
+  }
+  &._h-lg-2{
+    .thumbs-img{
+      min-height: 480px;
+      max-height: 480px;
     }
   }
 }

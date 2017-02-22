@@ -5,7 +5,7 @@ const propTypes = {
 };
 
 const defaultProps = {
-  className: "_auto"
+  className: ""
 };
 
 export default class Section extends React.Component {

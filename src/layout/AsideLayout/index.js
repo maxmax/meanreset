@@ -35,6 +35,7 @@ export default class AsideLayout extends React.Component {
         <p><Link to="section">Section</Link></p>
         <p><Link to="media">Media</Link></p>
         <p><Link to="buttons">Buttons</Link></p>
+        <p><Link to="thumbs">Thumbs</Link></p>
         <h3>Layout</h3>
         <p><Link to="/">Home</Link></p>
         <p><Link to="about">About</Link></p>

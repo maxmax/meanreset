@@ -411,6 +411,8 @@ body:after {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  max-width: 100%;
+  position: relative;
 }
 .flex-container._vertical {
   min-height: 100vh;
@@ -497,8 +499,6 @@ body:after {
 .thumb .thumbs-img + .caption {
   background: rgba(0, 0, 0, 0.6);
   color: white;
-}
-.thumb > .caption {
   position: absolute;
   width: 100%;
   padding: 20px;
@@ -508,9 +508,19 @@ body:after {
   display: block;
   z-index: 1;
 }
-.thumb > .caption > div {
+.thumb .thumbs-img + .caption > div {
   position: absolute;
   bottom: 20px;
+}
+.thumb > .caption {
+  position: relative;
+}
+.thumb > .caption h1,
+.thumb > .caption h2,
+.thumb > .caption h3,
+.thumb > .caption h4,
+.thumb > .caption p {
+  margin-top: 0px;
 }
 .thumb._h-xs .thumbs-img {
   min-height: 140px;
@@ -527,6 +537,10 @@ body:after {
 .thumb._h-lg .thumbs-img {
   min-height: 280px;
   max-height: 280px;
+}
+.thumb._h-lg-2 .thumbs-img {
+  min-height: 480px;
+  max-height: 480px;
 }
 .container-img {
   position: absolute;

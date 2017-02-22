@@ -11,6 +11,7 @@ import FlexDoc from './modules/FlexDoc'
 import SectionDoc from './modules/SectionDoc'
 import MediaDoc from './modules/MediaDoc'
 import ButtonDoc from './modules/ButtonDoc'
+import ThumbsDoc from './modules/ThumbsDoc'
 
 
 //import basedata from './tmp/soil.json';
@@ -30,6 +31,7 @@ render((
       <Route path="/section" component={SectionDoc}/>
       <Route path="/media" component={MediaDoc}/>
       <Route path="/buttons" component={ButtonDoc}/>
+      <Route path="/thumbs" component={ThumbsDoc}/>
     </Route>
   </Router>
 ), document.getElementById('app'))
