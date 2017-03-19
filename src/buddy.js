@@ -13,6 +13,7 @@ import SectionDoc from './modules/SectionDoc'
 import MediaDoc from './modules/MediaDoc'
 import ButtonDoc from './modules/ButtonDoc'
 import ThumbsDoc from './modules/ThumbsDoc'
+import ModalsDoc from './modules/ModalsDoc'
 
 
 //import basedata from './tmp/soil.json';
@@ -34,6 +35,7 @@ render((
       <Route path="/media" component={MediaDoc}/>
       <Route path="/buttons" component={ButtonDoc}/>
       <Route path="/thumbs" component={ThumbsDoc}/>
+      <Route path="/modals" component={ModalsDoc}/>
     </Route>
   </Router>
 ), document.getElementById('app'))

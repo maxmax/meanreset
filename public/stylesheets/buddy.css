@@ -76,7 +76,7 @@ body:after {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
-  width: 960px;
+  width: 1300px;
   max-width: 100%;
 }
 .container-fluid {
@@ -369,7 +369,7 @@ abbr[title] {
 blockquote {
   padding: 10px 20px;
   margin: 0 0 20px;
-  font-size: 17.5px;
+  font-size: 17px;
   border-left: 5px solid #eee;
 }
 blockquote .small,
@@ -378,7 +378,7 @@ blockquote small {
   display: block;
   font-size: 80%;
   line-height: 1.42857143;
-  color: #777;
+  color: #333;
 }
 blockquote.blockquote-reverse {
   text-align: right;
@@ -399,7 +399,7 @@ hr {
   margin: 25px 0;
   border: 0px;
   height: 1px;
-  background: #ccc;
+  background: #777;
 }
 ._test {
   border: 1px solid red;
@@ -435,12 +435,15 @@ hr {
 .lead {
   font-size: 110%;
 }
+ul,
+ol {
+  padding-left: 18px;
+}
 .jumbotron {
   background: #532F8C;
   color: white;
-  border: 0px solid transparent;
   position: relative;
-  padding: 10% 0;
+  padding: 15% 0;
 }
 .jumbotron > section {
   z-index: 2;
@@ -614,6 +617,76 @@ hr {
 .thumb._tomato {
   background: tomato;
 }
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  display: none;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+}
+.fade {
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.2);
+  transition: opacity .15s linear;
+}
+.fade.in {
+  opacity: 1;
+}
+.modal-dialog {
+  position: relative;
+  width: 600px;
+  margin: 0px auto;
+  height: 100vh;
+  padding: 0px 0;
+}
+.modal-content {
+  position: relative;
+  background-clip: padding-box;
+  outline: 0;
+  margin: 0px auto;
+}
+.modal-content .wrapper {
+  background-color: #fff;
+  border: 1px solid #999;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  min-height: 90px;
+  padding: 20px;
+}
+.modal-content .wrapper._page {
+  height: 100vh;
+  border: 0px;
+}
+.modal-body {
+  position: relative;
+}
+.modal-base .close {
+  display: inline-block;
+  border: 0;
+  padding: 0;
+  width: 26px;
+  height: 26px;
+  position: absolute;
+  top: 5%;
+  right: -66px;
+  z-index: 3;
+  opacity: 0.8;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCA0ODkgNDg5IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA0ODkgNDg5OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjUxMnB4IiBoZWlnaHQ9IjUxMnB4Ij4KPGc+Cgk8cGF0aCBkPSJNMjQ0LjUsMEMxMDkuMywwLDAsMTA5LjMsMCwyNDQuNVMxMDkuMyw0ODksMjQ0LjUsNDg5UzQ4OSwzNzkuNyw0ODksMjQ0LjVTMzc5LjcsMCwyNDQuNSwweiBNMjQ0LjUsNDQ4LjQgICAgYy0xMTIuNCwwLTIwMy45LTkxLjUtMjAzLjktMjAzLjlTMTMyLjEsNDAuNiwyNDQuNSw0MC42czIwMy45LDkxLjUsMjAzLjksMjAzLjlTMzU2LjksNDQ4LjQsMjQ0LjUsNDQ4LjR6IiBmaWxsPSIjZmZmZmZmIi8+Cgk8cGF0aCBkPSJNMzU0LjgsMTM0LjJjLTguMy04LjMtMjAuOC04LjMtMjkuMSwwbC04MS4yLDgxLjJsLTgxLjEtODEuMWMtOC4zLTguMy0yMC44LTguMy0yOS4xLDBzLTguMywyMC44LDAsMjkuMWw4MS4xLDgxLjEgICAgbC04MS4xLDgxLjFjLTguMyw4LjMtOC42LDIxLjEsMCwyOS4xYzYuNSw2LDE4LjgsMTAuNCwyOS4xLDBsODEuMS04MS4xbDgxLjEsODEuMWMxMi40LDExLjcsMjUsNC4yLDI5LjEsMCAgICBjOC4zLTguMyw4LjMtMjAuOCwwLTI5LjFsLTgxLjEtODEuMWw4MS4xLTgxLjFDMzYzLjEsMTU1LDM2My4xLDE0Mi41LDM1NC44LDEzNC4yeiIgZmlsbD0iI2ZmZmZmZiIvPgo8L2c+Cjwvc3ZnPgo=) center center no-repeat;
+  background-size: 22px 22px;
+  text-indent: -10000%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.modal-base .close:hover {
+  opacity: 1;
+  transition: all 0.2s ease;
+}
 .container-img {
   position: absolute;
   top: 0;
@@ -781,7 +854,7 @@ hr {
   width: 100%;
 }
 .aside-layout {
-  padding-left: 300px;
+  padding-left: 200px;
 }
 .aside-layout[data-view="off"] {
   padding: 0px;

@@ -1,18 +1,16 @@
-// Color variables (appears count calculates by raw css)
-@color0: #845ac7;
-@color1: green;
-@black: black;
-@blue: #03A9F4;
-@green: #4CAF50;
-@orange: #FF5722;
+@jumbotron-bg: #532F8C;
+@jumbotron-color: black;
+@jumbotron-padding: 15% 0;
+@jumbotron-blue: #03A9F4;
+@jumbotron-green: #4CAF50;
+@jumbotron-orange: #FF5722;
+@import (optional) "../../Base/_library";
 
 .jumbotron {
-	background: #532F8C;
+	background: @jumbotron-bg;
 	color: white;
-	border: 0px solid transparent;
 	position: relative;
-	padding: 10% 0;
-
+	padding: @jumbotron-padding;
 	> section{
 		z-index: 2;
 	}
@@ -24,18 +22,18 @@
 	//colors
 	&._white{
 		background: white;
-		color: @black;
+		color: @jumbotron-color;
 	}
 	&._blue{
-		background: @blue;
+		background: @jumbotron-blue;
 		color: white;
 	}
 	&._green{
-		background: @green;
+		background: @jumbotron-green;
 		color: white;
 	}
 	&._orange{
-		background: @orange;
+		background: @jumbotron-orange;
 		color: white;
 	}
 }

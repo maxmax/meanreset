@@ -11,10 +11,22 @@ import Button from '../elements/Button';
 import AsideLayout from '../layout/AsideLayout';
 
 export default React.createClass({
+
+  //constructor(props) {
+  //  super(props);
+  //  this.state = {
+  //    modalactive: false
+  //  };
+  //}
+
   render() {
+
+    //<div className="wrapper">Modal content!</div>
 
     const instanceFlexContainer = (
       <Section>
+        <br />
+        <br />
         <FlexContainer>
           <Col>
             <Thumb
