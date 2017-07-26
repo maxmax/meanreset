@@ -1,4 +1,3 @@
-## Server and web application
 
 node, heroku, express
 
